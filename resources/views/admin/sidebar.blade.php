@@ -74,5 +74,11 @@
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
         </li>
+        <li class="menu-item active">
+            <a href="{{ route('researchers') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <div data-i18n="Analytics">Researchers</div>
+            </a>
+        </li>
     </ul>
 </aside>

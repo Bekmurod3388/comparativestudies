@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResearchersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+/****************** RESEARCHERS **********************************************************************************/
+Route::get('/dashboard/researchers', [ResearchersController::class, 'index'])->name('researchers');
+Route::get('/dashboard/researchers/create', [ResearchersController::class, 'create'])->name('researchers.create');
+Route::get('/dashboard/researchers/update', [ResearchersController::class, 'update'])->name('researchers.update');
+Route::delete('/researchers/{researcher}', [ResearchersController::class, 'destroy'])->name('researchers.delete');
 
 require __DIR__.'/auth.php';
 
