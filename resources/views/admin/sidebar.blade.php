@@ -68,10 +68,24 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
+        <li class="menu-item @if(request()->routeIs('dashboard')) active @endif">
             <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(request()->routeIs('photos.index')) active @endif">
+            <a href="{{ route('photos.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-photo-album"></i>
+                <div data-i18n="Analytics">Rasmlar</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(request()->routeIs('videos.index')) active @endif">
+            <a href="{{ route('videos.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-video"></i>
+                <div data-i18n="Analytics">Videolar</div>
             </a>
         </li>
     </ul>
