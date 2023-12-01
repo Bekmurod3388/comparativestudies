@@ -88,5 +88,12 @@
                 <div data-i18n="Analytics">Videolar</div>
             </a>
         </li>
+
+        <li class="menu-item @if(request()->routeIs('abouts.index')) active @endif">
+            <a href="{{ route('abouts.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-video"></i>
+                <div data-i18n="Analytics">OAV biz haqimizda</div>
+            </a>
+        </li>
     </ul>
 </aside>

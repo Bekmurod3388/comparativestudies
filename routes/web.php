@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\VideoController;
@@ -32,6 +33,7 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);
+    Route::resource('/abouts', AboutController::class);
 });
 
 require __DIR__.'/auth.php';
