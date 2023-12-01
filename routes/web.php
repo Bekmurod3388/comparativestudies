@@ -34,8 +34,10 @@ Route::middleware('auth')->group(function () {
 /****************** RESEARCHERS **********************************************************************************/
 Route::get('/dashboard/researchers', [ResearchersController::class, 'index'])->name('researchers');
 Route::get('/dashboard/researchers/create', [ResearchersController::class, 'create'])->name('researchers.create');
-Route::get('/dashboard/researchers/update', [ResearchersController::class, 'update'])->name('researchers.update');
+Route::post('/dashboard/researchers/store', [ResearchersController::class, 'store'])->name('researchers.store');
+Route::get('/researchers/{researcher}/edit', [ResearchersController::class, 'edit'])->name('researchers.edit');
 Route::delete('/researchers/{researcher}', [ResearchersController::class, 'destroy'])->name('researchers.delete');
+Route::put('/dashboard/researchers/{researcher}', [ResearchersController::class, 'update'])->name('researchers.update');
 
 require __DIR__.'/auth.php';
 

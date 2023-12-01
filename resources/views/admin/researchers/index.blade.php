@@ -3,7 +3,7 @@
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Colleagues</h4>
     <!-- Striped Rows -->
     <div class="card">
-        <h5 class="card-header">Hamkasblar ro'yxati</h5>
+       <h5 class="card-header">Hamkasblar ro'yxati</h5>
         <div class="table-responsive text-nowrap">
             @unless(count($researchers) == 0)
                 <table class="table table-striped">
@@ -60,7 +60,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"
+                                            <a class="dropdown-item" href="/researchers/{{$researcher->id}}/edit"
                                             ><i class="bx bx-edit-alt me-1"></i> Tahrirlash</a
                                             >
                                             <form method="POST" action="/researchers/{{$researcher->id}}">
@@ -81,7 +81,15 @@
             @else
                 <p>Hamkasblar ro'yxati bo'sh!</p>
             @endunless
+            <div class="divider text-end me-5">
+                <div class="divider-text" title="Hamkasb qo'shish">
+                    <a href="/dashboard/researchers/create">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #696cff;transform: ;msFilter:;"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path></svg></p>
+                    </a>
+                </div>
+            </div>
         </div>
+      </div>
     </div>
 <!--/ Striped Rows -->
 @endsection
