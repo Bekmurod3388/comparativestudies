@@ -3,7 +3,18 @@
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Colleagues</h4>
     <!-- Striped Rows -->
     <div class="card">
-       <h5 class="card-header">Hamkasblar ro'yxati</h5>
+        <div class="card-header">
+            <div class="row content-end">
+                <div class="col-4">
+                    <h5>Hamkasblar ro'yxati</h5>
+                </div>
+                <div class="col-md-4 text-end offset-md-4">
+                    <a href="/dashboard/researchers/create">
+                        Hamkasb qo'shish
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="table-responsive text-nowrap">
             @unless(count($researchers) == 0)
                 <table class="table table-striped">
@@ -24,7 +35,7 @@
                                 <td><i class="fab fa-angular fa-lg text-danger"></i>{{ $loop->iteration }}</td>
                                 <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->fullname }}</strong></td>
                                 <td>{{ $researcher->position }}</td>
-                                <td>{{ $researcher->photo }}</td>
+                                <td>{{ $researcher->email }}</td>
                                 <td>
                                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                         <li
@@ -51,7 +62,7 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <img src="{{$researcher->photo ? asset('storage/' . $researcher->photo) : asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" />
+                                    <img src="{{$researcher->photo ? asset('storage/' . $researcher->photo) : asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" width=50 height=50/>
                                 </td>
                                 <td>
                                     <div class="dropdown">
@@ -80,13 +91,6 @@
             @else
                 <p>Hamkasblar ro'yxati bo'sh!</p>
             @endunless
-            <div class="divider text-end me-5">
-                <div class="divider-text" title="Hamkasb qo'shish">
-                    <a href="/dashboard/researchers/create">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: #696cff;transform: ;msFilter:;"><path d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4z"></path><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path></svg></p>
-                    </a>
-                </div>
-            </div>
         </div>
       </div>
     </div>
