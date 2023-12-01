@@ -68,7 +68,7 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
-        <li class="menu-item active">
+        <li class="menu-item @if(request()->routeIs('dashboard')) active @endif">
             <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Asosiy sahifa</div>
@@ -78,6 +78,27 @@
             <a href="{{ route('researchers') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Hamkasblar</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(request()->routeIs('photos.index')) active @endif">
+            <a href="{{ route('photos.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-photo-album"></i>
+                <div data-i18n="Analytics">Rasmlar</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(request()->routeIs('videos.index')) active @endif">
+            <a href="{{ route('videos.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-video"></i>
+                <div data-i18n="Analytics">Videolar</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(request()->routeIs('abouts.index')) active @endif">
+            <a href="{{ route('abouts.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-video"></i>
+                <div data-i18n="Analytics">OAV biz haqimizda</div>
             </a>
         </li>
     </ul>
