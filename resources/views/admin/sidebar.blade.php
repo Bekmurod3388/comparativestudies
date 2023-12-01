@@ -71,13 +71,13 @@
         <li class="menu-item active">
             <a href="{{ route('dashboard') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Dashboard</div>
+                <div data-i18n="Analytics">Asosiy sahifa</div>
             </a>
         </li>
-        <li class="menu-item active">
+        <li class="menu-item">
             <a href="{{ route('researchers') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Researchers</div>
+                <div data-i18n="Analytics">Hamkasblar</div>
             </a>
         </li>
     </ul>

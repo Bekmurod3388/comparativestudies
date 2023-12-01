@@ -56,7 +56,8 @@ class ResearchersController extends Controller
             'research_fields' => 'required',
             'email' => ['required', 'email'],
             'facebook_url' => 'required',
-            'instagram_url' => 'required'
+            'instagram_url' => 'required',
+            'photo' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
         ]);
 
         if($request->hasFile('photo')){

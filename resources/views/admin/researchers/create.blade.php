@@ -8,7 +8,7 @@
         <h5 class="mb-0">Hamkasb qo'shish</h5>
         <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
       </div>
-      <div class="card-body">
+      <div class="card-body demo-vertical-spacing demo-only-element">
         <form method="POST" action="/dashboard/researchers/store" enctype="multipart/form-data">
           @csrf
           <div class="row mb-3">
@@ -32,8 +32,8 @@
               @error('fullname')
                 <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
               @enderror
+            </div>
           </div>
-        </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-company">Lavozimi</label>
             <div class="col-sm-10">
@@ -118,6 +118,24 @@
                     />
                 </div>
                 @error('facebook_url')
+                  <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
+                @enderror
+            </div>
+          </div>
+          <div class="row mb-3">
+            <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Tadqiqotchi rasmi</label>
+            <div class="col-sm-10">
+                <div class="input-group">
+                    <span class="input-group-file">Yuklash</span>
+                    <input
+                        name="photo"
+                        type="file"
+                        class="form-control"
+                        id="basic-url1"
+                        aria-describedby="basic-icon-default-photo"
+                    />
+                </div>
+                @error('photo')
                   <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                 @enderror
             </div>

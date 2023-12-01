@@ -24,7 +24,7 @@
                                 <td><i class="fab fa-angular fa-lg text-danger"></i>{{ $loop->iteration }}</td>
                                 <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->fullname }}</strong></td>
                                 <td>{{ $researcher->position }}</td>
-                                <td>{{ $researcher->email }}</td>
+                                <td>{{ $researcher->photo }}</td>
                                 <td>
                                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                         <li
@@ -51,8 +51,7 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <img src="{{$researcher->photo ? asset($researcher->photo) : asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" style="width: 40px; height: 40px;"/>
-                                    <!-- <img src="{{$researcher->photo ? asset('storage/' . $researcher->photo) : asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" /> -->
+                                    <img src="{{$researcher->photo ? asset('storage/' . $researcher->photo) : asset('assets/img/avatars/1.png')}}" alt="Avatar" class="rounded-circle" />
                                 </td>
                                 <td>
                                     <div class="dropdown">
@@ -60,10 +59,10 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="/researchers/{{$researcher->id}}/edit"
+                                            <a class="dropdown-item" href="researchers/{{$researcher->id}}/edit"
                                             ><i class="bx bx-edit-alt me-1"></i> Tahrirlash</a
                                             >
-                                            <form method="POST" action="/researchers/{{$researcher->id}}">
+                                            <form method="POST" action="researchers/{{$researcher->id}}">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="dropdown-item">

@@ -16,7 +16,7 @@ return new class extends Migration
             $table->char('fullname');
             $table->char('position');
             $table->char('research_fields');
-            $table->char('photo');
+            $table->char('photo')->nullable();
             $table->char('email');
             $table->char('facebook_url');
             $table->char('twitter_url');
