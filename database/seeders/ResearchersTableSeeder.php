@@ -22,7 +22,7 @@ class ResearchersTableSeeder extends Seeder
                 'fullname' => $faker->name,
                 'position' => $faker->jobTitle,
                 'research_fields' => $faker->words(3, true),
-                'photo' => $faker->imageUrl(),
+                'photo' => "researcher_photos/example.png",
                 'email' => $faker->unique()->safeEmail,
                 'facebook_url' => $faker->url,
                 'twitter_url' => $faker->url,

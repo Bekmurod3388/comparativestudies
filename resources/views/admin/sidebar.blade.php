@@ -74,9 +74,9 @@
                 <div data-i18n="Analytics">Asosiy sahifa</div>
             </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item @if(request()->routeIs('researchers')) active @endif">
             <a href="{{ route('researchers') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                <i class='menu-icon tf-icons bx bx-briefcase-alt'></i>
                 <div data-i18n="Analytics">Hamkasblar</div>
             </a>
         </li>

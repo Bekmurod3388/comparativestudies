@@ -3,20 +3,20 @@
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Colleagues</h4>
     <!-- Striped Rows -->
     <div class="card">
-        <div class="card-header">
-            <div class="row content-end">
-                <div class="col-4">
-                    <h5>Hamkasblar ro'yxati</h5>
-                </div>
-                <div class="col-md-4 text-end offset-md-4">
-                    <a href="/dashboard/researchers/create">
-                        Hamkasb qo'shish
-                    </a>
+        @unless(count($researchers) == 0)
+            <div class="card-header">
+                <div class="row content-end">
+                    <div class="col-4">
+                        <h5>Hamkasblar ro'yxati</h5>
+                    </div>
+                    <div class="col-md-4 text-end offset-md-4">
+                        <a href="/dashboard/researchers/create">
+                            Hamkasb qo'shish
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="table-responsive text-nowrap">
-            @unless(count($researchers) == 0)
+            <div class="table-responsive text-nowrap">
                 <table class="table table-striped">
                     <thead>
                         <tr>
@@ -92,7 +92,18 @@
                     @endforeach
                 </table>
             @else
-                <p>Hamkasblar ro'yxati bo'sh!</p>
+                <div class="card-header">
+                    <div class="row content-end">
+                        <div class="col-4">
+                            <h5>Hamkasblar ro'yxati bo'sh</h5>
+                        </div>
+                        <div class="col-md-4 text-end offset-md-4">
+                            <a href="/dashboard/researchers/create">
+                                Hamkasb qo'shish
+                            </a>
+                        </div>
+                    </div>
+                </div>
             @endunless
         </div>
       </div>
