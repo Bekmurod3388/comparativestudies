@@ -126,14 +126,8 @@
             <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Tadqiqotchi rasmi</label>
             <div class="col-sm-10">
                 <div class="input-group">
-                    <span class="input-group-file">Yuklash</span>
-                    <input
-                        name="photo"
-                        type="file"
-                        class="form-control"
-                        id="basic-url1"
-                        aria-describedby="basic-icon-default-photo"
-                    />
+                    <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
+                    <input type="file" name=photo class="form-control" id="inputGroupFile01" />
                 </div>
                 @error('photo')
                   <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
@@ -155,7 +149,7 @@
                   aria-label="Sheriy kitoblarni o'rganish"
                   aria-describedby="basic-icon-default-message2"
                 ></textarea>
-              </div>           
+              </div>
               @error('research_fields')
                 <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
               @enderror
