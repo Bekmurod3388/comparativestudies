@@ -101,5 +101,12 @@
                 <div data-i18n="Analytics">OAV biz haqimizda</div>
             </a>
         </li>
+
+        <li class="menu-item @if(request()->routeIs('carousels')) active @endif">
+            <a href="{{ route('carousels') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-carousel"></i>
+                <div data-i18n="Analytics">Karusellar</div>
+            </a>
+        </li>
     </ul>
 </aside>

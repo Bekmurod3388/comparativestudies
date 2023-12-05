@@ -1,6 +1,5 @@
 @extends('admin.master')
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Colleagues</h4>
     <!-- Striped Rows -->
     <div class="card">
         @unless(count($researchers) == 0)
@@ -10,7 +9,7 @@
                         <h5>Hamkasblar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="/dashboard/researchers/create">
+                        <a href="/dashboard/researchers/create" class="btn-primary p-2 rounded">
                             Hamkasb qo'shish
                         </a>
                     </div>
@@ -68,23 +67,17 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="dropdown">
-                                        <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                            <i class="bx bx-dots-vertical-rounded"></i>
-                                        </button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="researchers/{{$researcher->id}}/edit"
-                                            ><i class="bx bx-edit-alt me-1"></i> Tahrirlash</a
-                                            >
-                                            <form method="POST" action="researchers/{{$researcher->id}}">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="dropdown-item">
-                                                    <i class="bx bx-trash me-1"></i>
-                                                    O'chirish
-                                                </button>
-                                            </form>
-                                        </div>
+                                    <div class="d-flex">    
+                                        <a href="researchers/{{$researcher->id}}/edit" class="btn-primary p-1 m-1"
+                                        ><i class="bx bx-edit-alt me-1"></i></a
+                                        >
+                                        <form method="POST" action="researchers/{{$researcher->id}}">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn-primary p-1 m-1">
+                                                <i class="bx bx-trash me-1"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </td>
                             </tr>
