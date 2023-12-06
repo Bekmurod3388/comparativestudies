@@ -52,7 +52,7 @@ class AboutController extends Controller
             "type" => $request->type,
         ]);
 
-        return redirect()->route('abouts.index')->with('success', 'About added successfully.');
+        return redirect()->route('abouts.index')->with('success', 'OAV muvaffaqiyatli yaratildi.');
     }
 
     /**
@@ -97,7 +97,7 @@ class AboutController extends Controller
             "type" => $request->type,
         ]);
 
-        return redirect()->route('abouts.index')->with('success', 'About updated successfully.');
+        return redirect()->route('abouts.index')->with('success', 'OAV muvaffaqiyatli tahrirlandi..');
     }
 
     /**
@@ -106,6 +106,6 @@ class AboutController extends Controller
     public function destroy(About $about)
     {
         $about->delete();
-        return redirect()->route('abouts.index')->with('success', 'About deleted successfully.');
+        return redirect()->route('abouts.index')->with('success', 'OAV muvaffaqiyatli o\'chirildi');
     }
 }

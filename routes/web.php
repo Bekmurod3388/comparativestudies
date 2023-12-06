@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CenterController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResearchersController;
@@ -35,6 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);
     Route::resource('/abouts', AboutController::class);
+    Route::resource('/centers', CenterController::class);
 });
 
 

@@ -2,8 +2,14 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h5 class="">OAV biz haqimizda</h5>
-            <a href="{{ route('abouts.create') }}" class="btn btn-primary">Yaratish</a>
+            <div class="row content-end">
+                <div class="col-4">
+                    <h5>OAV biz haqimizda</h5>
+                </div>
+                <div class="col-md-4 text-end offset-md-4">
+                    <a href="{{ route('abouts.create') }}" class="btn btn-primary">Yaratish</a>
+                </div>
+            </div>
         </div>
         @if(session('success'))
             <div class="alert alert-success mt-3" role="alert">
@@ -18,12 +24,14 @@
                     <th>Sarlavha</th>
                     <th>Url</th>
                     <th>Turi</th>
-                    <th>Amallar</th>
+                    <th style="width: 15%">Amallar</th>
                 </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
                 @if($abouts->isEmpty())
-                    <tr><td colspan="5">Ma'lumotlar mavjud emas.</td></tr>
+                    <tr>
+                        <td colspan="5">Ma'lumotlar mavjud emas.</td>
+                    </tr>
                 @else
                     @foreach($abouts as $video)
                         <tr>
@@ -40,24 +48,19 @@
                                 @endif
                             </td>
                             <td>
-                                <div class="dropdown">
-                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                            data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="{{ route('abouts.edit', $video->id) }}"><i
-                                                class="bx bx-edit-alt me-1"></i> Edit</a>
+                                <div class="d-flex justify-content-between">
+                                    <a class="btn btn-warning" href="{{ route('abouts.edit', $video->id) }}"><i
+                                            class="bx bx-edit-alt me-1"></i></a>
 
-                                        <form action="{{ route('abouts.destroy', $video->id) }}" method="POST" class="d-inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="dropdown-item" onclick="return confirm('OAV ni o\'chirishni xohlaysizmi?')">
-                                                <i class="bx bx-trash me-1"></i>
-                                                Delete
-                                            </button>
-                                        </form>
-                                    </div>
+                                    <form action="{{ route('abouts.destroy', $video->id) }}" method="POST"
+                                          class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger"
+                                                onclick="return confirm('OAV ni o\'chirishni xohlaysizmi?')">
+                                            <i class="bx bx-trash me-1"></i>
+                                        </button>
+                                    </form>
                                 </div>
                             </td>
                         </tr>
