@@ -22,8 +22,8 @@
                   type="text"
                   class="form-control"
                   id="basic-icon-default-fullname"
-                  placeholder="Bek Berganov"
-                  aria-label="Bek Berganov"
+                  placeholder="John Dere"
+                  aria-label="John Dere"
                   aria-describedby="basic-icon-default-fullname2"
                   value="{{old('fullname')}}"
                 />
@@ -66,12 +66,11 @@
                   type="text"
                   id="basic-icon-default-email"
                   class="form-control"
-                  placeholder="bek.berganov"
-                  aria-label="bek.berganov"
+                  placeholder="johndere@gmail.com"
+                  aria-label="johndere@gmail.com"
                   aria-describedby="basic-icon-default-email2"
                   value="{{old('email')}}"
                 />
-                <span id="basic-icon-default-email2" class="input-group-text">@namuna.com</span>
               </div>
               <div class="form-text">Harflar, raqamlar va nuqtalardan foydalanishingiz mumkin.</div>
               @error('email')

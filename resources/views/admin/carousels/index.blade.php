@@ -27,7 +27,7 @@
                         <th>T/R</th>
                         <th>Sarlavha</th>
                         <th>Rasm</th>
-                        <!-- <th>O'zgartirish</th> -->
+                        <th>Amallar</th>
                         </tr>
                     </thead>
                     @foreach ($carousels as $carousel)
@@ -43,15 +43,17 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex">
-                                        <a href="carousels/{{$carousel->id}}/edit" class="btn-primary p-1 m-1"
-                                        ><i class="bx bx-edit-alt"></i></a
-                                        >
-                                        <form method="POST" action="carousels/{{$carousel->id}}">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-warning" href="carousels/{{$carousel->id}}/edit"><i
+                                                class="bx bx-edit-alt me-1"></i></a>
+
+                                        <form action="carousels/{{$carousel->id}}" method="POST"
+                                              class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn-primary p-1 m-1">
-                                                <i class="bx bx-trash"></i>
+                                            <button type="submit" class="btn btn-danger"
+                                                    onclick="return confirm('Karuselni o\'chirishni xohlaysizmi?')">
+                                                <i class="bx bx-trash me-1"></i>
                                             </button>
                                         </form>
                                     </div>

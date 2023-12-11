@@ -30,7 +30,7 @@
                         <th>Email</th>
                         <th>Bog'lanish</th>
                         <th>Rasm</th>
-                        <!-- <th>O'zgartirish</th> -->
+                        <th>Amallar</th>
                         </tr>
                     </thead>
                     @foreach ($researchers as $researcher)
@@ -72,18 +72,21 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="d-flex">
-                                        <a href="researchers/{{$researcher->id}}/edit" class="btn-primary p-1 m-1"
-                                        ><i class="bx bx-edit-alt me-1"></i></a
-                                        >
-                                        <form method="POST" action="researchers/{{$researcher->id}}">
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-warning" href="researchers/{{$researcher->id}}/edit"><i
+                                                class="bx bx-edit-alt me-1"></i></a>
+
+                                        <form action="researchers/{{$researcher->id}}" method="POST"
+                                              class="d-inline">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn-primary p-1 m-1">
+                                            <button type="submit" class="btn btn-danger"
+                                                    onclick="return confirm('Hamkasbni o\'chirishni xohlaysizmi?')">
                                                 <i class="bx bx-trash me-1"></i>
                                             </button>
                                         </form>
                                     </div>
+
                                 </td>
                             </tr>
                         </tbody>
