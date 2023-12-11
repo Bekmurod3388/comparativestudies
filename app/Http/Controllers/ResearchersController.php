@@ -39,7 +39,7 @@ class ResearchersController extends Controller
             $formFields['photo'] = $request->file('photo')->store('researcher_photos', 'public');
         } else {
             $formFields['photo'] = "no";
-        }
+         }
 
         $formFields['twitter_url'] = "no";
 
