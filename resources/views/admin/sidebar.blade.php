@@ -81,6 +81,13 @@
             </a>
         </li>
 
+        <li class="menu-item @if(request()->routeIs('centers.index')) active @endif">
+            <a href="{{ route('centers.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bxs-bank"></i>
+                <div data-i18n="Analytics">Markazlar</div>
+            </a>
+        </li>
+
         <li class="menu-item @if(request()->routeIs('photos.index')) active @endif">
             <a href="{{ route('photos.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-photo-album"></i>

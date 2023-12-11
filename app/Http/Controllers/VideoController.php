@@ -46,7 +46,7 @@ class VideoController extends Controller
             "video_url" => $embeddedUrl
         ]);
 
-        return redirect()->route('videos.index')->with('success', 'Video added successfully.');
+        return redirect()->route('videos.index')->with('success', 'Video muvaffaqiyatli yaratildi.');
     }
 
     /**
@@ -87,7 +87,7 @@ class VideoController extends Controller
             "video_url" => $embeddedUrl
         ]);
 
-        return redirect()->route('videos.index')->with('success', 'Video updated successfully.');
+        return redirect()->route('videos.index')->with('success', 'Video muvaffaqiyatli tahrirlandi.');
     }
 
     /**
@@ -96,6 +96,6 @@ class VideoController extends Controller
     public function destroy(Video $video)
     {
         $video->delete();
-        return redirect()->route('videos.index')->with('success', 'Video deleted successfully.');
+        return redirect()->route('videos.index')->with('success', 'Video muvaffaqiyatli o\'chirildi');
     }
 }

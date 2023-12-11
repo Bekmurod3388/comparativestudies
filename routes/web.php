@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CenterController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\CarouselsController;
 use App\Http\Controllers\ProfileController;
@@ -37,6 +38,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);
     Route::resource('/abouts', AboutController::class);
+    Route::resource('/centers', CenterController::class);
+
 
     /****************** RESEARCHERS **********************************************************************************/
     Route::get('/dashboard/researchers', [ResearchersController::class, 'index'])->name('researchers');
