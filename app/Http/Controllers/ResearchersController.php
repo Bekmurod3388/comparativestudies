@@ -2,22 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Models\Researchers;
+use Illuminate\Routing\Redirector;
 
 class ResearchersController extends Controller
 {
-    public function index(){
+    public function index(): View|\Illuminate\Foundation\Application|Factory|Application
+    {
         return view('admin.researchers.index', [
             'researchers' => Researchers::all()
         ]);
     }
 
-    public function create(){
+    public function create(): View|\Illuminate\Foundation\Application|Factory|Application
+    {
         return view('admin.researchers.create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    {
         $formFields = $request->validate([
             'fullname' => 'required',
             'position' => 'required',
@@ -40,16 +48,19 @@ class ResearchersController extends Controller
         return redirect('/dashboard/researchers');
     }
 
-    public function edit(Researchers $researcher) {
+    public function edit(Researchers $researcher): View|\Illuminate\Foundation\Application|Factory|Application
+    {
         return view('admin.researchers.edit', ['researcher' => $researcher]);
     }
-    
-    public function destroy(Researchers $researcher) {
+
+    public function destroy(Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    {
         $researcher->delete();
         return redirect('/dashboard/researchers');
     }
 
-    public function update(Request $request, Researchers $researcher) {
+    public function update(Request $request, Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    {
         $formFields = $request->validate([
             'fullname' => 'required',
             'position' => 'required',

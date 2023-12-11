@@ -1,3 +1,4 @@
+@php use Carbon\Carbon; @endphp
 @extends('admin.master')
 @section('content')
     <!-- Basic with Icons -->
@@ -8,7 +9,8 @@
                 <small class="text-muted float-end">Malumotlarni o'zgartirishingiz mumkin.</small>
             </div>
             <div class="card-body demo-vertical-spacing demo-only-element">
-                <form method="POST" action="/dashboard/facultybooks/{{ $facultybook->id }}" enctype="multipart/form-data">
+                <form method="POST" action="/dashboard/facultybooks/{{ $facultybook->id }}"
+                      enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="row mb-3">
@@ -58,7 +60,8 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob yozilgan sana</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob yozilgan
+                            sana</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                                 <span id="basic-icon-default-fullname2" class="input-group-text"
@@ -67,7 +70,7 @@
                                 <input
                                     name="publication_date"
                                     type="date"
-                                    value="{{ \Carbon\Carbon::parse($facultybook->publication_date)->format('mm/dd/yy') }}"
+                                    value="{{ Carbon::parse($facultybook->publication_date)->format('mm/dd/yy') }}"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
                                     placeholder="2021-06-18T12:30:00"
@@ -125,7 +128,8 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 mt-4 col-form-label" for="basic-icon-default-photo">Kitobning elektron shakli</label>
+                        <label class="col-sm-2 mt-4 col-form-label" for="basic-icon-default-photo">Kitobning elektron
+                            shakli</label>
                         <div class="col-sm-10">
                             <div class="demo-inline-spacing mt-3">
                                 <div class="list-group list-group-horizontal-md text-md-center">
@@ -147,8 +151,10 @@
                                 <div class="tab-content px-0 mt-0">
                                     <div class="tab-pane fade show active" id="horizontal-pdf">
                                         <div class="input-group">
-                                            <label class="input-group-text" for="inputGroupFile01">Pdf faylni yuklash</label>
-                                            <input type="file" name=file_pdf class="form-control" id="inputGroupFile01" value="{{$facultybook->file_url}}"/>
+                                            <label class="input-group-text" for="inputGroupFile01">Pdf faylni
+                                                yuklash</label>
+                                            <input type="file" name=file_pdf class="form-control" id="inputGroupFile01"
+                                                   value="{{$facultybook->file_url}}"/>
                                         </div>
                                         @error('file_pdf')
                                         <div class="alert alert-danger" role="alert">{{ $message }}</div>
@@ -157,7 +163,8 @@
                                     <div class="tab-pane fade" id="horizontal-url">
                                         <div class="input-group">
                                             <span class="input-group-text"><i class="bx bx-link"></i></span>
-                                            <span class="input-group-text" id="basic-icon-default-fc">Kitobning havolasi</span>
+                                            <span class="input-group-text"
+                                                  id="basic-icon-default-fc">Kitobning havolasi</span>
                                             <input
                                                 name="file_url"
                                                 type="text"
@@ -181,7 +188,7 @@
                         <div class="col-sm-10">
                             <div class="input-group">
                                 <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
-                                <input type="file" name=image_url class="form-control" id="inputGroupFile01" />
+                                <input type="file" name=image_url class="form-control" id="inputGroupFile01"/>
                             </div>
                             @error('image_url')
                             <div class="alert alert-danger" role="alert">{{ $message }}</div>

@@ -13,11 +13,11 @@ class ResearchersTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(): void
     {
         $faker = Faker::create();
 
-        foreach (range(1, 10) as $index) {
+        foreach (range(1, 10) as $ignored) {
             DB::table('researchers')->insert([
                 'fullname' => $faker->name,
                 'position' => $faker->jobTitle,

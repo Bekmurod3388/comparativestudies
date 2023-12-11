@@ -45,7 +45,6 @@
                 @enderror
             </div>
           </div>
-          </div>
           <div class="row justify-content-end mb-5">
             <div class="col-sm-10">
               <button type="submit" class="btn btn-primary">Qo'shish</button>
@@ -54,5 +53,4 @@
         </form>
       </div>
     </div>
-  </div>
 @endsection

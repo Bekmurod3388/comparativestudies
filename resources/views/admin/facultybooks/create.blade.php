@@ -162,7 +162,6 @@
                                     type="text"
                                     class="form-control"
                                     placeholder="URL"
-                                    id="basic-url1"
                                     aria-describedby="basic-icon-default-fc"
                                     value="{{old('file_url')}}"
                                 />

@@ -8,7 +8,6 @@ use App\Http\Controllers\ResearchersController;
 use App\Http\Controllers\FacultyBooksController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CarouselController;
 
 /*
 |--------------------------------------------------------------------------

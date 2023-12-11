@@ -71,6 +71,5 @@
             @endunless
         </div>
       </div>
-    </div>
 <!--/ Striped Rows -->
 @endsection

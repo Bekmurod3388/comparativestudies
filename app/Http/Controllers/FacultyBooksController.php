@@ -3,16 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\FacultyBook;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Redirector;
 
 class FacultyBooksController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
      */
-    public function index()
+    public function index(): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $facultyBooks = FacultyBook::all();
         return view('admin.facultybooks.index', compact('facultyBooks'));
@@ -21,9 +26,9 @@ class FacultyBooksController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
      */
-    public function create()
+    public function create(): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('admin.facultybooks.create');
     }
@@ -31,10 +36,10 @@ class FacultyBooksController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Contracts\Foundation\Application|Application|RedirectResponse|Redirector
      */
-    public function store(Request $request)
+    public function store(Request $request): Application|Redirector|RedirectResponse|\Illuminate\Contracts\Foundation\Application
     {
         $formFields = $request->validate([
             'book_name' => 'required|string',
@@ -66,10 +71,10 @@ class FacultyBooksController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\FacultyBook  $facultyBook
-     * @return \Illuminate\Http\Response
+     * @param FacultyBook $facultyBook
+     * @return Application|Factory|\Illuminate\Contracts\Foundation\Application|View
      */
-    public function show(FacultyBook $facultyBook)
+    public function show(FacultyBook $facultyBook): View|Factory|Application|\Illuminate\Contracts\Foundation\Application
     {
         return view('admin.facultybooks.show', compact('facultyBook'));
     }
@@ -77,10 +82,10 @@ class FacultyBooksController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\FacultyBook  $facultyBook
-     * @return \Illuminate\Http\Response
+     * @param FacultyBook $facultybook
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
      */
-    public function edit(FacultyBook $facultybook)
+    public function edit(FacultyBook $facultybook): Application|View|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('admin.facultybooks.edit', compact('facultybook'));
     }
@@ -88,11 +93,11 @@ class FacultyBooksController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\FacultyBook  $facultyBook
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param FacultyBook $facultyBook
+     * @return Application|\Illuminate\Contracts\Foundation\Application|Redirector|RedirectResponse
      */
-    public function update(Request $request, FacultyBook $facultyBook)
+    public function update(Request $request, FacultyBook $facultyBook): Application|Redirector|RedirectResponse|\Illuminate\Contracts\Foundation\Application
     {
         $formFields = $request->validate([
             'book_name' => 'required|string',
@@ -124,10 +129,10 @@ class FacultyBooksController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\FacultyBook  $facultyBook
-     * @return \Illuminate\Http\Response
+     * @param FacultyBook $facultyBook
+     * @return Application|\Illuminate\Contracts\Foundation\Application|Redirector|RedirectResponse
      */
-    public function destroy(FacultyBook $facultyBook)
+    public function destroy(FacultyBook $facultyBook): Application|Redirector|RedirectResponse|\Illuminate\Contracts\Foundation\Application
     {
         $facultyBook->delete();
 

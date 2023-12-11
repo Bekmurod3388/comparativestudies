@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @method static create(array $formFields)
+ */
 class FacultyBook extends Model
 {
     use HasFactory;
@@ -21,7 +24,7 @@ class FacultyBook extends Model
         'file_url',
     ];
 
-    protected $dates = [
+    protected array $dates = [
         'publication_date',
     ];
 }

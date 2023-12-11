@@ -14,7 +14,7 @@ class CarouselsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach (range(1, 10) as $index) {
+        foreach (range(1, 10) as $ignored) {
             DB::table('carousel')->insert([
                 'title' => $faker->sentence,
                 'img_url' => $faker->imageUrl(),
