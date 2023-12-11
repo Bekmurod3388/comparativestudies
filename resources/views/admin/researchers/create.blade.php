@@ -8,7 +8,7 @@
         <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
       </div>
       <div class="card-body demo-vertical-spacing demo-only-element">
-        <form method="POST" action="/dashboard/facultybooks/store" enctype="multipart/form-data">
+        <form method="POST" action="/dashboard/researchers/store" enctype="multipart/form-data">
           @csrf
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">F.I.SH</label>
