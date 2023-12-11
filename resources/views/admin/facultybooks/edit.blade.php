@@ -70,11 +70,9 @@
                                 <input
                                     name="publication_date"
                                     type="date"
-                                    value="{{ Carbon::parse($facultybook->publication_date)->format('mm/dd/yy') }}"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
-                                    placeholder="2021-06-18T12:30:00"
-                                    aria-label="2021-06-18T12:30:00"
+                                    value="{{ Carbon::parse($facultybook->publication_date)->format('Y-m-d') }}"
                                     aria-describedby="basic-icon-default-fullname2"
                                 />
                             </div>
