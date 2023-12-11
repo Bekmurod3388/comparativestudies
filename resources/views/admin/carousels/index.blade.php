@@ -15,6 +15,11 @@
                     </div>
                 </div>
             </div>
+            @if(session('success'))
+                <div class="alert alert-success mt-3" role="alert">
+                    {{ session('success') }}
+                </div>
+            @endif
             <div class="table-responsive text-nowrap">
                 <table class="table table-striped">
                     <thead>

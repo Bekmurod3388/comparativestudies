@@ -34,8 +34,8 @@ class CarouselsController extends Controller
             $formFields['img_url'] = $request->file('img_url')->store('carousel_photos', 'public');
         }
         Carousel::create($formFields);
-
-        return redirect('/dashboard/carousels');
+        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli qo`shildi.');
+//        return redirect('/dashboard/carousels');
     }
 
     public function edit(Carousel $carousel): View|\Illuminate\Foundation\Application|Factory|Application
@@ -54,13 +54,16 @@ class CarouselsController extends Controller
         }
         $carousel->update($formFields);
 
-        return redirect('/dashboard/carousels');
+        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli o`zgartirildi.');
+
+//        return redirect('/dashboard/carousels');
     }
 
     public function destroy(Carousel $carousel): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         $carousel->delete();
+        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli o`chirildi.');
 
-        return redirect('/dashboard/carousels');
+//        return redirect('/dashboard/carousels');
     }
 }

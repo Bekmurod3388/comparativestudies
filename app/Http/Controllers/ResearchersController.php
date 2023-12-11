@@ -45,7 +45,8 @@ class ResearchersController extends Controller
 
         Researchers::create($formFields);
 
-        return redirect('/dashboard/researchers');
+        return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli qo`shildi.');
+//        return redirect('/dashboard/researchers');
     }
 
     public function edit(Researchers $researcher): View|\Illuminate\Foundation\Application|Factory|Application
@@ -56,7 +57,8 @@ class ResearchersController extends Controller
     public function destroy(Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         $researcher->delete();
-        return redirect('/dashboard/researchers');
+        return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
+//        return redirect('/dashboard/researchers');
     }
 
     public function update(Request $request, Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
@@ -77,6 +79,7 @@ class ResearchersController extends Controller
 
         $researcher->update($formFields);
 
-        return redirect('/dashboard/researchers');
+        return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
+//        return redirect('/dashboard/researchers');
     }
 }

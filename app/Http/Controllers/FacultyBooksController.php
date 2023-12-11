@@ -64,8 +64,9 @@ class FacultyBooksController extends Controller
         }
 
         FacultyBook::create($formFields);
+        return redirect('/dashboard/facultybooks')->with('success', 'Kitob muvaffaqiyatli qo`shildi.');
 
-        return redirect('/dashboard/facultybooks/');
+//        return redirect('/dashboard/facultybooks/');
     }
 
     /**
@@ -123,7 +124,8 @@ class FacultyBooksController extends Controller
 
         $facultyBook->update($formFields);
 
-        return redirect('/dashboard/facultybooks/');
+        return redirect('/dashboard/facultybooks')->with('success', 'Kitob muvaffaqiyatli o`zgartirildi.');
+//        return redirect('/dashboard/facultybooks/');
     }
 
     /**
@@ -136,6 +138,7 @@ class FacultyBooksController extends Controller
     {
         $facultyBook->delete();
 
-        return redirect('/dashboard/facultybooks/');
+        return redirect('/dashboard/facultybooks')->with('success', 'Kitob muvaffaqiyatli o`chirildi.');
+//        return redirect('/dashboard/facultybooks/');
     }
 }
