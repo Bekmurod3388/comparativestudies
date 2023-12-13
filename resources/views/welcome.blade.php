@@ -32,7 +32,6 @@
 
     <title>Front Page | Program in Literature</title>
     <!-- TTS Nagios Verification -->
-    <link rel="stylesheet" href="{{asset('assets_front/css/style.css')}}">
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main.css')}}"/>
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/bootstrap-paragraphs-columns.min61e5.css')}}"/>
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main2.css')}}"/>
@@ -49,6 +48,7 @@
     <link rel="stylesheet" href="{{asset('assets_front/css/bootstrap-utilities.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets_front/css/bootstrap-reboot.min.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('assets_front/css/alert.css')}}">
+
     <style type="text/css">
         .duke-alert {
             margin: 0 auto;
@@ -91,6 +91,8 @@
             })
         });
     </script>
+    <link rel="stylesheet" href="{{asset('assets_front/css/style.css')}}">
+
 </head>
 
 <body class="exclude-node-title layout-no-sidebars page-node-37051 path-frontpage node--type-page">
@@ -338,7 +340,7 @@
                                                                     <div class="home_book-one showPopupBtn">
                                                                         <img class="popup-trigger"
                                                                              data-popup="left-popup"
-                                                                             src="{{asset('assets_front/img/bookleft.png')}}"
+                                                                             src="{{asset('/assets_front/img/bookleft.png')}}"
                                                                              alt="img">
                                                                         <p class="name_book2">Garb</p>
 
@@ -348,7 +350,7 @@
                                                                     <div class="home_book-two showPopupBtn">
                                                                         <img class="popup-trigger"
                                                                              data-popup="right-popup"
-                                                                             src="{{asset('assets_front/img/bookright.png')}}"
+                                                                             src="{{asset('/assets_front/img/bookright.png')}}"
                                                                              alt="img">
                                                                         <p class="name_book">Sharq</p>
 
@@ -662,33 +664,14 @@
                                                                                                                 id="slick-f035d89d184"
                                                                                                                 data-slick="{&quot;count&quot;:2,&quot;total&quot;:2,&quot;dots&quot;:true,&quot;appendDots&quot;:&quot;.slick__arrow&quot;,&quot;fade&quot;:true,&quot;infinite&quot;:false,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;touchMove&quot;:false,&quot;easing&quot;:&quot;&quot;,&quot;waitForAnimate&quot;:false}"
                                                                                                                 class="slick__slider">
+                                                                                                                @foreach($videos as $video)
                                                                                                                 <div
                                                                                                                     class="slick__slide slide slide--0">
-                                                                                                                    <video
-                                                                                                                        class="video_rol"
-                                                                                                                        width="500"
-                                                                                                                        height="300"
-                                                                                                                        controls>
-                                                                                                                        <source
-                                                                                                                            src="https://youtu.be/xboXxzj6kYg?si=qIdClQ5bcOp9yGQE"
-                                                                                                                            type="video/mp4">
-                                                                                                                    </video>
+                                                                                                                    <iframe class="video_rol" width="500" height="300" src="{{$video->video_url}}" frameborder="0" allowfullscreen></iframe>
 
                                                                                                                 </div>
-                                                                                                                <div
-                                                                                                                    class="slick__slide slide slide--1">
-                                                                                                                    <video
-                                                                                                                        class="video_rol"
-                                                                                                                        border-radius="10px"
-                                                                                                                        width="500"
-                                                                                                                        height="300"
-                                                                                                                        controls>
-                                                                                                                        <source
-                                                                                                                            src="https://youtu.be/xboXxzj6kYg?si=qIdClQ5bcOp9yGQE"
-                                                                                                                            type="video/mp4">
-                                                                                                                    </video>
+                                                                                                                @endforeach
 
-                                                                                                                </div>
                                                                                                             </div>
                                                                                                             <nav
                                                                                                                 role="navigation"
