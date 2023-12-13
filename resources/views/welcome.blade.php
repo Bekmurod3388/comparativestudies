@@ -175,15 +175,13 @@
             <div id="block-tts-sub-branding"
                  class="clearfix block block-system block-system-branding-block">
                 <div class="site-logo">
-                    <a href="http://trinity.duke.edu/"
+                    <a href="#"
                        title="Duke University - Trinity College of Arts and Sciences"><img
-                            src="{{asset('assets_front/img/trinity-logo.svg')}}"
-                            alt="Duke University - Trinity College of Arts and Sciences"/></a>
+                            src="{{asset('assets_front/img/logo.png')}}"
+                            alt="O'zbekiston jahon tillari universiteti"/></a>
                 </div>
                 <div class="site-name">
-                    <a href="index.html" title="Program in Literature" rel="home"><span><img
-                                src="sites/literature.duke.edu/themes/tts_sub/logo.svg"
-                                alt="Program in Literature">Program in Literature</span></a>
+                    <span>O'zbekiston jahon tillari universiteti</span>
                 </div>
             </div>
         </div>
