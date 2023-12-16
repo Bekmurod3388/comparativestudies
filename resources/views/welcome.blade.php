@@ -337,7 +337,7 @@
                                                              class="container-fluid py-6 my-6 mt-0 earth">
                                                             <div class="container">
                                                                 <div class="align-items-center">
-                                                                    <div class="home_book-one showPopupBtn">
+                                                                    <div class="home_book-one" data-toggle="modal" data-target="#LeftModalCenter">
                                                                         <img class="popup-trigger"
                                                                              data-popup="left-popup"
                                                                              src="{{asset('/assets_front/img/bookleft.png')}}"
@@ -347,133 +347,18 @@
                                                                     </div>
 
                                                                     <div id="box"></div>
-                                                                    <div class="home_book-two showPopupBtn">
+                                                                    <div class="home_book-two" data-toggle="modal" data-target="#RightModalCenter">
                                                                         <img class="popup-trigger"
                                                                              data-popup="right-popup"
                                                                              src="{{asset('/assets_front/img/bookright.png')}}"
                                                                              alt="img">
                                                                         <p class="name_book">Sharq</p>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="popup">
-                                                            <div class="popup-content">
-                                                                <div class="popup2" id="left-popup">
-                                                                    <div class="popup_sharq">
-                                                                        <p>Sharq</p>
-                                                                        <div class="popup_sharq-box">
-                                                                            <div class="popup_sharq-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_sharq-name">
-                                                                                Uzbekiston
-                                                                            </div>
-                                                                            <div class="popup_sharq-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="popup_sharq-box">
-                                                                            <div class="popup_sharq-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_sharq-name">
-                                                                                Uzbekiston
-                                                                            </div>
-                                                                            <div class="popup_sharq-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="popup_sharq-box">
-                                                                            <div class="popup_sharq-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_sharq-name">
-                                                                                Uzbekiston
-                                                                            </div>
-                                                                            <div class="popup_sharq-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="popup_sharq-box">
-                                                                            <div class="popup_sharq-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_sharq-name">
-                                                                                Uzbekiston
-                                                                            </div>
-                                                                            <div class="popup_sharq-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <button class="close-popup">Закрыть</button>
-                                                                </div>
-                                                                <div class="popup2" id="right-popup">
-                                                                    <div class="popup_garb">
-                                                                        <p>Garb</p>
-                                                                        <div class="popup_garb-box">
-                                                                            <div class="popup_garb-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_garb-name">Rossiya
-                                                                            </div>
-                                                                            <div class="popup_garb-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="popup_garb-box">
-                                                                            <div class="popup_garb-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_garb-name">Rossiya
-                                                                            </div>
-                                                                            <div class="popup_garb-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="popup_garb-box">
-                                                                            <div class="popup_garb-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_garb-name">Rossiya
-                                                                            </div>
-                                                                            <div class="popup_garb-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-
-                                                                        <div class="popup_garb-box">
-                                                                            <div class="popup_garb-about">
-                                                                                malumot
-                                                                            </div>
-                                                                            <div class="popup_garb-name">Rossiya
-                                                                            </div>
-                                                                            <div class="popup_garb-btn">
-                                                                                <button>Batafsil</button>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <button class="close-popup">Закрыть</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                        @include('user.components.centers_popup')
                                                     </div>
-
                                                     <div
                                                         class="paragraph paragraph--type--front-page-quick-links paragraph--view-mode--default paragraph--id--79">
                                                         <div class="paragraph__column">
@@ -710,11 +595,9 @@
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
-
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-
                                                                         </div>
                                                                     </div>
                                                                 </div>
