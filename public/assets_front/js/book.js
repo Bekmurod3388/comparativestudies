@@ -49,30 +49,3 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // Объединение обработчиков событий для кнопок закрытия
-window.addEventListener("load", function () {
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#001a57"
-        },
-        "button": {
-          "background": "#ffd960",
-          "color": "#000000"
-        }
-      },
-      "content": {
-        "message": "This website uses cookies as well as similar tools and technologies to understand visitors' experiences. By continuing to use this website, you consent to Duke University's usage of cookies and similar technologies, in accordance with the ",
-        "dismiss": "I ACCEPT",
-        "link": "Duke Privacy Statement.",
-        "href": 'https://oarc.duke.edu/privacy/duke-university-privacy-statement'
-      },
-      "onPopupOpen": function () {
-        var dismiss = document.getElementsByClassName("cc-dismiss");
-        Array.prototype.forEach.call(dismiss, function (elem) {
-          elem.addEventListener("keypress", function (e) {
-            if ((e.keyCode == 32) || (e.keyCode == 13)) { e.preventDefault(); e.target.click(); }
-          });
-        });
-      }
-    })
-  });

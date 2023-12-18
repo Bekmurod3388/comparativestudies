@@ -453,3 +453,133 @@
 .artics_text p{
     margin-left: 20px;
 }
+.navbar-text-name{
+    font-size: 23px;
+    color: #fff;
+}
+@media (max-width:900px) {
+    #articles{
+        flex-direction: column;
+    }
+    #artics{
+        width: 100%;
+    }
+
+}
+.book_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-nav .nav-link{
+    text-transform: uppercase;
+}
+.project-o {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 100px 0;
+}
+.container-fluid{
+    margin-top: 100px;
+
+}
+.project-o::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(".././img/background.jpg") no-repeat center center / cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.project_objectives-box-start {
+    position: relative;
+    z-index: 1;
+}
+
+
+.project_objectives-img {
+    width: 90px;
+    height: 130px;
+}
+
+.project_objectives-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.prject_objectives-text h3 {
+    color: #080260;
+}
+
+.project_objectives-box-start {
+    background-color: #f6f6f6;
+    padding: 40px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.project_objectives-box-start:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+}
+
+.project_objectives-pdf {
+    background-color: #240090;
+    color: #fff;
+    width: 95px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project_objectives-pdf:hover {
+    background-color: #080260;
+    transition: all 0.3s ease;
+}
+
+.project_objectives-box {
+    margin-bottom: 30px;
+}
+
+@media(max-width:1300px){
+    .prject_objectives-text h3{
+        font-size: 18px;
+    }
+}
+@media(max-width:990px){
+    .project_objectives-img{
+        width: 70px;
+        height: 100px;
+    }
+    .prject_objectives-text h3{
+        font-size: 12px;
+    }
+    .prject_objectives-text p{
+        font-size:8px;
+    }
+}
+@media(max-width:768px){
+    .project_objectives-box-start{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .prject_objectives-text{
+        text-align: center;
+    }
+}

@@ -164,7 +164,7 @@
                                     @if (Route::has('register'))
                                         <li>
                                         <a href="{{ route('register') }}"
-                                           class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Ro'yxatdan o'tish</a>
+                                           class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Ro'yxatdan o'tish</a>
                                         </li>
                     @endif
                     @endauth
@@ -182,7 +182,7 @@
                             src="{{asset('assets_front/img/logo.png')}}"
                             alt="O'zbekiston jahon tillari universiteti"/></a>
                 </div>
-                <div class="site-name">
+                <div class="navbar-text-name">
                     <span>O'zbekiston jahon tillari universiteti</span>
                 </div>
             </div>
@@ -228,7 +228,7 @@
                                 <ul>
                                     <li id="main-menu-link-content62f18183-51b8-4622-ab43-d702dbcaa026"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="undergraduate/major-minor-certificates.html"
+                                            href="../views/dissertation.html"
                                             class="sf-depth-2">Dissertatsiyalar</a></li>
                                     <li id="main-menu-link-content8d4e2c93-1380-4b9b-85d8-4efac43921ee"
                                         class="sf-depth-2 sf-no-children"><a
