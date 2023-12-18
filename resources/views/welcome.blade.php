@@ -328,61 +328,8 @@
                                                                                                     Bizning
                                                                                                     Videolar
                                                                                                 </div>
-                                                                                                <div
-                                                                                                    class="view view-courses view-id-courses view-display-id-block_8 js-view-dom-id-6de772886e423b64858595ea9f7f5bb786aad17ec361f8e2fb01778601975bcf">
-
-                                                                                                    <div
-                                                                                                        class="view-content row">
-                                                                                                        <div
-                                                                                                            class="slick blazy slick--view slick--view--courses slick--view--courses--block-8 slick--view--courses-block-block-8 is-b-captioned is-b-ajax slick--optionset--large-feature-slider"
-                                                                                                            data-blazy="">
-                                                                                                            <div
-                                                                                                                id="slick-f035d89d184"
-                                                                                                                data-slick="{&quot;count&quot;:2,&quot;total&quot;:2,&quot;dots&quot;:true,&quot;appendDots&quot;:&quot;.slick__arrow&quot;,&quot;fade&quot;:true,&quot;infinite&quot;:false,&quot;lazyLoad&quot;:&quot;blazy&quot;,&quot;touchMove&quot;:false,&quot;easing&quot;:&quot;&quot;,&quot;waitForAnimate&quot;:false}"
-                                                                                                                class="slick__slider">
-                                                                                                                @foreach($videos as $video)
-                                                                                                                <div
-                                                                                                                    class="slick__slide slide slide--0">
-                                                                                                                    <iframe class="video_rol" width="500" height="300" src="{{$video->video_url}}" frameborder="0" allowfullscreen></iframe>
-
-                                                                                                                </div>
-                                                                                                                @endforeach
-
-                                                                                                            </div>
-                                                                                                            <nav
-                                                                                                                role="navigation"
-                                                                                                                class="slick__arrow">
-                                                                                                                <button
-                                                                                                                    type="button"
-                                                                                                                    data-role="none"
-                                                                                                                    class="slick-prev"
-                                                                                                                    aria-label="Previous"
-                                                                                                                    tabindex="0">
-                                                                                                                    Previous
-                                                                                                                </button>
-                                                                                                                <button
-                                                                                                                    type="button"
-                                                                                                                    data-role="none"
-                                                                                                                    class="slick-next"
-                                                                                                                    aria-label="Next"
-                                                                                                                    tabindex="0">
-                                                                                                                    Next
-                                                                                                                </button>
-                                                                                                            </nav>
-                                                                                                        </div>
-
-                                                                                                    </div>
-
-                                                                                                    <div
-                                                                                                        class="view-footer">
-                                                                                                        <div
-                                                                                                            class="more-link">
-                                                                                                            <a
-                                                                                                                href="courses.html">Barcha
-                                                                                                                Videolarimiz
-                                                                                                            </a>
-                                                                                                        </div>
-                                                                                                    </div>
+                                                                                                <div class="container">
+                                                                                                    @include('user.components.our_videos')
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>

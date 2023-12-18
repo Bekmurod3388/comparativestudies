@@ -11,7 +11,7 @@ use App\Service\CountryService;
 class HomeController extends Controller
 {
     public function index(){
-        $videos = Video::all();
+        $videos = Video::latest()->simplePaginate(1);
 
         $centers = Center::all()->sortBy(['type', 'country', 'name']); // Sort by 'type', 'country', and 'name'
         $centersByType = $centers->groupBy('type');
