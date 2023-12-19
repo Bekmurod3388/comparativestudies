@@ -19,4 +19,9 @@ class HomeController extends Controller
         $researchers = Researchers::all(); // Sort by 'type', 'country', and 'name'
         return view('welcome',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
     }
+
+    public function dissertations(){
+        $dissertation = Researchers::all();
+        return view('user.pages.dissertation',["dissertation"=>$dissertation]);
+    }
 }

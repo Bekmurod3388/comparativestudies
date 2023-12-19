@@ -1,0 +1,107 @@
+@extends('user.components.master')
+@section('content')
+    <div class="container mt-5">
+        <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="row g-0 book_center">
+                    <div class="col-10">
+                        <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                            <div class="text-center">
+                                <small
+                                    class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Dissertatsiyalar</small>
+                                <h1 class="display-5 mb-5">Dissertatsiya qidirish uchun ma`lumotlarni to`ldiring</h1>
+                            </div>
+                            <div class="row g-4 form">
+                                <div class="col-lg-4 col-md-6">
+                                    <select class="form-select border-primary p-2" aria-label="Default select example">
+                                        <option selected>Davlat</option>
+                                        <option value="1">USA</option>
+                                        <option value="2">UK</option>
+                                        <option value="3">India</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <select class="form-select border-primary p-2" aria-label="Default select example">
+                                        <option selected>Barcha Mualliflar</option>
+                                        <option value="1">Depend On Country</option>
+                                        <option value="2">UK</option>
+                                        <option value="3">India</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <select class="form-select border-primary p-2" aria-label="Default select example">
+                                        <option selected>Kutubxona</option>
+                                        <option value="1">Depend On Country</option>
+                                        <option value="2">UK</option>
+                                        <option value="3">India</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <select class="form-select border-primary p-2" aria-label="Default select example">
+                                        <option selected>Xususiyatlarga Havola</option>
+                                        <option value="1">Event Type</option>
+                                        <option value="2">Big Event</option>
+                                        <option value="3">Small Event</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <select class="form-select border-primary p-2" aria-label="Default select example">
+                                        <option selected>Identifikatsiya Raqami</option>
+                                        <option value="1">100-200</option>
+                                        <option value="2">300-400</option>
+                                        <option value="3">500-600</option>
+                                        <option value="4">700-800</option>
+                                        <option value="5">900-1000</option>
+                                        <option value="6">1000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project-o">
+            <div class="container">
+                <div class="project_objectives-start">
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
+                                <p> Registratsiya kodi: No 181 (703)</p>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" src="" frameborder="0">Maqola</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
+                                <p> Registratsiya kodi: No 181 (703)</p>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" src="" frameborder="0">Maqola</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
+                                <p> Registratsiya kodi: No 181 (703)</p>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" src="" frameborder="0">Maqola</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
