@@ -70,17 +70,6 @@ class FacultyBooksController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param FacultyBook $facultyBook
-     * @return Application|Factory|\Illuminate\Contracts\Foundation\Application|View
-     */
-    public function show(FacultyBook $facultyBook): View|Factory|Application|\Illuminate\Contracts\Foundation\Application
-    {
-        return view('admin.facultybooks.show', compact('facultyBook'));
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param FacultyBook $facultybook

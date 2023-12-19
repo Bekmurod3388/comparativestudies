@@ -12,58 +12,93 @@ use Illuminate\Routing\Redirector;
 
 class CarouselsController extends Controller
 {
-    public function index(): View|\Illuminate\Foundation\Application|Factory|Application
+    /**
+     * Display a listing of the carousels.
+     *
+     * @return View|Application|Factory
+     */
+    public function index(): View|Application|Factory
     {
         $carousels = Carousel::all();
-
         return view('admin.carousels.index', compact('carousels'));
     }
 
-    public function create(): View|\Illuminate\Foundation\Application|Factory|Application
+    /**
+     * Show the form for creating a new carousel.
+     *
+     * @return View|Application|Factory
+     */
+    public function create(): View|Application|Factory
     {
         return view('admin.carousels.create');
     }
 
-    public function store(Request $request): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    /**
+     * Store a newly created carousel in storage.
+     *
+     * @param Request $request
+     * @return Application|Redirector|RedirectResponse
+     */
+    public function store(Request $request): Application|Redirector|RedirectResponse
     {
         $formFields = $request->validate([
             'title' => 'required|string|max:255',
             'img_url' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        if($request->hasFile('img_url')){
+
+        if ($request->hasFile('img_url')) {
             $formFields['img_url'] = $request->file('img_url')->store('carousel_photos', 'public');
         }
+
         Carousel::create($formFields);
-        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli qo`shildi.');
-//        return redirect('/dashboard/carousels');
+
+        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli qo`shildi');
     }
 
-    public function edit(Carousel $carousel): View|\Illuminate\Foundation\Application|Factory|Application
+    /**
+     * Show the form for editing the specified carousel.
+     *
+     * @param Carousel $carousel
+     * @return View|Application|Factory
+     */
+    public function edit(Carousel $carousel): View|Application|Factory
     {
         return view('admin.carousels.edit', compact('carousel'));
     }
 
-    public function update(Request $request, Carousel $carousel): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    /**
+     * Update the specified carousel in storage.
+     *
+     * @param Request $request
+     * @param Carousel $carousel
+     * @return Application|Redirector|RedirectResponse
+     */
+    public function update(Request $request, Carousel $carousel): Application|Redirector|RedirectResponse
     {
         $formFields = $request->validate([
             'title' => 'required|string|max:255',
             'img_url' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-        if($request->hasFile('img_url')){
+
+        if ($request->hasFile('img_url')) {
             $formFields['img_url'] = $request->file('img_url')->store('carousel_photos', 'public');
         }
+
         $carousel->update($formFields);
 
-        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli o`zgartirildi.');
-
-//        return redirect('/dashboard/carousels');
+        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli yangilandi.');
     }
 
-    public function destroy(Carousel $carousel): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    /**
+     * Remove the specified carousel from storage.
+     *
+     * @param Carousel $carousel
+     * @return Application|Redirector|RedirectResponse
+     */
+    public function destroy(Carousel $carousel): Application|Redirector|RedirectResponse
     {
         $carousel->delete();
-        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli o`chirildi.');
 
-//        return redirect('/dashboard/carousels');
+        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli o`chirildi.');
     }
 }
