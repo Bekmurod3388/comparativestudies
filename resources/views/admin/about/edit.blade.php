@@ -10,7 +10,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('abouts.update', $about->id) }}">
+            <form method="POST" action="{{ route('abouts.update', $about->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
 
@@ -20,14 +20,15 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="url">URL</label>
+                    <label for="url" id="url_text">URL</label>
                     <input type="url" class="form-control" id="url" name="url" required value="{{ $about->url }}">
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="type">Turi</label>
-                    <select class="form-control" id="type" name="type" required>
+                    <select class="form-control" id="type" name="type" required onchange="selectType(this.value)">
                         <option value="youtube">YouTube</option>
+                        <option value="sayt">Web-sayt</option>
                         <option value="gazeta">Gazeta</option>
                     </select>
                 </div>
@@ -38,5 +39,26 @@
     </div>
     <script>
         document.getElementById("type").value = '{{ $about->type }}';
+    </script>
+@endsection
+@section("js")
+    <script>
+        function selectType(type){
+            var url = $("#url");
+            if (type == "gazeta"){
+                url.attr({
+                    type: "file",
+                    accept: ".pdf"
+                });
+                $("#url_text").text("File");
+            }
+            if (type == "sayt" || type == "youtube"){
+                url.attr({
+                    type: "url",
+                });
+                $("#url_text").text("URL");
+            }
+        }
+        selectType('{{ $about->type }}');
     </script>
 @endsection

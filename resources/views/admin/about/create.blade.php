@@ -10,7 +10,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('abouts.store') }}">
+            <form action="{{ route('abouts.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group mb-3">
@@ -19,14 +19,15 @@
                 </div>
 
                 <div class="form-group mb-3">
-                    <label for="url">URL</label>
+                    <label for="url" id="url_text">URL</label>
                     <input type="url" class="form-control" id="url" name="url" required>
                 </div>
 
                 <div class="form-group mb-3">
                     <label for="type">Turi</label>
-                    <select class="form-control" id="type" name="type" required>
+                    <select class="form-control" id="type" name="type" required onchange="selectType(this)">
                         <option value="youtube">YouTube</option>
+                        <option value="sayt">Web-sayt</option>
                         <option value="gazeta">Gazeta</option>
                     </select>
                 </div>
@@ -35,4 +36,24 @@
             </form>
         </div>
     </div>
+@endsection
+@section("js")
+    <script>
+        function selectType(type){
+            var url = $("#url");
+            if (type.value == "gazeta"){
+                url.attr({
+                    type: "file",
+                    accept: ".pdf"
+                });
+                $("#url_text").text("File");
+            }
+            if (type.value == "sayt" || type.value == "youtube"){
+                url.attr({
+                    type: "url",
+                });
+                $("#url_text").text("URL");
+            }
+        }
+    </script>
 @endsection
