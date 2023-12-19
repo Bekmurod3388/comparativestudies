@@ -366,92 +366,18 @@
 
                                                                                         <div
                                                                                             class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
-                                                                                            <h2>Graduate
-                                                                                                Program</h2>
+                                                                                            <h2>Belgilangan maqsadlar quyidagi vazifalarni bajarishni taqozo etadi:<br><br></h2>
 
-                                                                                            <p>The Graduate
-                                                                                                Program
-                                                                                                in Literature
-                                                                                                (GPL)
-                                                                                                endeavors to
-                                                                                                train
-                                                                                                future scholars
-                                                                                                in
-                                                                                                theory and
-                                                                                                global
-                                                                                                culture.
-                                                                                                Originally
-                                                                                                conceived as a
-                                                                                                critical
-                                                                                                expansion
-                                                                                                of "comparative
-                                                                                                literature"
-                                                                                                beyond
-                                                                                                its founding
-                                                                                                Eurocentrism and
-                                                                                                its
-                                                                                                (near) exclusive
-                                                                                                focus on
-                                                                                                literature
-                                                                                                and language,
-                                                                                                the
-                                                                                                GPL hosts a
-                                                                                                robust
-                                                                                                range of
-                                                                                                scholarship
-                                                                                                and teaching in
-                                                                                                a
-                                                                                                variety of
-                                                                                                areas,
-                                                                                                ranging from
-                                                                                                feminist and
-                                                                                                gender
-                                                                                                studies to
-                                                                                                political
-                                                                                                theory and
-                                                                                                Marxism,
-                                                                                                from
-                                                                                                psychoanalysis
-                                                                                                to cognitive
-                                                                                                studies
-                                                                                                and
-                                                                                                neuroscience,
-                                                                                                from philosophy
-                                                                                                of
-                                                                                                language and
-                                                                                                experimental
-                                                                                                literature to
-                                                                                                media
-                                                                                                studies in the
-                                                                                                digital age, and
-                                                                                                from global
-                                                                                                cinema
-                                                                                                and film theory
-                                                                                                to
-                                                                                                visual culture
-                                                                                                and
-                                                                                                postcolonial
-                                                                                                studies. The
-                                                                                                program
-                                                                                                defines itself
-                                                                                                through its
-                                                                                                diverse
-                                                                                                investment in
-                                                                                                theory
-                                                                                                and is dedicated
-                                                                                                to
-                                                                                                understanding
-                                                                                                literary and
-                                                                                                cultural history
-                                                                                                as
-                                                                                                a complex and
-                                                                                                evolving
-                                                                                                exchange
-                                                                                                between the past
-                                                                                                and
-                                                                                                the
-                                                                                                (future-oriented)
-                                                                                                present.</p>
+                                                                                            <p>a) adabiyotshunoslik, tilshunoslik sohalarida manbashunoslik va matnshunoslikning oʼrni va tadqiq obʼektlaridagi tutash nuqtalarni aniqlash; matn tarixi va matn tanqidi tushunchasi; ilmiy-tanqidiy matn tuzishning tasnifiy-qiyosiy mezonlari kabilar haqida nazariy bilim berish;<br><br>
+                                                                                                b) mamlakatimiz qoʼlyozma kitoblar fondlaridagi adabiy manbalar toʼla katalogining shartli roʼyxatini shakllantirish;<br><br>
+
+                                                                                                d) shakllantirilgan katalog asosida Yevropa qadimiy kitoblar fondlaridagi adabiy manbalarni qiyosiy oʼrganish;<br><br>
+
+                                                                                                e) Yevropa fondlaridagi adabiy manbalarni tizimli asosda xronologik, tematik tasnif qilish, qoʼlyozma nusxalarining tashqi va ichki xususiyatlaridan kelib chiqib, ularning toʼliq tavsifini tayyorlash;<br><br>
+
+                                                                                                f) loyiha doirasida amalga oshirilgan tadqiqotning tezislar toʼplamini oʼzbek, rus, ingliz tillarida, shuningdek, ularga ilova boʼlgan koʼrgazmali audio va videomateriallarni taqdim etish;<br><br>
+
+                                                                                                g) “Yevroturcologica.uz” elektron platformasining turkiy qoʼlyozma adabiy manbalar toʼla katalogi va qomusiy lugʼatini oʼz ichiga olgan mulьtimedia dasturiy mahsulotlarini yaratish.</p>
 
                                                                                             <p>
                                                                                                 <a class="btn-primary"
