@@ -32,9 +32,8 @@ class AboutController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'url' => 'required|url',
+            'url' => 'required',
         ]);
-
         $url = $request->url;
         if ($request->type == "youtube"){
             $url = $request->url;
@@ -45,6 +44,11 @@ class AboutController extends Controller
             }
         }
 
+        if ($request->type == "gazeta"){
+            $fileName = time().'.'.$url->extension();
+            $url->storeAs('public/oav_pdf', $fileName);
+            $url = $fileName;
+        }
 
         About::create([
             "title" => $request->title,
@@ -76,9 +80,10 @@ class AboutController extends Controller
      */
     public function update(Request $request, About $about)
     {
+
         $request->validate([
             'title' => 'required',
-            'url' => 'required|url',
+            'url' => 'required',
         ]);
 
         $url = $request->url;
@@ -89,6 +94,12 @@ class AboutController extends Controller
             if ($query = parse_url($url, PHP_URL_QUERY)) {
                 $url .= '?' . $query;
             }
+        }
+
+        if ($request->type == "gazeta"){
+            $fileName = time().'.'.$url->extension();
+            $url->storeAs('public/oav_pdf', $fileName);
+            $url = $fileName;
         }
 
         $about->update([

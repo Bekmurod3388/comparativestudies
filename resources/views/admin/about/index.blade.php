@@ -38,13 +38,19 @@
                             <td>{{ $loop->index+1 }}</td>
                             <td>{{ $video->title }}</td>
                             <td>
+                                @if($video->type == "gazeta")
+                                    <a href="{{ asset('storage/oav_pdf/' . $video->url) }}" target="_blank">Ko'rish uchun bosing</a>
+                                @else
                                 <a href="{{ $video->url }}" target="_blank">Ko'rish uchun bosing</a>
+                                @endif
                             </td>
                             <td>
                                 @if($video->type == "gazeta")
                                     <span class="badge bg-label-primary me-1">Gazeta</span>
                                 @elseif($video->type == "youtube")
                                     <span class="badge bg-label-danger me-1">YouTube</span>
+                                @elseif($video->type == "sayt")
+                                    <span class="badge bg-label-warning me-1">Web-sayt</span>
                                 @endif
                             </td>
                             <td>
