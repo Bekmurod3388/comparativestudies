@@ -8,7 +8,8 @@
 
         function gtag() {
             dataLayer.push(arguments)
-        };gtag("js", new Date());
+        }
+        gtag("js", new Date());
         gtag("set", "developer_id.dMDhkMT", true);
         gtag("config", "UA-7538209-19", {
             "groups": "default",
@@ -16,8 +17,6 @@
             "page_placeholder": "PLACEHOLDER_page_path"
         });
         gtag("config", "G-4WWP1WL629", {"groups": "default", "page_placeholder": "PLACEHOLDER_page_location"});</script>
-    <link rel="canonical" href="index.html"/>
-    <link rel="shortlink" href="index.html"/>
     <meta name="Generator" content="Drupal 10 (https://www.drupal.org)"/>
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
@@ -34,7 +33,7 @@
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main3.css')}}"/>
     <link rel="stylesheet" media="print" href="{{asset('assets_front/css/main4.css')}}"/>
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main5.css')}}"/>
-    <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main6.css')}}"/>
     <link rel="stylesheet" href="{{asset('assets_front/css/main-last.css')}}">
     <link rel="stylesheet" href="{{asset('assets_front/css/bootstrap.min.css')}}">
@@ -45,12 +44,6 @@
     <link rel="stylesheet" href="{{asset('assets_front/css/bootstrap-reboot.min.css')}}">
     <link rel="stylesheet" type="text/css" media="screen" href="{{asset('assets_front/css/alert.css')}}">
 
-    <style type="text/css">
-        .duke-alert {
-            margin: 0 auto;
-            display: none;
-        }
-    </style>
     <script src="{{asset('assets_front/js/cookieconsent.min.js')}}"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -74,10 +67,10 @@
                     "href": 'https://oarc.duke.edu/privacy/duke-university-privacy-statement'
                 },
                 "onPopupOpen": function () {
-                    var dismiss = document.getElementsByClassName("cc-dismiss");
+                    const dismiss = document.getElementsByClassName("cc-dismiss");
                     Array.prototype.forEach.call(dismiss, function (elem) {
                         elem.addEventListener("keypress", function (e) {
-                            if ((e.keyCode == 32) || (e.keyCode == 13)) {
+                            if ((e.keyCode === 32) || (e.keyCode === 13)) {
                                 e.preventDefault();
                                 e.target.click();
                             }
@@ -91,7 +84,7 @@
 
 </head>
 <body class="exclude-node-title layout-no-sidebars page-node-37051 path-frontpage node--type-page">
-<a href="#main-content" class="visually-hidden focusable skip-link">
+<a href="#" class="visually-hidden focusable skip-link">
     Skip to main content
 </a>
 <script src="https://alertbar.oit.duke.edu/alert.html"></script>
