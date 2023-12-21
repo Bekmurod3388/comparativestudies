@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\Foundation\Application;
@@ -12,6 +11,7 @@ use Illuminate\Routing\Redirector;
 
 class ResearchersController extends Controller
 {
+    // Display all researchers
     public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('admin.researchers.index', [
@@ -19,13 +19,16 @@ class ResearchersController extends Controller
         ]);
     }
 
+    // Display create researcher form
     public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('admin.researchers.create');
     }
 
+    // Store a new researcher
     public function store(Request $request): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
+        // Validate form fields
         $formFields = $request->validate([
             'fullname' => 'required',
             'position' => 'required',
@@ -35,34 +38,39 @@ class ResearchersController extends Controller
             'instagram_url' => 'required'
         ]);
 
+        // Handle photo upload
         if($request->hasFile('photo')){
             $formFields['photo'] = $request->file('photo')->store('researcher_photos', 'public');
         } else {
             $formFields['photo'] = "no";
-         }
+        }
 
         $formFields['twitter_url'] = "no";
 
+        // Create a new researcher
         Researchers::create($formFields);
 
         return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli qo`shildi.');
-//        return redirect('/dashboard/researchers');
     }
 
+    // Display edit researcher form
     public function edit(Researchers $researcher): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('admin.researchers.edit', ['researcher' => $researcher]);
     }
 
+    // Delete a researcher
     public function destroy(Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         $researcher->delete();
+
         return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
-//        return redirect('/dashboard/researchers');
     }
 
+    // Update a researcher
     public function update(Request $request, Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
+        // Validate form fields
         $formFields = $request->validate([
             'fullname' => 'required',
             'position' => 'required',
@@ -73,13 +81,14 @@ class ResearchersController extends Controller
             'photo' => 'image|mimes:jpeg,png,jpg,svg|max:2048'
         ]);
 
+        // Handle photo upload
         if($request->hasFile('photo')){
             $formFields['photo'] = $request->file('photo')->store('researcher_photos', 'public');
         }
 
+        // Update the researcher
         $researcher->update($formFields);
 
         return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
-//        return redirect('/dashboard/researchers');
     }
 }

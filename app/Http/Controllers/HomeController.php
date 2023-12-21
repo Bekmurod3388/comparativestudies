@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Video;
 use App\Models\Center;
 use App\Models\Researchers;
-use Illuminate\Http\Request;
+use App\Models\Dissertations;
 use App\Service\CountryService;
 
 class HomeController extends Controller
@@ -17,11 +17,17 @@ class HomeController extends Controller
         $centersByType = $centers->groupBy('type');
         $countries = CountryService::get_countries();
         $researchers = Researchers::all(); // Sort by 'type', 'country', and 'name'
-        return view('welcome',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
+        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
     }
 
     public function dissertations(){
-        $dissertation = Researchers::all();
-        return view('user.pages.dissertation',["dissertation"=>$dissertation]);
-    }
+
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+
+//        $dissertations = Dissertations::
+
+        // Pass the distinct countries to the view
+        return view('user.pages.dissertation', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 }

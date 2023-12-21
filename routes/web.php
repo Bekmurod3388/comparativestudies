@@ -7,6 +7,7 @@ use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\CarouselsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResearchersController;
+use App\Http\Controllers\DissertationsController;
 use App\Http\Controllers\FacultyBooksController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/dissertations', [HomeController::class,'dissertations'])->name('dissertations');
+Route::get('/dissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
 
 
 Route::get('/dashboard', function () {
@@ -40,6 +41,13 @@ Route::middleware('auth')->group(function () {
     Route::resource('/abouts', AboutController::class);
     Route::resource('/centers', CenterController::class);
 
+    /****************** DISSERTATIONS **********************************************************************************/
+    Route::get('/dashboard/dissertations', [DissertationsController::class, 'index'])->name('dissertations');
+    Route::get('/dashboard/dissertations/create', [DissertationsController::class, 'create'])->name('dissertations.create');
+    Route::post('/dashboard/dissertations/store', [DissertationsController::class, 'store'])->name('dissertations.store');
+    Route::get('/dashboard/dissertations/{dissertation}/edit', [DissertationsController::class, 'edit'])->name('dissertations.edit');
+    Route::delete('/dashboard/dissertations/{dissertation}', [DissertationsController::class, 'destroy'])->name('dissertations.delete');
+    Route::put('/dashboard/dissertations/{dissertation}', [DissertationsController::class, 'update'])->name('dissertations.update');
 
     /****************** RESEARCHERS **********************************************************************************/
     Route::get('/dashboard/researchers', [ResearchersController::class, 'index'])->name('researchers');
