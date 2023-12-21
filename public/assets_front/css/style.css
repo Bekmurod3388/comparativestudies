@@ -274,12 +274,12 @@
   @media(max-width: 540px){
     .name_book{
         bottom: 30px;
-        left: 20px;
+        left: 35px;
         font-size: 15px;
     }
     .name_book2{
         bottom: 30px;
-        right: 20px;
+        left: 35px;
         font-size: 15px;
     }
   }
@@ -460,6 +460,11 @@
 .navbar-text-name{
     font-size: 23px;
     color: #fff;
+}
+@media(max-width:550px){
+    .navbar-text-name span{
+        font-size: 16px;
+    }
 }
 @media (max-width:900px) {
     #articles{
