@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/dissertations', [HomeController::class,'dissertations'])->name('dissertations');
+Route::get('/dissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
 
 
 Route::get('/dashboard', function () {

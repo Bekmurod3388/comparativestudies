@@ -122,7 +122,7 @@
                                 <ul>
                                     <li id="main-menu-link-content62f18183-51b8-4622-ab43-d702dbcaa026"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('dissertations') }}"
+                                            href="{{ route('dissertations_user') }}"
                                             class="sf-depth-2">Dissertatsiyalar</a></li>
                                     <li id="main-menu-link-content8d4e2c93-1380-4b9b-85d8-4efac43921ee"
                                         class="sf-depth-2 sf-no-children"><a
