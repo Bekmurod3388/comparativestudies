@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="../../../../public/assets_front/css/style.css">
-    <title>Fotosuratlar</title>
-</head>
-<body>
-<div class="row g-0 book_center">
-
+@extends('user.layouts.master')
+@section('content')
     <div class="col-10">
         <div class="border-bottom border-top border-primary bg-light py-5 px-4">
             <div class="text-center">
@@ -69,7 +60,4 @@
         </div>
     </div>
 
-</div>
-
-</body>
-</html>
+@endsection

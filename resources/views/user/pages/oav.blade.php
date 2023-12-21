@@ -1,29 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title></title>
-    <link rel="stylesheet" href="../../public/assets_front/css/style.css">
-    <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
-    <
-    <link  rel="stylesheet" href="../../public/assets_front/css/alert.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main-last.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main2.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main3.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main4.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main5.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/main6.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/bootstrap-grid.min.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/bootstrap-reboot.min.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/bootstrap-utilities.min.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/bootstrap-utilities.rtl.min.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/bootstrap.min.css">
-    <link  rel="stylesheet" href="../../public/assets_front/css/cookieconsent.min.css">
-</head>
-<body>
+@extends('user.layouts.master')
+@section('content')
 <div class="blog">
     <div class="container">
         <!-- <div class="blurry-background"></div> -->
@@ -154,6 +130,4 @@
         </div>
     </div>
 </div>
-
-</body>
-</html>
+@endsection

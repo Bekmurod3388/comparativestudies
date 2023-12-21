@@ -71,7 +71,7 @@
             <div id="block-tts-sub-branding"
                  class="clearfix block block-system block-system-branding-block">
                 <div class="site-logo">
-                    <a href="#"
+                    <a href="{{ route('welcome') }}"
                        title="Duke University - Trinity College of Arts and Sciences"><img
                             src="{{asset('assets_front/img/logo.png')}}"
                             alt="O'zbekiston jahon tillari universiteti"/></a>
@@ -111,7 +111,7 @@
                                     </li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-3"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="statement-harassment-and-discrimination.html"
+                                            href="{{ route('oav_user') }}"
                                             class="sf-depth-2">OAV biz haqimizda</a>
                                     </li>
                                 </ul>
@@ -186,7 +186,7 @@
                                 <ul>
                                     <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="people/appointed-faculty/primary-faculty.html"
+                                            href="{{ route('photos_user') }}"
                                             class="sf-depth-2">Fotosuratlar</a></li>
                                     <li id="main-menu-link-content5a830532-5174-4ef6-b7ce-7d89ceefeb9d"
                                         class="sf-depth-2 sf-no-children"><a

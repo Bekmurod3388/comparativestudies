@@ -30,4 +30,26 @@ class HomeController extends Controller
 
         // Pass the distinct countries to the view
         return view('user.pages.dissertation', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+
+    public function photos(){
+
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+
+//        $dissertations = Dissertations::
+
+        // Pass the distinct countries to the view
+        return view('user.pages.photos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+
+    public function oav(){
+
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+
+//        $dissertations = Dissertations::
+
+        // Pass the distinct countries to the view
+        return view('user.pages.oav', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 }
