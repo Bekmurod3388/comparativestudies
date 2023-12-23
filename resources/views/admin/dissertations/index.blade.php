@@ -10,7 +10,7 @@
                         <h5>Dissertatsiyalar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="/dashboard/dissertations/create" class="btn-primary p-2 rounded">
+                        <a href="{{ route('dissertations.create') }}" class="btn-primary p-2 rounded">
                             Dissertatsiya qo'shish
                         </a>
                     </div>
@@ -62,9 +62,9 @@
                             </td>
                             <td>
                                 <div class="d-flex justify-content-center">
-                                    <a class="btn btn-warning me-2" href="dissertations/{{$dissertation->id}}/edit"><i
+                                    <a class="btn btn-warning me-2" href="{{ route('dissertations.edit', $dissertation->id) }}"><i
                                             class="bx bx-edit-alt me-1"></i></a>
-                                    <form action="dissertations/{{$dissertation->id}}" method="POST"
+                                    <form action="{{ route('dissertations.destroy', $dissertation->id) }}" method="POST"
                                           class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -86,7 +86,7 @@
                                 <h5>Dissertatsiyalar mavjud emas</h5>
                             </div>
                             <div class="col-md-4 text-end offset-md-4">
-                                <a href="/dashboard/dissertations/create">
+                                <a href="{{ route('dissertations.create') }}" class="btn-primary p-2 rounded">
                                     Dissertatsiya qo'shish
                                 </a>
                             </div>

@@ -8,9 +8,9 @@
         <small class="text-muted float-end">Malumotlarni o'zgartirishingiz mumkin.</small>
       </div>
       <div class="card-body demo-vertical-spacing demo-only-element">
-        <form method="POST" action="/dashboard/carousels/{{ $carousel->id }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('carousels.update', $carousel->id) }}" enctype="multipart/form-data">
           @csrf
-          @method('PUT')
+          @method('PATCH')
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Sarlavha matni</label>
             <div class="col-sm-10">

@@ -50,7 +50,7 @@ class ResearchersController extends Controller
         // Create a new researcher
         Researchers::create($formFields);
 
-        return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli qo`shildi.');
+        return redirect()->route('researchers.index')->with('success', 'Hamkasb muvaffaqiyatli qo`shildi.');
     }
 
     // Display edit researcher form
@@ -64,7 +64,7 @@ class ResearchersController extends Controller
     {
         $researcher->delete();
 
-        return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
+        return redirect()->route('researchers.index')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
     }
 
     // Update a researcher
@@ -89,6 +89,6 @@ class ResearchersController extends Controller
         // Update the researcher
         $researcher->update($formFields);
 
-        return redirect('/dashboard/researchers')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
+        return redirect()->route('researchers.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
     }
 }

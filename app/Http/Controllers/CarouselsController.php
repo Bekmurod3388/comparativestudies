@@ -52,7 +52,7 @@ class CarouselsController extends Controller
 
         Carousel::create($formFields);
 
-        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli qo`shildi');
+        return redirect()->route('carousels.index')->with('success', 'Karusel muvaffaqiyatli qo`shildi.');
     }
 
     /**
@@ -86,7 +86,7 @@ class CarouselsController extends Controller
 
         $carousel->update($formFields);
 
-        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli yangilandi.');
+        return redirect()->route('carousels.index')->with('success', 'Karusel muvaffaqiyatli yangilandi.');
     }
 
     /**
@@ -99,6 +99,6 @@ class CarouselsController extends Controller
     {
         $carousel->delete();
 
-        return redirect('/dashboard/carousels')->with('success', 'Karusel muvaffaqiyatli o`chirildi.');
+        return redirect()->route('carousels.index')->with('success', 'Karusel muvaffaqiyatli o`chirildi.');
     }
 }

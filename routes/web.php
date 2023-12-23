@@ -27,6 +27,7 @@ Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/dissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
 Route::get('/photogallery', [HomeController::class,'photos'])->name('photos_user');
 Route::get('/oav', [HomeController::class,'oav'])->name('oav_user');
+Route::get('/contact', [HomeController::class,'contact'])->name('contact_user');
 
 
 Route::get('/dashboard', function () {
@@ -42,30 +43,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/videos', VideoController::class);
     Route::resource('/abouts', AboutController::class);
     Route::resource('/centers', CenterController::class);
-
-    /****************** DISSERTATIONS **********************************************************************************/
-    Route::get('/dashboard/dissertations', [DissertationsController::class, 'index'])->name('dissertations');
-    Route::get('/dashboard/dissertations/create', [DissertationsController::class, 'create'])->name('dissertations.create');
-    Route::post('/dashboard/dissertations/store', [DissertationsController::class, 'store'])->name('dissertations.store');
-    Route::get('/dashboard/dissertations/{dissertation}/edit', [DissertationsController::class, 'edit'])->name('dissertations.edit');
-    Route::delete('/dashboard/dissertations/{dissertation}', [DissertationsController::class, 'destroy'])->name('dissertations.delete');
-    Route::put('/dashboard/dissertations/{dissertation}', [DissertationsController::class, 'update'])->name('dissertations.update');
-
-    /****************** RESEARCHERS **********************************************************************************/
-    Route::get('/dashboard/researchers', [ResearchersController::class, 'index'])->name('researchers');
-    Route::get('/dashboard/researchers/create', [ResearchersController::class, 'create'])->name('researchers.create');
-    Route::post('/dashboard/researchers/store', [ResearchersController::class, 'store'])->name('researchers.store');
-    Route::get('/dashboard/researchers/{researcher}/edit', [ResearchersController::class, 'edit'])->name('researchers.edit');
-    Route::delete('/dashboard/researchers/{researcher}', [ResearchersController::class, 'destroy'])->name('researchers.delete');
-    Route::put('/dashboard/researchers/{researcher}', [ResearchersController::class, 'update'])->name('researchers.update');
-
-    /****************** CAROUSELS **********************************************************************************/
-    Route::get('/dashboard/carousels', [CarouselsController::class, 'index'])->name('carousels');
-    Route::get('/dashboard/carousels/create', [CarouselsController::class, 'create'])->name('carousels.create');
-    Route::post('/dashboard/carousels/store', [CarouselsController::class, 'store'])->name('carousels.store');
-    Route::get('/dashboard/carousels/{carousel}/edit', [CarouselsController::class, 'edit'])->name('carousels.edit');
-    Route::delete('/dashboard/carousels/{carousel}', [CarouselsController::class, 'destroy'])->name('carousels.delete');
-    Route::put('/dashboard/carousels/{carousel}', [CarouselsController::class, 'update'])->name('carousels.update');
+    Route::resource('/dissertations', DissertationsController::class);
+    Route::resource('/researchers', ResearchersController::class);
+    Route::resource('/carousels', CarouselsController::class);
 
     /****************** FACULTYBOOKSS **********************************************************************************/
     Route::get('/dashboard/facultybooks', [FacultyBooksController::class, 'index'])->name('facultybooks');

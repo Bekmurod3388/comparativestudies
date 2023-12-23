@@ -58,7 +58,7 @@ class DissertationsController extends Controller
 
         Dissertations::create($validatedData);
 
-        return redirect('/dashboard/dissertations')->with('success', 'Dissertatsiya muvaffaqiyatli yaratildi!');
+        return redirect()->route('dissertations.index')->with('success', 'Dissertatsiya muvaffaqiyatli yaratildi!');
     }
 
     /**
@@ -92,7 +92,7 @@ class DissertationsController extends Controller
 
         $dissertation->update($validatedData);
 
-        return redirect('/dashboard/dissertations')->with('success', 'Dissertatsiya muvaffaqiyatli o`zgartirildi!');
+        return redirect()->route('dissertations.index')->with('success', 'Dissertatsiya muvaffaqiyatli o`zgartirildi!');
     }
 
     /**
@@ -105,6 +105,6 @@ class DissertationsController extends Controller
     {
         $dissertation->delete();
 
-        return redirect('/dashboard/dissertations')->with('success', 'Dissertatsiya muvaffaqiyatli o`zgartirildi!');
+        return redirect()->route('dissertations.index')->with('success', 'Dissertatsiya muvaffaqiyatli o`zgartirildi!');
     }
 }

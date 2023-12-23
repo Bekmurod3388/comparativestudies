@@ -8,9 +8,9 @@
         <small class="text-muted float-end">Malumotlarni o'zgartirishingiz mumkin.</small>
       </div>
       <div class="card-body">
-        <form method="POST" action="/dashboard/researchers/{{$researcher->id}}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('researchers.update', $researcher->id) }}" enctype="multipart/form-data">
           @csrf
-          @method('PUT')
+          @method('PATCH')
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">F.I.SH</label>
             <div class="col-sm-10">

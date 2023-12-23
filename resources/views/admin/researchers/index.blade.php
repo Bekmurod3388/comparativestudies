@@ -9,7 +9,7 @@
                         <h5>Hamkasblar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="/dashboard/researchers/create" class="btn-primary p-2 rounded">
+                        <a href="{{ route('researchers.create') }}" class="btn-primary p-2 rounded">
                             Hamkasb qo'shish
                         </a>
                     </div>
@@ -73,10 +73,10 @@
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-warning" href="researchers/{{$researcher->id}}/edit"><i
+                                        <a class="btn btn-warning" href="{{ route('researchers.edit', $researcher->id) }}"><i
                                                 class="bx bx-edit-alt me-1"></i></a>
 
-                                        <form action="researchers/{{$researcher->id}}" method="POST"
+                                        <form action="{{ route('researchers.destroy', $researcher->id) }}" method="POST"
                                               class="d-inline">
                                             @csrf
                                             @method('DELETE')
@@ -99,7 +99,7 @@
                             <h5>Hamkasblar ro'yxati bo'sh</h5>
                         </div>
                         <div class="col-md-4 text-end offset-md-4">
-                            <a href="/dashboard/researchers/create">
+                            <a href="{{ route('researchers.create') }}">
                                 Hamkasb qo'shish
                             </a>
                         </div>

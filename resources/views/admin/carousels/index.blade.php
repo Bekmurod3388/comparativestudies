@@ -9,7 +9,7 @@
                         <h5>Karusellar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="/dashboard/carousels/create" class="btn-primary p-2 rounded">
+                        <a href="{{ route('carousels.create') }}" class="btn-primary p-2 rounded">
                             Karusel qo'shish
                         </a>
                     </div>
@@ -44,10 +44,10 @@
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-warning" href="carousels/{{$carousel->id}}/edit"><i
+                                        <a class="btn btn-warning" href="{{ route('carousels.edit', $carousel->id) }}"><i
                                                 class="bx bx-edit-alt me-1"></i></a>
 
-                                        <form action="carousels/{{$carousel->id}}" method="POST"
+                                        <form action="{{ route('carousels.destroy', $carousel->id) }}" method="POST"
                                               class="d-inline">
                                             @csrf
                                             @method('DELETE')

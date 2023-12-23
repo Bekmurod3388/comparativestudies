@@ -74,15 +74,15 @@
                 <div data-i18n="Analytics">Asosiy sahifa</div>
             </a>
         </li>
-        <li class="menu-item @if(request()->routeIs('researchers')) active @endif">
-            <a href="{{ route('researchers') }}" class="menu-link">
+        <li class="menu-item @if(request()->routeIs('researchers.index')) active @endif">
+            <a href="{{ route('researchers.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-briefcase-alt'></i>
                 <div data-i18n="Analytics">Hamkasblar</div>
             </a>
         </li>
 
-        <li class="menu-item @if(request()->routeIs('dissertations')) active @endif">
-            <a href="{{ route('dissertations') }}" class="menu-link">
+        <li class="menu-item @if(request()->routeIs('dissertations.index')) active @endif">
+            <a href="{{ route('dissertations.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-list-check'></i>
                 <div data-i18n="Analytics">Dissertatsiyalar</div>
             </a>
@@ -116,8 +116,8 @@
             </a>
         </li>
 
-        <li class="menu-item @if(request()->routeIs('carousels')) active @endif">
-            <a href="{{ route('carousels') }}" class="menu-link">
+        <li class="menu-item @if(request()->routeIs('carousels.index')) active @endif">
+            <a href="{{ route('carousels.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-carousel"></i>
                 <div data-i18n="Analytics">Karusellar</div>
             </a>
