@@ -10,7 +10,7 @@
                         <h5>Kitoblar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="/dashboard/facultybooks/create" class="btn-primary p-2 rounded">
+                        <a href="{{ route('facultybooks.create') }}" class="btn-primary p-2 rounded">
                             Kitob qo'shish
                         </a>
                     </div>
@@ -53,10 +53,10 @@
                             </td>
                             <td>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-warning" href="facultybooks/{{$facultybook->id}}/edit"><i
+                                    <a class="btn btn-warning" href="{{ route('facultybooks.edit', $facultybook->id) }}"><i
                                             class="bx bx-edit-alt me-1"></i></a>
 
-                                    <form action="facultybooks/{{$facultybook->id}}" method="POST"
+                                    <form action="{{ route('facultybooks.destroy', $facultybook->id) }}" method="POST"
                                           class="d-inline">
                                         @csrf
                                         @method('DELETE')

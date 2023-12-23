@@ -24,11 +24,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/dissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
+Route::get('/userdissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
 Route::get('/photogallery', [HomeController::class,'photos'])->name('photos_user');
 Route::get('/oav', [HomeController::class,'oav'])->name('oav_user');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact_user');
-
 
 Route::get('/dashboard', function () {
     return view('admin.master');
@@ -46,15 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/dissertations', DissertationsController::class);
     Route::resource('/researchers', ResearchersController::class);
     Route::resource('/carousels', CarouselsController::class);
-
-    /****************** FACULTYBOOKSS **********************************************************************************/
-    Route::get('/dashboard/facultybooks', [FacultyBooksController::class, 'index'])->name('facultybooks');
-    Route::get('/dashboard/facultybooks/create', [FacultyBooksController::class, 'create'])->name('facultybooks.create');
-    Route::post('/dashboard/facultybooks/store', [FacultyBooksController::class, 'store'])->name('facultybooks.store');
-    Route::get('/dashboard/facultybooks/{facultybook}/edit', [FacultyBooksController::class, 'edit'])->name('facultybooks.edit');
-    Route::delete('/dashboard/facultybooks/{facultyBook}', [FacultyBooksController::class, 'destroy'])->name('facultybooks.delete');
-    Route::put('/dashboard/facultybooks/{facultyBook}', [FacultyBooksController::class, 'update'])->name('facultybooks.update');
-
+    Route::resource('/facultybooks', FacultyBooksController::class);
 });
 
 

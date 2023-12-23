@@ -123,8 +123,8 @@
             </a>
         </li>
 
-        <li class="menu-item @if(request()->routeIs('facultybooks')) active @endif">
-            <a href="{{ route('facultybooks') }}" class="menu-link">
+        <li class="menu-item @if(request()->routeIs('facultybooks.index')) active @endif">
+            <a href="{{ route('facultybooks.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-book"></i>
                 <div data-i18n="Analytics">Kitoblar</div>
             </a>

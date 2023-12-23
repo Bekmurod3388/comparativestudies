@@ -64,10 +64,9 @@ class FacultyBooksController extends Controller
         }
 
         FacultyBook::create($formFields);
-        return redirect('/dashboard/facultybooks')->with('success', 'Kitob muvaffaqiyatli qo`shildi.');
 
-//        return redirect('/dashboard/facultybooks/');
-    }
+        return redirect()->route('facultybooks.index')->with('success','Kitob muvaffaqiyatli qo`shildi.');
+   }
 
     /**
      * Show the form for editing the specified resource.
@@ -110,11 +109,9 @@ class FacultyBooksController extends Controller
         if($request->hasFile('image_url')){
             $formFields['image_url'] = $request->file('image_url')->store('faculty_books/book_photos', 'public');
         }
-
         $facultyBook->update($formFields);
 
-        return redirect('/dashboard/facultybooks')->with('success', 'Kitob muvaffaqiyatli o`zgartirildi.');
-//        return redirect('/dashboard/facultybooks/');
+        return redirect()->route('facultybooks.index')->with('success','Kitob muvaffaqiyatli o`zgartirildi.');
     }
 
     /**
@@ -127,7 +124,6 @@ class FacultyBooksController extends Controller
     {
         $facultyBook->delete();
 
-        return redirect('/dashboard/facultybooks')->with('success', 'Kitob muvaffaqiyatli o`chirildi.');
-//        return redirect('/dashboard/facultybooks/');
+        return redirect()->route('facultybooks.index')->with('success','Kitob muvaffaqiyatli o`chirildi.');
     }
 }

@@ -16,13 +16,13 @@ class VideosTableSeeder extends Seeder
     {
         DB::table('videos')->insert([
             'title' => "Video1",
-            'video_url' => "https://youtu.be/9RhWXPcKBI8?si=mYDCUU-lqxKrMC5I",
+            'video_url' => "https://www.youtube.com/embed/lOKASgtr6kU?si=rD9wnhSoXVrgwaw1",
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('videos')->insert([
             'title' => "Video2",
-            'video_url' => "https://youtu.be/0e3GPea1Tyg?si=4bBxE1jU-tUJuM1K",
+            'video_url' => "https://www.youtube.com/embed/lOKASgtr6kU?si=rD9wnhSoXVrgwaw1",
             'created_at' => now(),
             'updated_at' => now(),
         ]);

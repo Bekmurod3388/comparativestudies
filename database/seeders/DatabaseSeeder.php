@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
             CarouselsTableSeeder::class,
             FacultyBooksTableSeeder::class,
             VideosTableSeeder::class,
+            CenterTableSeeder::class,
         ]);
     }
 }

@@ -9,10 +9,10 @@
                 <small class="text-muted float-end">Malumotlarni o'zgartirishingiz mumkin.</small>
             </div>
             <div class="card-body demo-vertical-spacing demo-only-element">
-                <form method="POST" action="/dashboard/facultybooks/{{ $facultybook->id }}"
+                <form method="POST" action="{{ route('facultybooks.update', $facultybook->id) }}"
                       enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
+                    @method('PATCH')
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob nomi</label>
                         <div class="col-sm-10">
