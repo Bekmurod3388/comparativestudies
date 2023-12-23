@@ -716,3 +716,52 @@
 }
 
 
+.Korgazma{
+    display: flex;
+    width: 20%;
+    align-items: center;
+    overflow-y: scroll;
+    list-style: none;
+    flex-wrap: wrap;
+    height: 400px;
+}
+/*.Korgazma::-webkit-scrollbar{*/
+/*    display: none;*/
+/*}*/
+.tab-class{
+    display: flex;
+}
+.tab-content{
+    width: 80%;
+    padding: 0 20px;
+}
+.width_photos{
+    width: 33%;
+}
+.event-img{
+    height: 200px;
+}
+.event-img img{
+    height: 100%;
+}
+.border{
+    text-decoration: none;
+
+}
+.my-button{
+    color: #000;
+
+}
+.G-button{
+    color: #fff;
+}
+.Korgazma li a:focus {
+    color: #FFF; /* Цвет текста при фокусировке */
+    background-color: blue; /* Цвет фона при фокусировке */
+}
+
+/* Пример добавления стилей при активном состоянии (для класса 'active') */
+.Korgazma li a.active {
+    color: #FFF; /* Цвет текста в активном состоянии */
+    background-color: blue; /* Цвет фона в активном состоянии */
+}
