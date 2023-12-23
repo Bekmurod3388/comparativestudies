@@ -691,12 +691,13 @@
         height: 100%;
     }
 }
-.header .container{
-    padding: 0;
+@media(max-width: 800px){
+    .header .container{
+        padding: 0;
+    }
 }
-.event .tab-class .nav-item a.active {
-    background: #2f2fa2 !important;
-}
+
+
 
 .event .event-img .event-overlay {
     position: absolute;
@@ -764,4 +765,54 @@
 .Korgazma li a.active {
     color: #FFF; /* Цвет текста в активном состоянии */
     background-color: blue; /* Цвет фона в активном состоянии */
+}
+
+.contact_left{
+    width: 40%;
+}
+.contact{
+    margin: 100px 0;
+}
+.contact_input, textarea{
+    width: 100%;
+    border: 3px solid #0a53be;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.contact_left form{
+    display: flex;
+    flex-direction: column;
+
+}
+.contact_left button{
+    padding: 10px;
+    background: #0a53be;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+.contact_left button:hover{
+    background: #0a53be;
+}
+
+input::placeholder,
+textarea::placeholder {
+
+}
+.contact_start{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact_right{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    line-height: 150%;
+    color: #aeaeae;
+    font-size: 16px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-decoration: none
 }
