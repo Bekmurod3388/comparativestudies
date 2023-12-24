@@ -157,14 +157,14 @@
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bx bx-link"></i></span>
                                 <span class="input-group-text" id="basic-icon-default-fc">Kitobning havolasi</span>
-                                <input
-                                    name="file_url"
-                                    type="text"
-                                    class="form-control"
-                                    placeholder="URL"
-                                    aria-describedby="basic-icon-default-fc"
-                                    value="{{old('file_url')}}"
-                                />
+                                    <input
+                                        name="file_url"
+                                        type="text"
+                                        class="form-control"
+                                        placeholder="URL"
+                                        aria-describedby="basic-icon-default-fc"
+                                        value="{{old('file_url')}}"
+                                    />
                             </div>
                             @error('file_url')
                             <div class="alert alert-danger" role="alert">{{ $message }}</div>
