@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Video;
 use App\Models\Center;
-use App\Models\Researchers;
+use App\Models\Colleagues;
 use App\Models\Dissertations;
 use App\Service\CountryService;
 
@@ -16,8 +16,8 @@ class HomeController extends Controller
         $centers = Center::all()->sortBy(['type', 'country', 'name']); // Sort by 'type', 'country', and 'name'
         $centersByType = $centers->groupBy('type');
         $countries = CountryService::get_countries();
-        $researchers = Researchers::all(); // Sort by 'type', 'country', and 'name'
-        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
+        $researchers = Colleagues::all(); // Sort by 'type', 'country', and 'name'
+        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "colleagues"=>$researchers]);
     }
 
     public function dissertations(){

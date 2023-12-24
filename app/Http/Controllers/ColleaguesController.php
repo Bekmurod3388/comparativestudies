@@ -6,23 +6,23 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use App\Models\Researchers;
+use App\Models\Colleagues;
 use Illuminate\Routing\Redirector;
 
-class ResearchersController extends Controller
+class ColleaguesController extends Controller
 {
-    // Display all researchers
+    // Display all colleagues
     public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('admin.researchers.index', [
-            'researchers' => Researchers::all()
+        return view('admin.colleagues.index', [
+            'colleagues' => Colleagues::all()
         ]);
     }
 
     // Display create researcher form
     public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('admin.researchers.create');
+        return view('admin.colleagues.create');
     }
 
     // Store a new researcher
@@ -48,27 +48,27 @@ class ResearchersController extends Controller
         $formFields['twitter_url'] = "no";
 
         // Create a new researcher
-        Researchers::create($formFields);
+        Colleagues::create($formFields);
 
-        return redirect()->route('researchers.index')->with('success', 'Hamkasb muvaffaqiyatli qo`shildi.');
+        return redirect()->route('colleagues.index')->with('success', 'Hamkasb muvaffaqiyatli qo`shildi.');
     }
 
     // Display edit researcher form
-    public function edit(Researchers $researcher): View|\Illuminate\Foundation\Application|Factory|Application
+    public function edit(Colleagues $colleague): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('admin.researchers.edit', ['researcher' => $researcher]);
+        return view('admin.colleagues.edit', ['colleague' => $colleague]);
     }
 
     // Delete a researcher
-    public function destroy(Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    public function destroy(Colleagues $colleague): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
-        $researcher->delete();
+        $colleague->delete();
 
-        return redirect()->route('researchers.index')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
+        return redirect()->route('colleagues.index')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
     }
 
     // Update a researcher
-    public function update(Request $request, Researchers $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    public function update(Request $request, Colleagues $colleague): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         // Validate form fields
         $formFields = $request->validate([
@@ -85,10 +85,9 @@ class ResearchersController extends Controller
         if($request->hasFile('photo')){
             $formFields['photo'] = $request->file('photo')->store('researcher_photos', 'public');
         }
-
         // Update the researcher
-        $researcher->update($formFields);
+        $colleague->update($formFields);
 
-        return redirect()->route('researchers.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
+        return redirect()->route('colleagues.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
     }
 }

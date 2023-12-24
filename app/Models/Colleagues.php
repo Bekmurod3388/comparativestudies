@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @method static create(array $formFields)
  */
-class Researchers extends Model
+class Colleagues extends Model
 {
     use HasFactory;
 

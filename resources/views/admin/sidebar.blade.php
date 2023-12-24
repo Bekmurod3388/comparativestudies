@@ -73,10 +73,17 @@
                 <div data-i18n="Analytics">Asosiy sahifa</div>
             </a>
         </li>
-        <li class="menu-item @if(request()->routeIs('researchers.index')) active @endif">
-            <a href="{{ route('researchers.index') }}" class="menu-link">
+        <li class="menu-item @if(request()->routeIs('colleagues.index')) active @endif">
+            <a href="{{ route('colleagues.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-briefcase-alt'></i>
                 <div data-i18n="Analytics">Hamkasblar</div>
+            </a>
+        </li>
+
+        <li class="menu-item @if(request()->routeIs('researcher.index')) active @endif">
+            <a href="{{ route('researcher.index') }}" class="menu-link">
+                <i class='menu-icon tf-icons bx bx-briefcase-alt'></i>
+                <div data-i18n="Analytics">Tadqiqotchilar</div>
             </a>
         </li>
 

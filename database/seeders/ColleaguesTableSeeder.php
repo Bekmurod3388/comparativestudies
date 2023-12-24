@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Faker\Factory as Faker;
 
-class ResearchersTableSeeder extends Seeder
+class ColleaguesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,7 +18,7 @@ class ResearchersTableSeeder extends Seeder
         $faker = Faker::create();
 
         foreach (range(1, 10) as $ignored) {
-            DB::table('researchers')->insert([
+            DB::table('colleagues')->insert([
                 'fullname' => $faker->name,
                 'position' => $faker->jobTitle,
                 'research_fields' => $faker->words(3, true),

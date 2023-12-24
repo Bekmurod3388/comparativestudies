@@ -4,12 +4,13 @@
   <div class="col-xxl">
     <div class="card mb-4">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="mb-0">Hamkasb qo'shish</h5>
-        <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
+        <h5 class="mb-0">Hamkasbni o'zgartirish</h5>
+        <small class="text-muted float-end">Malumotlarni o'zgartirishingiz mumkin.</small>
       </div>
-      <div class="card-body demo-vertical-spacing demo-only-element">
-        <form method="POST" action="{{ route('researchers.store') }}" enctype="multipart/form-data">
+      <div class="card-body">
+        <form method="POST" action="{{ route('colleagues.update', $colleague->id) }}" enctype="multipart/form-data">
           @csrf
+          @method('PATCH')
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">F.I.SH</label>
             <div class="col-sm-10">
@@ -22,17 +23,17 @@
                   type="text"
                   class="form-control"
                   id="basic-icon-default-fullname"
-                  placeholder="John Dere"
-                  aria-label="John Dere"
+                  placeholder="Bek Berganov"
+                  aria-label="Bek Berganov"
                   aria-describedby="basic-icon-default-fullname2"
-                  value="{{old('fullname')}}"
+                  value="{{$colleague->fullname}}"
                 />
               </div>
               @error('fullname')
                 <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
               @enderror
-            </div>
           </div>
+        </div>
           <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-company">Lavozimi</label>
             <div class="col-sm-10">
@@ -48,7 +49,7 @@
                   placeholder="Direktor."
                   aria-label="Direktor."
                   aria-describedby="basic-icon-default-company2"
-                  value="{{old('position')}}"
+                  value="{{$colleague->position}}"
                 />
               </div>
               @error('position')
@@ -66,11 +67,12 @@
                   type="text"
                   id="basic-icon-default-email"
                   class="form-control"
-                  placeholder="johndere@gmail.com"
-                  aria-label="johndere@gmail.com"
+                  placeholder="bek.berganov"
+                  aria-label="bek.berganov"
                   aria-describedby="basic-icon-default-email2"
-                  value="{{old('email')}}"
+                  value="{{$colleague->email}}"
                 />
+                <span id="basic-icon-default-email2" class="input-group-text">@namuna.com</span>
               </div>
               <div class="form-text">Harflar, raqamlar va nuqtalardan foydalanishingiz mumkin.</div>
               @error('email')
@@ -91,7 +93,7 @@
                         placeholder="URL"
                         id="basic-url1"
                         aria-describedby="basic-icon-default-insta"
-                        value="{{old('instagram_url')}}"
+                        value="{{$colleague->instagram_url}}"
                     />
                 </div>
                 @error('instagram_url')
@@ -112,7 +114,7 @@
                         placeholder="URL"
                         id="basic-url1"
                         aria-describedby="basic-icon-default-fc"
-                        value="{{old('facebook_url')}}"
+                        value="{{$colleague->facebook_url}}"
                     />
                 </div>
                 @error('facebook_url')
@@ -121,15 +123,15 @@
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Tadqiqotchi rasmi</label>
+            <label class="col-sm-2 form-label" for="basic-icon-default-message">Tadqiqotchi rasmi</label>
             <div class="col-sm-10">
                 <div class="input-group">
                     <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
                     <input type="file" name=photo class="form-control" id="inputGroupFile01" />
                 </div>
-                @error('photo')
-                  <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
-                @enderror
+              @error('photo')
+                <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
+              @enderror
             </div>
           </div>
           <div class="row mb-3">
@@ -146,7 +148,9 @@
                   placeholder="Sheriy kitoblarni o'rganish"
                   aria-label="Sheriy kitoblarni o'rganish"
                   aria-describedby="basic-icon-default-message2"
-                ></textarea>
+                >
+                {{$colleague->research_fields}}
+                </textarea>
               </div>
               @error('research_fields')
                 <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
@@ -155,7 +159,7 @@
           </div>
           <div class="row justify-content-end">
             <div class="col-sm-10">
-              <button type="submit" class="btn btn-primary">Qo'shish</button>
+              <button type="submit" class="btn btn-primary">O'zgartirish</button>
             </div>
           </div>
         </form>
