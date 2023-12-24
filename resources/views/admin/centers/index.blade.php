@@ -36,7 +36,7 @@
                     @foreach($centers as $center)
                         <tr>
                             <td>{{ $loop->index+1 }}</td>
-                            <td>{{ $countries["en"][$center->country] }}</td>
+                            <td>{{ isset($countries['en'][$center->country]) ? $countries['en'][$center->country] : $center->country }}</td>
                             <td>{{ $center->name }}</td>
                             <td>
                                 <a href="{{ $center->url }}" target="_blank">Havola</a>

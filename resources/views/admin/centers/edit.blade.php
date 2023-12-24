@@ -25,11 +25,10 @@
                 <div class="form-group mb-3">
                     <label for="country">Mamlakat</label>
                     <select class="form-control form-select" id="country" name="country" required>
-                        @foreach($countries["en"] as $key => $item)
-                            <option value="{{ $key }}"
-                            @if($key == $center->country) selected @endif
-                            >{{ $item }}</option>
-                        @endforeach
+                            <option selected>{{isset($countries['en'][$center->country]) ? $countries['en'][$center->country] : $center->country}}</option>
+                            @foreach($countries["en"] as $key => $item)
+                                <option value="{{ $key }}">{{ $countries['en'][$key] }}</option>
+                            @endforeach
                     </select>
                 </div>
 

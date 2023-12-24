@@ -13,9 +13,9 @@
                         @foreach ($typeCenters->groupBy('country') as $countryCenters)
                             <p style="text-align: center;">
                                 <strong>
-                                    {{ $countries["en"][$countryCenters[0]->country]}}
+                                    {{ isset($countries['en'][$countryCenters[0]->country]) ? $countries['en'][$countryCenters[0]->country] : $countryCenters[0]->country}}
                                 </strong>
-                            </p>                                                                                    
+                            </p>
                             <table class="table">
                                 <tbody>
                                     @foreach ($countryCenters as $country)
@@ -25,7 +25,7 @@
                                         </tr>
                                     @endforeach
                                 </tbody>
-                            </table>                                                                    
+                            </table>
                         @endforeach
                     </div>
                 </div>
