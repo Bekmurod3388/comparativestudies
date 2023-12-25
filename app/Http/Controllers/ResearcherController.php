@@ -33,7 +33,7 @@ class ResearcherController extends Controller
             'fullname' => 'required',
             'position' => 'nullable|string',
             'research' => 'nullable|string',
-            'scholar_link' => 'nullable|url',
+            'scholar' => 'nullable|url',
             'email' => 'nullable|email',
             'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming 'img' is an image file
         ]);
@@ -73,7 +73,7 @@ class ResearcherController extends Controller
             'fullname' => 'required',
             'position' => 'nullable|string',
             'research' => 'nullable|string',
-            'scholar_link' => 'nullable|url',
+            'scholar' => 'nullable|url',
             'email' => 'nullable|email',
             'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming 'img' is an image file
         ]);

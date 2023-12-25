@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::disableForeignKeyConstraints();
 
-        Schema::create('researcher', function (Blueprint $table) {
+        Schema::create('researchers', function (Blueprint $table) {
             $table->id();
             $table->string('fullname');
             $table->string('position')->nullable();
             $table->string('research')->nullable();
-            $table->string('scholar_link')->nullable();
+            $table->string('scholar')->nullable();
             $table->string('email')->nullable();
             $table->string('img')->nullable();
         });
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('researcher');
+        Schema::dropIfExists('researchers');
     }
 };

@@ -15,8 +15,8 @@ return new class extends Migration
 
         Schema::create('researchers_books', function (Blueprint $table) {
             $table->id();
-            $table->string('researcher_id');
-            $table->foreign('researcher_id')->references('id')->on('researcher');
+            $table->unsignedBigInteger('researcher_id');
+            $table->foreign('researcher_id')->references('id')->on('researchers');
             $table->string('name');
             $table->string('country')->nullable();
             $table->date('pub_date')->nullable();

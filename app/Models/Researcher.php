@@ -9,13 +9,11 @@ class Researcher extends Model
 {
     use HasFactory;
 
-    protected $table = 'researcher';
-
     protected $fillable = [
         'fullname',
         'position',
         'research',
-        'scholar_link',
+        'scholar',
         'email',
         'img',
     ];

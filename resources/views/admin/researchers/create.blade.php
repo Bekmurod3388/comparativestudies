@@ -87,17 +87,17 @@
                 ><i class="bx bx-link-alt"></i
                     ></span>
                         <input
-                            name="scholar_link"
+                            name="scholar"
                             type="text"
                             class="form-control"
                             id="basic-icon-default-fullname"
                             placeholder="Maqolalar uchun havola"
                             aria-label="Maqolalar uchun havola"
                             aria-describedby="basic-icon-default-fullname2"
-                            value="{{old('scholar_link')}}"
+                            value="{{old('scholar')}}"
                         />
                     </div>
-                    @error('scholar_link')
+                    @error('scholar')
                     <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                     @enderror
                 </div>

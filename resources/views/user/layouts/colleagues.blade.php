@@ -5,7 +5,7 @@
                 <div class="artics_about-name">
                     <div class="artics_about-name-back">
                         <a href="#">
-                            <span>{{ $researcher->fullname }} <br> ({{ $researcher->position }})</span>
+                            <span>{{ $researcher->scholar }} <br> ({{ $researcher->position }})</span>
                         </a>
                     </div>
                     <a href="#">     <p class="artics_p">{{ $researcher->email }}</p></a>
