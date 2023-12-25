@@ -73,6 +73,7 @@
                 <div data-i18n="Analytics">Asosiy sahifa</div>
             </a>
         </li>
+        @if(auth()->user()->hasRole('admin'))
         <li class="menu-item @if(request()->routeIs('colleagues.index')) active @endif">
             <a href="{{ route('colleagues.index') }}" class="menu-link">
                 <i class='menu-icon tf-icons bx bx-briefcase-alt'></i>
@@ -135,5 +136,15 @@
                 <div data-i18n="Analytics">Kitoblar</div>
             </a>
         </li>
+        @endif
+        @if(auth()->user()->hasRole('client'))
+
+            <li class="menu-item @if(request()->routeIs('facultybooks.index')) active @endif">
+                <a href="{{ route('facultybooks.index') }}" class="menu-link">
+                    <i class="menu-icon tf-icons bx bx-book"></i>
+                    <div data-i18n="Analytics">Maqolalar</div>
+                </a>
+            </li>
+        @endif
     </ul>
 </aside>
