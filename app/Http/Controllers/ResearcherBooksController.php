@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\Foundation\Application;
@@ -6,31 +7,25 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use App\Models\Researcher;
 use Illuminate\Routing\Redirector;
+use App\Models\ResearcherBook;
+use App\Models\Researcher;
 
-class ResearcherController extends Controller
+class ResearcherBooksController extends Controller
 {
-    // Display all colleagues
-    public function index(): View|\Illuminate\Foundation\Application|Factory|Application
-    {
-        return view('admin.researchers.index', [
-            'researchers' => Researcher::all()
-        ]);
-    }
-
     // Display create researcher form
     public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('admin.researchers.create');
+        $researchers = Researcher::all();
+        return view('admin.researchersbooks.create', ['researchers' => $researchers]);
     }
 
     // Store a new researcher
     public function store(Request $request): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         // Validate form fields
-         $request->validate([
-            'fullname' => 'required',
+        $request->validate([
+            'name' => 'required',
             'position' => 'nullable|string',
             'research' => 'nullable|string',
             'scholar_link' => 'nullable|url',
@@ -43,7 +38,7 @@ class ResearcherController extends Controller
         } else {
             $imgPath = null;
         }
-//        dd($request);
+
 
         Researcher::create(array_merge($request->all(), ['img' => $imgPath]));
 

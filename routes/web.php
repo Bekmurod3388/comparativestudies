@@ -10,6 +10,7 @@ use App\Http\Controllers\ColleaguesController;
 use App\Http\Controllers\ResearcherController;
 use App\Http\Controllers\DissertationsController;
 use App\Http\Controllers\FacultyBooksController;
+use App\Http\Controllers\ResearcherBooksController;
 use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,6 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/researcher', ResearcherController::class);
     Route::resource('/carousels', CarouselsController::class);
     Route::resource('/facultybooks', FacultyBooksController::class);
+    Route::resource('/researcherbooks', ResearcherBooksController::class);
 });
 
 

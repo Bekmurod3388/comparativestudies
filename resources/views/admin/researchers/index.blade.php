@@ -6,11 +6,14 @@
             <div class="card-header">
                 <div class="row content-end">
                     <div class="col-4">
-                        <h5>Karusellar ro'yxati</h5>
+                        <h5>Tadqiqotchilar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="{{ route('colleagues.create') }}" class="btn-primary p-2 rounded">
-                            Karusel qo'shish
+                        <a href="{{ route('researcherbooks.create') }}" class="btn-primary p-2 m-2  rounded">
+                            Kitob qo'shish
+                        </a>
+                        <a href="{{ route('researcher.create') }}" class="btn-primary p-2 rounded">
+                            Tadqiqotchi qo'shish
                         </a>
                     </div>
                 </div>
@@ -24,35 +27,37 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                        <th>T/R</th>
-                        <th>Sarlavha</th>
-                        <th>Rasm</th>
-                        <th>Amallar</th>
+                            <th>T/R</th>
+                            <th>F.I.SH</th>
+                            <th>Lavozim</th>
+                            <th>Rasm</th>
+                            <th>Amallar</th>
                         </tr>
                     </thead>
                     @foreach ($researchers as $researcher)
                         <tbody class="table-border-bottom-0">
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger"></i>{{ $loop->iteration }}</td>
-                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->title }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->fullname }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->position }}</strong></td>
                                 <td>
                                     <div class="avatar">
-                                        <img src="{{$researcher->img_url ? asset('storage/' . $researcher->img_url) : asset('assets/img/avatars/1.png') }}" alt="Rasm" class="w-px-40 h-auto rounded-circle"/>
-                                        <!-- <img src="{{ asset('assets/img/avatars/1.png') }}" alt -->
-                                             <!-- class="w-px-40 h-auto rounded-circle"/> -->
+                                        <img src="{{$researcher->img ? asset('storage/' . $researcher->img) : asset('assets/img/avatars/1.png') }}" alt="Rasm" class="w-px-40 h-auto rounded-circle"/>
+{{--                                        <img src="{{ asset('storage/' . $researcher->img) }}" alt--}}
+{{--                                             class="w-px-40 h-auto rounded-circle"/>--}}
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-warning" href="{{ route('colleagues.edit', $researcher->id) }}"><i
+                                        <a class="btn btn-warning" href="{{ route('researcher.edit', $researcher->id) }}"><i
                                                 class="bx bx-edit-alt me-1"></i></a>
 
-                                        <form action="{{ route('colleagues.destroy', $researcher->id) }}" method="POST"
+                                        <form action="{{ route('researcher.destroy', $researcher->id) }}" method="POST"
                                               class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger"
-                                                    onclick="return confirm('Karuselni o\'chirishni xohlaysizmi?')">
+                                                    onclick="return confirm('Tadqiqotchini o\'chirishni xohlaysizmi?')">
                                                 <i class="bx bx-trash me-1"></i>
                                             </button>
                                         </form>
@@ -66,11 +71,11 @@
                 <div class="card-header">
                     <div class="row content-end">
                         <div class="col-4">
-                            <h5>Karusel bo'sh</h5>
+                            <h5>Tadqiqotchilar bo'sh</h5>
                         </div>
                         <div class="col-md-4 text-end offset-md-4">
-                            <a href="/dashboard/researchers/create">
-                                Karusel qo'shish
+                            <a href="{{ route('researcher.create') }}" class="btn-primary p-2 rounded">
+                                Tadqiqotchi qo'shish
                             </a>
                         </div>
                     </div>

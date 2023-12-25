@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('fullname');
             $table->string('position')->nullable();
             $table->string('research')->nullable();
-            $table->bigInteger('scholar_link')->nullable();
+            $table->string('scholar_link')->nullable();
             $table->string('email')->nullable();
             $table->string('img')->nullable();
         });

@@ -2,15 +2,18 @@
 @section('content')
     <!-- Striped Rows -->
     <div class="card">
-        @unless(count($carousels) == 0)
+        @unless(count($researchers) == 0)
             <div class="card-header">
                 <div class="row content-end">
                     <div class="col-4">
-                        <h5>Karusellar ro'yxati</h5>
+                        <h5>Tadqiqotchilar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
-                        <a href="{{ route('carousels.create') }}" class="btn-primary p-2 rounded">
-                            Karusel qo'shish
+                        <a href="{{ route('researcherbooks.create') }}" class="btn-primary p-2 m-2  rounded">
+                            Kitob qo'shish
+                        </a>
+                        <a href="{{ route('researcher.create') }}" class="btn-primary p-2 rounded">
+                            Tadqiqotchi qo'shish
                         </a>
                     </div>
                 </div>
@@ -24,35 +27,43 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                        <th>T/R</th>
-                        <th>Sarlavha</th>
-                        <th>Rasm</th>
-                        <th>Amallar</th>
+                            <th>T/R</th>
+                            <th>F.I.SH</th>
+                            <th>Lavozim</th>
+                            <th>Tadqiqot</th>
+                            <th>Maqolalar</th>
+                            <th>Email</th>
+                            <th>Rasm</th>
+                            <th>Amallar</th>
                         </tr>
                     </thead>
-                    @foreach ($carousels as $carousel)
+                    @foreach ($researchers as $researcher)
                         <tbody class="table-border-bottom-0">
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger"></i>{{ $loop->iteration }}</td>
-                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $carousel->title }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->fullname }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->position }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->research }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->scholar_link }}</strong></td>
+                                <td><i class="fab fa-angular fa-lg text-danger"></i> <strong>{{ $researcher->email }}</strong></td>
                                 <td>
                                     <div class="avatar">
-                                        <img src="{{$carousel->img_url ? asset('storage/' . $carousel->img_url) : asset('assets/img/avatars/1.png') }}" alt="Rasm" class="w-px-40 h-auto rounded-circle"/>
-                                        <!-- <img src="{{ asset('assets/img/avatars/1.png') }}" alt -->
-                                             <!-- class="w-px-40 h-auto rounded-circle"/> -->
+                                        <img src="{{$researcher->img ? asset('storage/' . $researcher->img) : asset('assets/img/avatars/1.png') }}" alt="Rasm" class="w-px-40 h-auto rounded-circle"/>
+{{--                                        <img src="{{ asset('storage/' . $researcher->img) }}" alt--}}
+{{--                                             class="w-px-40 h-auto rounded-circle"/>--}}
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn btn-warning" href="{{ route('carousels.edit', $carousel->id) }}"><i
+                                        <a class="btn btn-warning" href="{{ route('researcher.edit', $researcher->id) }}"><i
                                                 class="bx bx-edit-alt me-1"></i></a>
 
-                                        <form action="{{ route('carousels.destroy', $carousel->id) }}" method="POST"
+                                        <form action="{{ route('researcher.destroy', $researcher->id) }}" method="POST"
                                               class="d-inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger"
-                                                    onclick="return confirm('Karuselni o\'chirishni xohlaysizmi?')">
+                                                    onclick="return confirm('Tadqiqotchini o\'chirishni xohlaysizmi?')">
                                                 <i class="bx bx-trash me-1"></i>
                                             </button>
                                         </form>
@@ -66,11 +77,11 @@
                 <div class="card-header">
                     <div class="row content-end">
                         <div class="col-4">
-                            <h5>Karusel bo'sh</h5>
+                            <h5>Tadqiqotchilar bo'sh</h5>
                         </div>
                         <div class="col-md-4 text-end offset-md-4">
-                            <a href="{{ route('carousels.create') }}" class="btn-primary p-2 rounded">
-                                Karusel qo'shish
+                            <a href="{{ route('researcher.create') }}" class="btn-primary p-2 rounded">
+                                Tadqiqotchi qo'shish
                             </a>
                         </div>
                     </div>
