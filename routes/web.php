@@ -71,6 +71,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
+    Route::get('/researcherbooks/{researcher}/add', [ResearcherBooksController::class, 'add'])->name('researcher.books.add');
+    Route::post('/researcherbooks/{researcher}/store', [ResearcherBooksController::class, 'store'])->name('researcher.books.store');
+    Route::delete('/researcherbooks/{book}/delete', [ResearcherBooksController::class, 'destroy'])->name('researcher.books.destroy');
+    Route::get('/researcherbooks/{book}/edit', [ResearcherBooksController::class, 'edit'])->name('researcher.books.edit');
+    Route::patch('/researcherbooks/{book}/update', [ResearcherBooksController::class, 'update'])->name('researcher.books.update');
+
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);
     Route::resource('/abouts', AboutController::class);
@@ -80,7 +86,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('/researcher', ResearcherController::class);
     Route::resource('/carousels', CarouselsController::class);
     Route::resource('/facultybooks', FacultyBooksController::class);
-    Route::resource('/researcherbooks', ResearcherBooksController::class);
 });
 
 

@@ -8,7 +8,7 @@
           <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
       </div>
       <div class="card-body demo-vertical-spacing demo-only-element">
-        <form method="POST" action="{{ route('researcher.storebook', $researcher->id) }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('researcher.books.store', $researcher->id) }}" enctype="multipart/form-data">
           @csrf
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob nomi</label>
