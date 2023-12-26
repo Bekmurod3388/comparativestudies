@@ -14,33 +14,25 @@ use App\Models\Researcher;
 class ResearcherBooksController extends Controller
 {
     // Display create researcher form
-    public function create(): View|\Illuminate\Foundation\Application|Factory|Application
+    public function create(Researcher $researcher): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        $researchers = Researcher::all();
-        return view('admin.researchersbooks.create', ['researchers' => $researchers]);
+        return view('admin.researchersbooks.create', ['researcher' => $researcher]);
     }
 
     // Store a new researcher
-    public function store(Request $request): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    public function store(Request $request, Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         // Validate form fields
         $request->validate([
             'name' => 'required',
-            'position' => 'nullable|string',
-            'research' => 'nullable|string',
-            'scholar_link' => 'nullable|url',
-            'email' => 'nullable|email',
-            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming 'img' is an image file
+            'country' => 'nullable|string',
+            'pub_date' => 'nullable|date',
+            'pages' => 'nullable|int',
+            'publisher' => 'nullable|string',
         ]);
 
-        if ($request->hasFile('img')) {
-            $imgPath = $request->file('img')->store('public/researchers');
-        } else {
-            $imgPath = null;
-        }
-
-
-        Researcher::create(array_merge($request->all(), ['img' => $imgPath]));
+        dd($researcher);
+        Researcher::create(array_merge($request->all(), ['researcher_id' => $researcher]));
 
         return redirect()->route('researcher.index')
             ->with('success', 'Tadqiqotchi muvaffaqiyatli qo`shildi.');

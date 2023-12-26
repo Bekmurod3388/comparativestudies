@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('scholar')->nullable();
             $table->string('email')->nullable();
             $table->string('img')->nullable();
+            $table->timestamps();
         });
 
         Schema::enableForeignKeyConstraints();

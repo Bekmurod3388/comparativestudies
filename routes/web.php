@@ -26,10 +26,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/userdissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
+//Route::get('/userdissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
 Route::get('/photogallery', [HomeController::class,'photos'])->name('photos_user');
-Route::get('/oav', [HomeController::class,'oav'])->name('oav_user');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact_user');
+
+
+Route::get('/oav', [HomeController::class,'oav'])->name('oav_user');
+Route::get('/goals', [HomeController::class,'about_goals'])->name('goals_user');
+Route::get('/participants', [HomeController::class,'about_participants'])->name('participants_user');
+Route::get('/books', [HomeController::class,'about_books'])->name('books_user');
+Route::get('/articles', [HomeController::class,'about_articles'])->name('articles_user');
+
+Route::get('user/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('dissertations_user');
+Route::get('user/textbooks', [HomeController::class,'scientific_research_textbooks'])->name('textbooks_user');
+Route::get('user/preparation', [HomeController::class,'scientific_research_preparation'])->name('preparation_user');
+
 
 Route::get('/dashboard', function () {
     return view('admin.master');
@@ -49,6 +60,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/researcher', ResearcherController::class);
     Route::resource('/carousels', CarouselsController::class);
     Route::resource('/facultybooks', FacultyBooksController::class);
+    Route::get('/researcher/{researcher}/addbook', [ResearcherController::class, 'add'])->name('researcher.addbook');
+    Route::post('/researcher/{researcher}/storebook', [ResearcherController::class, 'storebook'])->name('researcher.storebook');
     Route::resource('/researcherbooks', ResearcherBooksController::class);
 });
 

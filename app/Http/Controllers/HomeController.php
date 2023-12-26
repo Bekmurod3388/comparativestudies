@@ -64,4 +64,33 @@ class HomeController extends Controller
 
         // Pass the distinct countries to the view
         return view('user.pages.contact', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+
+    public function about_goals(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.goals_and_objectives');    }
+
+    public function about_participants(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.participants');    }
+
+    public function about_books(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.books');    }
+
+    public function about_articles(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.articles');    }
+
+    public function scientific_research_dissertations(){
+        // Pass the distinct countries to the view
+        return view('user.pages.scientific_research.dissertations');    }
+
+    public function scientific_research_textbooks(){
+        // Pass the distinct countries to the view
+        return view('user.pages.scientific_research.textbooks');    }
+
+    public function scientific_research_preparation(){
+        // Pass the distinct countries to the view
+        return view('user.pages.scientific_research.preparation');    }
+
 }

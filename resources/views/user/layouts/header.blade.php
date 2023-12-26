@@ -93,20 +93,20 @@
                                 <ul>
                                     <li id="main-menu-link-content9135765b-fd1d-4f20-849b-d958bf625641"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="collective-statement-climate-conduct-and-values.html"
+                                            href="{{ route('goals_user') }}"
                                             class="sf-depth-2">Loyihaning maqsad va vazifalari</a></li>
                                     <li id="main-menu-link-content00e95e5a-272e-4d8a-bca1-4cc889c1c50b"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="http://trinity.duke.edu/diversity-inclusion" title=""
+                                            href="{{ route('participants_user') }}" title=""
                                             class="sf-depth-2 sf-external">Loyiha ishtirokchilari</a></li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-2"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="statement-harassment-and-discrimination.html"
+                                            href="{{ route('books_user') }}"
                                             class="sf-depth-2">Loyiha bo'yicha kitoblar</a>
                                     </li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-1"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="statement-harassment-and-discrimination.html"
+                                            href="{{ route('articles_user') }}"
                                             class="sf-depth-2">Loyiha bo'yicha maqolalar</a>
                                     </li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-3"
@@ -126,11 +126,11 @@
                                             class="sf-depth-2">Dissertatsiyalar</a></li>
                                     <li id="main-menu-link-content8d4e2c93-1380-4b9b-85d8-4efac43921ee"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="undergraduate/about-gcs.html"
+                                            href="{{ route('textbooks_user') }}"
                                             class="sf-depth-2">Darsliklar</a></li>
                                     <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="undergraduate/gwd-honors-thesis.html"
+                                            href="{{ route('preparation_user') }}"
                                             class="sf-depth-2">Online imtihonga tayyorgarlik</a></li>
 
                                 </ul>

@@ -31,6 +31,7 @@
                             <th>F.I.SH</th>
                             <th>Lavozim</th>
                             <th>Rasm</th>
+                            <th>Kitoblar</th>
                             <th>Amallar</th>
                         </tr>
                     </thead>
@@ -45,6 +46,12 @@
                                         <img src="{{$researcher->img ? asset('storage/' . $researcher->img) : asset('assets/img/avatars/1.png') }}" alt="Rasm" class="w-px-40 h-auto rounded-circle"/>
 {{--                                        <img src="{{ asset('storage/' . $researcher->img) }}" alt--}}
 {{--                                             class="w-px-40 h-auto rounded-circle"/>--}}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-between">
+                                        <a class="btn btn-primary" href="{{ route('researcher.addbook', $researcher->id) }}"><i
+                                                class="bx bx-book-content me-1"></i></a>
                                     </div>
                                 </td>
                                 <td>
