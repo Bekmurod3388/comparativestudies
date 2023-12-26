@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Models\ResearcherBook;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -88,5 +89,28 @@ class ResearcherController extends Controller
         // Update the researcher
 
         return redirect()->route('researcher.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
+    }
+
+    public function add(Researcher $researcher): View|\Illuminate\Foundation\Application|Factory|Application
+    {
+        return view('admin.researchersbooks.create', ['researcher' => $researcher]);
+    }
+    // Store a new researcher
+    public function storebook(Request $request, Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    {
+        // Validate form fields
+        $request->validate([
+            'name' => 'required',
+            'country' => 'nullable|string',
+            'pub_date' => 'nullable|date',
+            'pages' => 'nullable|int',
+            'publisher' => 'nullable|string',
+        ]);
+
+//        dd($researcher);
+        ResearcherBook::create(array_merge($request->all(), ['researcher_id' => $researcher->id]));
+
+        return redirect()->route('researcher.index')
+            ->with('success', 'Kitob muvaffaqiyatli qo`shildi.');
     }
 }

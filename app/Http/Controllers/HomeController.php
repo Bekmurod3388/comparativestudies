@@ -64,4 +64,20 @@ class HomeController extends Controller
 
         // Pass the distinct countries to the view
         return view('user.pages.contact', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+
+    public function about_goals(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.goals_and_objectives');    }
+
+    public function about_participants(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.participants');    }
+
+    public function about_books(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.books');    }
+
+    public function about_articles(){
+        // Pass the distinct countries to the view
+        return view('user.pages.about.articles');    }
 }

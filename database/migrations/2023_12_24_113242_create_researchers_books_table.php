@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('pub_date')->nullable();
             $table->bigInteger('pages')->nullable();
             $table->string('publisher')->nullable();
+            $table->timestamps();
         });
 
         Schema::enableForeignKeyConstraints();

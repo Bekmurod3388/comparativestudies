@@ -4,27 +4,12 @@
   <div class="col-xxl">
     <div class="card mb-4">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="mb-0">Tadqiqotchi qo'shish</h5>
-        <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
+          <h5 class="mb-0">Kitob qo'shish <br>Tadqiqotchi: {{ $researcher->fullname }}</h5>
+          <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
       </div>
       <div class="card-body demo-vertical-spacing demo-only-element">
-        <form method="POST" action="{{ route('researcherbooks.store') }}" enctype="multipart/form-data">
+        <form method="POST" action="{{ route('researcher.storebook', $researcher->id) }}" enctype="multipart/form-data">
           @csrf
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Tadqiqotchi</label>
-                <div class="col-sm-10">
-                    <div class="input-group input-group-merge">
-                        <select class="form-select" id="type" name="researcher_id" required>
-                            @foreach($researchers as $researcher)
-                                <option value="{{$researcher->id}}">{{$researcher->fullname}}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    @error('researcher_id')
-                    <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
-                    @enderror
-                </div>
-            </div>
             <div class="row mb-3">
                 <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob nomi</label>
                 <div class="col-sm-10">
@@ -33,7 +18,7 @@
                 ><i class="bx bx-book"></i
                     ></span>
                         <input
-                            name="position"
+                            name="name"
                             type="text"
                             class="form-control"
                             id="basic-icon-default-fullname"
@@ -56,7 +41,7 @@
                 ><i class="bx bx-globe"></i
                     ></span>
                         <input
-                            name="research"
+                            name="country"
                             type="text"
                             class="form-control"
                             id="basic-icon-default-fullname"
@@ -101,7 +86,7 @@
                 ><i class="bx bx-book-add"></i
                     ></span>
                         <input
-                            name="scholar_link"
+                            name="pages"
                             type="number"
                             class="form-control"
                             id="basic-icon-default-fullname"
