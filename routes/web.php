@@ -27,9 +27,24 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/photogallery', [HomeController::class,'photos'])->name('photos_user');
-Route::get('/contact', [HomeController::class,'contact'])->name('contact_user');
+Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
 
+Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_gallery');
+Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
+Route::get('user/gallery/videos', [HomeController::class,'gallery_videos'])->name('user_gallery_videos');
+
+
+Route::get('user/literature', [HomeController::class,'literature'])->name('user_literature');
+Route::get('user/literature/textbooks', [HomeController::class,'literature_textbooks'])->name('user_literature_textbooks');
+Route::get('user/literature/manuals', [HomeController::class,'literature_manuals'])->name('user_literature_manuals');
+Route::get('user/literature/methodical', [HomeController::class,'literature_methodical'])->name('user_literature_methodical');
+
+Route::get('user/magazines', [HomeController::class,'magazines'])->name('user_magazines');
+Route::get('user/magazines/yevropa', [HomeController::class,'magazines_yevrope'])->name('user_magazines_yevropa');
+Route::get('user/magazines/amerika', [HomeController::class,'magazines_amerika'])->name('user_magazines_amerika');
+Route::get('user/magazines/turkiya', [HomeController::class,'magazines_turkiya'])->name('user_magazines_turkiya');
+Route::get('user/magazines/rossiya', [HomeController::class,'magazines_rossiya'])->name('user_magazines_rossiya');
+Route::get('user/magazines/markaziyosiyo', [HomeController::class,'magazines_central_asia'])->name('user_magazines_central_asia');
 
 Route::get('user/scientific', [HomeController::class,'scientific_research'])->name('user_scientific_research');
 Route::get('user/scientific/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('user_scientific_research_dissertations');

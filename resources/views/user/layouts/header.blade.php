@@ -136,44 +136,44 @@
                                 </ul>
                             </li>
                             <li id="main-menu-link-content5c7661a8-cd1e-4f88-b60e-1c5889aaeb34"
-                                class="sf-depth-1 menuparent"><a href="graduate.html"
+                                class="sf-depth-1 menuparent"><a href="{{ route('user_magazines') }}"
                                                                  class="sf-depth-1 menuparent">ILMIY JURNALLAR</a>
                                 <ul>
                                     <li id="main-menu-link-content1165affb-12cc-446d-ae4b-650384a82ce0"
-                                        class="sf-depth-2 sf-no-children"><a href="graduate/phd.html"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_magazines_yevropa') }}"
                                                                              class="sf-depth-2">Yevropa</a>
                                     </li>
                                     <li id="main-menu-link-content47016e1b-8792-4e2b-925d-c98d68ade53d"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="graduate/prospective-students.html"
+                                            href="{{ route('user_magazines_amerika') }}"
                                             class="sf-depth-2">Amerika</a></li>
                                     <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="graduate/current-students.html"
+                                            href="{{ route('user_magazines_turkiya') }}"
                                             class="sf-depth-2">Turkiya</a></li>
                                     <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d1"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="graduate/current-students.html"
+                                            href="{{ route('user_magazines_rossiya') }}"
                                             class="sf-depth-2">Rossiya</a>
                                     <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d2"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="graduate/current-students.html"
+                                            href="{{ route('user_magazines_central_asia') }}"
                                             class="sf-depth-2">Markaziy Osiyo</a></li>
                                 </ul>
                             </li>
                             <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
-                                class="sf-depth-1 menuparent"><a href="courses.html"
+                                class="sf-depth-1 menuparent"><a href="{{ route('user_literature') }}"
                                                                  class="sf-depth-1 menuparent">O'QUV ADABIYOTLARI</a>
                                 <ul>
                                     <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
-                                        class="sf-depth-2 sf-no-children"><a href="spring-2024-courses.html"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_textbooks') }}"
                                                                              class="sf-depth-2">Darsliklar</a></li>
                                     <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef1"
-                                        class="sf-depth-2 sf-no-children"><a href="spring-2024-courses.html"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_manuals') }}"
                                                                              class="sf-depth-2">O'quv qo'llanmalar</a>
                                     </li>
                                     <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"
-                                        class="sf-depth-2 sf-no-children"><a href="spring-2024-courses.html"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_methodical') }}"
                                                                              class="sf-depth-2">Metodik qo'llanmalar</a>
                                     </li>
 
@@ -181,22 +181,22 @@
                             </li>
                             <li id="main-menu-link-contente43f358c-d19f-477e-9529-44f9281c2575"
                                 class="sf-depth-1 menuparent"><a
-                                    href="people/appointed-faculty/primary-faculty.html"
+                                    href="{{ route('user_gallery') }}"
                                     class="sf-depth-1 menuparent">GALEREYA</a>
                                 <ul>
                                     <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('photos_user') }}"
+                                            href="{{ route('user_gallery_photos') }}"
                                             class="sf-depth-2">Fotosuratlar</a></li>
                                     <li id="main-menu-link-content5a830532-5174-4ef6-b7ce-7d89ceefeb9d"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="people/appointed-faculty/secondary-faculty.html"
+                                            href="{{ route('user_gallery_videos') }}"
                                             class="sf-depth-2">Videolavhalar</a></li>
 
                                 </ul>
                             </li>
                             <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
-                                class="sf-depth-1 menuparent"><a href="research.html"
+                                class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"
                                                                  class="sf-depth-1 menuparent">ALOQA</a>
 
                             </li>
