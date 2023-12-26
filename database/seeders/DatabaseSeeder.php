@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             FacultyBooksTableSeeder::class,
             VideosTableSeeder::class,
             CenterTableSeeder::class,
+            ResearchersTableSeeder::class,
+            ResearchersBooksTableSeeder::class,
         ]);
     }
 }

@@ -1,146 +1,135 @@
+@php use Carbon\Carbon; @endphp
 @extends('admin.master')
 @section('content')
     <!-- Basic with Icons -->
     <div class="col-xxl">
         <div class="card mb-4">
             <div class="card-header d-flex align-items-center justify-content-between">
-                <h5 class="mb-0">Tadqiqotchi ma`lumotlarini o`zgartirish</h5>
+                <h5 class="mb-0">Kitob ma`lumotlarini o`zgartirish<br><strong>Teadqiqotchi: </strong>{{ $book->researcher->fullname }}</h5>
                 <small class="text-muted float-end">Malumotlarni o`zgartirishingiz mumkin.</small>
             </div>
             <div class="card-body demo-vertical-spacing demo-only-element">
-                <form method="POST" action="{{ route('researcher.update', $researcher->id) }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('researcher.books.update', $book->id) }}" enctype="multipart/form-data">
                     @csrf
                     @method("PATCH")
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">F.I.SH</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob nomi</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                 <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bx-user"></i
+                ><i class="bx bx-book"></i
                     ></span>
                                 <input
-                                    name="fullname"
+                                    name="name"
                                     type="text"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
-                                    placeholder="F.I.SH"
-                                    aria-label="F.I.SH"
+                                    placeholder="Kitob nomi"
+                                    aria-label="Kitob nomi"
                                     aria-describedby="basic-icon-default-fullname2"
-                                    value="{{$researcher->fullname}}"
+                                    value="{{$book->name}}"
                                 />
                             </div>
-                            @error('fullname')
+                            @error('name')
                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                             @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Lavozimi</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Davlat</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                 <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bx-badge"></i
+                ><i class="bx bx-globe"></i
                     ></span>
                                 <input
-                                    name="position"
+                                    name="country"
                                     type="text"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
-                                    placeholder="Ilmiy darajasi"
-                                    aria-label="Ilmiy darajasi"
+                                    placeholder="Davlat"
+                                    aria-label="Davlat"
                                     aria-describedby="basic-icon-default-fullname2"
-                                    value="{{$researcher->position}}"
+                                    value="{{$book->country}}"
                                 />
                             </div>
-                            @error('position')
+                            @error('country')
                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                             @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Tadqiqot sohalari</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Kitob yozilgan sana</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                 <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bx-expand"></i
+                ><i class="bx bx-hourglass"></i
                     ></span>
                                 <input
-                                    name="research"
-                                    type="text"
+                                    name="pub_date"
+                                    type="date"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
-                                    placeholder="Tadqiqot sohalari"
-                                    aria-label="Tadqiqot sohalari"
+                                    placeholder="2021-06-18T12:30:00"
+                                    aria-label="2021-06-18T12:30:00"
+                                    value="{{ Carbon::parse($book->pub_date)->format('Y-m-d') }}"
                                     aria-describedby="basic-icon-default-fullname2"
-                                    value="{{$researcher->research}}"
                                 />
                             </div>
-                            @error('research')
+                            @error('pub_date')
                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                             @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Maqolalar uchun havola</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Sahifalar soni</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                 <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bx-link-alt"></i
+                ><i class="bx bx-book-add"></i
                     ></span>
                                 <input
-                                    name="scholar_link"
-                                    type="text"
+                                    name="pages"
+                                    type="number"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
-                                    placeholder="Maqolalar uchun havola"
-                                    aria-label="Maqolalar uchun havola"
+                                    placeholder="Sahifalar soni"
+                                    aria-label="Sahifalar soni"
                                     aria-describedby="basic-icon-default-fullname2"
-                                    value="{{$researcher->scholar_link}}"
+                                    value="{{$book->pages}}"
                                 />
                             </div>
-                            @error('scholar_link')
+                            @error('pages')
                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                             @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Elektron pochtasi</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Nashriyot</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                 <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bx-mail-send"></i
+                ><i class="bx bx-printer"></i
                     ></span>
                                 <input
-                                    name="email"
+                                    name="publisher"
                                     type="text"
                                     class="form-control"
                                     id="basic-icon-default-fullname"
-                                    placeholder="johndoe@mail.com"
-                                    aria-label="johndoe@mail.com"
+                                    placeholder="Jop etuvchi tashkilot"
+                                    aria-label="Jop etuvchi tashkilot"
                                     aria-describedby="basic-icon-default-fullname2"
-                                    value="{{$researcher->email}}"
+                                    value="{{$book->publisher}}"
                                 />
                             </div>
-                            @error('email')
+                            @error('publisher')
                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
-                            @enderror
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Tadqiqotchi rasmi</label>
-                        <div class="col-sm-10">
-                            <div class="input-group">
-                                <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
-                                <input type="file" name=img class="form-control" id="inputGroupFile01" />
-                            </div>
-                            @error('img')
-                            <div class="alert alert-danger" role="alert">{{ $message }}</div>
                             @enderror
                         </div>
                     </div>
                     <div class="row justify-content-end mb-5">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Yangilash</button>
+                            <button type="submit" class="btn btn-primary">O'zgartirish</button>
                         </div>
                     </div>
                 </form>

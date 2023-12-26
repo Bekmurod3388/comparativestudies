@@ -27,4 +27,9 @@ class Researcher extends Model
     ];
 
     // Additional methods, relationships, or customizations can be added here
+
+    public function book()
+    {
+        return $this->hasMany(ResearcherBook::class);
+    }
 }

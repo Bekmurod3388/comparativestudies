@@ -13,12 +13,10 @@ use App\Models\Researcher;
 
 class ResearcherBooksController extends Controller
 {
-    // Display create researcher form
-    public function create(Researcher $researcher): View|\Illuminate\Foundation\Application|Factory|Application
+    public function add(Researcher $researcher): View|\Illuminate\Foundation\Application|Factory|Application
     {
         return view('admin.researchersbooks.create', ['researcher' => $researcher]);
     }
-
     // Store a new researcher
     public function store(Request $request, Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
@@ -31,49 +29,43 @@ class ResearcherBooksController extends Controller
             'publisher' => 'nullable|string',
         ]);
 
-        dd($researcher);
-        Researcher::create(array_merge($request->all(), ['researcher_id' => $researcher]));
+//        dd($researcher);
+        ResearcherBook::create(array_merge($request->all(), ['researcher_id' => $researcher->id]));
 
         return redirect()->route('researcher.index')
-            ->with('success', 'Tadqiqotchi muvaffaqiyatli qo`shildi.');
+            ->with('success', 'Kitob muvaffaqiyatli qo`shildi.');
     }
-
     // Display edit researcher form
-    public function edit(Researcher $researcher): View|\Illuminate\Foundation\Application|Factory|Application
+
+    public function edit(ResearcherBook $book): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('admin.researchers.edit', ['researcher' => $researcher]);
+        return view('admin.researchersbooks.edit', ['book' => $book]);
     }
 
     // Delete a researcher
-    public function destroy(Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    public function destroy(ResearcherBook $book): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
-        $researcher->delete();
+        $book->delete();
 
-        return redirect()->route('researcher.index')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
+        return redirect()->route('researcher.index')->with('success', 'Kitob muvaffaqiyatli o`chirildi.');
     }
 
     // Update a researcher
-    public function update(Request $request, Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
+    public function update(Request $request, ResearcherBook $book): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
         // Validate form fields
         $request->validate([
-            'fullname' => 'required',
-            'position' => 'nullable|string',
-            'research' => 'nullable|string',
-            'scholar_link' => 'nullable|url',
-            'email' => 'nullable|email',
-            'img' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Assuming 'img' is an image file
+            'name' => 'required',
+            'country' => 'nullable|string',
+            'pub_date' => 'nullable|date',
+            'pages' => 'nullable|int',
+            'publisher' => 'nullable|string',
         ]);
 
-        if ($request->hasFile('img')) {
-            $imgPath = $request->file('img')->store('public/researchers');
-        } else {
-            $imgPath = null;
-        }
 
-        $researcher->update(array_merge($request->all(), ['img' => $imgPath]));
+        $book->update(array_merge($request->all()));
         // Update the researcher
 
-        return redirect()->route('researcher.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
+        return redirect()->route('researcher.index')->with('success', 'Kitob muvaffaqiyatli o`zgartirildi.');
     }
 }

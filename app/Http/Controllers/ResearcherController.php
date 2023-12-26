@@ -15,6 +15,8 @@ class ResearcherController extends Controller
     // Display all colleagues
     public function index(): View|\Illuminate\Foundation\Application|Factory|Application
     {
+//        $researchers = Researcher::find(3)->books()->all();
+//        dd($researchers);
         return view('admin.researchers.index', [
             'researchers' => Researcher::all()
         ]);
@@ -40,7 +42,7 @@ class ResearcherController extends Controller
         ]);
 
         if ($request->hasFile('img')) {
-            $imgPath = $request->file('img')->store('public/researchers');
+            $imgPath = $request->file('img')->store('researchers', 'public');
         } else {
             $imgPath = null;
         }
@@ -69,7 +71,7 @@ class ResearcherController extends Controller
     // Update a researcher
     public function update(Request $request, Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
     {
-        // Validate form fields
+    // Validate form fields
         $request->validate([
             'fullname' => 'required',
             'position' => 'nullable|string',
@@ -81,36 +83,12 @@ class ResearcherController extends Controller
 
         if ($request->hasFile('img')) {
             $imgPath = $request->file('img')->store('public/researchers');
-        } else {
-            $imgPath = null;
         }
+
 
         $researcher->update(array_merge($request->all(), ['img' => $imgPath]));
         // Update the researcher
 
         return redirect()->route('researcher.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
-    }
-
-    public function add(Researcher $researcher): View|\Illuminate\Foundation\Application|Factory|Application
-    {
-        return view('admin.researchersbooks.create', ['researcher' => $researcher]);
-    }
-    // Store a new researcher
-    public function storebook(Request $request, Researcher $researcher): \Illuminate\Foundation\Application|Redirector|RedirectResponse|Application
-    {
-        // Validate form fields
-        $request->validate([
-            'name' => 'required',
-            'country' => 'nullable|string',
-            'pub_date' => 'nullable|date',
-            'pages' => 'nullable|int',
-            'publisher' => 'nullable|string',
-        ]);
-
-//        dd($researcher);
-        ResearcherBook::create(array_merge($request->all(), ['researcher_id' => $researcher->id]));
-
-        return redirect()->route('researcher.index')
-            ->with('success', 'Kitob muvaffaqiyatli qo`shildi.');
     }
 }

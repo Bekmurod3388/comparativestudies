@@ -83,7 +83,7 @@
 
         <li class="menu-item @if(request()->routeIs('researcher.index')) active @endif">
             <a href="{{ route('researcher.index') }}" class="menu-link">
-                <i class='menu-icon tf-icons bx bx-briefcase-alt'></i>
+                <i class='menu-icon tf-icons bx bx-reset'></i>
                 <div data-i18n="Analytics">Tadqiqotchilar</div>
             </a>
         </li>
