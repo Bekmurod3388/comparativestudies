@@ -88,49 +88,49 @@
                     <div class="content">
                         <ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none">
                             <li id="main-menu-link-contentdb57f021-ee07-40a6-8446-be8044f1ad27"
-                                class="sf-depth-1 menuparent"><a href="about.html"
+                                class="sf-depth-1 menuparent"><a href="{{ route('user_about') }}"
                                                                  class="sf-depth-1 menuparent">LOYIHA HAQIDA</a>
                                 <ul>
                                     <li id="main-menu-link-content9135765b-fd1d-4f20-849b-d958bf625641"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('goals_user') }}"
+                                            href="{{ route('user_about_goals') }}"
                                             class="sf-depth-2">Loyihaning maqsad va vazifalari</a></li>
                                     <li id="main-menu-link-content00e95e5a-272e-4d8a-bca1-4cc889c1c50b"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('participants_user') }}" title=""
+                                            href="{{ route('user_about_participants') }}" title=""
                                             class="sf-depth-2 sf-external">Loyiha ishtirokchilari</a></li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-2"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('books_user') }}"
+                                            href="{{ route('user_about_books') }}"
                                             class="sf-depth-2">Loyiha bo'yicha kitoblar</a>
                                     </li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-1"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('articles_user') }}"
+                                            href="{{ route('user_about_articles') }}"
                                             class="sf-depth-2">Loyiha bo'yicha maqolalar</a>
                                     </li>
                                     <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-3"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('oav_user') }}"
+                                            href="{{ route('user_about_oav') }}"
                                             class="sf-depth-2">OAV biz haqimizda</a>
                                     </li>
                                 </ul>
                             </li>
                             <li id="main-menu-link-contentfaf6415d-7a6e-4245-bf98-82e7a76b6dce"
-                                class="sf-depth-1 menuparent"><a href="undergraduate-programs.html"
+                                class="sf-depth-1 menuparent"><a href="{{ route('user_scientific_research') }}"
                                                                  class="sf-depth-1 menuparent">ILMIY TADQIQOTLAR</a>
                                 <ul>
                                     <li id="main-menu-link-content62f18183-51b8-4622-ab43-d702dbcaa026"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('dissertations_user') }}"
+                                            href="{{ route('user_scientific_research_dissertations') }}"
                                             class="sf-depth-2">Dissertatsiyalar</a></li>
                                     <li id="main-menu-link-content8d4e2c93-1380-4b9b-85d8-4efac43921ee"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('textbooks_user') }}"
+                                            href="{{ route('user_scientific_research_textbooks') }}"
                                             class="sf-depth-2">Darsliklar</a></li>
                                     <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
                                         class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('preparation_user') }}"
+                                            href="{{ route('user_scientific_research_preparation') }}"
                                             class="sf-depth-2">Online imtihonga tayyorgarlik</a></li>
 
                                 </ul>

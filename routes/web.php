@@ -25,22 +25,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/userdissertations', [HomeController::class,'dissertations'])->name('dissertations_user');
 Route::get('/photogallery', [HomeController::class,'photos'])->name('photos_user');
-Route::get('/oav', [HomeController::class,'oav'])->name('oav_user');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact_user');
 
 
-Route::get('/oav', [HomeController::class,'oav'])->name('oav_user');
-Route::get('/goals', [HomeController::class,'about_goals'])->name('goals_user');
-Route::get('/participants', [HomeController::class,'about_participants'])->name('participants_user');
-Route::get('/books', [HomeController::class,'about_books'])->name('books_user');
-Route::get('/articles', [HomeController::class,'about_articles'])->name('articles_user');
+Route::get('user/scientific', [HomeController::class,'scientific_research'])->name('user_scientific_research');
+Route::get('user/scientific/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('user_scientific_research_dissertations');
+Route::get('user/scientific/textbooks', [HomeController::class,'scientific_research_textbooks'])->name('user_scientific_research_textbooks');
+Route::get('user/scientific/preparation', [HomeController::class,'scientific_research_preparation'])->name('user_scientific_research_preparation');
 
-Route::get('user/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('dissertations_user');
-Route::get('user/textbooks', [HomeController::class,'scientific_research_textbooks'])->name('textbooks_user');
-Route::get('user/preparation', [HomeController::class,'scientific_research_preparation'])->name('preparation_user');
+Route::get('user/about', [HomeController::class,'about'])->name('user_about');
+Route::get('user/about/goals', [HomeController::class,'about_goals'])->name('user_about_goals');
+Route::get('user/about/participants', [HomeController::class,'about_participants'])->name('user_about_participants');
+Route::get('user/about/books', [HomeController::class,'about_books'])->name('user_about_books');
+Route::get('user/about/articles', [HomeController::class,'about_articles'])->name('user_about_articles');
+Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_about_oav');
+
+
+/* ADMIN PAGE ROUTES ********************************************************************************/
 
 
 Route::get('/dashboard', function () {

@@ -43,16 +43,6 @@ class HomeController extends Controller
         // Pass the distinct countries to the view
         return view('user.pages.photos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
-    public function oav(){
-
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-
-//        $dissertations = Dissertations::
-
-        // Pass the distinct countries to the view
-        return view('user.pages.oav', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
     public function contact(){
 
@@ -60,37 +50,43 @@ class HomeController extends Controller
         $languages = Dissertations::distinct()->pluck('language');
         $author = Dissertations::distinct()->pluck('author');
 
-//        $dissertations = Dissertations::
 
         // Pass the distinct countries to the view
         return view('user.pages.contact', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
-    public function about_goals(){
-        // Pass the distinct countries to the view
-        return view('user.pages.about.goals_and_objectives');    }
 
-    public function about_participants(){
-        // Pass the distinct countries to the view
-        return view('user.pages.about.participants');    }
-
-    public function about_books(){
-        // Pass the distinct countries to the view
-        return view('user.pages.about.books');    }
-
-    public function about_articles(){
-        // Pass the distinct countries to the view
-        return view('user.pages.about.articles');    }
+    public function scientific_research(){
+        return view('user.pages.scientific_research');    }
 
     public function scientific_research_dissertations(){
-        // Pass the distinct countries to the view
         return view('user.pages.scientific_research.dissertations');    }
 
     public function scientific_research_textbooks(){
-        // Pass the distinct countries to the view
         return view('user.pages.scientific_research.textbooks');    }
 
     public function scientific_research_preparation(){
-        // Pass the distinct countries to the view
         return view('user.pages.scientific_research.preparation');    }
+
+
+    public function about(){
+        return view('user.pages.about');    }
+
+    public function about_goals(){
+        return view('user.pages.about.goals_and_objectives');    }
+
+    public function about_participants(){
+        return view('user.pages.about.participants');    }
+
+    public function about_books(){
+        return view('user.pages.about.books');    }
+
+    public function about_articles(){
+        return view('user.pages.about.articles');    }
+
+    public function about_oav(){
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+        return view('user.pages.about.oav', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
 }
