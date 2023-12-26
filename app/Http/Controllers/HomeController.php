@@ -21,45 +21,53 @@ class HomeController extends Controller
         return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
     }
 
-    public function dissertations(){
-
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-
-//        $dissertations = Dissertations::
-
-        // Pass the distinct countries to the view
-        return view('user.pages.dissertation', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
-
-    public function photos(){
-
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-
-//        $dissertations = Dissertations::
-
-        // Pass the distinct countries to the view
-        return view('user.pages.photos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
-
-
     public function contact(){
+        return view('user.pages.contact');    }
+
+
+    public function gallery(){
 
         $countries = Dissertations::distinct()->pluck('country');
         $languages = Dissertations::distinct()->pluck('language');
         $author = Dissertations::distinct()->pluck('author');
+        return view('user.pages.gallery', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+
+    public function gallery_photos(){
+
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+        return view('user.pages.gallery.photos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+
+    public function gallery_videos(){
+
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+        return view('user.pages.gallery.videos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
 
-        // Pass the distinct countries to the view
-        return view('user.pages.contact', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+    public function literature(){
+        return view('user.pages.literature');    }
+
+    public function literature_textbooks(){
+        return view('user.pages.literature.textbooks');    }
+
+    public function literature_manuals(){
+        return view('user.pages.literature.manuals');    }
+
+    public function literature_methodical(){
+        return view('user.pages.literature.methodical');    }
 
 
     public function scientific_research(){
         return view('user.pages.scientific_research');    }
 
     public function scientific_research_dissertations(){
-        return view('user.pages.scientific_research.dissertations');    }
+        $countries = Dissertations::distinct()->pluck('country');
+        $languages = Dissertations::distinct()->pluck('language');
+        $author = Dissertations::distinct()->pluck('author');
+        return view('user.pages.scientific_research.dissertations', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
     public function scientific_research_textbooks(){
         return view('user.pages.scientific_research.textbooks');    }
