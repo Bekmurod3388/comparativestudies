@@ -12,46 +12,18 @@
 
         <div class="container">
             <div class="videos_start">
-                <div class="video_box">
-                    <div class="video">
-                        <iframe class="video_rol"  height="300" src="https://www.youtube.com/embed/B0hD4_TPAD4" frameborder="0" allowfullscreen></iframe>
+                @forelse( $videos as $video )
+                    <div class="video_box">
+                        <div class="video">
+                            <iframe class="video_rol"  height="300" src="{{ $video->video_url }}" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="video_text">
+                            <p><span>{{ $video->title }}</span></p>
+                        </div>
                     </div>
-                    <div class="video_text">
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis delectus deserunt dicta dolor exercitationem illo illum, numquam pariatur, provident quae quas quia quisquam quo quos vel velit voluptates voluptatibus?</span></p>
-
-                    </div>
-
-                </div>
-                <div class="video_box">
-                    <div class="video">
-                        <iframe class="video_rol"  height="300" src="https://www.youtube.com/embed/B0hD4_TPAD4" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video_text">
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis delectus deserunt dicta dolor exercitationem illo illum, numquam pariatur, provident quae quas quia quisquam quo quos vel velit voluptates voluptatibus?</span></p>
-
-                    </div>
-
-                </div>
-                <div class="video_box">
-                    <div class="video">
-                        <iframe class="video_rol"  height="300" src="https://www.youtube.com/embed/B0hD4_TPAD4" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video_text">
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis delectus deserunt dicta dolor exercitationem illo illum, numquam pariatur, provident quae quas quia quisquam quo quos vel velit voluptates voluptatibus?</span></p>
-
-                    </div>
-
-                </div>
-                <div class="video_box">
-                    <div class="video">
-                        <iframe class="video_rol"  height="300" src="https://www.youtube.com/embed/B0hD4_TPAD4" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <div class="video_text">
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem corporis delectus deserunt dicta dolor exercitationem illo illum, numquam pariatur, provident quae quas quia quisquam quo quos vel velit voluptates voluptatibus?</span></p>
-
-                    </div>
-
-                </div>
+                @empty
+                    <h1>No video</h1>
+                @endforelse
             </div>
         </div>
     </div>
