@@ -6,6 +6,7 @@ use App\Models\Photo;
 use App\Models\Researcher;
 use App\Models\Video;
 use App\Models\Center;
+use App\Models\Colleagues;
 use App\Models\Dissertations;
 use App\Service\CountryService;
 
