@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use PhpOption\None;
 
 class AboutController extends Controller
 {
@@ -34,7 +35,7 @@ class AboutController extends Controller
             'title' => 'required',
             'url' => 'required',
         ]);
-        $url = $request->url;
+            $url = $request->url;
         if ($request->type == "youtube"){
             $url = $request->url;
             $videoId = pathinfo(parse_url($url, PHP_URL_PATH), PATHINFO_FILENAME);
@@ -42,18 +43,27 @@ class AboutController extends Controller
             if ($query = parse_url($url, PHP_URL_QUERY)) {
                 $url .= '?' . $query;
             }
-        }
-
-        if ($request->type == "gazeta"){
+        } else if ($request->type == "gazeta"){
+            $request->validate(["img"=> 'required|image|mimes:jpeg,png,png,jpg,gif|max:2048']);
             $fileName = time().'.'.$url->extension();
             $url->storeAs('public/oav_pdf', $fileName);
             $url = $fileName;
+        } else {
+            $request->validate(["img"=> 'required|image|mimes:jpeg,png,png,jpg,gif|max:2048']);
         }
+
+        if ($request->hasFile('img')) {
+            $img_url = $request->file('img')->store('about_photos', 'public');
+        } else {
+            $img_url = "no";
+        }
+
 
         About::create([
             "title" => $request->title,
             "url" => $url,
             "type" => $request->type,
+            "img" => $img_url,
         ]);
 
         return redirect()->route('abouts.index')->with('success', 'OAV muvaffaqiyatli yaratildi.');
@@ -94,19 +104,29 @@ class AboutController extends Controller
             if ($query = parse_url($url, PHP_URL_QUERY)) {
                 $url .= '?' . $query;
             }
-        }
-
-        if ($request->type == "gazeta"){
+        } else if ($request->type == "gazeta"){
+            $request->validate(["img"=> 'required|image|mimes:jpeg,png,png,jpg,gif|max:2048']);
             $fileName = time().'.'.$url->extension();
             $url->storeAs('public/oav_pdf', $fileName);
             $url = $fileName;
+        } else {
+            $request->validate(["img"=> 'required|image|mimes:jpeg,png,png,jpg,gif|max:2048']);
         }
-
-        $about->update([
-            "title" => $request->title,
-            "url" => $url,
-            "type" => $request->type,
-        ]);
+        if ($request->hasFile('img')) {
+            $img_url = $request->file('img')->store('about_photos', 'public');
+            $about->update([
+                "title" => $request->title,
+                "url" => $url,
+                "type" => $request->type,
+                "img" => $img_url,
+            ]);
+        } else {
+            $about->update([
+                "title" => $request->title,
+                "url" => $url,
+                "type" => $request->type,
+            ]);
+        }
 
         return redirect()->route('abouts.index')->with('success', 'OAV muvaffaqiyatli tahrirlandi..');
     }

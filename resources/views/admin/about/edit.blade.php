@@ -23,6 +23,25 @@
                     <label for="url" id="url_text">URL</label>
                     <input type="url" class="form-control" id="url" name="url" required value="{{ $about->url }}">
                 </div>
+                <div class="form-group mb-3">
+                    @if($about->img == "no")
+                        <img
+                            src="{{ asset('assets/img/avatars/1.png') }}"
+                            class="card-img-top" alt="{{ $about->title }}"
+                            style="width: 100px; height: 100px;"
+                        >
+                    @else
+                        <img
+                            src="{{ asset('storage/' . $about->img) }}"
+                            class="card-img-top" alt="{{ $about->title }}"
+                            style="width: 100px; height: 100px;"
+                        >
+                    @endif
+                </div>
+                <div class="form-group mb-3" id="imageInput" style="display: none;">
+                    <label for="image">Rasm tanlang</label>
+                    <input type="file" class="form-control" id="img" name="img" accept="image/*">
+                </div>
 
                 <div class="form-group mb-3">
                     <label for="type">Turi</label>
@@ -45,18 +64,27 @@
     <script>
         function selectType(type){
             var url = $("#url");
+            var imageInput = $("#imageInput");
+            console.log(type)
             if (type == "gazeta"){
                 url.attr({
                     type: "file",
                     accept: ".pdf"
                 });
                 $("#url_text").text("File");
-            }
-            if (type == "sayt" || type == "youtube"){
+                imageInput.show();
+            } else if (type == "sayt" || type == "youtube"){
                 url.attr({
                     type: "url",
                 });
                 $("#url_text").text("URL");
+                if (type == "sayt"){
+                    imageInput.show();
+                }else {
+                    imageInput.hide();
+                }
+            } else {
+                imageInput.hide();
             }
         }
         selectType('{{ $about->type }}');

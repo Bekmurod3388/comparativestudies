@@ -10,7 +10,7 @@
                 </div>
             @endif
 
-            <form action="{{ route('abouts.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('abouts.store') }}" id="storeform" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group mb-3">
@@ -21,6 +21,11 @@
                 <div class="form-group mb-3">
                     <label for="url" id="url_text">URL</label>
                     <input type="url" class="form-control" id="url" name="url" required>
+                </div>
+
+                <div class="form-group mb-3" id="imageInput" style="display: none;">
+                    <label for="image">Rasm tanlang</label>
+                    <input type="file" class="form-control-file" id="img" name="img" accept="image/*">
                 </div>
 
                 <div class="form-group mb-3">
@@ -41,18 +46,27 @@
     <script>
         function selectType(type){
             var url = $("#url");
+            var imageInput = $("#imageInput");
+
             if (type.value == "gazeta"){
                 url.attr({
                     type: "file",
                     accept: ".pdf"
                 });
                 $("#url_text").text("File");
-            }
-            if (type.value == "sayt" || type.value == "youtube"){
+                imageInput.show();
+            } else if (type.value == "sayt" || type.value == "youtube"){
                 url.attr({
                     type: "url",
                 });
                 $("#url_text").text("URL");
+                if (type.value == "sayt"){
+                    imageInput.show();
+                }else {
+                    imageInput.hide();
+                }
+            } else {
+                ixmageInput.hide();
             }
         }
     </script>

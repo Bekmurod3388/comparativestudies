@@ -23,6 +23,7 @@
                     <th>#</th>
                     <th>Sarlavha</th>
                     <th>Url</th>
+                    <th>Foto</th>
                     <th>Turi</th>
                     <th style="width: 15%">Amallar</th>
                 </tr>
@@ -33,32 +34,47 @@
                         <td colspan="5">Ma'lumotlar mavjud emas.</td>
                     </tr>
                 @else
-                    @foreach($abouts as $video)
+                    @foreach($abouts as $about)
                         <tr>
                             <td>{{ $loop->index+1 }}</td>
-                            <td>{{ $video->title }}</td>
+                            <td>{{ $about->title }}</td>
                             <td>
-                                @if($video->type == "gazeta")
-                                    <a href="{{ asset('storage/oav_pdf/' . $video->url) }}" target="_blank">Ko'rish uchun bosing</a>
+                                @if($about->type == "gazeta")
+                                    <a href="{{ asset('storage/oav_pdf/' . $about->url) }}" target="_blank">Ko'rish uchun bosing</a>
                                 @else
-                                <a href="{{ $video->url }}" target="_blank">Ko'rish uchun bosing</a>
+                                <a href="{{ $about->url }}" target="_blank">Ko'rish uchun bosing</a>
                                 @endif
                             </td>
                             <td>
-                                @if($video->type == "gazeta")
+                                @if($about->img == "no")
+                                    <img
+                                        src="{{ asset('assets/img/avatars/1.png') }}"
+                                        class="card-img-top" alt="{{ $about->title }}"
+                                        style="width: 100px; height: 100px;"
+                                    >
+                                @else
+                                    <img
+                                        src="{{ asset('storage/' . $about->img) }}"
+                                        class="card-img-top" alt="{{ $about->title }}"
+                                        style="width: 100px; height: 100px;"
+                                    >
+                                @endif
+                            </td>
+                            <td>
+                                @if($about->type == "gazeta")
                                     <span class="badge bg-label-primary me-1">Gazeta</span>
-                                @elseif($video->type == "youtube")
+                                @elseif($about->type == "youtube")
                                     <span class="badge bg-label-danger me-1">YouTube</span>
-                                @elseif($video->type == "sayt")
+                                @elseif($about->type == "sayt")
                                     <span class="badge bg-label-warning me-1">Web-sayt</span>
                                 @endif
                             </td>
                             <td>
                                 <div class="d-flex justify-content-between">
-                                    <a class="btn btn-warning" href="{{ route('abouts.edit', $video->id) }}"><i
+                                    <a class="btn btn-warning" href="{{ route('abouts.edit', $about->id) }}"><i
                                             class="bx bx-edit-alt me-1"></i></a>
 
-                                    <form action="{{ route('abouts.destroy', $video->id) }}" method="POST"
+                                    <form action="{{ route('abouts.destroy', $about->id) }}" method="POST"
                                           class="d-inline">
                                         @csrf
                                         @method('DELETE')
