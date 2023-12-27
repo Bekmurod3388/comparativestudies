@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use App\Models\Researcher;
 use App\Models\Video;
 use App\Models\Center;
-use App\Models\Colleagues;
 use App\Models\Dissertations;
 use App\Service\CountryService;
 
@@ -33,18 +33,13 @@ class HomeController extends Controller
         return view('user.pages.gallery', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
 
     public function gallery_photos(){
-
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-        return view('user.pages.gallery.photos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+        $photos = Photo::all();
+        return view('user.pages.gallery.photos', ["photos" => $photos]);    }
 
     public function gallery_videos(){
 
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-        return view('user.pages.gallery.videos', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+        $videos = Video::all();
+        return view('user.pages.gallery.videos', ["videos" => $videos]);    }
 
 
     public function literature(){
