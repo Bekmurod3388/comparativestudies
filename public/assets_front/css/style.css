@@ -484,27 +484,13 @@
 .navbar-nav .nav-link{
     text-transform: uppercase;
 }
-.project-o {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 100px 0;
-}
+
 .container-fluid{
     margin-top: 100px;
+    margin-bottom: 100px;
 
 }
-.project-o::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(".././img/background.jpg") no-repeat center center / cover;
-    opacity: 0.3;
-    z-index: -1;
-}
+
 
 .project_objectives-box-start {
     position: relative;
@@ -724,7 +710,7 @@
     overflow-y: scroll;
     list-style: none;
     flex-wrap: wrap;
-    height: 400px;
+    height: 50vh;
 }
 /*.Korgazma::-webkit-scrollbar{*/
 /*    display: none;*/
@@ -734,7 +720,9 @@
 }
 .tab-content{
     width: 80%;
+    height: 50vh;
     padding: 0 20px;
+    overflow-y: scroll;
 }
 .width_photos{
     width: 33%;
@@ -753,19 +741,7 @@
     color: #000;
 
 }
-.G-button{
-    color: #fff;
-}
-.Korgazma li a:focus {
-    color: #FFF; /* Цвет текста при фокусировке */
-    background-color: blue; /* Цвет фона при фокусировке */
-}
 
-/* Пример добавления стилей при активном состоянии (для класса 'active') */
-.Korgazma li a.active {
-    color: #FFF; /* Цвет текста в активном состоянии */
-    background-color: blue; /* Цвет фона в активном состоянии */
-}
 
 .contact_left{
     width: 40%;
@@ -815,4 +791,192 @@ textarea::placeholder {
     -webkit-transition: .3s;
     transition: .3s;
     text-decoration: none
+}
+
+.project {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.blurry-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.15;
+}
+.goals_start h1{
+    font-size: 40px;
+    color: #000;
+}
+.goals_start li a{
+    text-decoration: none;
+    list-style: none;
+    color: #0a53be;
+
+}
+.project_start {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.project_one,
+.project_two {
+    background: #cfcfcf;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project_one h3,
+.project_two h3 {
+    color: #000000;
+}
+.project_one p, .project_two p{
+    color: #0a53be;
+}
+.goals{
+}
+
+
+
+
+.project_objectives-box-start {
+    position: relative;
+    z-index: 1;
+}
+
+
+.project_objectives-img {
+    width: 90px;
+    height: 130px;
+}
+
+.project_objectives-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.prject_objectives-text h3 {
+    color: #080260;
+}
+.articles{
+    background: #fff;
+    margin: 50px 0;
+}
+.project_objectives-box-start {
+    background-color: #f6f6f6;
+    padding: 40px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    align-items: center;
+}
+
+.project_objectives-box-start:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+}
+
+.project_objectives-pdf {
+    background-color: #240090;
+    color: #fff;
+    width: 95px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project_objectives-pdf:hover {
+    background-color: #080260;
+    transition: all 0.3s ease;
+}
+
+.project_objectives-box {
+    margin-bottom: 30px;
+}
+
+@media(max-width:1300px){
+    .prject_objectives-text h3{
+        font-size: 18px;
+    }
+}
+@media(max-width:990px){
+    .project_objectives-img{
+        width: 70px;
+        height: 100px;
+    }
+    .prject_objectives-text h3{
+        font-size: 12px;
+    }
+    .prject_objectives-text p{
+        font-size:8px;
+    }
+}
+@media(max-width:768px){
+    .project_objectives-box-start{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .prject_objectives-text{
+        text-align: center;
+    }
+}
+/* LOYIHA BOYICHA MAQOLALAR  END*/
+.breadcrumb-item a{
+    list-style: none;
+    text-decoration: none;
+    color: #0a53be;
+}
+.animated h1{
+    font-size: 40px;
+}
+.videos {
+    display: flex;
+    flex-direction: column;
+}
+.margin{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.video_box{
+    width: 45%;
+    margin-bottom: 100px;
+}
+.video iframe{
+    width: 100%;
+}
+.video_text{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.videos_start{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+@media(max-width:768px){
+    .video_box{
+        width: 100%;
+    }
 }
