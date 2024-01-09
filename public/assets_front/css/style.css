@@ -980,3 +980,73 @@ textarea::placeholder {
         width: 100%;
     }
 }
+.textbooks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 0;
+}
+
+.textbooks_boxs{
+
+}
+.textbook_img{
+    width: 90px;
+    height: 130px;
+
+}
+.textbook_img img{
+    width: 100%;
+    height: 100%;
+}
+.textbook_left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.textbook_name p{
+    color: #333;
+    font-size: 30px;
+    font-weight: 500;
+}
+.textbook_right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.project_objectives-box-start{
+    margin-bottom: 20px;
+
+}
+.textbook_file a{
+    text-decoration: none;
+    color: #fff;
+}
+.textbook_file button{
+    background-color: #240090;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.textbook_file button:hover{
+    background-color: #080260;
+    transition: all 0.3s ease;
+
+}
+.textbook_category select{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #000;
+    border: 1px solid #0a58ca;
+}
