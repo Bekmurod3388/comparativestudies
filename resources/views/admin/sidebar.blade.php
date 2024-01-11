@@ -136,6 +136,13 @@
                 <div data-i18n="Analytics">Kitoblar</div>
             </a>
         </li>
+
+        <li class="menu-item @if(request()->routeIs('journals.index')) active @endif">
+            <a href="{{ route('journals.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-bookmarks"></i>
+                <div data-i18n="Analytics">Jurnallar</div>
+            </a>
+        </li>
         @endif
         @if(auth()->user()->hasRole('client'))
 
