@@ -14,75 +14,30 @@
         <div class="container">
             <div class="project_objectives-start">
                 <div class="project_objectives-box">
-                    <div class="project_objectives-box-start">
-
-
+                    @forelse($journals as $journal)
+                        <div class="project_objectives-box-start">
                         <div class="textbook_left">
                             <div class="textbook_img">
-                                <img src="https://yevroturkologika.uz/storage/first_page/first_page_1692993713.png" alt="book">
+                                <img src="{{ asset('storage/journals/' . $journal->img_url) }}" alt="book">
                             </div>
                             <div class="prject_objectives-text">
-                                <h3>ИННОВАЦИОН ЛОЙИҲА </h3>
-                                <p>Bu qo'llanma 1999 yil yozilgan</p>
+                                <h3>{{ $journal->name }}</h3>
+                                <p>{{ $journal->description }}</p>
                             </div>
                         </div>
                         <div class="textbook_right">
 
                             <div class="textbook_file">
                                 <button>
-                                    <a href="" download>Kitobni Yuklash</a>
+                                    <a href="{{ $journal->site_url }}">Jurnal sahifasi</a>
                                 </button>
                             </div>
 
                         </div>
-
                     </div>
-                    <div class="project_objectives-box-start">
-
-
-                        <div class="textbook_left">
-                            <div class="textbook_img">
-                                <img src="https://yevroturkologika.uz/storage/first_page/first_page_1692993713.png" alt="book">
-                            </div>
-                            <div class="prject_objectives-text">
-                                <h3>ИННОВАЦИОН ЛОЙИҲА </h3>
-                                <p>Bu qo'llanma 1999 yil yozilgan</p>
-                            </div>
-                        </div>
-                        <div class="textbook_right">
-
-                            <div class="textbook_file">
-                                <button>
-                                    <a href="" download>Kitobni Yuklash</a>
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="project_objectives-box-start">
-
-
-                        <div class="textbook_left">
-                            <div class="textbook_img">
-                                <img src="https://yevroturkologika.uz/storage/first_page/first_page_1692993713.png" alt="book">
-                            </div>
-                            <div class="prject_objectives-text">
-                                <h3>ИННОВАЦИОН ЛОЙИҲА </h3>
-                                <p>Bu qo'llanma 1999 yil yozilgan</p>
-                            </div>
-                        </div>
-                        <div class="textbook_right">
-
-                            <div class="textbook_file">
-                                <button>
-                                    <a href="" download>Kitobni Yuklash</a>
-                                </button>
-                            </div>
-
-                        </div>
-
-                    </div>
+                    @empty
+                        <h1>Jurnallar mavjud emas</h1>
+                    @endforelse
                 </div>
             </div>
         </div>

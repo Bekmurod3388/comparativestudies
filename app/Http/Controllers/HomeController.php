@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Photo;
+use App\Models\Journal;
 use App\Models\Researcher;
 use App\Models\Video;
 use App\Models\Center;
@@ -57,22 +58,28 @@ class HomeController extends Controller
 
 
     public function magazines(){
-        return view('user.pages.magazines');    }
+        $journals = Journal::all();
+        return view('user.pages.magazines', compact('journals'));    }
 
     public function magazines_yevrope(){
-        return view('user.pages.magazines.yevropa');    }
+        $journals = Journal::where('category', "1")->get();
+        return view('user.pages.magazines.yevropa', compact('journals'));    }
 
     public function magazines_amerika(){
-        return view('user.pages.magazines.amerika');    }
+        $journals = Journal::where('category', "2")->get();
+        return view('user.pages.magazines.amerika', compact('journals'));    }
 
     public function magazines_turkiya(){
-        return view('user.pages.magazines.turkiya');    }
+        $journals = Journal::where('category', "3")->get();
+        return view('user.pages.magazines.turkiya', compact('journals'));    }
 
     public function magazines_rossiya(){
-        return view('user.pages.magazines.rossiya');    }
+        $journals = Journal::where('category', "4")->get();
+        return view('user.pages.magazines.rossiya', compact('journals'));    }
 
     public function magazines_central_asia(){
-        return view('user.pages.magazines');    }
+        $journals = Journal::where('category', "5")->get();
+        return view('user.pages.magazines.central_asia', compact('journals'));    }
 
 
     public function scientific_research(){

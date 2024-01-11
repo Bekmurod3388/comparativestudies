@@ -12,6 +12,7 @@ use App\Http\Controllers\DissertationsController;
 use App\Http\Controllers\FacultyBooksController;
 use App\Http\Controllers\ResearcherBooksController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\JournalsControlller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -86,6 +87,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/researcher', ResearcherController::class);
     Route::resource('/carousels', CarouselsController::class);
     Route::resource('/facultybooks', FacultyBooksController::class);
+    Route::resource('/journals', JournalsControlller::class);
 });
 
 

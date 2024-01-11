@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
             CenterTableSeeder::class,
             ResearchersTableSeeder::class,
             ResearchersBooksTableSeeder::class,
+            JournalsTableSeeder::class,
         ]);
     }
 }
