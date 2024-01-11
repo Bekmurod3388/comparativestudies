@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Photo;
 use App\Models\Journal;
 use App\Models\Researcher;
@@ -10,6 +11,9 @@ use App\Models\Center;
 use App\Models\Colleagues;
 use App\Models\Dissertations;
 use App\Service\CountryService;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 
 class HomeController extends Controller
 {
@@ -23,23 +27,23 @@ class HomeController extends Controller
         return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
     }
 
-    public function contact(){
+    public function contact(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         return view('user.pages.contact');    }
 
+    public function gallery(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        $photos = Photo::all();
+        $videos = Video::all();
+        return view('user.pages.gallery', compact('photos','videos'));    }
 
-    public function gallery(){
-
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-        return view('user.pages.gallery', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
-
-    public function gallery_photos(){
+    public function gallery_photos(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $photos = Photo::all();
         return view('user.pages.gallery.photos', ["photos" => $photos]);    }
 
-    public function gallery_videos(){
-
+    public function gallery_videos(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $videos = Video::all();
         return view('user.pages.gallery.videos', ["videos" => $videos]);    }
 
@@ -57,27 +61,33 @@ class HomeController extends Controller
         return view('user.pages.literature.methodical');    }
 
 
-    public function magazines(){
+    public function magazines(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $journals = Journal::all();
         return view('user.pages.magazines', compact('journals'));    }
 
-    public function magazines_yevrope(){
+    public function magazines_yevrope(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $journals = Journal::where('category', "1")->get();
         return view('user.pages.magazines.yevropa', compact('journals'));    }
 
-    public function magazines_amerika(){
+    public function magazines_amerika(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $journals = Journal::where('category', "2")->get();
         return view('user.pages.magazines.amerika', compact('journals'));    }
 
-    public function magazines_turkiya(){
+    public function magazines_turkiya(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $journals = Journal::where('category', "3")->get();
         return view('user.pages.magazines.turkiya', compact('journals'));    }
 
-    public function magazines_rossiya(){
+    public function magazines_rossiya(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $journals = Journal::where('category', "4")->get();
         return view('user.pages.magazines.rossiya', compact('journals'));    }
 
-    public function magazines_central_asia(){
+    public function magazines_central_asia(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
         $journals = Journal::where('category', "5")->get();
         return view('user.pages.magazines.central_asia', compact('journals'));    }
 
@@ -113,10 +123,13 @@ class HomeController extends Controller
     public function about_articles(){
         return view('user.pages.about.articles');    }
 
-    public function about_oav(){
-        $countries = Dissertations::distinct()->pluck('country');
-        $languages = Dissertations::distinct()->pluck('language');
-        $author = Dissertations::distinct()->pluck('author');
-        return view('user.pages.about.oav', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+    public function about_oav(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+
+        $about_gazeta = About::where('type', 'gazeta')->get();
+        $about_site = About::where('type', 'sayt')->get();
+        $about_youtube = About::where('type', 'youtube')->get();
+        return view('user.pages.about.oav', compact('about_youtube', 'about_gazeta', 'about_site'));
+    }
 
 }

@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             ResearchersTableSeeder::class,
             ResearchersBooksTableSeeder::class,
             JournalsTableSeeder::class,
+            AboutTableSeeder::class,
         ]);
     }
 }
