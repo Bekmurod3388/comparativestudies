@@ -99,7 +99,8 @@ class HomeController extends Controller
         $countries = Dissertations::distinct()->pluck('country');
         $languages = Dissertations::distinct()->pluck('language');
         $author = Dissertations::distinct()->pluck('author');
-        return view('user.pages.scientific_research.dissertations', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+        $dissertations = Dissertations::latest()->filter(request(['search_author', 'search_languages', 'search_countries', 'search']))->paginate(6)->pluck('dissertations');
+        return view('user.pages.scientific_research.dissertations', ["countries" => $countries, "author" => $author, "languages" => $languages, "dissertations" => $dissertations]);    }
 
     public function scientific_research_textbooks(){
         return view('user.pages.scientific_research.textbooks');    }

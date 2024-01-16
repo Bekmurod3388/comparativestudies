@@ -16,7 +16,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <select name="search_country" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
-                                            <option value="0" selected>Davlat</option>
+                                            <option value="" selected>Davlat</option>
                                             @foreach($countries as $country)
                                                 <option value="{{ $country }}">{{ $country }}</option>
                                             @endforeach
@@ -26,7 +26,7 @@
                                         <select name="search_language" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
                                             <option selected>Tilni tanlash</option>
-                                            @foreach($languages as $language)
+                                                @foreach($languages as $language)
                                                 <option value="{{ $language }}">{{ $language }}</option>
                                             @endforeach
                                         </select>
@@ -40,33 +40,8 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-8">
-                                        <input
-                                            name="thesis_date_start"
-                                            type="date"
-                                            class="form-control border-primary p-2"
-                                            id="basic-icon-default-fullname"
-                                            placeholder="2021-06-18T12:30:00"
-                                            aria-label="2021-06-18T12:30:00"
-                                            aria-describedby="basic-icon-default-fullname2"
-                                        />
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-4 text-center">
-                                        <p>sana dan</p>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 col-sm-8">
-                                        <input
-                                            name="thesis_date_end"
-                                            type="date"
-                                            class="form-control border-primary p-2"
-                                            id="basic-icon-default-fullname"
-                                            placeholder="2021-06-18T12:30:00"
-                                            aria-label="2021-06-18T12:30:00"
-                                            aria-describedby="basic-icon-default-fullname2"
-                                        />
-                                    </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-4 text-center">
-                                        <p>sanagacha</p>
+                                    <div class="col-lg-4 col-md-4">
+                                        <input type="text">
                                     </div>
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
@@ -82,39 +57,21 @@
         <div class="project-o">
             <div class="container">
                 <div class="project_objectives-start">
+                    @forelse($dissertations as $dissertation)
                     <div class="project_objectives-box">
                         <div class="project_objectives-box-start">
                             <div class="prject_objectives-text">
-                                <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
-                                <p> Registratsiya kodi: No 181 (703)</p>
+                                <h3>{{ $dissertation->topic }}</h3>
+                                <p> {{ $dissertation->author }} </p>
                             </div>
                             <div class="project_objectives-pdf">
                                 <a target="_blank" src="" frameborder="0">Maqola</a>
                             </div>
                         </div>
                     </div>
-                    <div class="project_objectives-box">
-                        <div class="project_objectives-box-start">
-                            <div class="prject_objectives-text">
-                                <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
-                                <p> Registratsiya kodi: No 181 (703)</p>
-                            </div>
-                            <div class="project_objectives-pdf">
-                                <a target="_blank" src="" frameborder="0">Maqola</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project_objectives-box">
-                        <div class="project_objectives-box-start">
-                            <div class="prject_objectives-text">
-                                <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
-                                <p> Registratsiya kodi: No 181 (703)</p>
-                            </div>
-                            <div class="project_objectives-pdf">
-                                <a target="_blank" src="" frameborder="0">Maqola</a>
-                            </div>
-                        </div>
-                    </div>
+                    @empty
+                        <h1 class="pb-5">Dissertatsiya topilmadi</h1>
+                    @endforelse
                 </div>
             </div>
         </div>
