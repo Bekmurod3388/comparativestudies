@@ -114,11 +114,9 @@
                                         <div class="field-content">
 
 
-                                            <div
-                                                    class="videos paragraph paragraph--type--bp-columns paragraph--view-mode--default paragraph--id--77 paragraph--width--wide duke-royal-blue">
-                                                <div class="paragraph__column videos">
-                                                    <div
-                                                            class="paragraph--type--bp-columns__2col videos">
+                                            <div class="container mt-1" style="background-color: #00539b; color: white;">
+                                                <div class="row">
+                                                    <div class="col-sm">
                                                         <div>
                                                             <div
                                                                     class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--74">
@@ -188,7 +186,7 @@
                                                                                         muvofiqlashtirish; 
                                                                                     </p>
 
-                                                                                    <p><a class="btn-primary"
+                                                                                    <p><a class="btn btn-danger" style="border-color: #ffd960 !important; background-color: #ffd960 !important; color: #262626 !important;"
                                                                                           href="undergraduate-programs.html">Kirish
                                                                                         </a></p>
                                                                                 </div>
@@ -202,23 +200,23 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="paragraph--type--bp-columns__2col width_row">
+                                                    <div class="col-sm">
                                                         <div>
                                                             <div
-                                                                    class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
+                                                                class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
                                                                 <div class="paragraph__column">
                                                                     <div>
                                                                         <div
-                                                                                class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
+                                                                            class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
                                                                             <div
-                                                                                    class="paragraph__column">
+                                                                                class="paragraph__column">
 
                                                                                 <div
-                                                                                        class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
+                                                                                    class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
                                                                                     <div
-                                                                                            class="views-element-container">
+                                                                                        class="views-element-container">
                                                                                         <div
-                                                                                                class="viewsreference--view-title">
+                                                                                            class="viewsreference--view-title">
                                                                                             Bizning
                                                                                             Videolar
                                                                                         </div>
