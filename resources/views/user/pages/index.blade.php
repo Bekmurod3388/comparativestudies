@@ -53,26 +53,26 @@
                                                     <div class="quicklinks-wrapper">
                                                         <div
                                                                 class="field field--name-field-quick-link-1 field--type-link field--label-hidden field__item">
-                                                            <a href="undergraduate/major.html">Loyihaning
+                                                            <a href="{{ route('user_about_goals') }}">Loyihaning
                                                                 maqsad va vazifalari</a>
                                                         </div>
 
                                                         <div
                                                                 class="field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
-                                                            <a href="undergraduate/film-media.html">Loyiha
+                                                            <a href="{{ route('user_about_articles') }}">Loyiha
                                                                 bo'yicha maqolalar</a>
                                                         </div>
 
                                                         <div
                                                                 class="field field--name-field-quick-link-3 field--type-link field--label-hidden field__item">
-                                                            <a href="graduate/phd.html">Oav biz
+                                                            <a href="{{ route('user_about_oav') }}">Oav biz
                                                                 haqimizda</a>
                                                         </div>
 
                                                         <div
                                                                 class="field field--name-field-quick-link-4 field--type-link field--label-hidden field__item">
                                                             <a
-                                                                    href="people/appointed-faculty/primary-faculty.html">Bizning
+                                                                    href="{{ route('user_magazines') }}">Bizning
                                                                 Jurnallar</a>
                                                         </div>
 
