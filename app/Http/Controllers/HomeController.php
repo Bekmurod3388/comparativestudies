@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\About;
 use App\Models\Photo;
 use App\Models\Researcher;
 use App\Models\Video;
@@ -110,6 +111,17 @@ class HomeController extends Controller
         $countries = Dissertations::distinct()->pluck('country');
         $languages = Dissertations::distinct()->pluck('language');
         $author = Dissertations::distinct()->pluck('author');
-        return view('user.pages.about.oav', ["countries" => $countries, "author" => $author, "languages" => $languages]);    }
+        $about_youtube = About::where('type', 'youtube')->get();
+        $about_gazeta = About::where('type', 'gazeta')->get();
+        $about_websayt = About::where('type', 'wensayt')->get();
+
+        return view('user.pages.about.oav', [
+            "countries" => $countries,
+            "author" => $author,
+            "languages" => $languages,
+            "about_youtube" => $about_youtube,
+            "about_gazeta" => $about_gazeta,
+            "about_websayt" => $about_websayt
+        ]);    }
 
 }
