@@ -127,7 +127,7 @@
                                     <li id="main-menu-link-content8d4e2c93-1380-4b9b-85d8-4efac43921ee"
                                         class="sf-depth-2 sf-no-children"><a
                                             href="{{ route('user_scientific_research_textbooks') }}"
-                                            class="sf-depth-2">Darsliklar</a></li>
+                                            class="sf-depth-2">Qiyosiy jurnallar</a></li>
                                     <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
                                         class="sf-depth-2 sf-no-children"><a
                                             href="{{ route('user_scientific_research_preparation') }}"
