@@ -8,10 +8,7 @@
 
                 <div class="content">
                     <div>
-                        <div
-                                class="view view-paragraphs view-id-paragraphs view-display-id-block_2 js-view-dom-id-f8f48d28b8fb2eecc5fd3f9fb07d4a3c92b8838820c05ec4667cfe970b4a6a01">
-
-
+                        <div class="view view-paragraphs view-id-paragraphs view-display-id-block_2 js-view-dom-id-f8f48d28b8fb2eecc5fd3f9fb07d4a3c92b8838820c05ec4667cfe970b4a6a01">
                             <div class="">
                                 <div class="views-row">
                                     <div class="views-field views-field-field-paragraphs-top">
@@ -28,9 +25,7 @@
                                                                      src="{{asset('/assets_front/img/bookleft.png')}}"
                                                                      alt="img">
                                                                 <p class="name_book2">Garb</p>
-
                                                             </div>
-
                                                             <div id="box"></div>
                                                             <div class="home_book-two" data-toggle="modal"
                                                                  data-target="#RightModalCenter">
@@ -45,34 +40,29 @@
                                                 </div>
                                                 @include('user.layouts.centers_popup')
                                             </div>
-                                            <div
-                                                    class="paragraph paragraph--type--front-page-quick-links paragraph--view-mode--default paragraph--id--79">
+                                            <div class="paragraph paragraph--type--front-page-quick-links paragraph--view-mode--default paragraph--id--79">
                                                 <div class="paragraph__column">
                                                     <p class="paragraph_us">BIZ HAQIMIZDA</p>
-
                                                     <div class="quicklinks-wrapper">
-                                                        <div
-                                                                class="field field--name-field-quick-link-1 field--type-link field--label-hidden field__item">
-                                                            <a href="undergraduate/major.html">Loyihaning
+                                                        <div class="field field--name-field-quick-link-1 field--type-link field--label-hidden field__item">
+                                                            <a href="{{ route('user_about_goals') }}">Loyihaning
                                                                 maqsad va vazifalari</a>
                                                         </div>
-
-                                                        <div
-                                                                class="field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
-                                                            <a href="undergraduate/film-media.html">Loyiha
+                                                        <div class="field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
+                                                            <a href="{{ route('user_about_articles') }}">Loyiha
                                                                 bo'yicha maqolalar</a>
                                                         </div>
 
                                                         <div
                                                                 class="field field--name-field-quick-link-3 field--type-link field--label-hidden field__item">
-                                                            <a href="graduate/phd.html">Oav biz
+                                                            <a href="{{ route('user_about_oav') }}">Oav biz
                                                                 haqimizda</a>
                                                         </div>
 
                                                         <div
                                                                 class="field field--name-field-quick-link-4 field--type-link field--label-hidden field__item">
                                                             <a
-                                                                    href="people/appointed-faculty/primary-faculty.html">Bizning
+                                                                    href="{{ route('user_magazines') }}">Bizning
                                                                 Jurnallar</a>
                                                         </div>
 
@@ -114,11 +104,9 @@
                                         <div class="field-content">
 
 
-                                            <div
-                                                    class="videos paragraph paragraph--type--bp-columns paragraph--view-mode--default paragraph--id--77 paragraph--width--wide duke-royal-blue">
-                                                <div class="paragraph__column videos">
-                                                    <div
-                                                            class="paragraph--type--bp-columns__2col videos">
+                                            <div class="container mt-1" style="background-color: #00539b; color: white;">
+                                                <div class="row">
+                                                    <div class="col-sm">
                                                         <div>
                                                             <div
                                                                     class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--74">
@@ -188,7 +176,7 @@
                                                                                         muvofiqlashtirish; 
                                                                                     </p>
 
-                                                                                    <p><a class="btn-primary"
+                                                                                    <p><a class="btn btn-danger" style="border-color: #ffd960 !important; background-color: #ffd960 !important; color: #262626 !important;"
                                                                                           href="undergraduate-programs.html">Kirish
                                                                                         </a></p>
                                                                                 </div>
@@ -202,23 +190,23 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="paragraph--type--bp-columns__2col width_row">
+                                                    <div class="col-sm">
                                                         <div>
                                                             <div
-                                                                    class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
+                                                                class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
                                                                 <div class="paragraph__column">
                                                                     <div>
                                                                         <div
-                                                                                class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
+                                                                            class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
                                                                             <div
-                                                                                    class="paragraph__column">
+                                                                                class="paragraph__column">
 
                                                                                 <div
-                                                                                        class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
+                                                                                    class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
                                                                                     <div
-                                                                                            class="views-element-container">
+                                                                                        class="views-element-container">
                                                                                         <div
-                                                                                                class="viewsreference--view-title">
+                                                                                            class="viewsreference--view-title">
                                                                                             Bizning
                                                                                             Videolar
                                                                                         </div>

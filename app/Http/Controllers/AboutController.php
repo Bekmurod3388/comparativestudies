@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Http\Controllers\Controller;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 use PhpOption\None;
 
@@ -21,7 +24,7 @@ class AboutController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('admin.about.create');
     }
