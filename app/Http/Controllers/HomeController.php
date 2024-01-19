@@ -102,12 +102,17 @@ class HomeController extends Controller
         $dissertations = Dissertations::latest()->filter(request(['search_author', 'search_languages', 'search_countries', 'search']))->paginate(6)->pluck('dissertations');
         return view('user.pages.scientific_research.dissertations', ["countries" => $countries, "author" => $author, "languages" => $languages, "dissertations" => $dissertations]);    }
 
-    public function scientific_research_textbooks(){
-        return view('user.pages.scientific_research.textbooks');    }
+    public function scientific_research_abstracts(){
+        return view('user.pages.scientific_research.abstracts');    }
 
-    public function scientific_research_preparation(){
-        return view('user.pages.scientific_research.preparation');    }
+    public function scientific_research_monographs(){
+        return view('user.pages.scientific_research.monographs');    }
 
+    public function scientific_research_articles(){
+        return view('user.pages.scientific_research.articles');    }
+
+    public function scientific_research_conventions(){
+        return view('user.pages.scientific_research.conventions');    }
 
     public function about(){
         return view('user.pages.about');    }
