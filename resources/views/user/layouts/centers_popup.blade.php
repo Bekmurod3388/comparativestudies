@@ -1,6 +1,6 @@
 @foreach ($centersByType as $type => $typeCenters)
     <div class="modal fade" id="{{ $type == '2' ? 'LeftModalCenter' : 'RightModalCenter' }}" tabindex="-1" role="dialog" aria-labelledby="LeftModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-dialog-centered {{ $type == '2' ? 'ml-5' : 'mr-5' }}" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h6 class="modal-title" id="exampleModalLongTitle">{{ $type == '2' ? 'G`arb' : 'Sharq' }} adabiyotlari</h6>
