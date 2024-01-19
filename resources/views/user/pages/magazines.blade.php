@@ -22,7 +22,6 @@
                                 </div>
                                 <div class="prject_objectives-text">
                                     <h3>{{ $journal->name }}</h3>
-                                    <p>{{ $journal->description }}</p>
                                 </div>
                             </div>
                             <div class="textbook_right">

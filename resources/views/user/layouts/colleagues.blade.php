@@ -1,22 +1,22 @@
 <div id="articles">
-    @foreach($researchers as $researcher)
+    @foreach($colleagues as $colleague)
         <div id="artics">
             <div class="artics_about">
                 <div class="artics_about-name">
                     <div class="artics_about-name-back">
-                        <a href="#">
-                            <span>{{ $researcher->scholar }} <br> ({{ $researcher->position }})</span>
+                        <a href="{{ $colleague->scholar }}" target="_blank">
+                            <span>{{ $colleague->fullname }} <br> ({{ $colleague->position }})</span>
                         </a>
                     </div>
-                    <a href="#">     <p class="artics_p">{{ $researcher->email }}</p></a>
+                    <a href="mailto:{{ $colleague->email }}">     <p class="artics_p">{{ $colleague->email }}</p></a>
                 </div>
                 <div class="artics_about-img">
-                    <img src="{{$researcher->img_url ? asset('storage/' . $researcher->img_url) : 'https://www.sciencespo.fr/centre-etudes-europeennes/sites/sciencespo.fr.centre-etudes-europeennes/files/Balme_Richard_00183.png?1689772246' }}" alt="img">
+                    <img src="{{$colleague->img ? asset('storage/' . $colleague->img) : 'https://www.sciencespo.fr/centre-etudes-europeennes/sites/sciencespo.fr.centre-etudes-europeennes/files/Balme_Richard_00183.png?1689772246' }}" alt="img">
                 </div>
             </div>
             <div class="artics_text">
                 <span>Tadqiqot sohalari:</span>
-                <p>{{ $researcher->research_fields }}</p>
+                <p>{{ $colleague->research }}</p>
             </div>
         </div>
     @endforeach

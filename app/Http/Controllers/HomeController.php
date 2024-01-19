@@ -23,8 +23,8 @@ class HomeController extends Controller
         $centers = Center::all()->sortBy(['type', 'country', 'name']); // Sort by 'type', 'country', and 'name'
         $centersByType = $centers->groupBy('type');
         $countries = CountryService::get_countries();
-        $researchers = Colleagues::all(); // Sort by 'type', 'country', and 'name'
-        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "researchers"=>$researchers]);
+        $colleagues = Researcher::all(); // Sort by 'type', 'country', and 'name'
+        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "colleagues"=>$colleagues]);
     }
 
     public function contact(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
@@ -116,7 +116,8 @@ class HomeController extends Controller
         return view('user.pages.about.goals_and_objectives');    }
 
     public function about_participants(){
-        return view('user.pages.about.participants');    }
+        $colleagues = Researcher::all(); // Sort by 'type', 'country', and 'name'
+        return view('user.pages.about.participants', compact('colleagues'));    }
 
     public function about_books(){
         return view('user.pages.about.books');    }
