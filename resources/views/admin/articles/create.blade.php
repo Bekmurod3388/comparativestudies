@@ -90,9 +90,7 @@
                     <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Dissertatsiya yozilgan sana</label>
                     <div class="col-sm-10">
                         <div class="input-group input-group-merge">
-                <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bx-hourglass"></i
-                    ></span>
+                            <span id="basic-icon-default-fullname2" class="input-group-text"><i class="bx bx-hourglass"></i></span>
                             <input
                                 name="published_date"
                                 type="date"
@@ -104,12 +102,22 @@
                             />
                         </div>
                         @error('published_date')
-                        `                    <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
+                            <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                         @enderror
                     </div>
                 </div>
-
-
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Maqola sarlavhasi uchun rasm</label>
+                    <div class="col-sm-10">
+                        <div class="input-group">
+                            <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
+                            <input type="file" name="photo_url" class="form-control" id="inputGroupFile01" />
+                        </div>
+                        @error('photo_url')
+                            <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
                 <button type="submit" class="btn btn-primary">Saqlash</button>
             </form>
         </div>

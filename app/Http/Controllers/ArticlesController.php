@@ -42,27 +42,27 @@ class ArticlesController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
+        $FormFields = $request->validate([
             'locale_id' => 'required|exists:locales,id',
             'name' => 'required|string|max:255',
             'journal_name' => 'required|string|max:255',
             'authors' => 'required|string|max:255',
             'file_url' => 'nullable|string',
-            'photo_url' => 'nullable|string',
+            'photo_url' => 'nullable|file|image|mimes:png,jpg,jpeg|max:2048', // Example: Allow PNG, JPG, JPEG files up to 2MB
             'published_date' => 'nullable|date',
         ]);
 
         if ($request->hasFile('photo_url')) {
-            $request['photo_url'] = $request->file('photo_url')->store('article_files/photos', 'public');
+            $FormFields['photo_url'] = $request->file('photo_url')->store('article_files/photos', 'public');
         }
 
         if($request->hasFile('file_pdf')){
-            $request['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
+            $FormFields['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
+//            dd($FormFields);
         }
 
-//        dd($request);
 
-        Article::create($request->all());
+        Article::create($FormFields);
 
         return redirect()->route('articles.index')
             ->with('success', 'Maqola muvaffaqiyatli yaratildi.');
@@ -89,25 +89,26 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, Article $article): RedirectResponse
     {
-        $request->validate([
+        $FormFields = $request->validate([
             'locale_id' => 'required|exists:locales,id',
             'name' => 'required|string|max:255',
             'journal_name' => 'required|string|max:255',
             'authors' => 'required|string|max:255',
-            'file_url' => 'nullable|bigInteger',
-            'photo_url' => 'nullable|string',
+            'file_url' => 'nullable|string',
+            'photo_url' => 'nullable|file|image|mimes:png,jpg,jpeg|max:2048', // Example: Allow PNG, JPG, JPEG files up to 2MB
             'published_date' => 'nullable|date',
         ]);
 
         if ($request->hasFile('photo_url')) {
-            $request['photo_url'] = $request->file('photo_url')->store('article_files/photos', 'public');
+            $FormFields['photo_url'] = $request->file('photo_url')->store('article_files/photos', 'public');
         }
 
         if($request->hasFile('file_pdf')){
-            $request['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
+            $FormFields['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
+//            dd($FormFields);
         }
 
-        $article->update($request->all());
+        $article->update($FormFields);
 
         return redirect()->route('articles.index')
             ->with('success', 'Maqola muvaffaqiyatli yaratildi.');

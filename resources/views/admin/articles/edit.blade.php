@@ -78,7 +78,6 @@
                                             class="form-control"
                                             placeholder="URL"
                                             aria-describedby="basic-icon-default-fc"
-                                            value="{{ $article->file_url }}"
                                             id="inputGroupFile01"
                                         />
                                     </div>
@@ -89,10 +88,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="form-group mb-3" id="imageInput" style="display: none;">
-                    <label for="image">Maqola sarlavhasi uchun rasm tanlang</label>
-                    <input type="file" class="form-control-file" id="img" name="photo_url" accept="image/*">
                 </div>
                 <div class="row mb-3">
                     <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Dissertatsiya yozilgan sana</label>
@@ -114,6 +109,26 @@
                         </div>
                         @error('published_date')
                                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
+                        @enderror
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Maqola sarlavhasi uchun rasm</label>
+                    <div class="col-sm-2">
+                        <img
+                            src="{{ asset('storage/' . $article->photo_url) }}"
+                            class="card-img-top" alt="{{ $article->name }}"
+                            style="width: 100px; height: 100px;"
+                        >
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
+                            <input type="file" name="photo_url" class="form-control" id="inputGroupFile01" />
+                        </div>
+                        @error('photo_url')
+                        <div class="alert alert-danger" role="alert">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>

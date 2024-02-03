@@ -174,7 +174,7 @@
                 </div>
               </div>
           </div>
-            <div class="row mb-3">
+          <div class="row mb-3">
             <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Kitob rasmi</label>
             <div class="col-sm-10">
                 <div class="input-group">

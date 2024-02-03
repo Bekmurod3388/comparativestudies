@@ -37,7 +37,7 @@
                     @foreach($articles as $article)
                         <tr>
                             <td>{{ $loop->index+1 }}</td>
-                            <td>{{ $article->file_url }}</td>
+                            <td>{{ $article->name }}</td>
                             <td>{{ $article->locale->name }}</td>
                             <td>
                                 <img
