@@ -13,13 +13,15 @@
                                 <div class="row justify-content-between">
 
                                     <div class="col-6 col-sm-6 col-md-3 col-lg-2 order-12 order-lg-0">
-
                                         <a href="https://duke.edu/" target="_blank">
                                             <img
-                                                src="sites/literature.duke.edu/files/footer-logo/duke_wordmark_small.svg"
+                                                src="{{asset('assets_front/img/logo.png')}}"
                                                 alt="Duke wordmark." loading="lazy"/>
 
                                         </a>
+
+                                    </div>
+                                    <div class="col-6 col-sm-6 col-md-3 col-lg-2 order-12 order-lg-0">
 
                                         <div
                                             class="clearfix text-formatted field field--name-field-address-and-contact-info field--type-text-long field--label-hidden field__item">
@@ -162,23 +164,6 @@
 
                     </div>
                 </div>
-
-            </div>
-            <div class="footer-mid container"></div>
-            <div class="footer-bottom container">
-                <script type="text/javascript"
-                        src="themes/custom/tts_base/js/global-footer.js"></script>
-                <div id="block-shibbolethlogin" class="block block-basicshib block-basicshib-login">
-
-
-                    <div class="content">
-                        <a class="basicshib-login-block__link"
-                            href="Shibboleth.sso/Login8a5b.html?target=https%3A//literature.duke.edu/basicshib/login%3Fafter_login%3D/front"
-                            title="Log in with Shibboleth">NetID Login</a>
-
-                    </div>
-                </div>
-
 
             </div>
         </div>

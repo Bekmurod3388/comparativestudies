@@ -72,7 +72,7 @@
                  class="clearfix block block-system block-system-branding-block">
                 <div class="site-logo">
                     <a href="{{ route('welcome') }}"
-                       title="Duke University - Trinity College of Arts and Sciences"><img
+                       title="O'zbekiston jahon tillari universiteti"><img
                             src="{{asset('assets_front/img/logo.png')}}"
                             alt="O'zbekiston jahon tillari universiteti"/></a>
                 </div>
