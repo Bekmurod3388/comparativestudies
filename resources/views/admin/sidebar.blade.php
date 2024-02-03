@@ -143,6 +143,12 @@
                 <div data-i18n="Analytics">Jurnallar</div>
             </a>
         </li>
+        <li class="menu-item @if(request()->routeIs('locales.index')) active @endif">
+            <a href="{{ route('locales.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-world"></i>
+                <div data-i18n="Analytics">Tillar</div>
+            </a>
+        </li>
         @endif
         @if(auth()->user()->hasRole('client'))
 

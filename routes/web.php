@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\CarouselsController;
 use App\Http\Controllers\ProfileController;
@@ -90,6 +91,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/carousels', CarouselsController::class);
     Route::resource('/facultybooks', FacultyBooksController::class);
     Route::resource('/journals', JournalsControlller::class);
+    Route::resource('/locales', LocaleController::class);
 });
 
 

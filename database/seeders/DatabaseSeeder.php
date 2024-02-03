@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             ResearchersBooksTableSeeder::class,
             JournalsTableSeeder::class,
             AboutTableSeeder::class,
+            LocaleTableSeeder::class,
         ]);
     }
 }
