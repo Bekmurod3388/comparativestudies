@@ -149,6 +149,12 @@
                 <div data-i18n="Analytics">Tillar</div>
             </a>
         </li>
+        <li class="menu-item @if(request()->routeIs('articles.index')) active @endif">
+            <a href="{{ route('articles.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-world"></i>
+                <div data-i18n="Analytics">Maqolalar</div>
+            </a>
+        </li>
         @endif
         @if(auth()->user()->hasRole('client'))
 
