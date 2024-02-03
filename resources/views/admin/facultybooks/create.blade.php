@@ -158,6 +158,7 @@
                                 <span class="input-group-text"><i class="bx bx-link"></i></span>
                                 <span class="input-group-text" id="basic-icon-default-fc">Kitobning havolasi</span>
                                     <input
+                                        id="inputGroupFile01"
                                         name="file_url"
                                         type="text"
                                         class="form-control"
