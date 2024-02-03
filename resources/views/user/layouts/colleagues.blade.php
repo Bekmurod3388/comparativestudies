@@ -1,5 +1,6 @@
 <div id="articles">
     @foreach($colleagues as $colleague)
+
         <div id="artics">
             <div class="artics_about">
                 <div class="artics_about-name">
