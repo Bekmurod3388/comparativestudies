@@ -1,4 +1,7 @@
 @extends('user.layouts.master')
 @section('content')
-    @include('user.layouts.colleagues')
+    <div class="container">
+        @include('user.layouts.colleagues')
+
+    </div>
 @endsection
