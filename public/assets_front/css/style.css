@@ -1090,3 +1090,37 @@ textarea::placeholder {
     color: #fff;
     transition: .4s ease;
 }
+
+.congrames_pupil h2{
+    color: #988675;
+    margin: 20px 0;
+}
+.page_books-start h2{
+    color: #988675;
+    margin: 20px 0;
+}
+.page_book-img{
+    width: 100%;
+    height: 300px;
+}
+.page_book-img img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.page_book{
+    width: 24%;
+    border-radius: 20px;
+}
+.page_book-about{
+    background-color: #f6f6f6;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.page_books{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
