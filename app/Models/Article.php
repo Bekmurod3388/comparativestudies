@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static create(array $all)
- * @property mixed $id
  */
-class Locale extends Model
+class Article extends Model
 {
     use HasFactory;
 
@@ -18,7 +17,7 @@ class Locale extends Model
      *
      * @var string
      */
-    protected $table = 'locales';
+    protected $table = 'articles';
 
     /**
      * The attributes that are mass assignable.
@@ -26,7 +25,13 @@ class Locale extends Model
      * @var array
      */
     protected $fillable = [
+        'locale_id',
         'name',
+        'journal_name',
+        'authors',
+        'file_url',
+        'photo_url',
+        'published_date',
     ];
 
     /**
@@ -43,6 +48,15 @@ class Locale extends Model
      */
     protected $casts = [
         'id' => 'integer',
-        'name' => 'string',
+        'locale_id' => 'integer',
+        'published_date' => 'datetime',
     ];
+
+    /**
+     * Get the locale that owns the article.
+     */
+    public function locale()
+    {
+        return $this->belongsTo(Locale::class);
+    }
 }
