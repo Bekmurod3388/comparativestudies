@@ -56,6 +56,11 @@ Route::get('user/scientific/monographs', [HomeController::class,'scientific_rese
 Route::get('user/scientific/articles', [HomeController::class,'scientific_research_articles'])->name('user_scientific_research_articles');
 Route::get('user/scientific/conventions', [HomeController::class,'scientific_research_conventions'])->name('user_scientific_research_conventions');
 
+Route::get('user/services', [HomeController::class,'services'])->name('user_services');
+Route::get('user/services/exam_preparation', [HomeController::class,'services_exam_preparation'])->name('user_services_exam_preparation');
+Route::get('user/services/teaching_research', [HomeController::class,'services_teaching_research'])->name('user_services_teaching_research');
+Route::get('user/services/online_lecture', [HomeController::class,'services_online_lecture'])->name('user_services_online_lecture');
+
 Route::get('user/about', [HomeController::class,'about'])->name('user_about');
 Route::get('user/about/goals', [HomeController::class,'about_goals'])->name('user_about_goals');
 Route::get('user/about/participants', [HomeController::class,'about_participants'])->name('user_about_participants');

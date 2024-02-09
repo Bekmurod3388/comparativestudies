@@ -139,4 +139,23 @@ class HomeController extends Controller
         return view('user.pages.about.oav', compact('about_youtube', 'about_gazeta', 'about_site'));
     }
 
+    public function services(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('user.pages.services');
+    }
+
+    public function services_exam_preparation(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('user.pages.services.exam_preparation');
+    }
+
+    public function services_teaching_research(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('user.pages.services.teaching_research');
+    }
+
+    public function services_online_lecture(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('user.pages.services.online_lecture');
+    }
 }
