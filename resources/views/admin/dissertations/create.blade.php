@@ -161,6 +161,7 @@
                                     placeholder="URL"
                                     aria-describedby="basic-icon-default-fc"
                                     value="{{old('file_url')}}"
+                                    id="inputGroupFile01"
                                 />
                             </div>
                             @error('file_url')
