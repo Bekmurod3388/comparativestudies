@@ -88,7 +88,7 @@
                     <div class="content">
                         <ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none">
                             <li id="main-menu-link-contentdb57f021-ee07-40a6-8446-be8044f1ad27"
-                                class="sf-depth-1 menuparent"><a href="{{ route('user_about') }}"
+                                class="sf-depth-1 menuparent"><a href="#"
                                                                  class="sf-depth-1 menuparent">LOYIHA HAQIDA</a>
                                 <ul>
                                     <li id="main-menu-link-content9135765b-fd1d-4f20-849b-d958bf625641"
@@ -117,7 +117,7 @@
                                 </ul>
                             </li>
                             <li id="main-menu-link-contentfaf6415d-7a6e-4245-bf98-82e7a76b6dce"
-                                class="sf-depth-1 menuparent"><a href="{{ route('user_scientific_research') }}"
+                                class="sf-depth-1 menuparent"><a href="#"
                                                                  class="sf-depth-1 menuparent">ILMIY TADQIQOTLAR</a>
                                 <ul>
                                     <li id="main-menu-link-content62f18183-51b8-4622-ab43-d702dbcaa026"
@@ -144,7 +144,7 @@
                                 </ul>
                             </li>
                             <li id="main-menu-link-content5c7661a8-cd1e-4f88-b60e-1c5889aaeb34"
-                                class="sf-depth-1 menuparent"><a href="{{ route('user_magazines') }}"
+                                class="sf-depth-1 menuparent"><a href="#"
                                                                  class="sf-depth-1 menuparent">ILMIY JURNALLAR</a>
                                 <ul>
                                     <li id="main-menu-link-content1165affb-12cc-446d-ae4b-650384a82ce0"
@@ -170,7 +170,7 @@
                                 </ul>
                             </li>
                             <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
-                                class="sf-depth-1 menuparent"><a href="{{ route('user_literature') }}"
+                                class="sf-depth-1 menuparent"><a href="#"
                                                                  class="sf-depth-1 menuparent">O'QUV ADABIYOTLARI</a>
                                 <ul>
                                     <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
@@ -187,9 +187,28 @@
 
                                 </ul>
                             </li>
+
+                            <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
+                                class="sf-depth-1 menuparent"><a href="#"
+                                                                 class="sf-depth-1 menuparent">XIZMATLAR</a>
+                                <ul>
+                                    <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_exam_preparation') }}"
+                                                                             class="sf-depth-2">Imtihonga tayorlash</a></li>
+                                    <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef1"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_teaching_research') }}"
+                                                                             class="sf-depth-2">Tadqiqotlarni o`rgatish</a>
+                                    </li>
+                                    <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"
+                                        class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_online_lecture') }}"
+                                                                             class="sf-depth-2">Onlayn maruza</a>
+                                    </li>
+
+                                </ul>
+                            </li>
                             <li id="main-menu-link-contente43f358c-d19f-477e-9529-44f9281c2575"
                                 class="sf-depth-1 menuparent"><a
-                                    href="{{ route('user_gallery') }}"
+                                    href="#"
                                     class="sf-depth-1 menuparent">GALEREYA</a>
                                 <ul>
                                     <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
