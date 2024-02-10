@@ -23,9 +23,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 
-    <link rel="icon" href="{{asset('assets_front/img/favicon.ico')}}" type="image/vnd.microsoft.icon"/>
+    <link rel="icon" href="{{asset('assets_front/img/logo.png')}}" type="image/vnd.microsoft.icon"/>
 
-    <title>Front Page | Program in Literature</title>
+    <title>Сomparative Studies</title>
     <!-- TTS Nagios Verification -->
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main.css')}}"/>
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/bootstrap-paragraphs-columns.min61e5.css')}}"/>

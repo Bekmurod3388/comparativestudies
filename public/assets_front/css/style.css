@@ -1102,12 +1102,22 @@ textarea::placeholder {
 .page_book-img{
     width: 100%;
     height: 300px;
+    overflow: hidden;
 }
 .page_book-img img{
     width: 100%;
     height: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    transition: 0.5s ease all;
+    object-fit: cover;
+}
+.page_book-img:hover img{
+    transform: scale(1.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+
 }
 .page_book{
     width: 24%;
@@ -1123,4 +1133,7 @@ textarea::placeholder {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+.index_page-books{
+    margin-bottom: 50px;
 }
