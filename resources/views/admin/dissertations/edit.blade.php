@@ -82,24 +82,20 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="basic-icon-default-fullname">Dissertatsiya tili</label>
+                        <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Tilni tanlang</label>
                         <div class="col-sm-10">
-                            <div class="input-group input-group-merge">
-                <span id="basic-icon-default-fullname2" class="input-group-text"
-                ><i class="bx bxs-landmark"></i
-                    ></span>
-                                <input
-                                    name="language"
-                                    type="text"
-                                    class="form-control"
-                                    id="basic-icon-default-fullname"
-                                    placeholder="Dissertatsiya tili"
-                                    aria-label="Dissertatsiya tili"
-                                    aria-describedby="basic-icon-default-fullname2"
-                                    value="{{ $dissertation->language }}"
-                                />
+                            <div class="input-group">
+                                <label class="input-group-text" for="inputGroupSelect01">Tilni tanlang</label>
+                                <select class="form-select" id="inputGroupSelect01" name="locale_id">
+                                    <option selected>Tanlash....</option>
+                                    @forelse($locales as $locale)
+                                        <option value="{{ $locale->id }}" @if($locale->id == $dissertation->locale_id) selected @endif>{{ $locale->name }}</option>
+                                    @empty
+                                        <option>Tillar mavjud emas</option>
+                                    @endforelse
+                                </select>
                             </div>
-                            @error('language')
+                            @error('country')
                             <div class="alert alert-danger" role="alert">Ushbu maydon bo'sh bo'lishi mumkin emas!</div>
                             @enderror
                         </div>
@@ -167,7 +163,7 @@
                                                 class="form-control"
                                                 placeholder="URL"
                                                 aria-describedby="basic-icon-default-fc"
-                                                value="{{old('file_url')}}"
+                                                value="{{$dissertation->file_url}}"
                                             />
                                         </div>
                                         @error('file_url')
@@ -180,7 +176,7 @@
                     </div>
                     <div class="row justify-content-end mb-5">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary">Qo'shish</button>
+                            <button type="submit" class="btn btn-primary">O`zgartirish</button>
                         </div>
                     </div>
                 </form>

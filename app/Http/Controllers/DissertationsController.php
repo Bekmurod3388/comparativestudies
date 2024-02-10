@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dissertations;
+use App\Models\Locale;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
@@ -29,7 +30,8 @@ class DissertationsController extends Controller
      */
     public function create(): View|Factory|Application|\Illuminate\Contracts\Foundation\Application
     {
-        return view('admin.dissertations.create');
+        $locales = Locale::all();
+        return view('admin.dissertations.create', compact('locales'));
     }
 
     /**
@@ -41,7 +43,7 @@ class DissertationsController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validatedData = $request->validate([
-            'language' => 'required',
+            'locale_id' => 'required',
             'country' => 'required',
             'author' => 'required',
             'topic' => 'required',
@@ -69,7 +71,8 @@ class DissertationsController extends Controller
      */
     public function edit(Dissertations $dissertation): View|Factory|Application|\Illuminate\Contracts\Foundation\Application
     {
-        return view('admin.dissertations.edit', compact('dissertation'));
+        $locales = Locale::all();
+        return view('admin.dissertations.edit', compact('dissertation', 'locales'));
     }
 
     /**
@@ -82,13 +85,19 @@ class DissertationsController extends Controller
     public function update(Request $request, Dissertations $dissertation): RedirectResponse
     {
         $validatedData = $request->validate([
-            'language' => 'required',
+            'locale_id' => 'required',
             'country' => 'required',
             'author' => 'required',
             'topic' => 'required',
             'file_url' => 'nullable|url',
             'thesis_date' => 'nullable|date',
         ]);
+
+        if($request->hasFile('file_pdf')){
+            $validatedData['file_url'] = $request->file('file_pdf')->store('faculty_books/book_files', 'public');
+        }
+
+        unset($validatedData['file_pdf']); // Remove 'file_pdf' from the array
 
         $dissertation->update($validatedData);
 

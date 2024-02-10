@@ -19,11 +19,11 @@ class Dissertations extends Model
         if ($filters['search_country'] ?? false){
             $query->where('country', '%' . request('search_country') . '%');
         }
-        if ($filters['search_language'] ?? false){
-            $query->where('language', '%' . request('search_language') . '%');
+        if ($filters['search_locale_id'] ?? false){
+            $query->where('locale_id', '%' . request('search_locale_id') . '%');
             }
         if ($filters['search'] ?? false){
-            $query->where('language', '%' . request('search') . '%')
+            $query->where('locale_id', '%' . request('search') . '%')
                 ->orWhere('country', '%' . request('search') . '%')
                 ->orWhere('topic', '%' . request('search') . '%')
                 ->orWhere('author', '%' . request('search') . '%');
@@ -32,7 +32,7 @@ class Dissertations extends Model
     protected $table = 'dissertations';
 
     protected $fillable = [
-        'language', 'country', 'author', 'topic', 'file_url', 'thesis_date'
+        'locale_id', 'country', 'author', 'topic', 'file_url', 'thesis_date'
     ];
 
     /**
@@ -43,5 +43,9 @@ class Dissertations extends Model
     protected $casts = [
         'thesis_date' => 'datetime',
     ];
+    public function locale()
+    {
+        return $this->belongsTo(Locale::class);
+    }
 
 }

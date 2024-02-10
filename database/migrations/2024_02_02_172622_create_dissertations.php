@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('dissertations', function (Blueprint $table) {
             $table->id();
-            $table->char('language');
+            $table->bigInteger('locale_id')->unsigned()->nullable();
+            $table->foreign('locale_id')->references('id')->on('locales')->onDelete('cascade');
             $table->string('country');
             $table->string('author');
             $table->text('topic');

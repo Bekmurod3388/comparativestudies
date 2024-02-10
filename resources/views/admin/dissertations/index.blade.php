@@ -49,7 +49,7 @@
                             <td><i class="fab fa-angular fa-lg text-danger"></i>
                                 <strong>{{ $dissertation->author }}</strong></td>
                             <td><i class="fab fa-angular fa-lg text-danger"></i>
-                                <strong>{{ $dissertation->language }}</strong></td>
+                                <strong>{{ $dissertation->locale->name }}</strong></td>
                             <td><i class="fab fa-angular fa-lg text-danger"></i>
                                 <strong>{{ $dissertation->country }}</strong></td>
                             <td><i class="fab fa-angular fa-lg text-danger"></i>
