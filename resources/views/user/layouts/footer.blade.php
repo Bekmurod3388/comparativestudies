@@ -13,7 +13,7 @@
                                 <div class="row justify-content-between">
 
                                     <div class="col-6 col-sm-6 col-md-3 col-lg-2 order-12 order-lg-0">
-                                        <a href="https://duke.edu/" target="_blank">
+                                        <a href="{{ route('welcome') }}" target="_blank">
                                             <img
                                                 src="{{asset('assets_front/img/logo.png')}}"
                                                 alt="Duke wordmark." loading="lazy"/>
@@ -49,12 +49,12 @@
                                                     <h2 class="footer-heading">
                                                         Biz haqimizda</h2>
                                                     <div class="footer-link">
-                                                        <a href="about.html">Loyihaning maqsad va
+                                                        <a href="{{ route('user_about_goals') }}">Loyihaning maqsad va
                                                             vazifalari</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a
-                                                            href="statement-harassment-and-discrimination.html">Loyiha
+                                                            href="{{ route('user_about_articles') }}">Loyiha
                                                             bo'yicha maqolalar
                                                         </a>
                                                     </div>
@@ -81,11 +81,11 @@
 
                                                     <div class="footer-link">
                                                         <a
-                                                            href="undergraduate/major.html">Dissertatsiya</a>
+                                                            href="{{ route('user_scientific_research_dissertations') }}">Dissertatsiya</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a
-                                                            href="undergraduate/minor.html">Darsliklar</a>
+                                                            href="{{ route('user_literature_textbooks') }}">Darsliklar</a>
                                                     </div>
 
                                                 </div>
@@ -108,11 +108,11 @@
 
 
                                                     <div class="footer-link">
-                                                        <a href="graduate/phd.html">Fotosuratlar</a>
+                                                        <a href="{{ route('user_gallery_photos') }}">Fotosuratlar</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a
-                                                            href="graduate/prospective-students.html">Videolar</a>
+                                                            href="{{ route('user_gallery_videos') }}">Videolar</a>
                                                     </div>
 
 
