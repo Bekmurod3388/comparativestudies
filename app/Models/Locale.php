@@ -45,4 +45,10 @@ class Locale extends Model
         'id' => 'integer',
         'name' => 'string',
     ];
+
+    public function abstract()
+    {
+        return $this->hasMany(Abstracts::class);
+    }
+
 }

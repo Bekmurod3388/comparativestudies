@@ -14,10 +14,24 @@ return new class extends Migration
         Schema::create('abstracts', function (Blueprint $table) {
             $table->id();
             $table->string('applicant_name');
+            $table->bigInteger('locale_id')->unsigned()->nullable();
+            $table->foreign('locale_id')->references('id')->on('locales')->onDelete('cascade');
             $table->string('dissertation_topic');
-            $table->string('academic_degree');
+            $table->enum('academic_degree', [
+                'Bachelor',
+                'Master',
+                'PhD',
+                'DSc',
+                'Associate Degree',
+                'Professional Degree',
+                'Doctor of Medicine',
+                'Juris Doctor',
+                'Master of Business Administration',
+                'Doctor of Education',
+                'Doctor of Philosophy'
+            ])->default('Bachelor');
             $table->string('specialty_code_and_name');
-            $table->string('protection_year');
+            $table->year('protection_year');
             $table->string('file_url')->nullable();
             $table->timestamps();
         });

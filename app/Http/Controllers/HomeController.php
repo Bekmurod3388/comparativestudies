@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\Abstracts;
+use App\Models\Locale;
 use App\Models\Photo;
 use App\Models\Journal;
 use App\Models\Researcher;
@@ -103,7 +105,12 @@ class HomeController extends Controller
         return view('user.pages.scientific_research.dissertations', ["countries" => $countries, "author" => $author, "languages" => $languages, "dissertations" => $dissertations]);    }
 
     public function scientific_research_abstracts(){
-        return view('user.pages.scientific_research.abstracts');    }
+        $locales = Locale::all();
+        $academicDegrees = Abstracts::distinct()->pluck('academic_degree')->toArray();
+        $protectionYears = Abstracts::distinct()->pluck('protection_year')->toArray();
+        $abstracts = Abstracts::all();
+
+        return view('user.pages.scientific_research.abstracts', compact("locales", "academicDegrees", "protectionYears", "abstracts"));    }
 
     public function scientific_research_monographs(){
         return view('user.pages.scientific_research.monographs');    }

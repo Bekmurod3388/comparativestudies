@@ -14,6 +14,7 @@ class LocaleTableSeeder extends Seeder
     public function run(): void
     {
         $languages = [
+            'Uzbek',
             'English',
             'Spanish',
             'French',
