@@ -1,6 +1,5 @@
 @extends('user.layouts.master')
 @section('content')
-    <div class="container mt-5">
         <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="row g-0 book_center">
@@ -26,8 +25,10 @@
                                         <select name="search_language" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
                                             <option selected>Tilni tanlash</option>
-                                                @foreach($languages as $language)
-                                                <option value="{{ $language }}">{{ $language }}</option>
+                                            @foreach($locales as $locale)
+                                                @if(count($locale->dissertation)>0)
+                                                    <option value="{{ $locale->id }}">{{ $locale->name }}</option>
+                                                @endif
                                             @endforeach
                                         </select>
                                     </div>
@@ -54,26 +55,69 @@
                 </div>
             </div>
         </div>
-        <div class="project-o">
+        <div class="textbook_two">
             <div class="container">
-                <div class="project_objectives-start">
-                    @forelse($dissertations as $dissertation)
-                    <div class="project_objectives-box">
-                        <div class="project_objectives-box-start">
-                            <div class="prject_objectives-text">
-                                <h3>{{ $dissertation->topic }}</h3>
-                                <p> {{ $dissertation->author }} </p>
+                <div class="textbook_two-start">
+                    <div class="textbooks_boxs-start">
+                        @forelse($dissertations as $dissertation)
+                            <div class="textbooks_boxs">
+                                <div class="project_objectives-start">
+                                    <div class="project_objectives-box">
+                                        <div class="project_objectives-box-start">
+                                            <div class="textbook_left">
+    {{--                                            <div class="textbook_img">--}}
+    {{--                                                <img src="" alt="img">--}}
+    {{--                                            </div>--}}
+                                                <div class="prject_objectives-text">
+                                                    <h3>{{ $dissertation->topic }}</h3>
+                                                    <p>{{ $dissertation->author }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="textbook_right">
+
+                                                <div class="textbook_file">
+                                                    <button>
+                                                        <a target="_blank" href="{{ $dissertation->file_url }}">Jurnal sahifasi</a>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="project_objectives-pdf">
-                                <a target="_blank" src="" frameborder="0">Maqola</a>
+                            @empty
+                                <h1 class="pb-5">Dissertatsiya topilmadi</h1>
+                            @endforelse
+                        </div>
+                            <div class="textbook_btns">
+                                @foreach($locales as $locale)
+                                    @if(count($locale->dissertation)>0)
+                                        <button value="{{ $locale->id }}">{{ $locale->name }}</button>
+                                    @endif
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                    @empty
-                        <h1 class="pb-5">Dissertatsiya topilmadi</h1>
-                    @endforelse
                 </div>
-            </div>
-        </div>
-    </div>
-@endsection
+        @endsection
+        {{--<div class="project-o">--}}
+{{--    <div class="container">--}}
+{{--        <div class="project_objectives-start">--}}
+{{--            @forelse($dissertations as $dissertation)--}}
+{{--                <div class="project_objectives-box">--}}
+{{--                    <div class="project_objectives-box-start">--}}
+{{--                        <div class="prject_objectives-text">--}}
+{{--                            <h3>{{ $dissertation->topic }}</h3>--}}
+{{--                            <p> {{ $dissertation->author }} </p>--}}
+{{--                        </div>--}}
+{{--                        <div class="project_objectives-pdf">--}}
+{{--                            <a target="_blank" href="{{ $dissertation->file_url }}">Maqola</a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @empty--}}
+{{--                <h1 class="pb-5">Dissertatsiya topilmadi</h1>--}}
+{{--            @endforelse--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}

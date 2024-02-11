@@ -116,10 +116,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
                 <div class="textbook_btns">
                     <button>English</button>
                     <button>English</button>
