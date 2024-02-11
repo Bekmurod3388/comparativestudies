@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AbstractsController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\HomeController;
@@ -99,6 +100,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/journals', JournalsControlller::class);
     Route::resource('/locales', LocaleController::class);
     Route::resource('/articles', ArticlesController::class);
+    Route::resource('/abstracts', AbstractsController::class);
 });
 
 

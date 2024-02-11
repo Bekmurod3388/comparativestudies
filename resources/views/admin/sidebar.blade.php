@@ -73,7 +73,8 @@
             <!-- Scientific -->
             <li class="menu-item
                 @if(request()->routeIs('dissertations.index')) active @endif
-                @if(request()->routeIs('articles.index')) active @endif">
+                @if(request()->routeIs('articles.index')) active @endif
+                @if(request()->routeIs('abstracts.index')) active @endif">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                     <i class="menu-icon tf-icons bx bx-book-content"></i>
                     <div data-i18n="Layouts">Ilmiy tadqiqotlar</div>
@@ -83,6 +84,11 @@
                     <li class="menu-item @if(request()->routeIs('dissertations.index')) active @endif">
                         <a href="{{ route('dissertations.index') }}" class="menu-link">
                             <div data-i18n="Without menu">Dissertatsiyalar</div>
+                        </a>
+                    </li>
+                    <li class="menu-item @if(request()->routeIs('abstracts.index')) active @endif">
+                        <a href="{{ route('abstracts.index') }}" class="menu-link">
+                            <div data-i18n="Without menu">Avtoreferatlar</div>
                         </a>
                     </li>
                     <li class="menu-item @if(request()->routeIs('articles.index')) active @endif">

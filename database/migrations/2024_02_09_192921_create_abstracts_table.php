@@ -31,7 +31,7 @@ return new class extends Migration
                 'Doctor of Philosophy'
             ])->default('Bachelor');
             $table->string('specialty_code_and_name');
-            $table->year('protection_year');
+            $table->integer('protection_year');
             $table->string('file_url')->nullable();
             $table->timestamps();
         });
