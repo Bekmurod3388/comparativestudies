@@ -41,8 +41,8 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="col-lg-4 col-md-4">
-                                        <input type="text">
+                                    <div class="col-lg-4 col-md-4 input_search">
+                                        <input class="dissertation_input" placeholder="Kalit so'zni kiriting" type="text">
                                     </div>
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
@@ -56,6 +56,9 @@
             </div>
         </div>
         <div class="textbook_two">
+            @empty
+                <h1 >Dissertatsiya topilmadi</h1>
+            @endforelse
             <div class="container">
                 <div class="textbook_two-start">
                     <div class="textbooks_boxs-start">
@@ -85,9 +88,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @empty
-                                <h1 class="pb-5">Dissertatsiya topilmadi</h1>
-                            @endforelse
+
                         </div>
                             <div class="textbook_btns">
                                 @foreach($locales as $locale)
