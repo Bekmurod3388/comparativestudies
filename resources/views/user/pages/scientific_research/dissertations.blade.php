@@ -42,7 +42,7 @@
                                         </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4 input_search">
-                                        <input class="dissertation_input" placeholder="Kalit so'zni kiriting" type="text">
+                                        <input type="text" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />
                                     </div>
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
@@ -56,13 +56,13 @@
             </div>
         </div>
         <div class="textbook_two">
-            @empty
+            @if(count($dissertations)<1)
                 <h1 >Dissertatsiya topilmadi</h1>
-            @endforelse
+            @endif
             <div class="container">
                 <div class="textbook_two-start">
                     <div class="textbooks_boxs-start">
-                        @forelse($dissertations as $dissertation)
+                        @for($dissertations as $dissertation)
                             <div class="textbooks_boxs">
                                 <div class="project_objectives-start">
                                     <div class="project_objectives-box">
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                             </div>
-
+                        @endfor
                         </div>
                             <div class="textbook_btns">
                                 @foreach($locales as $locale)
