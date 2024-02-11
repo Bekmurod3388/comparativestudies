@@ -58,9 +58,9 @@ class ArticlesController extends Controller
 
         if($request->hasFile('file_pdf')){
             $FormFields['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
-//            dd($FormFields);
         }
 
+//        dd($FormFields);
 
         Article::create($FormFields);
 

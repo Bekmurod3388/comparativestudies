@@ -102,7 +102,6 @@ class AbstractsController extends Controller
         }
 
         unset($validatedData['file_pdf']); // Remove 'file_pdf' from the array
-
         $abstract->update($validatedData);
 
         return redirect()->route('abstracts.index')->with('success', 'Avtoreferat muvaffaqiyatli o`zgartirildi!');

@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             AboutTableSeeder::class,
             LocaleTableSeeder::class,
             AbstractTableSeeder::class,
+            ArticleTableSeeder::class,
         ]);
     }
 }
