@@ -61,4 +61,9 @@ class Locale extends Model
         return $this->hasMany(Dissertations::class);
     }
 
+    public function monograph()
+    {
+        return $this->hasMany(Monograph::class);
+    }
+
 }

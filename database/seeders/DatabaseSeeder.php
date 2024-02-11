@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
             LocaleTableSeeder::class,
             AbstractTableSeeder::class,
             ArticleTableSeeder::class,
+            MonographTableSeeder::class,
         ]);
     }
 }
