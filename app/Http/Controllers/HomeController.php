@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\About;
 use App\Models\Abstracts;
+use App\Models\Article;
 use App\Models\Locale;
 use App\Models\Photo;
 use App\Models\Journal;
@@ -117,7 +118,11 @@ class HomeController extends Controller
         return view('user.pages.scientific_research.monographs');    }
 
     public function scientific_research_articles(){
-        return view('user.pages.scientific_research.articles');    }
+        $locales = Locale::all();
+        $journal_names = Article::distinct()->pluck('journal_name');
+        $authors = Article::distinct()->pluck('authors');
+        $articles = Article::all();
+        return view('user.pages.scientific_research.articles', compact('locales', 'journal_names', 'authors', 'articles'));    }
 
     public function scientific_research_conventions(){
         return view('user.pages.scientific_research.conventions');    }

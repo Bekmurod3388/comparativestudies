@@ -51,6 +51,11 @@ class Locale extends Model
         return $this->hasMany(Abstracts::class);
     }
 
+    public function article()
+    {
+        return $this->hasMany(Article::class);
+    }
+
     public function dissertation()
     {
         return $this->hasMany(Dissertations::class);

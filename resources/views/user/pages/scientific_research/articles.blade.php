@@ -1,4 +1,104 @@
 @extends('user.layouts.master')
 @section('content')
-    <h1>articles</h1>
+    <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-0 book_center">
+                <div class="col-10">
+                    <div class="border-bottom border-top border-primary bg-light py-5 px-4">
+                        <div class="text-center">
+                            <small
+                                class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Maqolalar</small>
+                            <h1 class="display-5 mb-5">Maqola qidirish uchun ma`lumotlarni to`ldiring</h1>
+                        </div>
+                        <form action="/articles">
+                            <div class="row g-4 form">
+                                <div class="col-lg-4 col-md-4">
+                                    <select name="search_country" class="form-select border-primary p-2"
+                                            aria-label="Default select example">
+                                        <option value="" selected>Davlat</option>
+                                        @foreach($journal_names as $journal_name)
+                                            <option value="{{ $journal_name }}">{{ $journal_name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <select name="search_language" class="form-select border-primary p-2"
+                                            aria-label="Default select example">
+                                        <option selected>Tilni tanlash</option>
+                                        @foreach($locales as $locale)
+                                            @if(count($locale->article)>0)
+                                                <option value="{{ $locale->id }}">{{ $locale->name }}</option>
+                                            @endif
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+                                    <select name="search_author" class="form-select border-primary p-2"
+                                            aria-label="Default select example">
+                                        <option selected>Yozuvchini tanlash</option>
+                                        @foreach($authors as $author)
+                                            <option value="{{ $author }}">{{ $author }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="col-lg-4 col-md-4">
+{{--                                    <input type="text">--}}
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="textbook_two">
+        <div class="container">
+            <div class="textbook_two-start">
+                <div class="textbooks_boxs-start">
+                    @forelse($articles as $article)
+                        <div class="textbooks_boxs">
+                            <div class="project_objectives-start">
+                                <div class="project_objectives-box">
+                                    <div class="project_objectives-box-start">
+                                        <div class="textbook_left">
+                                            <div class="textbook_img">
+                                                <img src="{{ asset('storage/' . $article->photo_url) }}"
+                                                     alt="{{ $article->name }}">
+                                            </div>
+                                            <div class="prject_objectives-text">
+                                                <h3>{{ $article->name }} {{ $article->published_date }}</h3>
+                                                <p>{{$article->authors}}</p>
+                                                <p>{{ $article->journal_name }}</p>
+                                            </div>
+                                        </div>
+                                        <div class="textbook_right">
+
+                                            <div class="textbook_file">
+                                                <button>
+                                                    <a target="_blank" href="{{ $article->file_url }}">Jurnal sahifasi</a>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @empty
+                        <h1 class="pb-5">Maqola topilmadi</h1>
+                    @endforelse
+                </div>
+                <div class="textbook_btns">
+                    @foreach($locales as $locale)
+                        @if(count($locale->article)>0)
+                            <button value="{{ $locale->id }}">{{ $locale->name }}</button>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
