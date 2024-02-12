@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="textbook_two-start">
                     <div class="textbooks_boxs-start">
-                        @for($dissertations as $dissertation)
+                        @foreach($dissertations as $dissertation)
                             <div class="textbooks_boxs">
                                 <div class="project_objectives-start">
                                     <div class="project_objectives-box">
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                             </div>
-                        @endfor
+                        @endforeach
                         </div>
                             <div class="textbook_btns">
                                 @foreach($locales as $locale)
