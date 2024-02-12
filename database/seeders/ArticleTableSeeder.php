@@ -36,6 +36,28 @@ class ArticleTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'Cultural Studies and Comparative Literature?',
+                'journal_name' => 'Penn State University Press',
+                'locale_id' => 2,
+                'authors' => 'Michael Bérubé',
+                'file_url' => 'article_files/files/5. Aldridge-ConceptInfluenceComparative-1963.png',
+                'photo_url' => "article_files/photos/img.png",
+                'published_date' => '2023-11-24 00:00:00',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Cultural Studies and Comparative Literature?',
+                'journal_name' => 'Penn State University Press',
+                'locale_id' => 2,
+                'authors' => 'Michael Bérubé',
+                'file_url' => 'article_files/files/5. Aldridge-ConceptInfluenceComparative-1963.png',
+                'photo_url' => "article_files/photos/img.png",
+                'published_date' => '2023-11-24 00:00:00',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         // Insert data into the 'abstracts' table

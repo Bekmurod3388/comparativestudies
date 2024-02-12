@@ -10,21 +10,21 @@
                                     class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Dissertatsiyalar</small>
                                 <h1 class="display-5 mb-5">Dissertatsiya qidirish uchun ma`lumotlarni to`ldiring</h1>
                             </div>
-                            <form action="/dissertations">
+                            <form method="get">
                                 <div class="row g-4 form">
                                     <div class="col-lg-4 col-md-4">
                                         <select name="search_country" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
-                                            <option value="" selected>Davlat</option>
+                                            <option value="None" selected>Davlat</option>
                                             @foreach($countries as $country)
                                                 <option value="{{ $country }}">{{ $country }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4">
-                                        <select name="search_language" class="form-select border-primary p-2"
+                                        <select name="search_locale" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
-                                            <option selected>Tilni tanlash</option>
+                                            <option value="None" selected>Tilni tanlash</option>
                                             @foreach($locales as $locale)
                                                 @if(count($locale->dissertation)>0)
                                                     <option value="{{ $locale->id }}">{{ $locale->name }}</option>
@@ -35,7 +35,7 @@
                                     <div class="col-lg-4 col-md-4">
                                         <select name="search_author" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
-                                            <option selected>Yozuvchini tanlash</option>
+                                            <option value="None" selected>Yozuvchini tanlash</option>
                                             @foreach($author as $aut)
                                                 <option value="{{ $aut }}">{{ $aut }}</option>
                                             @endforeach

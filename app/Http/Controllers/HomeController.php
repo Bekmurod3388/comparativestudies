@@ -6,6 +6,7 @@ use App\Models\About;
 use App\Models\Abstracts;
 use App\Models\Article;
 use App\Models\Locale;
+use App\Models\Monograph;
 use App\Models\Photo;
 use App\Models\Journal;
 use App\Models\Researcher;
@@ -17,6 +18,7 @@ use App\Service\CountryService;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -98,30 +100,130 @@ class HomeController extends Controller
     public function scientific_research(){
         return view('user.pages.scientific_research');    }
 
-    public function scientific_research_dissertations(){
+    public function scientific_research_dissertations(Request $request){
         $countries = Dissertations::distinct()->pluck('country');
         $locales = Locale::all();
         $author = Dissertations::distinct()->pluck('author');
-//        $dissertations = Dissertations::latest()->filter(request(['search_author', 'search_languages', 'search_countries', 'search']))->paginate(6)->pluck('dissertations');
-        $dissertations = Dissertations::all();
+        $query = Dissertations::query();
+
+        // Filter by search_publisher
+        if ($request->has("search_author") && $request->search_author != "None") {
+            $query->where('author', $request->search_author);
+        }
+
+        // Filter by search_language
+        if ($request->has("search_locale") && $request->search_locale != "None") {
+            $query->where('locale_id', $request->search_locale);
+        }
+
+        // Filter by search_author
+        if ($request->has("search_country") && $request->search_country != "None") {
+            $query->where('country', $request->search_country);
+        }
+
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('author', 'like', '%' . $request->q . '%')
+                ->orWhere('topic', 'like', '%' . $request->q . '%');
+        }
+
+        $dissertations = $query->get();
+
         return view('user.pages.scientific_research.dissertations', ["countries" => $countries, "author" => $author, "locales" => $locales, "dissertations" => $dissertations]);    }
 
-    public function scientific_research_abstracts(){
+    public function scientific_research_abstracts(Request $request){
         $locales = Locale::all();
         $academicDegrees = Abstracts::distinct()->pluck('academic_degree')->toArray();
         $protectionYears = Abstracts::distinct()->pluck('protection_year')->toArray();
-        $abstracts = Abstracts::all();
+        $query = Abstracts::query();
+
+        // Filter by search_publisher
+        if ($request->has("search_academicDegree") && $request->search_academicDegree != "None") {
+            $query->where('academic_degree', $request->search_academicDegree);
+        }
+
+        // Filter by search_language
+        if ($request->has("search_locale") && $request->search_locale != "None") {
+            $query->where('locale_id', $request->search_locale);
+        }
+
+        // Filter by search_author
+        if ($request->has("search_protectionYear") && $request->search_protectionYear != "None") {
+            $query->where('protection_year', $request->search_protectionYear);
+        }
+
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%');
+        }
+
+        $abstracts = $query->get();
 
         return view('user.pages.scientific_research.abstracts', compact("locales", "academicDegrees", "protectionYears", "abstracts"));    }
 
-    public function scientific_research_monographs(){
-        return view('user.pages.scientific_research.monographs');    }
+    public function scientific_research_monographs(Request $request){
+        $publishers = Monograph::distinct()->pluck('publisher');
+        $authors = Monograph::distinct()->pluck('authors');
+        $locales = Locale::all();
 
-    public function scientific_research_articles(){
+        $query = Monograph::query();
+
+        // Filter by search_publisher
+        if ($request->has("search_publisher") && $request->search_publisher != "None") {
+            $query->where('publisher', $request->search_publisher);
+        }
+
+        // Filter by search_language
+        if ($request->has("search_language") && $request->search_language != "None") {
+            $query->where('locale_id', $request->search_language);
+        }
+
+        // Filter by search_author
+        if ($request->has("search_author") && $request->search_author != "None") {
+            $query->where('authors', $request->search_author);
+        }
+
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%');
+        }
+
+        $monographs = $query->get();
+
+        return view('user.pages.scientific_research.monographs', compact('publishers', 'authors', 'monographs', 'locales'));    }
+
+    public function scientific_research_articles(Request $request){
         $locales = Locale::all();
         $journal_names = Article::distinct()->pluck('journal_name');
         $authors = Article::distinct()->pluck('authors');
-        $articles = Article::all();
+
+        $query = Article::query();
+
+        // Filter by search_publisher
+        if ($request->has("search_author") && $request->search_author != "None") {
+            $query->where('authors', $request->search_author);
+        }
+
+        // Filter by search_language
+        if ($request->has("search_locale") && $request->search_locale != "None") {
+            $query->where('locale_id', $request->search_locale);
+        }
+
+        // Filter by search_author
+        if ($request->has("search_journal_name") && $request->search_journal_name != "None") {
+            $query->where('journal_name', $request->search_journal_name);
+        }
+
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%');
+        }
+
+        $articles = $query->get();
+
         return view('user.pages.scientific_research.articles', compact('locales', 'journal_names', 'authors', 'articles'));    }
 
     public function scientific_research_conventions(){

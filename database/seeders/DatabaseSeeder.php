@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Abstracts;
+use App\Models\Dissertations;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -29,6 +30,7 @@ class DatabaseSeeder extends Seeder
             AbstractTableSeeder::class,
             ArticleTableSeeder::class,
             MonographTableSeeder::class,
+            DissertationsTableSeeder::class,
         ]);
     }
 }

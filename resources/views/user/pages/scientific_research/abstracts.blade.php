@@ -10,21 +10,21 @@
                                 class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Avtoreferatlar</small>
                             <h1 class="display-5 mb-5">Avtoreferat qidirish uchun ma`lumotlarni to`ldiring</h1>
                         </div>
-                        <form action="/dissertations">
+                        <form method="get">
                             <div class="row g-4 form">
                                 <div class="col-lg-4 col-md-4">
-                                    <select name="search_country" class="form-select border-primary p-2"
+                                    <select name="search_academicDegree" class="form-select border-primary p-2"
                                             aria-label="Default select example">
-                                        <option selected>Ilmiy daraja</option>
+                                        <option value="None" selected>Ilmiy daraja</option>
                                         @foreach($academicDegrees as $academicDegree)
                                             <option value="{{ $academicDegree }}">{{ $academicDegree }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-4">
-                                    <select name="search_language" class="form-select border-primary p-2"
+                                    <select name="search_locale" class="form-select border-primary p-2"
                                             aria-label="Default select example">
-                                        <option selected>Tilni tanlash</option>
+                                        <option value="None" selected>Tilni tanlash</option>
                                         @foreach($locales as $locale)
                                             @if(count($locale->abstract)>0)
                                                 <option value="{{ $locale->id }}">{{ $locale->name }}</option>
@@ -33,16 +33,16 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-4">
-                                    <select name="search_author" class="form-select border-primary p-2"
+                                    <select name="search_protectionYear" class="form-select border-primary p-2"
                                             aria-label="Default select example">
-                                        <option selected>Himoya yili</option>
+                                        <option value="None" selected>Himoya yili</option>
                                         @foreach($protectionYears as $protectionYear)
                                             <option value="{{ $protectionYear }}">{{ $protectionYear }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <input type="text">
+                                <div class="col-lg-4 col-md-4 input_search">
+                                    <input type="text" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />
                                 </div>
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
@@ -75,10 +75,9 @@
                                             </div>
                                         </div>
                                         <div class="textbook_right">
-
                                             <div class="textbook_file">
                                                 <button>
-                                                    <a target="_blank" href="{{ $abstract->file_url }}">Avtoreferat sahifasi</a>
+                                                    <a target="_blank" href="{{ Storage::exists('storage/' . $abstract->file_url) ? asset('storage/' . $abstract->file_url) : $abstract->file_url }}">Avtoreferat sahifasi</a>
                                                 </button>
                                             </div>
                                         </div>

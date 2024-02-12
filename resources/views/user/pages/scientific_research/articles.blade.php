@@ -10,21 +10,21 @@
                                 class="d-inline-block fw-bold text-dark text-uppercase bg-light border border-primary rounded-pill px-4 py-1 mb-3">Maqolalar</small>
                             <h1 class="display-5 mb-5">Maqola qidirish uchun ma`lumotlarni to`ldiring</h1>
                         </div>
-                        <form action="/articles">
+                        <form method="get">
                             <div class="row g-4 form">
                                 <div class="col-lg-4 col-md-4">
-                                    <select name="search_country" class="form-select border-primary p-2"
+                                    <select name="search_journal_name" class="form-select border-primary p-2"
                                             aria-label="Default select example">
-                                        <option value="" selected>Davlat</option>
+                                        <option value="None" selected>Jurnal nomi</option>
                                         @foreach($journal_names as $journal_name)
                                             <option value="{{ $journal_name }}">{{ $journal_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-4">
-                                    <select name="search_language" class="form-select border-primary p-2"
+                                    <select name="search_locale" class="form-select border-primary p-2"
                                             aria-label="Default select example">
-                                        <option selected>Tilni tanlash</option>
+                                        <option value="None" selected>Tilni tanlash</option>
                                         @foreach($locales as $locale)
                                             @if(count($locale->article)>0)
                                                 <option value="{{ $locale->id }}">{{ $locale->name }}</option>
@@ -35,14 +35,14 @@
                                 <div class="col-lg-4 col-md-4">
                                     <select name="search_author" class="form-select border-primary p-2"
                                             aria-label="Default select example">
-                                        <option selected>Yozuvchini tanlash</option>
+                                        <option value="None" selected>Yozuvchini tanlash</option>
                                         @foreach($authors as $author)
                                             <option value="{{ $author }}">{{ $author }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-lg-4 col-md-4">
-{{--                                    <input type="text">--}}
+                                <div class="col-lg-4 col-md-4 input_search">
+                                    <input type="text" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />
                                 </div>
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
@@ -70,7 +70,7 @@
                                                      alt="{{ $article->name }}">
                                             </div>
                                             <div class="prject_objectives-text">
-                                                <h3>{{ $article->name }} {{ $article->published_date }}</h3>
+                                                <h3>{{ $article->name }} {{ $article->published_date->format('Y') }}</h3>
                                                 <p>{{$article->authors}}</p>
                                                 <p>{{ $article->journal_name }}</p>
                                             </div>

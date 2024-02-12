@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DissertationsTableSeeder extends Seeder
 {
@@ -103,7 +104,7 @@ class DissertationsTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            [
+//            [
 //                'country' => 'Uzbekistan',
 //                'author' => 'Халлиева Гулноз Искандаровна -2016',
 //                'locale_id' => 1,
@@ -112,7 +113,7 @@ class DissertationsTableSeeder extends Seeder
 //                'file_url' => 'https://diss.natlib.uz/ru-RU/ResearchWork/OnlineView/39254',
 //                'created_at' => now(),
 //                'updated_at' => now(),
-            ],
+//            ],
             [
                 'country' => 'Uzbekistan',
                 'author' => 'Йўлдошев У. Р. -2017',
@@ -454,6 +455,7 @@ class DissertationsTableSeeder extends Seeder
                 'updated_at' => now(),
             ]
         ];
+        DB::table('dissertations')->insert($abstracts);
        //
     }
 }
