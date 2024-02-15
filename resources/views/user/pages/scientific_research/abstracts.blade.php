@@ -77,7 +77,7 @@
                                         <div class="textbook_right">
                                             <div class="textbook_file">
                                                 <button>
-                                                    <a target="_blank" href="{{ Storage::exists('storage/' . $abstract->file_url) ? asset('storage/' . $abstract->file_url) : $abstract->file_url }}">Avtoreferat sahifasi</a>
+                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $abstract->file_url)) ? asset('storage/' . $abstract->file_url) : $abstract->file_url }}">Avtoreferat sahifasi</a>
                                                 </button>
                                             </div>
                                         </div>

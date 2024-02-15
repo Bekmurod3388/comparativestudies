@@ -1,4 +1,4 @@
-@extends('user.layouts.master')
+    @extends('user.layouts.master')
 @section('content')
     <div class="container-fluid contact py-6 wow bounceInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -77,7 +77,7 @@
                                         <div class="textbook_right">
                                             <div class="textbook_file">
                                                 <button>
-                                                    <a target="_blank" href="{{ Storage::exists('storage/' . $monograph->file_url) ? asset('storage/' . $monograph->file_url) : $monograph->file_url }}">Monografiya sahifasi</a>
+                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $monograph->file_url)) ? asset('storage/' . $monograph->file_url) : $monograph->file_url }}">Monograf sahifasi</a>
                                                 </button>
                                             </div>
                                         </div>

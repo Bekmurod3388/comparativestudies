@@ -79,7 +79,7 @@
 
                                             <div class="textbook_file">
                                                 <button>
-                                                    <a target="_blank" href="{{ $article->file_url }}">Jurnal sahifasi</a>
+                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $article->file_url)) ? asset('storage/' . $article->file_url) : $article->file_url }}">Maqola sahifasi</a>
                                                 </button>
                                             </div>
                                         </div>

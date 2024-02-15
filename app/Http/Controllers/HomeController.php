@@ -19,6 +19,8 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use PhpParser\Node\Scalar\MagicConst\File;
 
 class HomeController extends Controller
 {
@@ -159,7 +161,10 @@ class HomeController extends Controller
         }
 
         $abstracts = $query->get();
-
+//        dd( $abstracts[102]->file_url);
+//        if(\Illuminate\Support\Facades\File::exists(public_path('storage/abstract_files/1.pdf'))){
+//            dd(true);
+//        }else{dd(false);}
         return view('user.pages.scientific_research.abstracts', compact("locales", "academicDegrees", "protectionYears", "abstracts"));    }
 
     public function scientific_research_monographs(Request $request){

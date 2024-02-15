@@ -80,7 +80,7 @@
 
                                                 <div class="textbook_file">
                                                     <button>
-                                                        <a target="_blank" href="{{ $dissertation->file_url }}">Jurnal sahifasi</a>
+                                                        <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $dissertation->file_url)) ? asset('storage/' . $dissertation->file_url) : $dissertation->file_url }}">Dissertatsiya sahifasi</a>
                                                     </button>
                                                 </div>
                                             </div>
