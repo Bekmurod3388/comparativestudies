@@ -14,24 +14,24 @@ class AboutTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('abouts')->insert([
-            'title' => "Namuna",
-            'url' => "https://www.youtube.com/embed/EtbWNdRYpnw?si=o6S5sb9ZxMT7_-v4",
+            'title' => "Европа кутубхоналарида қандай ноёб қўлёзмаларимиз сақланмоқда?",
+            'url' => "https://www.youtube.com/embed/B0hD4_TPAD4?si=FNSdpNeDiVREdhs9",
             'type' => "youtube",
             'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
             'created_at' => now(),
         ]);
+//        DB::table('abouts')->insert([
+//            'title' => "Namuna1",
+//            'url' => "https://ubtuit.uz",
+//            'type' => "gazeta",
+//            'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
+//            'created_at' => now(),
+//        ]);
         DB::table('abouts')->insert([
-            'title' => "Namuna1",
-            'url' => "https://ubtuit.uz",
+            'title' => "“Фарҳод ва Ширин” достони – лотиш китобхонларининг энг севимли асари",
+            'url' => "https://uza.uz/uz/posts/farhod-va-shirin-dostoni-lotish-kitobxonlarining-eng-sevimli-asari_567082",
             'type' => "sayt",
-            'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
-            'created_at' => now(),
-        ]);
-        DB::table('abouts')->insert([
-            'title' => "Namuna2",
-            'url' => "https://ubtuit.uz",
-            'type' => "gazeta",
-            'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
+            'img' => "about_photos/img.png",
             'created_at' => now(),
         ]);
     }
