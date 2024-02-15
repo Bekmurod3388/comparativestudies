@@ -10,6 +10,7 @@ use App\Models\Monograph;
 use App\Models\Photo;
 use App\Models\Journal;
 use App\Models\Researcher;
+use App\Models\ResearcherBook;
 use App\Models\Video;
 use App\Models\Center;
 use App\Models\Colleagues;
@@ -31,7 +32,8 @@ class HomeController extends Controller
         $centersByType = $centers->groupBy('type');
         $countries = CountryService::get_countries();
         $colleagues = Researcher::all(); // Sort by 'type', 'country', and 'name'
-        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "colleagues"=>$colleagues]);
+        $books = ResearcherBook::latest()->take(4)->get();
+        return view('user.pages.index',['videos'=>$videos, "centersByType"=>$centersByType, "countries"=>$countries, "colleagues"=>$colleagues, "books"=>$books]);
     }
 
     public function contact(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application

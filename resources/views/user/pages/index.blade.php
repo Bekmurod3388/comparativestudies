@@ -340,42 +340,19 @@
                                                     <div class="page_books-start">
                                                         <h2>Bizning Kitoblar</h2>
                                                         <div class="page_books">
-                                                            <div class="page_book">
-                                                                <div class="page_book-img">
-                                                                    <img src="http://jadidlar.uz:2118/storage/uploads/jadids/1kXq4kFyFhteMu28qRPXRjJKof0G6Wqp5IjNJkaD.jpg" alt="img_book">
+                                                            @foreach($books as $book)
+                                                                <div class="page_book">
+                                                                    <div class="page_book-img">
+                                                                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.ZYOit7EPQpTA0Ypg9tPSwwHaHa%26pid%3DApi&f=1&ipt=325d134e74fa2e574203664b19adb1b4fa94b2b44383135ee942196d8f6a010c&ipo=images" alt="img_book">
+                                                                    </div>
+                                                                    <div class="page_book-about">
+                                                                        <span>{{ $book->name }}</span>
+                                                                        <p>{{ $book->researcher->fullname }}</p>
+                                                                        <p>{{ $book->country }}</p>
+                                                                        <p>{{ $book->publisher }}</p>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="page_book-about">
-                                                                    <span>Kitob malumot</span>
-                                                                    <p>Discreption</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="page_book">
-                                                                <div class="page_book-img">
-                                                                    <img src="http://jadidlar.uz:2118/storage/uploads/jadids/1kXq4kFyFhteMu28qRPXRjJKof0G6Wqp5IjNJkaD.jpg" alt="img_book">
-                                                                </div>
-                                                                <div class="page_book-about">
-                                                                    <span>Kitob malumot</span>
-                                                                    <p>Discreption</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="page_book">
-                                                                <div class="page_book-img">
-                                                                    <img src="http://jadidlar.uz:2118/storage/uploads/jadids/1kXq4kFyFhteMu28qRPXRjJKof0G6Wqp5IjNJkaD.jpg" alt="img_book">
-                                                                </div>
-                                                                <div class="page_book-about">
-                                                                    <span>Kitob malumot</span>
-                                                                    <p>Discreption</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="page_book">
-                                                                <div class="page_book-img">
-                                                                    <img src="http://jadidlar.uz:2118/storage/uploads/jadids/1kXq4kFyFhteMu28qRPXRjJKof0G6Wqp5IjNJkaD.jpg" alt="img_book">
-                                                                </div>
-                                                                <div class="page_book-about">
-                                                                    <span>Kitob malumot</span>
-                                                                    <p>Discreption</p>
-                                                                </div>
-                                                            </div>
+                                                            @endforeach
                                                         </div>
                                                     </div>
                                                 </div>
