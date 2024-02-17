@@ -14,53 +14,27 @@
     <div class="project-o">
         <div class="container">
             <div class="project_objectives-start">
-                <div class="project_objectives-box">
-                    <div class="project_objectives-box-start">
-                        <div class="project_objectives-img">
-                            <img src="https://yevroturkologika.uz/storage/first_page/first_page_1692993713.png" alt="book">
-                        </div>
-                        <div class="prject_objectives-text">
-                            <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
-                            <p> Registratsiya kodi: No 181 (703)</p>
-                        </div>
-                        <div class="project_objectives-pdf">
-                            <a target="_blank"  src="" frameborder="0">Maqola</a>
+                @forelse($articles as $article)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="project_objectives-img">
+                                <img src="{{ asset('storage/' . $article->photo_url) }}"
+                                alt="{{ $article->article_topic }}">
+                            </div>
+                            <div class="prject_objectives-text">
+                                <h3>{{ $article->article_topic }}</h3>
+                                <p> {{ $article->article_type }}</p>
+                                <p> {{ $article->authors }}</p>,
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $article->file_url)) ? asset('storage/' . $article->file_url) : $article->file_url }}" >Maqola</a>
 
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="project_objectives-box">
-                    <div class="project_objectives-box-start">
-                        <div class="project_objectives-img">
-                            <img src="https://yevroturkologika.uz/storage/first_page/first_page_1692993713.png" alt="book">
-                        </div>
-                        <div class="prject_objectives-text">
-                            <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
-                            <p> Registratsiya kodi: No 181 (703)</p>
-                        </div>
-                        <div class="project_objectives-pdf">
-                            <a target="_blank"  src="" frameborder="0">Maqola</a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_objectives-box">
-                    <div class="project_objectives-box-start">
-                        <div class="project_objectives-img">
-                            <img src="https://yevroturkologika.uz/storage/first_page/first_page_1692993713.png" alt="book">
-                        </div>
-                        <div class="prject_objectives-text">
-                            <h3>ИННОВАЦИОН ЛОЙИҲА ТУРКИЙ ҚЎЛЁЗМАЛАРНИ ЎРГАНАДИ</h3>
-                            <p> Registratsiya kodi: No 181 (703)</p>
-                        </div>
-                        <div class="project_objectives-pdf">
-                            <a target="_blank"  src="" frameborder="0">Maqola</a>
-
-                        </div>
-                    </div>
-                </div>
+                @empty
+                    <h1>Maqolalar mavjud emas</h1>
+                @endforelse
             </div>
         </div>
     </div>

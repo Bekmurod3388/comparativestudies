@@ -10,6 +10,7 @@ use App\Models\Monograph;
 use App\Models\Photo;
 use App\Models\Journal;
 use App\Models\Researcher;
+use App\Models\ResearcherArticle;
 use App\Models\ResearcherBook;
 use App\Models\Video;
 use App\Models\Center;
@@ -247,10 +248,14 @@ class HomeController extends Controller
         return view('user.pages.about.participants', compact('colleagues'));    }
 
     public function about_books(){
-        return view('user.pages.about.books');    }
+        $books = ResearcherBook::all();
+        return view('user.pages.about.books', compact('books'));
+    }
 
     public function about_articles(){
-        return view('user.pages.about.articles');    }
+        $articles = ResearcherArticle::all();
+        return view('user.pages.about.articles', compact('articles'));
+    }
 
     public function about_oav(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
