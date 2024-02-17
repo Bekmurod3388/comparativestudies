@@ -392,8 +392,8 @@
 }
 
 .artics_about-img{
-    width: 140px;
-    height: 140px;
+    width: 110px;
+    height: 110px;
 }
 .artics_about-img img{
     width: 100%;
@@ -503,6 +503,9 @@
     width: 90px;
     height: 130px;
 }
+.prject_objectives-text{
+    width: 70%;
+}
 
 .project_objectives-img img {
     width: 100%;
@@ -511,6 +514,7 @@
 
 .prject_objectives-text h3 {
     color: #080260;
+    font-size: 23px;
 }
 
 .project_objectives-box-start {
@@ -543,7 +547,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
+.project_objectives-pdf a{
+    color: #fff;
+    text-decoration: none;
+}
 .project_objectives-pdf:hover {
     background-color: #080260;
     transition: all 0.3s ease;
@@ -1033,6 +1040,7 @@ textarea::placeholder {
     color: #fff;
     padding: 10px;
     display: flex;
+    width: 170px;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -1151,6 +1159,10 @@ textarea::placeholder {
     padding: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    color: #000;
+}
+.page_book a{
+    text-decoration: none;
 }
 .page_books{
     display: flex;

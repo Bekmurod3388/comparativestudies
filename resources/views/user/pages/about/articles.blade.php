@@ -24,7 +24,7 @@
                             <div class="prject_objectives-text">
                                 <h3>{{ $article->article_topic }}</h3>
                                 <p> {{ $article->article_type }}</p>
-                                <p> {{ $article->authors }}</p>,
+                                <p> {{ $article->authors }}</p>
                             </div>
                             <div class="project_objectives-pdf">
                                 <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $article->file_url)) ? asset('storage/' . $article->file_url) : $article->file_url }}" >Maqola</a>
