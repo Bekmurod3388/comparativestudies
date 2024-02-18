@@ -933,10 +933,10 @@ textarea::placeholder {
         height: 100px;
     }
     .prject_objectives-text h3{
-        font-size: 12px;
+        font-size: 18px;
     }
     .prject_objectives-text p{
-        font-size:8px;
+        font-size:12px;
     }
 }
 @media(max-width:768px){
@@ -1103,6 +1103,26 @@ textarea::placeholder {
     flex-direction: column;
     gap: 40px;
 }
+@media(max-width: 900px){
+    .textbook_btns{
+        display: none;
+    }
+    .textbooks_boxs-start{
+        width: 100%;
+    }
+    .textbook_left{
+        gap: 0;
+
+    }
+    .prject_objectives-text{
+        width: 100%;
+    }
+}
+@media(max-width: 768px){
+    .textbook_left{
+        flex-direction: column;
+    }
+}
 .textbook_two{
     margin-bottom: 100px;
 }
@@ -1160,6 +1180,26 @@ textarea::placeholder {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     color: #000;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@media(max-width: 1024px){
+    .page_book-img{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+}
+@media(max-width: 768px){
+    .page_book{
+        width: 32%;
+        border-radius: 20px;
+    }
+    .page_book-about{
+        font-size: 15px;
+    }
 }
 .page_book a{
     text-decoration: none;
