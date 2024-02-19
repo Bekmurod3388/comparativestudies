@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+<html lang="en" dir="ltr" >
 <head>
     <meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
     <meta charset="utf-8"/>
@@ -17,7 +17,6 @@
             "page_placeholder": "PLACEHOLDER_page_path"
         });
         gtag("config", "G-4WWP1WL629", {"groups": "default", "page_placeholder": "PLACEHOLDER_page_location"});</script>
-    <meta name="Generator" content="Drupal 10 (https://www.drupal.org)"/>
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -64,7 +63,7 @@
                     "message": "This website uses cookies as well as similar tools and technologies to understand visitors' experiences. By continuing to use this website, you consent to Duke University's usage of cookies and similar technologies, in accordance with the ",
                     "dismiss": "I ACCEPT",
                     "link": "Duke Privacy Statement.",
-                    "href": 'https://oarc.duke.edu/privacy/duke-university-privacy-statement'
+                    "href": ''
                 },
                 "onPopupOpen": function () {
                     const dismiss = document.getElementsByClassName("cc-dismiss");
@@ -87,7 +86,7 @@
 <a href="#" class="visually-hidden focusable skip-link">
     Skip to main content
 </a>
-<script src="https://alertbar.oit.duke.edu/alert.html"></script>
+<script src=""></script>
 
 <div class="responsive-menu-page-wrapper">
     <div id="page-wrapper">

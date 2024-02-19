@@ -27,7 +27,7 @@
                                             class="clearfix text-formatted field field--name-field-address-and-contact-info field--type-text-long field--label-hidden field__item">
                                             <h2>Program In Literature</h2>
 
-                                            <p><a href="https://maps.duke.edu/?focus=159"
+                                            <p><a href=""
                                                     target="_blank">101 Friedl​ Building<br/>
                                                     1316 Campus Drive</a><br/>
                                                 Campus Box 90670<br/>
@@ -136,15 +136,15 @@
 
 
                                                     <div class="footer-link">
-                                                        <a href="https://www.facebook.com/DukeUniv"
+                                                        <a href=""
                                                             class="brand-icon facebook">Facebook</a>
                                                     </div>
                                                     <div class="footer-link">
-                                                        <a href="https://twitter.com/DukeU"
+                                                        <a href=""
                                                             class="brand-icon twitter">Twitter</a>
                                                     </div>
                                                     <div class="footer-link">
-                                                        <a href="https://www.youtube.com/user/Duke"
+                                                        <a href=""
                                                             class="brand-icon youtube">YouTube</a>
                                                     </div>
 
