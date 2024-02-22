@@ -54,14 +54,19 @@
                 <ul class="menu-sub">
                     <li class="menu-item @if(request()->routeIs('researcher.index')) active @endif">
                         <a href="{{ route('researcher.index') }}" class="menu-link">
-                            <div data-i18n="Without menu">Tadqiqotchilar</div>
+                            <div data-i18n="Without menu">Ishtirokchilar va Kitoblar</div>
                         </a>
                     </li>
-                    <li class="menu-item @if(request()->routeIs('facultybooks.index')) active @endif">
-                        <a href="{{ route('facultybooks.index') }}" class="menu-link">
-                            <div data-i18n="Analytics">Kitoblar</div>
+                    <li class="menu-item @if(request()->routeIs('researcherarticles.index')) active @endif">
+                        <a href="{{ route('researcherarticles.index') }}" class="menu-link">
+                            <div data-i18n="Without menu">Loyiha bo'yicha maqolalar</div>
                         </a>
                     </li>
+{{--                    <li class="menu-item @if(request()->routeIs('facultybooks.index')) active @endif">--}}
+{{--                        <a href="{{ route('facultybooks.index') }}" class="menu-link">--}}
+{{--                            <div data-i18n="Analytics">Kitoblar</div>--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
                     <li class="menu-item @if(request()->routeIs('abouts.index')) active @endif">
                         <a href="{{ route('abouts.index') }}" class="menu-link">
                             <div data-i18n="Analytics">OAV biz haqimizda</div>

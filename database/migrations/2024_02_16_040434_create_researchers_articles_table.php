@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('article_topic');
             $table->string('authors');
-            $table->enum('article_type', [
-                'Scopus',
-                'Oak',
-            ])->default('Scopus');
+            $table->string('article_type');
+//            $table->enum('article_type', [
+//                'Scopus',
+//                'Oak',
+//            ])->default('Scopus');
             $table->string('protection_year');
             $table->string('file_url')->nullable();
             $table->string('photo_url')->nullable();

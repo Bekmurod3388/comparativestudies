@@ -18,11 +18,5 @@ class ResearcherArticle extends Model
         'file_url',
         'photo_url',
         ];
-    public static function articleTypesList()
-    {
-        return [
-            'Scopus',
-            'Oak',
-            ];
-    }
+
 }

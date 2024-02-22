@@ -10,6 +10,7 @@ use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\CarouselsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ColleaguesController;
+use App\Http\Controllers\ResearcherArticlesController;
 use App\Http\Controllers\ResearcherController;
 use App\Http\Controllers\DissertationsController;
 use App\Http\Controllers\FacultyBooksController;
@@ -101,6 +102,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/locales', LocaleController::class);
     Route::resource('/articles', ArticlesController::class);
     Route::resource('/abstracts', AbstractsController::class);
+    Route::resource('/researcherarticles', ResearcherArticlesController::class);
 });
 
 

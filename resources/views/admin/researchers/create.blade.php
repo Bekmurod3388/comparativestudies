@@ -4,7 +4,7 @@
   <div class="col-xxl">
     <div class="card mb-4">
       <div class="card-header d-flex align-items-center justify-content-between">
-        <h5 class="mb-0">Tadqiqotchi qo'shish</h5>
+        <h5 class="mb-0">Ishtirokchi qo'shish</h5>
         <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
       </div>
       <div class="card-body demo-vertical-spacing demo-only-element">
@@ -126,7 +126,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-            <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Tadqiqotchi rasmi</label>
+            <label class="col-sm-2 col-form-label" for="basic-icon-default-photo">Ishtirokchi rasmi</label>
             <div class="col-sm-10">
                 <div class="input-group">
                     <label class="input-group-text" for="inputGroupFile01">Yuklash</label>

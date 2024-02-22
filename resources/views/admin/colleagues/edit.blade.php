@@ -123,7 +123,7 @@
             </div>
           </div>
           <div class="row mb-3">
-            <label class="col-sm-2 form-label" for="basic-icon-default-message">Tadqiqotchi rasmi</label>
+            <label class="col-sm-2 form-label" for="basic-icon-default-message">Ishtirokchi rasmi</label>
             <div class="col-sm-10">
                 <div class="input-group">
                     <label class="input-group-text" for="inputGroupFile01">Yuklash</label>
