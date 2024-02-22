@@ -12,6 +12,7 @@ use App\Models\Journal;
 use App\Models\Researcher;
 use App\Models\ResearcherArticle;
 use App\Models\ResearcherBook;
+use App\Models\TrainingManual;
 use App\Models\Video;
 use App\Models\Center;
 use App\Models\Colleagues;
@@ -64,8 +65,38 @@ class HomeController extends Controller
     public function literature_textbooks(){
         return view('user.pages.literature.textbooks');    }
 
-    public function literature_manuals(){
-        return view('user.pages.literature.manuals');    }
+    public function literature_manuals(Request $request){
+        $publishers = TrainingManual::distinct()->pluck('publisher');
+        $authors = TrainingManual::distinct()->pluck('authors');
+        $locales = Locale::all();
+
+        $query = TrainingManual::query();
+
+        // Filter by search_publisher
+        if ($request->has("search_publisher") && $request->search_publisher != "None") {
+            $query->where('publisher', $request->search_publisher);
+        }
+
+        // Filter by search_language
+        if ($request->has("search_language") && $request->search_language != "None") {
+            $query->where('locale_id', $request->search_language);
+        }
+
+        // Filter by search_author
+        if ($request->has("search_author") && $request->search_author != "None") {
+            $query->where('authors', $request->search_author);
+        }
+
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%');
+        }
+
+        $training_manuals = $query->get();
+
+        return view('user.pages.literature.manuals', compact('publishers', 'authors', 'training_manuals', 'locales'));
+    }
 
     public function literature_methodical(){
         return view('user.pages.literature.methodical');    }

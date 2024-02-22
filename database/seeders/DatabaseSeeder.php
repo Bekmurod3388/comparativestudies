@@ -32,6 +32,7 @@ class DatabaseSeeder extends Seeder
             MonographTableSeeder::class,
             DissertationsTableSeeder::class,
             ResearchersArticlesTableSeeder::class,
+            TrainingManualsTableSeeder::class,
         ]);
     }
 }
