@@ -51,7 +51,7 @@ class ResearcherController extends Controller
         Researcher::create(array_merge($request->all(), ['img' => $imgPath]));
 
         return redirect()->route('researcher.index')
-            ->with('success', 'Tadqiqotchi muvaffaqiyatli qo`shildi.');
+            ->with('success', 'Ishtirokchi muvaffaqiyatli qo`shildi.');
     }
 
     // Display edit researcher form
@@ -65,7 +65,7 @@ class ResearcherController extends Controller
     {
         $researcher->delete();
 
-        return redirect()->route('researcher.index')->with('success', 'Hamkasb muvaffaqiyatli o`chirildi.');
+        return redirect()->route('researcher.index')->with('success', 'Ishtirokchi muvaffaqiyatli o`chirildi.');
     }
 
     // Update a researcher
@@ -89,6 +89,6 @@ class ResearcherController extends Controller
         $researcher->update(array_merge($request->all(), ['img' => $imgPath]));
         // Update the researcher
 
-        return redirect()->route('researcher.index')->with('success', 'Hamkasb muvaffaqiyatli o`zgartirildi.');
+        return redirect()->route('researcher.index')->with('success', 'Ishtirokchi muvaffaqiyatli o`zgartirildi.');
     }
 }

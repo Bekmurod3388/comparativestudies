@@ -4,7 +4,7 @@
   <div class="col-xxl">
     <div class="card mb-4">
       <div class="card-header d-flex align-items-center justify-content-between">
-          <h5 class="mb-0">Kitob qo'shish <br>Tadqiqotchi: {{ $researcher->fullname }}</h5>
+          <h5 class="mb-0">Kitob qo'shish <br>Ishtirokchi: {{ $researcher->fullname }}</h5>
           <small class="text-muted float-end">Malumotlarni to'ldirishingiz mumkin.</small>
       </div>
       <div class="card-body demo-vertical-spacing demo-only-element">

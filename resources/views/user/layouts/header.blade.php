@@ -9,7 +9,7 @@
                                     <div id="search-block">
                                         <div data-drupal-selector="search-block-form" id="block-tts-sub-search"
                                              role="search">
-                                            <form action="https://literature.duke.edu/search/node" method="get"
+                                            <form action="" method="get"
                                                   id="search-block-form" accept-charset="UTF-8" class="form-row">
                                                 <fieldset class="form-group"><label for="edit-search-api-fulltext"
                                                                                     class="sr-only">Enter your

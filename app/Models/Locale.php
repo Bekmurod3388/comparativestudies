@@ -66,4 +66,9 @@ class Locale extends Model
         return $this->hasMany(Monograph::class);
     }
 
+   public function training_manual()
+    {
+        return $this->hasMany(TrainingManual::class);
+    }
+
 }

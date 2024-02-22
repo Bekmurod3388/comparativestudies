@@ -6,11 +6,11 @@
             <div class="card-header">
                 <div class="row content-end">
                     <div class="col-4">
-                        <h5>Tadqiqotchilar ro'yxati</h5>
+                        <h5>Ishtirokchilar ro'yxati</h5>
                     </div>
                     <div class="col-md-4 text-end offset-md-4">
                         <a href="{{ route('researcher.create') }}" class="btn-primary p-2 rounded">
-                            Tadqiqotchi qo'shish
+                            Ishtirokchi qo'shish
                         </a>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger"
-                                                    onclick="return confirm('Tadqiqotchini o\'chirishni xohlaysizmi?')">
+                                                    onclick="return confirm('Ishtirokchini o\'chirishni xohlaysizmi?')">
                                                 <i class="bx bx-trash me-1"></i>
                                             </button>
                                         </form>
@@ -165,11 +165,11 @@
                 <div class="card-header">
                     <div class="row content-end">
                         <div class="col-4">
-                            <h5>Tadqiqotchilar bo'sh</h5>
+                            <h5>Ishtirokchilar bo'sh</h5>
                         </div>
                         <div class="col-md-4 text-end offset-md-4">
                             <a href="{{ route('researcher.create') }}" class="btn-primary p-2 rounded">
-                                Tadqiqotchi qo'shish
+                                Ishtirokchi qo'shish
                             </a>
                         </div>
                     </div>
