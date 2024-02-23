@@ -6,6 +6,7 @@ use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocaleController;
+use App\Http\Controllers\MonographController;
 use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\CarouselsController;
 use App\Http\Controllers\ProfileController;
@@ -103,6 +104,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/articles', ArticlesController::class);
     Route::resource('/abstracts', AbstractsController::class);
     Route::resource('/researcherarticles', ResearcherArticlesController::class);
+    Route::resource('/monographs', MonographController::class);
 });
 
 

@@ -96,6 +96,11 @@
                             <div data-i18n="Without menu">Avtoreferatlar</div>
                         </a>
                     </li>
+                    <li class="menu-item @if(request()->routeIs('monographs.index')) active @endif">
+                        <a href="{{ route('monographs.index') }}" class="menu-link">
+                            <div data-i18n="Without menu">Monografiyalar</div>
+                        </a>
+                    </li>
                     <li class="menu-item @if(request()->routeIs('articles.index')) active @endif">
                         <a href="{{ route('articles.index') }}" class="menu-link">
                             <div data-i18n="Analytics">Maqolalar</div>
