@@ -16,10 +16,15 @@ class TrainingManual extends Model
     protected $fillable = [
         'locale_id',
         'name',
-        'journal_name',
+        'publisher',
         'authors',
         'file_url',
         'photo_url',
         'published_date',
     ];
+    public function locale()
+    {
+        return $this->belongsTo(Locale::class);
+    }
+
 }

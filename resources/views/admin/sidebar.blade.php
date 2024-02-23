@@ -132,8 +132,12 @@
                     <i class="menu-icon tf-icons bx bx-book"></i>
                     <div data-i18n="Layouts">O`quv adabiyotlar</div>
                 </a>
-
                 <ul class="menu-sub">
+                    <li class="menu-item @if(request()->routeIs('trainingmanuals.index')) active @endif">
+                        <a href="{{ route('trainingmanuals.index') }}" class="menu-link">
+                            <div data-i18n="Analytics">O`quv qo`llanmalar</div>
+                        </a>
+                    </li>
                 </ul>
             </li>
 
