@@ -843,6 +843,362 @@ Literature in Chinese',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => '',
+                'journal_name' => 'CENTRAL ASIAN JOURNAL OF LITERATURE,
+PHILOSOPHY AND CULTURE',
+
+                'locale_id' => 8,
+                'authors' => 'Собирова Гульчирой Эргашбаевна
+',
+                'file_url' => 'article_files/files/72-Article Text-226-1-10-20210306.pdf',
+                'photo_url' => "article_files/photos/img_71.png",
+                'published_date' => '19-02-21',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Российский государственный гуманитарный университет',
+                'journal_name' => 'Эпохи взаимодействие литуратур востока и запада',
+
+                'locale_id' => 8,
+                'authors' => 'П.А.Гринцер
+',
+                'file_url' => 'article_files/files/Epokhi_vzaimodeystvia_literatur_Vostoka_i_Zapada_Grintser_P_A.pdf',
+                'photo_url' => "article_files/photos/img_72.png",
+                'published_date' => '19-02-21',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Российская академия наук институт мировой литурературы им. А.М.Горького',
+                'journal_name' => 'Восток в русской литературе
+XVIII — начала XX века',
+
+                'locale_id' => 8,
+                'authors' => 'Е.Н.Афанасьевой
+',
+                'file_url' => 'article_files/files/gromova_opul_skaya_l_d_vostok_v_russkoy_literature_xviii_nac (1).pdf',
+                'photo_url' => "article_files/photos/img_73.png",
+                'published_date' => '19-02-04',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Узбекский государственный университет
+мировых языков',
+                'journal_name' => 'КОНЦЕПТУАЛЬНЫЕ ТЕНДЕНЦИИ РАЗВИТИЯ СОВРЕМЕННОЙ
+ФИЛОЛОГИЧЕСКОЙ (ЛИТЕРАТУРОВЕДЧЕСКОЙ)
+КОМПАРАТИВИСТИКИ',
+
+                'locale_id' => 8,
+                'authors' => 'Гульчира ГАРИПОВА
+',
+                'file_url' => 'article_files/files/Гарипова Статья.pdf',
+                'photo_url' => "article_files/photos/img_74.png",
+                'published_date' => 'ххх',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'ОППОЗИЦИЯ «ВОСТОК–ЗАПАД»
+В ИСТОРИИ СРАВНИТЕЛЬНОЙ ПОЭТИКИ',
+
+                'locale_id' => 8,
+                'authors' => 'Б.П. Маслов
+',
+                'file_url' => 'article_files/files/Поэтика_в_контексте_сравнительных_дисциплин.pdf',
+                'photo_url' => "article_files/photos/img_75.png",
+                'published_date' => 'ххх',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Литовский эдукологический университет',
+                'journal_name' => 'Русистика и компаративистика',
+
+                'locale_id' => 8,
+                'authors' => 'М.Б.Лоскутникова
+',
+                'file_url' => 'article_files/files/Русистика и компаративистика. Выпуск VII. Книга 2. Литературоведение. Сборник научных статей (Эсалнек А.Я., Лос... (Z-Library).pdf',
+                'photo_url' => "article_files/photos/img_76.png",
+                'published_date' => '2012',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Тюменский государственный университет',
+                'journal_name' => 'СРАВНИТЕЛЬНОЕ ЛИТЕРАТУРОВЕДЕНИЕ КАК УНИВЕРСИТЕТСКАЯ ДИСЦИПЛИНА',
+
+                'locale_id' => 8,
+                'authors' => 'Данилина Галина Ивановна
+',
+                'file_url' => 'article_files/files/СРАВНИТЕЛЬНОЕ_ЛИТЕРАТУРОВЕДЕНИЕ_КАК_УНИВЕРСИТЕТСКАЯ_ДИСЦИПЛИНА.pdf',
+                'photo_url' => "article_files/photos/img_77.png",
+                'published_date' => '2016',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'Edebiyatın Menşei, Karşılaştırmalı
+(Mukayeseli/Komparatistik) Edebiyatın
+Dünya ve Türk Edebiyatındaki Yeri
+Hakkında Bir İncelem',
+
+                'locale_id' => 15,
+                'authors' => 'İsmail TURAN
+',
+                'file_url' => 'article_files/files/22_İsmail-TURAN-_-Edebiyatın-MenşeiKarşılaştırmalı-1.pdf',
+                'photo_url' => "article_files/photos/img_78.png",
+                'published_date' => '2017',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'EskiĢehir Osmangazi Üniversitesi',
+                'journal_name' => 'KARġILAġTIRMALI EDEBĠYAT VE MĠTOLOJĠ ĠLĠġKĠSĠ1',
+
+                'locale_id' => 15,
+                'authors' => 'Medine SĠVRĠ2
+IĢıl KÖYLÜ
+',
+                'file_url' => 'article_files/files/477_6_Qarshilashdirmali_Edebiyat_Ve_Mitoloji_Ilishgisi_Medine_Sivri.pdf',
+                'photo_url' => "article_files/photos/img_79.png",
+                'published_date' => '2013',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Kırıkkale Üniversitesi,',
+                'journal_name' => 'Karşılaştırmalı Edebiyat Araştırmaları Açısından
+Klasik Türk Edebiyatı ile İran Edebiyatı',
+
+                'locale_id' => 15,
+                'authors' => 'Adnan KARAİSMAİLOĞLU
+',
+                'file_url' => 'article_files/files/3364-published (2).pdf',
+                'photo_url' => "article_files/photos/img_80.png",
+                'published_date' => '2002',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Literature and History of Turkish or Turkic',
+                'journal_name' => 'Karşılaştırmalı Edebiyat Hocası Tanım',
+
+                'locale_id' => 15,
+                'authors' => 'Hacer GÜLŞEN*
+',
+                'file_url' => 'article_files/files/acarindex-1423933805.pdf',
+                'photo_url' => "article_files/photos/img_81.png",
+                'published_date' => '2013',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'Karşılaştırmalı Edebiyat Hocası Tanım',
+
+                'locale_id' => 15,
+                'authors' => '*
+',
+                'file_url' => 'article_files/files/dokumen.tips_karsilastirmali-edebiyat-hocasi.pdf',
+                'photo_url' => "article_files/photos/img_82.png",
+                'published_date' => '2019-2022',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'International Journal of Cultural and Social Studies',
+                'journal_name' => 'Edebiyat ve Mekân Bağlamında Safiye Erol’un Ülker Fırtınası Romanı
+Üzerine Bir İnceleme1',
+
+                'locale_id' => 15,
+                'authors' => 'Macit BALIK
+',
+                'file_url' => 'article_files/files/Edebiyat_ve_Mek_n_Ba_lam_nda_Safiye_Erol_un_lker_F_rt_nas_Roman.pdf',
+                'photo_url' => "article_files/photos/img_83.png",
+                'published_date' => 'December 2016',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Cukurova Universiteti',
+                'journal_name' => 'Kibatek Edebiyat Sempozyumu',
+
+                'locale_id' => 15,
+                'authors' => 'Macit BALIK
+',
+                'file_url' => 'article_files/files/elmas-kibatek-karsilastirmali-edebiyat-hg4s.pdf',
+                'photo_url' => "article_files/photos/img_84.png",
+                'published_date' => 'December 2006',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'Turnalar',
+
+                'locale_id' => 15,
+                'authors' => '
+',
+                'file_url' => 'article_files/files/elmas-yitik-kusak-turnalar-jupx.pdf',
+                'photo_url' => "article_files/photos/img_85.png",
+                'published_date' => 'xxx',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'KARŞILAŞTIRMALI EDEBİYATIN YAYILMA ALANI',
+
+                'locale_id' => 15,
+                'authors' => 'Ertuğrul AYDIN1
+',
+                'file_url' => 'article_files/files/ertugrul_aydin_karsilastirmali_edebiyat_yayilma_alani.pdf',
+                'photo_url' => "article_files/photos/img_86.png",
+                'published_date' => '1992',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'KARŞILAŞTIRMALI EDEBİYATIN YAYILMA ALANI',
+
+                'locale_id' => 15,
+                'authors' => 'Ertuğrul AYDIN1
+',
+                'file_url' => 'article_files/files/ertugrul_aydin_karsilastirmali_edebiyat_yayilma_alani.pdf',
+                'photo_url' => "article_files/photos/img_86.png",
+                'published_date' => '1992',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Selçuk Üniversitesi Edebiyat Fakültesi',
+                'journal_name' => 'Genel ve Karşılaştırmalı Edebiyat Bilimi’nin (Komparatistik) Ulusal ve
+Dünya Edebiyatları Ekseninde Kuramsal Açılımı',
+
+                'locale_id' => 15,
+                'authors' => 'Doç. Dr. Ahmet Cuma
+',
+                'file_url' => 'article_files/files/Genel_ve_Karsilastirmali_Edebiyat_Biliminin_Kompa.pdf',
+                'photo_url' => "article_files/photos/img_87.png",
+                'published_date' => '22-05-2018',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'NEDEN Mİ KARŞILAŞTIRMALI EDEBİYAT? ',
+
+                'locale_id' => 15,
+                'authors' => '
+',
+                'file_url' => 'article_files/files/karsilastirmali-edebisyat-adana-bildiri-yayinlandi.pdf',
+                'photo_url' => "article_files/photos/img_88.png",
+                'published_date' => '22-05-2006',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => ' Erciyes Üniversitesi Eğitim Fakültesi, Kayseri',
+                'journal_name' => 'Karşılaştırmalı Edebiyatın Türkiye’deki Öncüleri: Leo Spitzer - Erich Auerbach ',
+
+                'locale_id' => 15,
+                'authors' => 'Hüseyin ARAK
+',
+                'file_url' => 'article_files/files/Karslastrmal Edebiyatn Turkiye deki Onculeri_ Leo Spitzer.pdf',
+                'photo_url' => "article_files/photos/img_89.png",
+                'published_date' => 'xxx',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '  Ankara Üniversitesi TÖMER Öğretim Üyesi.',
+                'journal_name' => 'Avrasya Türkçelerinin
+Karşılaştırmalı İncelenmesi',
+
+                'locale_id' => 15,
+                'authors' => 'Prof. Dr. Mehman Musaoğlu
+',
+                'file_url' => 'article_files/files/mk_1.pdf',
+                'photo_url' => "article_files/photos/img_90.png",
+                'published_date' => 'xxx',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => '',
+                'journal_name' => 'ULUSLAR ARASI BİR BİLGİ ŞÖLENİ: KARŞıLAŞTıRMALı
+EDEBİYAT ARAŞTIRMALARI SEMPOZYUMU III',
+
+                'locale_id' => 15,
+                'authors' => 'PROF. DR. SAİM SAKAOGLU
+',
+                'file_url' => 'article_files/files/pdffox.com_karlatrmal-edebiyat-aratrmalar-sempozyumu-iii.pdf',
+                'photo_url' => "article_files/photos/img_91.png",
+                'published_date' => 'xxx',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Eskisehir Osmangazi Universiteti',
+                'journal_name' => 'Turkiye`de kashtirmali Edebiyat Calismalari',
+
+                'locale_id' => 15,
+                'authors' => 'PROF. DR. Ali Gultekin
+',
+                'file_url' => 'article_files/files/T_rkiye`de_Kar_la_t_rmal_Edebiyat_al_malar_#11677_10786.pdf',
+                'photo_url' => "article_files/photos/img_92.png",
+                'published_date' => 'xxx',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Aydın Adnan Menderes Üniversitesi',
+                'journal_name' => 'Ulusal Edebiyata Katkısı Bağlamında Karşılaştırmalı Edebiyat`ın İşlevselliği
+Üzerine On the Functionality of Comparative Literature in Terms of
+Contribution to National Literature',
+
+                'locale_id' => 15,
+                'authors' => 'Gökhan şefik Erkurt
+',
+                'file_url' => 'article_files/files/UlusalEdebiyataKatksBalamndaKarlatrmalEdebiyatnlevselliizerine.pdf',
+                'photo_url' => "article_files/photos/img_93.png",
+                'published_date' => '2022 December',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Selçuk Üniversitesi
+Türkiyat Araştırmaları Enstitüsü Türkiyat Araştırmaları Dergis',
+                'journal_name' => 'KARŞILAŞTIRMALI EDEBĐYAT BĐLĐMĐ ve BĐR UYGULAMA',
+
+                'locale_id' => 15,
+                'authors' => 'Yavuz BAYRAM *
+',
+                'file_url' => 'article_files/files/yavuz_bayram_karsilastirmali_edebiyat_bilimi_uygulama.pdf',
+                'photo_url' => "article_files/photos/img_94.png",
+                'published_date' => '2004 December',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Yrd. Doç. Dr. Pamukkale Üniversitesi',
+                'journal_name' => 'YENİ TÜRK EDEBİYATINDA KARŞILAŞTIRMALI TEZLER',
+
+                'locale_id' => 15,
+                'authors' => 'Ali DONBAY**
+',
+                'file_url' => 'article_files/files/yen-trk-edebyatinda-karilatirmali-tezler-zet.pdf',
+                'photo_url' => "article_files/photos/img_95.png",
+                'published_date' => '2004 December',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         // Insert data into the 'abstracts' table

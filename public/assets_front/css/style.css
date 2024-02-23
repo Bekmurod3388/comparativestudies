@@ -1212,3 +1212,22 @@ textarea::placeholder {
 .index_page-books{
     margin-bottom: 50px;
 }
+
+@media(max-width: 425px){
+    .field-content .container{
+        padding: 0;
+    }
+    .artics_about-name-back span{
+        font-size: 15px;
+    }
+    .artics_text p{
+        font-size: 13px;
+    }
+    .artics_about-img {
+        width: 90px;
+        height: 90px;
+    }
+    #artics{
+        height: 270px;
+    }
+}
