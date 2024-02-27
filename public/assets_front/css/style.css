@@ -432,7 +432,7 @@
     text-decoration: none;
 }
 .artics_about-name-back span{
-    font-size: 17px;
+    font-size: 16px;
     color: #fff;
 }
 .artics_p{
@@ -1230,4 +1230,24 @@ textarea::placeholder {
     #artics{
         height: 270px;
     }
+}
+.books_slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+.slide{
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    background: #240090;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide:hover{
+    background: #0b5ed7;
 }

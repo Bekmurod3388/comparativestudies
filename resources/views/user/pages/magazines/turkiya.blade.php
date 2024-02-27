@@ -28,9 +28,12 @@
                             <div class="textbook_right">
 
                                 <div class="textbook_file">
-                                    <button>
-                                        <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $journal->site_url)) ? asset('storage/' . $journal->site_url) : $journal->site_url }}">Jurnal sahifasi</a>
-                                    </button>
+                                    <a  target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $journal->site_url)) ? asset('storage/' . $journal->site_url) : $journal->site_url }}">
+                                        <button>
+                                            Jurnal sahifasi
+                                        </button>
+                                    </a>
+
                                 </div>
 
                             </div>
