@@ -17,7 +17,7 @@
                                                 aria-label="Default select example">
                                             <option value="None" selected>Davlat</option>
                                             @foreach($countries as $country)
-                                                <option value="{{ $country }}">{{ $country }}</option>
+                                                <option value="{{ $country }}" @if($search_country == $country) selected @endif>{{ $country }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -27,7 +27,7 @@
                                             <option value="None" selected>Tilni tanlash</option>
                                             @foreach($locales as $locale)
                                                 @if(count($locale->dissertation)>0)
-                                                    <option value="{{ $locale->id }}">{{ $locale->name }}</option>
+                                                    <option value="{{ $locale->id }}" @if($search_locale == $locale->id) selected @endif>{{ $locale->name }}</option>
                                                 @endif
                                             @endforeach
                                         </select>
@@ -37,12 +37,12 @@
                                                 aria-label="Default select example">
                                             <option value="None" selected>Yozuvchini tanlash</option>
                                             @foreach($author as $aut)
-                                                <option value="{{ $aut }}">{{ $aut }}</option>
+                                                <option value="{{ $aut }}" @if($search_author == $aut) selected @endif>{{ $aut }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                     <div class="col-lg-4 col-md-4 input_search">
-                                        <input type="text" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />
+                                        <input type="text" name="q" class="dissertation_input" @if($q) value="{{$q}}" @endif placeholder="Kalit so'zni kiriting" />
                                     </div>
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
