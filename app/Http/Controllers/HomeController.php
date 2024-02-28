@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Abstracts;
 use App\Models\Article;
+use App\Models\Convention;
 use App\Models\Locale;
 use App\Models\Monograph;
 use App\Models\Photo;
@@ -303,7 +304,10 @@ class HomeController extends Controller
         return view('user.pages.scientific_research.articles', compact('locales', 'journal_names', 'authors', 'articles', 'search_locale', 'search_author', 'search_journal_name', 'q'));    }
 
     public function scientific_research_conventions(){
-        return view('user.pages.scientific_research.conventions');    }
+        $conventions = Convention::all();
+        $locales = Locale::all();
+        return view('user.pages.scientific_research.conventions', compact('conventions', 'locales'));
+    }
 
     public function about(){
         return view('user.pages.about');    }

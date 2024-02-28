@@ -1095,13 +1095,17 @@ textarea::placeholder {
 .textbooks_boxs-start{
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+    /*Yon tarafdagi tillear durgan div hidden qilish uchun*/
+    /*width: 80%;*/
     overflow-y: scroll;
 }
 .textbook_btns{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: none;
+    /*Yon tarafdagi tillear durgan div hidden qilish uchun*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*gap: 40px;*/
 }
 @media(max-width: 900px){
     .textbook_btns{

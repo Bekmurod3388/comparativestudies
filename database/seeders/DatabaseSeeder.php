@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             DissertationsTableSeeder::class,
             ResearchersArticlesTableSeeder::class,
             TrainingManualsTableSeeder::class,
+            ConventionsTableSeeder::class,
         ]);
     }
 }

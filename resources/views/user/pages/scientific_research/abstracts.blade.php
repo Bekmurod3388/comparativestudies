@@ -89,13 +89,13 @@
                         <h1 class="pb-5">Avtoreferat topilmadi</h1>
                     @endforelse
                 </div>
-                <div class="textbook_btns">
-                    @foreach($locales as $locale)
-                        @if(count($locale->abstract)>0)
-                            <button value="{{ $locale->id }}">{{ $locale->name }}</button>
-                        @endif
-                    @endforeach
-                </div>
+{{--                <div class="textbook_btns">--}}
+{{--                    @foreach($locales as $locale)--}}
+{{--                        @if(count($locale->abstract)>0)--}}
+{{--                            <button value="{{ $locale->id }}">{{ $locale->name }}</button>--}}
+{{--                        @endif--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>
