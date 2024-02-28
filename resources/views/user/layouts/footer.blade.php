@@ -28,12 +28,11 @@
                                             <h2>Program In Literature</h2>
 
                                             <p><a href=""
-                                                    target="_blank">101 Friedl​ Building<br/>
-                                                    1316 Campus Drive</a><br/>
-                                                Campus Box 90670<br/>
-                                                Durham, NC 27708<br/>
-                                                T: 919.684.4127<br/>
-                                                F: 919.684.3598</p>
+                                                    target="_blank">Address: Toshkent shahri, Kichik Xalqa Yo`li ko`chasi, G-9a mavzesi, 21-a uy.</a><br/>
+                                                Postal code: 100138<br/>
+                                                Phone: +998 71 230-12-92<br/>
+                                                Email: gulnoz7410@mail.ru<br/>
+                                                F: 098911335672</p>
                                         </div>
 
                                     </div>
@@ -132,7 +131,7 @@
                                                 <div class="bs-region bs-region--main">
 
                                                     <h2 class="footer-heading">
-                                                        Stay Connected</h2>
+                                                       Biz bilan bog'lanish</h2>
 
 
                                                     <div class="footer-link">

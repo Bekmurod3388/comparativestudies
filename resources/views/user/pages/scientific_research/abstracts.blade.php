@@ -76,9 +76,11 @@
                                         </div>
                                         <div class="textbook_right">
                                             <div class="textbook_file">
+                                                <a href="target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $abstract->file_url)) ? asset('storage/' . $abstract->file_url) : $abstract->file_url }}"">
                                                 <button>
-                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $abstract->file_url)) ? asset('storage/' . $abstract->file_url) : $abstract->file_url }}">Avtoreferat sahifasi</a>
-                                                </button>
+                                                    Avtoreferat sahifasi
+                                                </button></a>
+
                                             </div>
                                         </div>
                                     </div>
