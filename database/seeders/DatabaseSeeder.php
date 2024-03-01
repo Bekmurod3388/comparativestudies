@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
+            LocaleTableSeeder::class,
             RoleSeeder::class,
             UserSeeder::class,
             ColleaguesTableSeeder::class,
@@ -26,7 +27,6 @@ class DatabaseSeeder extends Seeder
             ResearchersBooksTableSeeder::class,
             JournalsTableSeeder::class,
             AboutTableSeeder::class,
-            LocaleTableSeeder::class,
             AbstractTableSeeder::class,
             ArticleTableSeeder::class,
             MonographTableSeeder::class,

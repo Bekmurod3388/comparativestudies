@@ -319,9 +319,40 @@ class HomeController extends Controller
         $colleagues = Researcher::all(); // Sort by 'type', 'country', and 'name'
         return view('user.pages.about.participants', compact('colleagues'));    }
 
-    public function about_books(){
-        $books = ResearcherBook::all();
-        return view('user.pages.about.books', compact('books'));
+    public function about_books(Request $request){
+            $publishers = ResearcherBook::distinct()->pluck('publisher');
+            $authors = ResearcherBook::distinct()->pluck('authors');
+            $locales = Locale::all();
+
+            $query = ResearcherBook::query();
+
+            // Filter by search_publisher
+            if ($request->has("search_publisher") && $request->search_publisher != "None") {
+                $query->where('publisher', $request->search_publisher);
+            }
+
+            // Filter by search_language
+            if ($request->has("search_language") && $request->search_language != "None") {
+                $query->where('locale_id', $request->search_language);
+            }
+
+            // Filter by search_author
+            if ($request->has("search_author") && $request->search_author != "None") {
+                $query->where('authors', $request->search_author);
+            }
+
+            // Filter by keyword search
+            if ($request->q) {
+                $query->where('authors', 'like', '%' . $request->q . '%')
+                    ->orWhere('name', 'like', '%' . $request->q . '%');
+            }
+
+            $books = $query->get();
+
+            return view('user.pages.about.books', compact('publishers', 'authors', 'books', 'locales'));
+
+            //        $books = ResearcherBook::all();
+//        return view('user.pages.about.books', compact('books'));
     }
 
     public function about_articles(){
