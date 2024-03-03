@@ -184,6 +184,11 @@
                 </a>
 
                 <ul class="menu-sub">
+                    <li class="menu-item @if(request()->routeIs('connection.index')) active @endif">
+                        <a href="{{ route('connection.index') }}" class="menu-link">
+                            <div data-i18n="Analytics">Bog`lanishlar</div>
+                        </a>
+                    </li>
                 </ul>
             </li>
 

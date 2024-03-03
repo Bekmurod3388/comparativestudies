@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Abstracts;
 use App\Models\Article;
+use App\Models\Connection;
 use App\Models\Convention;
+use App\Models\FacultyBook;
 use App\Models\Locale;
 use App\Models\Monograph;
 use App\Models\Photo;
@@ -41,7 +43,20 @@ class HomeController extends Controller
 
     public function contact(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        return view('user.pages.contact');    }
+        return view('user.pages.contact');
+        }
+    public function contact_post(Request $request): \Illuminate\Http\RedirectResponse
+    {
+        $formFields = $request->validate([
+            'fullname' => 'required|string',
+            'phone' => 'required|string',
+            'message' => 'required|string',
+        ]);
+
+        Connection::create($formFields);
+
+        return redirect()->route('user_contact')->with('success','Xabar muvaffaqiyatli yuborildi.');
+        }
 
     public function gallery(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {

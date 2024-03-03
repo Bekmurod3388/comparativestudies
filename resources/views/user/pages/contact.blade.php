@@ -4,12 +4,13 @@
         <div class="container">
             <div class="contact_start">
                 <div class="contact_left">
-                    <form>
-                        <label for="name">Name:</label>
-                        <input class="contact_input" type="text" id="name" name="name" placeholder="F.I.0" required>
+                    <form method="post" action="{{ route('user_contact_post') }}">
+                        @csrf
+                        <label for="name">F.I.O:</label>
+                        <input class="contact_input" type="text" id="name" name="fullname" placeholder="F.I.0" required>
 
                         <label for="number">Telefon:</label>
-                        <input placeholder="Telefon raqamingizni kiriting" class="contact_input" type="email" id="number" name="number" required>
+                        <input placeholder="Telefon raqamingizni kiriting" class="contact_input" type="number" id="number" name="phone" required>
 
                         <label for="message">Xabar:</label>
                         <textarea placeholder="Xabar yuborish" id="message" name="message" rows="4" required></textarea>

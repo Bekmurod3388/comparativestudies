@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AbstractsController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\MonographController;
@@ -35,6 +36,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
+Route::post('/contactpost', [HomeController::class,'contact_post'])->name('user_contact_post');
 
 Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_gallery');
 Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
@@ -90,6 +92,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/researcherbooks/{book}/delete', [ResearcherBooksController::class, 'destroy'])->name('researcher.books.destroy');
     Route::get('/researcherbooks/{book}/edit', [ResearcherBooksController::class, 'edit'])->name('researcher.books.edit');
     Route::patch('/researcherbooks/{book}/update', [ResearcherBooksController::class, 'update'])->name('researcher.books.update');
+
+    Route::get('/connections', [ContactController::class, 'index'])->name('connection.index');
+    Route::delete('/connections/{connection}/delete', [ContactController::class, 'destroy'])->name('connection.destroy');
+    Route::patch('/connections/{connection}/update', [ContactController::class, 'update'])->name('connection.update');
 
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);

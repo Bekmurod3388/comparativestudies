@@ -28,11 +28,11 @@
                             <th>F.I.SH</th>
                             <th>Lavozim</th>
                             <th>Rasm</th>
-                            <th>
-                                <div class="d-flex justify-content-center">
-                                    Kitoblar
-                                </div>
-                            </th>
+{{--                            <th>--}}
+{{--                                <div class="d-flex justify-content-center">--}}
+{{--                                    Kitoblar--}}
+{{--                                </div>--}}
+{{--                            </th>--}}
                             <th>
                                 <div class="d-flex justify-content-center">
                                     Amallar
@@ -53,18 +53,18 @@
 {{--                                             class="w-px-40 h-auto rounded-circle"/>--}}
                                     </div>
                                 </td>
-                                <td>
-                                    <div class="d-flex justify-content-center">
-                                        <button
-                                            type="button"
-                                            class="btn btn-primary"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#modalScrollable{{$researcher->id}}"
-                                        ><i
-                                                class="bx bxs-book me-1"></i>Kitoblar
-                                        </button>
-                                    </div>
-                                </td>
+{{--                                <td>--}}
+{{--                                    <div class="d-flex justify-content-center">--}}
+{{--                                        <button--}}
+{{--                                            type="button"--}}
+{{--                                            class="btn btn-primary"--}}
+{{--                                            data-bs-toggle="modal"--}}
+{{--                                            data-bs-target="#modalScrollable{{$researcher->id}}"--}}
+{{--                                        ><i--}}
+{{--                                                class="bx bxs-book me-1"></i>Kitoblar--}}
+{{--                                        </button>--}}
+{{--                                    </div>--}}
+{{--                                </td>--}}
                                 <td>
                                     <div class="d-flex justify-content-center">
                                         <a class="btn btn-warning m-1" href="{{ route('researcher.edit', $researcher->id) }}"><i
@@ -85,82 +85,82 @@
                         </tbody>
                     @endforeach
                 </table>
-                @foreach ($researchers as $researcher)
-                    <div class="modal fade" id="modalScrollable{{$researcher->id}}" tabindex="-1" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalScrollableTitle">{{ $researcher->fullname }}
-                                        <br> Kitoblari</h5>
-                                    <button
-                                        type="button"
-                                        class="btn-close"
-                                        data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                    ></button>
-                                </div>
-                                <div class="modal-body">
-                                    @if ($researcher->book)
-                                        <table class="table table-striped">
-                                            <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Nomi</th>
-                                                <th scope="col">Nashriyot</th>
-                                                <th scope="col">Sahifalar</th>
-                                                <th scope="col">
-                                                    <div class="d-flex justify-content-center">
-                                                        Amallar
-                                                    </div>
-                                                </th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            @forelse ($researcher->book as $book)
-                                                <tr>
-                                                    <th>{{ $loop->iteration }}</th>
-                                                    <td>{{ $book->name }}</td>
-                                                    <td>{{ $book->publisher }}</td>
-                                                    <td>{{ $book->pages }}</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-center">
-                                                            <a class="btn btn-warning m-1" href="{{ route('researcher.books.edit', $book->id) }}">
-                                                                <i class="bx bx-edit-alt me-1"></i>
-                                                            </a>
+{{--                @foreach ($researchers as $researcher)--}}
+{{--                    <div class="modal fade" id="modalScrollable{{$researcher->id}}" tabindex="-1" aria-hidden="true">--}}
+{{--                        <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">--}}
+{{--                            <div class="modal-content">--}}
+{{--                                <div class="modal-header">--}}
+{{--                                    <h5 class="modal-title" id="modalScrollableTitle">{{ $researcher->fullname }}--}}
+{{--                                        <br> Kitoblari</h5>--}}
+{{--                                    <button--}}
+{{--                                        type="button"--}}
+{{--                                        class="btn-close"--}}
+{{--                                        data-bs-dismiss="modal"--}}
+{{--                                        aria-label="Close"--}}
+{{--                                    ></button>--}}
+{{--                                </div>--}}
+{{--                                <div class="modal-body">--}}
+{{--                                    @if ($researcher->book)--}}
+{{--                                        <table class="table table-striped">--}}
+{{--                                            <thead>--}}
+{{--                                            <tr>--}}
+{{--                                                <th scope="col">#</th>--}}
+{{--                                                <th scope="col">Nomi</th>--}}
+{{--                                                <th scope="col">Nashriyot</th>--}}
+{{--                                                <th scope="col">Sahifalar</th>--}}
+{{--                                                <th scope="col">--}}
+{{--                                                    <div class="d-flex justify-content-center">--}}
+{{--                                                        Amallar--}}
+{{--                                                    </div>--}}
+{{--                                                </th>--}}
+{{--                                            </tr>--}}
+{{--                                            </thead>--}}
+{{--                                            <tbody>--}}
+{{--                                            @forelse ($researcher->book as $book)--}}
+{{--                                                <tr>--}}
+{{--                                                    <th>{{ $loop->iteration }}</th>--}}
+{{--                                                    <td>{{ $book->name }}</td>--}}
+{{--                                                    <td>{{ $book->publisher }}</td>--}}
+{{--                                                    <td>{{ $book->pages }}</td>--}}
+{{--                                                    <td>--}}
+{{--                                                        <div class="d-flex justify-content-center">--}}
+{{--                                                            <a class="btn btn-warning m-1" href="{{ route('researcher.books.edit', $book->id) }}">--}}
+{{--                                                                <i class="bx bx-edit-alt me-1"></i>--}}
+{{--                                                            </a>--}}
 
-                                                            <form action="{{ route('researcher.books.destroy', $book->id) }}" method="POST" class="d-inline">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="btn btn-danger m-1" onclick="return confirm('Kitobni o`chirishga ishonchingiz komilmi?')">
-                                                                    <i class="bx bx-trash me-1"></i>
-                                                                </button>
-                                                            </form>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            @empty
-                                                <tr>
-                                                    <td colspan="5">
-                                                        <h1>Kitob mavjud emas</h1>
-                                                    </td>
-                                                </tr>
-                                            @endforelse                                            </tbody>
-                                        </table>
-                                    @else
-                                        <p>{{ $researcher->fullname }} has no books listed.</p>
-                                    @endif
-                                </div>
-                                <div class="modal-footer">
-                                    <a class="btn btn-primary" href="{{ route('researcher.books.add', $researcher->id) }}"><i
-                                            class="bx bxs-book-add me-1"></i>Kitob qo'shish</a>
-                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                                        Yopish
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
+{{--                                                            <form action="{{ route('researcher.books.destroy', $book->id) }}" method="POST" class="d-inline">--}}
+{{--                                                                @csrf--}}
+{{--                                                                @method('DELETE')--}}
+{{--                                                                <button type="submit" class="btn btn-danger m-1" onclick="return confirm('Kitobni o`chirishga ishonchingiz komilmi?')">--}}
+{{--                                                                    <i class="bx bx-trash me-1"></i>--}}
+{{--                                                                </button>--}}
+{{--                                                            </form>--}}
+{{--                                                        </div>--}}
+{{--                                                    </td>--}}
+{{--                                                </tr>--}}
+{{--                                            @empty--}}
+{{--                                                <tr>--}}
+{{--                                                    <td colspan="5">--}}
+{{--                                                        <h1>Kitob mavjud emas</h1>--}}
+{{--                                                    </td>--}}
+{{--                                                </tr>--}}
+{{--                                            @endforelse                                            </tbody>--}}
+{{--                                        </table>--}}
+{{--                                    @else--}}
+{{--                                        <p>{{ $researcher->fullname }} has no books listed.</p>--}}
+{{--                                    @endif--}}
+{{--                                </div>--}}
+{{--                                <div class="modal-footer">--}}
+{{--                                    <a class="btn btn-primary" href="{{ route('researcher.books.add', $researcher->id) }}"><i--}}
+{{--                                            class="bx bxs-book-add me-1"></i>Kitob qo'shish</a>--}}
+{{--                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">--}}
+{{--                                        Yopish--}}
+{{--                                    </button>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                @endforeach--}}
             @else
                 <div class="card-header">
                     <div class="row content-end">
