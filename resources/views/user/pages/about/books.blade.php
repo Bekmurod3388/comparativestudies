@@ -112,9 +112,11 @@
                                         </div>
                                         <div class="textbook_right">
                                             <div class="textbook_file">
-                                                <button>
-                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">Kitob sahifasi</a>
-                                                </button>
+                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">
+                                                        <button>
+                                                            Kitob sahifasi
+                                                        </button>
+                                                    </a>
                                             </div>
                                         </div>
                                     </div>

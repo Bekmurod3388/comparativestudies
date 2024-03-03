@@ -69,16 +69,18 @@
                                                 <img src="{{asset('storage/'.$monograph->photo_url)}}" alt="img">
                                             </div>
                                             <div class="prject_objectives-text">
-                                                <h3>{{ $monograph->name }} <span>{{ $monograph->published_date }}</span></h3>
+                                                <h3>{{ $monograph->name }} <span>{{ \Carbon\Carbon::parse($monograph->published_date)->format('Y') }}</span></h3>
                                                 <p> {{ $monograph->authors }} </p>
                                                 <p>( {{ $monograph->authors }}) {{ $monograph->publisher }} </p>
                                             </div>
                                         </div>
                                         <div class="textbook_right">
                                             <div class="textbook_file">
-                                                <button>
-                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $monograph->file_url)) ? asset('storage/' . $monograph->file_url) : $monograph->file_url }}">Monograf sahifasi</a>
-                                                </button>
+                                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $monograph->file_url)) ? asset('storage/' . $monograph->file_url) : $monograph->file_url }}">
+                                                    <button>
+                                                        Monograf sahifasi
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>

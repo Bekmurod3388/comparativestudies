@@ -42,7 +42,8 @@
                                     </select>
                                 </div>
                                 <div class="col-lg-4 col-md-4 input_search">
-                                    <input type="text" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />
+{{--                                    <label for="q">Kalit so'zni kiriting</label>--}}
+                                    <input type="text" id="q" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />
                                 </div>
                                 <div class="col-12 text-center">
                                     <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill">Qidirish
@@ -76,9 +77,11 @@
                                         </div>
                                         <div class="textbook_right">
                                             <div class="textbook_file">
-                                                <button>
-                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $training_manual->file_url)) ? asset('storage/' . $training_manual->file_url) : $training_manual->file_url }}">O`quv qo`llanma sahifasi</a>
-                                                </button>
+                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $training_manual->file_url)) ? asset('storage/' . $training_manual->file_url) : $training_manual->file_url }}">
+                                                        <button>
+                                                            O`quv qo`llanma sahifasi
+                                                        </button>
+                                                    </a>
                                             </div>
                                         </div>
                                     </div>

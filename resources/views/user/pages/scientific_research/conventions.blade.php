@@ -77,9 +77,11 @@
                                         <div class="textbook_right">
 
                                             <div class="textbook_file">
-                                                <button>
-                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}">Anjuman nizomi</a>
-                                                </button>
+                                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}">
+                                                    <button>
+                                                        Anjuman nizomi
+                                                    </button>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
