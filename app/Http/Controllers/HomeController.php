@@ -279,8 +279,8 @@ class HomeController extends Controller
 
     public function scientific_research_articles(Request $request){
         $locales = Locale::all();
-        $journal_names = Article::distinct()->pluck('journal_name');
-        $authors = Article::distinct()->pluck('authors');
+        $journal_names = Article::with('status', '5')->distinct()->pluck('journal_name');
+        $authors = Article::with('status', '5')->distinct()->pluck('authors');
 
         $query = Article::query();
 

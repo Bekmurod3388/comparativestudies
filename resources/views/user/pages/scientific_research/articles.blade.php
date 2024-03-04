@@ -32,7 +32,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-lg-4 col-md-4">
+                                <div class="col-lg-4 col-md-4">{{$search_author}}
                                     <select name="search_author" class="form-select border-primary p-2"
                                             aria-label="Default select example">
                                         <option value="None" selected>Yozuvchini tanlash</option>

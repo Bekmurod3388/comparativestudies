@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AbstractsController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
+use App\Http\Controllers\ClientArticleController as ClientArticleControllerAlias;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocaleController;
@@ -113,6 +114,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/researcherarticles', ResearcherArticlesController::class);
     Route::resource('/monographs', MonographController::class);
     Route::resource('/trainingmanuals', TrainingManualController::class);
+
+//    for clients
+    Route::resource('/clientarticles', ClientArticleControllerAlias::class);
 });
 
 

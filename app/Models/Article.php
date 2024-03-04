@@ -32,6 +32,8 @@ class Article extends Model
         'file_url',
         'photo_url',
         'published_date',
+        'user_id',
+        'status',
     ];
 
     /**
@@ -58,5 +60,9 @@ class Article extends Model
     public function locale()
     {
         return $this->belongsTo(Locale::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

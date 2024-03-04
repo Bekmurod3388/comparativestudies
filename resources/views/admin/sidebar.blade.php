@@ -209,11 +209,10 @@
 
         @endif
         @if(auth()->user()->hasRole('client'))
-
-            <li class="menu-item @if(request()->routeIs('facultybooks.index')) active @endif">
-                <a href="{{ route('facultybooks.index') }}" class="menu-link">
+            <li class="menu-item @if(request()->routeIs('clientarticles.index')) active @endif">
+                <a href="{{ route('clientarticles.index') }}" class="menu-link">
                     <i class="menu-icon tf-icons bx bx-book"></i>
-                    <div data-i18n="Analytics">Maqolalar</div>
+                    <div data-i18n="Analytics">Mening maqolalarim</div>
                 </a>
             </li>
         @endif

@@ -17,12 +17,15 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('locale_id')->unsigned()->nullable();
             $table->foreign('locale_id')->references('id')->on('locales')->onDelete('cascade');
+            $table->bigInteger('user_id')->unsigned()->nullable(); // Nullable foreign key for users table
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('set null'); // Set null on delete
             $table->string('name');
-            $table->string('journal_name');
-            $table->string('authors');
+            $table->string('journal_name')->nullable();
+            $table->string('authors')->nullable();
             $table->string('file_url')->nullable();
             $table->string('photo_url')->nullable();
             $table->dateTime('published_date')->nullable();
+            $table->integer('status')->default(5);
             $table->timestamps();
         });
 
