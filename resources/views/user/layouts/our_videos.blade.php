@@ -1,6 +1,6 @@
 <div class="row">
     @foreach($videos as $our_video)
-        <div class="slick__slide slide slide--1">
+        <div class="slick__slide  slide--1">
             <iframe
                 width="100%"
                 height="300"

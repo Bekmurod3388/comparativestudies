@@ -186,7 +186,7 @@
 
     .home_book-one,
     .home_book-two {
-        width: 110px;
+        width: 150px;
         padding: 3px;
     }
 }
@@ -273,12 +273,12 @@
   }
   @media(max-width: 540px){
     .name_book{
-        bottom: 30px;
-        left: 35px;
+        bottom: 45px;
+        left: 65px;
         font-size: 15px;
     }
     .name_book2{
-        bottom: 30px;
+        bottom: 45px;
         left: 35px;
         font-size: 15px;
     }

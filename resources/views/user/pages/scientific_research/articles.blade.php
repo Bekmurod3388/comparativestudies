@@ -17,7 +17,7 @@
                                             aria-label="Default select example">
                                         <option value="None" selected>Jurnal nomi</option>
                                         @foreach($journal_names as $journal_name)
-                                            <option value="{{ $journal_name }}" @if($search_journal_name == $journal_name) selected @endif>{{ $journal_name }}</option>
+                                            <option  value="{{ $journal_name }}" @if($search_journal_name == $journal_name) selected @endif>{{ $journal_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
