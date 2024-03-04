@@ -6,7 +6,7 @@
                 <div class="artics_about-name">
                     <div class="artics_about-name-back">
                         <a href="{{ $colleague->scholar }}" target="_blank">
-                            <span>{{ $colleague->fullname }} <br> ({{ $colleague->position }})</span>
+                            <span>{{ $colleague->fullname }} <br> <p class="coll_text"> ({{ $colleague->position }})</p></span>
                         </a>
                     </div>
                     <a href="mailto:{{ $colleague->email }}">     <p class="artics_p">{{ $colleague->email }}</p></a>

@@ -432,7 +432,7 @@
     text-decoration: none;
 }
 .artics_about-name-back span{
-    font-size: 16px;
+    font-size: 20px;
     color: #fff;
 }
 .artics_p{
@@ -466,6 +466,9 @@
     .navbar-text-name span{
         font-size: 16px;
     }
+}
+.coll_text{
+    font-size: 13px;
 }
 @media (max-width:900px) {
     #articles{
