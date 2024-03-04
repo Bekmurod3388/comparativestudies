@@ -41,7 +41,42 @@
                     <div data-i18n="Analytics">Tillar</div>
                 </a>
             </li>
+
             <!-- About -->
+            <li class="menu-item
+                @if(request()->routeIs('adminarticles.index')) active @endif
+                @if(request()->routeIs('adminarticles.reject')) active @endif
+                @if(request()->routeIs('adminarticles.check')) active @endif
+                @if(request()->routeIs('adminarticles.apply')) active @endif"
+            >
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-book"></i>
+                    <div data-i18n="Layouts">Maqolalar</div>
+                </a>
+
+                <ul class="menu-sub">
+                    <li class="menu-item @if(request()->routeIs('adminarticles.index')) active @endif">
+                        <a href="{{ route('adminarticles.index') }}" class="menu-link">
+                            <div data-i18n="Analytics">Barcha maqolalar</div>
+                        </a>
+                    </li>
+                    <li class="menu-item @if(request()->routeIs('adminarticles.apply')) active @endif">
+                        <a href="{{ route('adminarticles.apply') }}" class="menu-link">
+                            <div data-i18n="Analytics">Jo`natilgan Maqolalar</div>
+                        </a>
+                    </li>
+                    <li class="menu-item @if(request()->routeIs('adminarticles.check')) active @endif">
+                        <a href="{{ route('adminarticles.check') }}" class="menu-link">
+                            <div data-i18n="Analytics">To'lov qilinmagan</div>
+                        </a>
+                    </li>
+                    <li class="menu-item @if(request()->routeIs('adminarticles.reject')) active @endif">
+                        <a href="{{ route('adminarticles.reject') }}" class="menu-link">
+                            <div data-i18n="Analytics">Tasdiqlanmagan</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="menu-item
                 @if(request()->routeIs('abouts.index')) active @endif
                 @if(request()->routeIs('facultybooks.index')) active @endif

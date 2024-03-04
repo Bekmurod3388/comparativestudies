@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('content')
-    <div class="card">
+        <div class="card">
         <div class="card-header">
             <div class="row content-end">
                 <div class="col-4">
@@ -24,7 +24,6 @@
                     <th>Nomi</th>
                     <th>Tili</th>
                     <th>Holat</th>
-                    <th>Rasm</th>
                     <th>File</th>
 {{--                    <th style="width: 15%">Amallar</th>--}}
                 </tr>
@@ -54,13 +53,6 @@
                                 @elseif($article->status == 5)
                                 <span class="badge bg-label-primary me-1">Qabul qilindi
                                 @endif</td>
-                            <td>
-                                <img
-                                    src="{{ asset('storage/' . $article->photo_url) }}"
-                                    class="card-img-top" alt="{{ $article->name }}"
-                                    style="width: 100px; height: 100px;"
-                                >
-                            </td>
                             <td>
                                 <a href="{{ asset('storage/' . $article->file_url) }}" target="_blank">Ko'rish uchun bosing</a>
                             </td>

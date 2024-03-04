@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\ClientArticle;
 use App\Models\Locale;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -22,10 +22,15 @@ class ClientArticleController extends Controller
     {
         // Retrieve the authenticated user
         $user = Auth::user();
-
-        // Retrieve articles associated with the authenticated user
-        $articles = $user->articles()->get();
-        return view('client.articles.index', compact('articles'));
+        if ($user->hasRole('admin')){
+            // Retrieve articles associated with the authenticated user
+            $articles = ClientArticle::all();
+            return view('client.articles.index', compact('articles'));
+        } else {
+            // Retrieve articles associated with the authenticated user
+            $articles = $user->articles()->get();
+            return view('client.articles.index', compact('articles'));
+        }
     }
 
     /**
@@ -50,17 +55,12 @@ class ClientArticleController extends Controller
         $FormFields = $request->validate([
             'locale_id' => 'required|exists:locales,id',
             'name' => 'required|string|max:255',
-            'file_url' => 'nullable|string',
-            'photo_url' => 'nullable|file|image|mimes:png,jpg,jpeg|max:2048', // Example: Allow PNG, JPG, JPEG files up to 2MB
+            'file_url' => 'nullable|file',
         ]);
 
-        if ($request->hasFile('photo_url')) {
-            $FormFields['photo_url'] = $request->file('photo_url')->store('article_files/photos', 'public');
-        }
-
-        if($request->hasFile('file_pdf')){
-            $FormFields['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
-        }
+        if($request->hasFile('file_url')){
+            $FormFields['file_url'] = $request->file('file_url')->store('article_files/files', 'public');
+            }
 
         $FormFields['status'] = 0;
         // Retrieve the authenticated user
@@ -70,7 +70,7 @@ class ClientArticleController extends Controller
 
 //        dd($FormFields);
 
-        Article::create($FormFields);
+        ClientArticle::create($FormFields);
 
         return redirect()->route('clientarticles.index')
             ->with('success', 'Maqola muvaffaqiyatli jo`natildi.');
@@ -79,10 +79,10 @@ class ClientArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Article $article
+     * @param ClientArticle $article
      * @return Application|Factory|\Illuminate\Foundation\Application|View
      */
-    public function edit(Article $article): View|\Illuminate\Foundation\Application|Factory|Application
+    public function edit(ClientArticle $article): View|\Illuminate\Foundation\Application|Factory|Application
     {
         $locales = Locale::all();
         return view('admin.articles.edit', compact('article', 'locales'));
@@ -92,31 +92,17 @@ class ClientArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Article $article
+     * @param ClientArticle $article
      * @return RedirectResponse
      */
-    public function update(Request $request, Article $article): RedirectResponse
+    public function update(Request $request, ClientArticle $article): RedirectResponse
     {
-        $FormFields = $request->validate([
-            'locale_id' => 'required|exists:locales,id',
-            'name' => 'required|string|max:255',
-            'journal_name' => 'required|string|max:255',
-            'authors' => 'required|string|max:255',
-            'file_url' => 'nullable|string',
-            'photo_url' => 'nullable|file|image|mimes:png,jpg,jpeg|max:2048', // Example: Allow PNG, JPG, JPEG files up to 2MB
-            'published_date' => 'nullable|date',
-        ]);
-
-        if ($request->hasFile('photo_url')) {
-            $FormFields['photo_url'] = $request->file('photo_url')->store('article_files/photos', 'public');
-        }
-
-        if($request->hasFile('file_pdf')){
-            $FormFields['file_url'] = $request->file('file_pdf')->store('article_files/files', 'public');
-//            dd($FormFields);
-        }
-
-        $article->update($FormFields);
+        // Fetch the status from the request
+        $status = $request->input('status');
+        dd($article->id);
+        // Update the article status
+        $article->status = $status;
+        $article->save();
 
         return redirect()->route('articles.index')
             ->with('success', 'Maqola muvaffaqiyatli yaratildi.');
@@ -125,14 +111,14 @@ class ClientArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Article $article
+     * @param ClientArticle $article
      * @return RedirectResponse
      */
-    public function destroy(Article $article): RedirectResponse
+    public function destroy(ClientArticle $article): RedirectResponse
     {
         $article->delete();
 
         return redirect()->route('articles.index')
-            ->with('success', 'Maqola muvaffaqiyatli yaratildi.');
+            ->with('success', 'Maqola muvaffaqiyatli o`chirildi.');
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AbstractsController;
+use App\Http\Controllers\AdminArticlesController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\ClientArticleController as ClientArticleControllerAlias;
@@ -97,6 +98,12 @@ Route::middleware('auth')->group(function () {
     Route::get('/connections', [ContactController::class, 'index'])->name('connection.index');
     Route::delete('/connections/{connection}/delete', [ContactController::class, 'destroy'])->name('connection.destroy');
     Route::patch('/connections/{connection}/update', [ContactController::class, 'update'])->name('connection.update');
+
+    Route::get('/adminarticles', [AdminArticlesController::class,'index'])->name('adminarticles.index');
+    Route::get('/adminarticles/apply', [AdminArticlesController::class,'apply'])->name('adminarticles.apply');
+    Route::get('/adminarticles/check', [AdminArticlesController::class,'check'])->name('adminarticles.check');
+    Route::get('/adminarticles/reject', [AdminArticlesController::class,'reject'])->name('adminarticles.reject');
+    Route::post('/adminarticles/{article}/update', [AdminArticlesController::class,'updatestatus'])->name('adminarticles.update');
 
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);
