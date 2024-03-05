@@ -25,13 +25,12 @@
 
                                         <div
                                             class="clearfix text-formatted field field--name-field-address-and-contact-info field--type-text-long field--label-hidden field__item">
-                                            <h2>Comparative Studies</h2>
+                                            <h2>Komparavistika markazlari</h2>
 
-                                            <p><a href=""
-                                                    target="_blank">Address: Toshkent shahri, Kichik Xalqa Yo`li ko`chasi, G-9a mavzesi, 21-a uy.</a><br/>
-                                                Postal code: 100138<br/>
-                                                Phone: +998 71 230-12-92<br/>
-                                                Email: gulnoz7410@mail.ru<br/>
+                                            <p>Manzil: Toshkent shahri, Kichik Xalqa Yo`li ko`chasi, G-9a mavzesi, 21-a uy.<br/>
+                                                Pochta indeksi: 100138<br/>
+                                                Telefon: +998 71 230-12-92<br/>
+                                                E-pochta: gulnoz7410@mail.ru<br/>
                                                 F: 098911335672</p>
                                         </div>
 
