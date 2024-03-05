@@ -72,7 +72,7 @@
                     </li>
                     <li class="menu-item @if(request()->routeIs('adminarticles.reject')) active @endif">
                         <a href="{{ route('adminarticles.reject') }}" class="menu-link">
-                            <div data-i18n="Analytics">Tasdiqlanmagan</div>
+                            <div data-i18n="Analytics">Rad qilingan</div>
                         </a>
                     </li>
                 </ul>
