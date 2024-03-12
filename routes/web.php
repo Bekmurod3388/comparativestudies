@@ -37,6 +37,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class,'index'])->name('welcome');
+Route::get('/search', [HomeController::class,'home_search'])->name('home_search');
 Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
 Route::post('/contactpost', [HomeController::class,'contact_post'])->name('user_contact_post');
 
