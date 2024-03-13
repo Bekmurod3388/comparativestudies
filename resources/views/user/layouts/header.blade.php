@@ -9,13 +9,12 @@
                                     <div id="search-block">
                                         <div data-drupal-selector="search-block-form" id="block-tts-sub-search"
                                              role="search">
-                                            <form action="" method="get"
+                                            <form action="{{ route('home_search') }}" method="get"
                                                   id="search-block-form" accept-charset="UTF-8" class="form-row">
                                                 <fieldset class="form-group"><label for="edit-search-api-fulltext"
-                                                                                    class="sr-only">Enter your
-                                                        keywords</label><input
+                                                                                    class="sr-only">Kalit so`zni kiriting</label><input
                                                         data-drupal-selector="edit-search-api-fulltext"
-                                                        type="search" id="edit-search-api-fulltext" name="keys"
+                                                        type="search" id="edit-search-api-fulltext" name="q"
                                                         value="" size="30" maxlength="128" class="form-control">
                                                 </fieldset>
                                                 <div data-drupal-selector="edit-actions"
@@ -35,7 +34,7 @@
                          class="responsive-menu-toggle-wrapper responsive-menu-toggle block block-responsive-menu block-responsive-menu-toggle">
                         <div class="content">
                             <a id="toggle-icon" class="toggle responsive-menu-toggle-icon" title="Menu"
-                               href="#off-canvas">
+                               href="#">
                                 <span class="icon"></span><span class="label">Menu</span>
                             </a>
                         </div>
