@@ -112,7 +112,13 @@
     margin: 0;
 }
 
+.home_book-two:hover, .home_book-one:hover{
+    box-shadow: 0 0 7px rgba(0, 0, 3, 0.2);
+    border-radius: 15px;
+    transition: .3s ease all;
+    cursor:pointer;
 
+}
 .align-items-center {
     display: flex;
     justify-content: center;
@@ -459,8 +465,11 @@
     margin-left: 20px;
 }
 .navbar-text-name{
-    font-size: 23px;
+    font-size: 20px;
     color: #fff;
+}
+.navbar-text-name p{
+    font-size: 11px;
 }
 @media(max-width:550px){
     .navbar-text-name span{

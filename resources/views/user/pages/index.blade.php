@@ -98,19 +98,19 @@
                                 class="view view-paragraphs view-id-paragraphs view-display-id-block_1 js-view-dom-id-e9291022e3b60c3ac51e58a769b8c794f8bfd221fa02bf09b15b984bf4a7b8d4">
 
 
-                            <div class="view-content row">
+                            <div class="">
                                 <div class="views-row">
                                     <div class="views-field views-field-field-paragraphs-bottom">
                                         <div class="field-content">
 
 
-                                            <div class="container mt-1" style="background-color: #00539b; color: white;">
-                                                <div class="row">
+                                            <div class="" style="background-color: #00539b; color: white;">
+                                                <div class="row container">
                                                     <div class="col-sm">
                                                         <div>
                                                             <div
-                                                                    class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--74">
-                                                                <div class="paragraph__column">
+                                                                   >
+                                                                <div >
                                                                     <div>
                                                                         <div
                                                                                 class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
