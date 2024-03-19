@@ -17,14 +17,8 @@
                 @forelse($articles as $article)
                     <div class="project_objectives-box">
                         <div class="project_objectives-box-start">
-{{--                            <div class="project_objectives-img">--}}
-{{--                                <img src="{{ asset('storage/' . $article->photo_url) }}"--}}
-{{--                                alt="{{ $article->article_topic }}">--}}
-{{--                            </div>--}}
                             <div class="prject_objectives-text">
-                                <h3>{{ $article->dissertation_topic }}</h3>
-{{--                                <p> {{ $article->article_type }}</p>--}}
-{{--                                <p> {{ $article->authors }}</p>--}}
+                                <h3>{{ $article->journal_name }}</h3>
                             </div>
                             <div class="project_objectives-pdf">
                                 <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $article->file_url)) ? asset('storage/' . $article->file_url) : $article->file_url }}" >Resurs</a>
@@ -34,17 +28,11 @@
                     </div>
                 @empty
                 @endforelse
-                @forelse($Abstracts as $abstract)
+                @forelse($abstracts as $abstract)
                     <div class="project_objectives-box">
                         <div class="project_objectives-box-start">
-{{--                            <div class="project_objectives-img">--}}
-{{--                                <img src="{{ asset('storage/' . $article->photo_url) }}"--}}
-{{--                                alt="{{ $article->article_topic }}">--}}
-{{--                            </div>--}}
                             <div class="prject_objectives-text">
                                 <h3>{{ $abstract->dissertation_topic }}</h3>
-{{--                                <p> {{ $article->article_type }}</p>--}}
-{{--                                <p> {{ $article->authors }}</p>--}}
                             </div>
                             <div class="project_objectives-pdf">
                                 <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $abstract->file_url)) ? asset('storage/' . $abstract->file_url) : $abstract->file_url }}" >Resurs</a>
@@ -53,25 +41,110 @@
                     </div>
                 @empty
                 @endforelse
-{{--                @forelse($ResearcherBooks as $rb)--}}
-{{--                    <div class="project_objectives-box">--}}
-{{--                        <div class="project_objectives-box-start">--}}
-{{--                            <div class="project_objectives-img">--}}
-{{--                                <img src="{{ asset('storage/' . $article->photo_url) }}"--}}
-{{--                                alt="{{ $article->article_topic }}">--}}
-{{--                            </div>--}}
-{{--                            <div class="prject_objectives-text">--}}
-{{--                                <h3>{{ $rb->name }}</h3>--}}
-{{--                                <p> {{ $article->article_type }}</p>--}}
-{{--                                <p> {{ $article->authors }}</p>--}}
-{{--                            </div>--}}
-{{--                            <div class="project_objectives-pdf">--}}
-{{--                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $article->file_url)) ? asset('storage/' . $article->file_url) : $article->file_url }}" >Resurs</a>--}}
-
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                @endforelse--}}
+                @forelse($training_manual as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->name }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($researchers_books as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->name }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($researchers_articles as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->article_topic }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($monograph as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->article_topic }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($journal as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->name }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($facultybooks as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->book_name }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($dissertations as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->topic }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
+                @forelse($convention as $item)
+                    <div class="project_objectives-box">
+                        <div class="project_objectives-box-start">
+                            <div class="prject_objectives-text">
+                                <h3>{{ $item->name }}</h3>
+                            </div>
+                            <div class="project_objectives-pdf">
+                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $item->file_url)) ? asset('storage/' . $item->file_url) : $item->file_url }}" >Resurs</a>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                @endforelse
             </div>
         </div>
     </div>

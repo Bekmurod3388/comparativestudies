@@ -429,34 +429,118 @@ class HomeController extends Controller
             $q = $request->q;
         }
 
+        $abstracts = $query->get();
+
+        $query = Article::query();
+
+        if ($request->q) {
+            $query->where('name', 'like', '%' . $request->q . '%')
+                ->orWhere('journal_name', 'like', '%' . $request->q . '%')
+                ->orWhere('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('published_date', 'like', '%' . $request->q . '%')
+            ;
+        }
+
         $articles = $query->get();
+
+
+        $query = Convention::query();
+
+        if ($request->q) {
+            $query->where('name', 'like', '%' . $request->q . '%')
+                ->orWhere('description', 'like', '%' . $request->q . '%')
+//                ->orWhere('published_date', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $convention = $query->get();
+
+
+        $query = Dissertations::query();
+
+        if ($request->q) {
+            $query->where('topic', 'like', '%' . $request->q . '%')
+                ->orWhere('country', 'like', '%' . $request->q . '%')
+                ->orWhere('author', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $dissertations = $query->get();
+
+
+        $query = FacultyBook::query();
+
+        if ($request->q) {
+            $query->where('description', 'like', '%' . $request->q . '%')
+                ->orWhere('title', 'like', '%' . $request->q . '%')
+                ->orWhere('publication_date', 'like', '%' . $request->q . '%')
+                ->orWhere('book_name', 'like', '%' . $request->q . '%')
+                ->orWhere('authors', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $facultybooks = $query->get();
+
+
+        $query = Journal::query();
+
+        if ($request->q) {
+            $query->where('description', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $journal = $query->get();
+
+
+        $query = Monograph::query();
+
+        if ($request->q) {
+            $query->where('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%')
+                ->orWhere('publisher', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $monograph = $query->get();
+
+
+        $query = ResearcherArticle::query();
+
+        if ($request->q) {
+            $query->where('protection_year', 'like', '%' . $request->q . '%')
+                ->orWhere('article_type', 'like', '%' . $request->q . '%')
+                ->orWhere('article_topic', 'like', '%' . $request->q . '%')
+                ->orWhere('authors', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $researchers_articles = $query->get();
+
 
         $query = ResearcherBook::query();
 
         if ($request->q) {
-            $query->where('name', 'like', '%' . $request->q . '%')
-//                ->orWhere('country', 'like', '%' . $request->q . '%')
-//                ->orWhere('pub_date', 'like', '%' . $request->q . '%')
-//                ->orWhere('pages', 'like', '%' . $request->q . '%')
-//                ->orWhere('publisher', 'like', '%' . $request->q . '%')
+            $query->where('publisher', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%')
             ;
         }
 
-        $ResearcherBooks = $query->get();
+        $researchers_books = $query->get();
 
-        $query = Abstracts::query();
+
+        $query = TrainingManual::query();
 
         if ($request->q) {
-            $query->where('applicant_name', 'like', '%' . $request->q . '%')
-                ->orWhere('dissertation_topic', 'like', '%' . $request->q . '%')
-                ->orWhere('academic_degree', 'like', '%' . $request->q . '%')
-                ->orWhere('specialty_code_and_name', 'like', '%' . $request->q . '%')
-                ->orWhere('protection_year', 'like', '%' . $request->q . '%')
+            $query->where('published_date', 'like', '%' . $request->q . '%')
+                ->orWhere('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('publisher', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%')
             ;
         }
 
-        $Abstracts = $query->get();
+        $training_manual = $query->get();
 
-        return view('user.pages.search', compact('articles', 'ResearcherBooks', 'Abstracts', 'q'));
+        return view('user.pages.search', compact('articles', 'abstracts', 'training_manual', 'researchers_books', 'researchers_articles', 'convention', 'monograph', 'journal', 'dissertations', 'facultybooks', 'q'));
     }
 }
