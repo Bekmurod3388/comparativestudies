@@ -76,7 +76,9 @@
                             alt="O'zbekiston jahon tillari universiteti"/></a>
                 </div>
                 <div class="navbar-text-name">
-                    <span>O'zbekiston jahon tillari universiteti</span>
+                    <span>O'zbekiston jahon tillari universiteti <br>  <p>Comporativistika platformasi</p>
+                    </span>
+
                 </div>
             </div>
         </div>
