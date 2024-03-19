@@ -28,6 +28,10 @@
 .text-primare {
     color: #2f2fa2;
 }
+.back, .goals{
+    background: url("../../assets/img/pattern1.jpg");
+
+}
 .my-code{
     color: #000000;
     margin-bottom: 50px;
@@ -113,7 +117,7 @@
 }
 
 .home_book-two:hover, .home_book-one:hover{
-    box-shadow: 0 0 7px rgba(0, 0, 3, 0.2);
+    box-shadow: 0 0 7px rgba(0, 0, 3, 0.8);
     border-radius: 15px;
     transition: .3s ease all;
     cursor:pointer;
@@ -242,17 +246,17 @@
   .name_book{
     position: absolute;
     z-index: 111;
-    bottom: 130px;
+    bottom: 140px;
     left:100px;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 800;
   }
   .name_book2{
     position: absolute;
     z-index: 111;
-    bottom: 130px;
-    right:150px;
-    font-size: 30px;
+    bottom: 140px;
+    right:115px;
+    font-size: 20px;
     font-weight: 800;
   }
   @media(max-width: 1250px){
@@ -530,7 +534,7 @@
 }
 
 .project_objectives-box-start {
-    background-color: #f6f6f6;
+    background-color: #dee9ed;
     padding: 40px;
     width: 100%;
     height: auto;
@@ -849,10 +853,12 @@ textarea::placeholder {
     position: relative;
     z-index: 1;
 }
-
+.goals_start{
+    padding-top: 100px;
+}
 .project_one,
 .project_two {
-    background: #cfcfcf;
+    background: #fff;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 10px;
@@ -895,7 +901,7 @@ textarea::placeholder {
     margin: 50px 0;
 }
 .project_objectives-box-start {
-    background-color: #f6f6f6;
+    background-color: #dee9ed;
     padding: 40px;
     width: 100%;
     height: auto;

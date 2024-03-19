@@ -13,7 +13,7 @@
                                 <div class="views-row">
                                     <div class="views-field views-field-field-paragraphs-top">
                                         <div class="field-content">
-                                            <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                                            <div id="main-wrapper" class="layout-main-wrapper back clearfix">
                                                 <div id="earth"
                                                      class="container-fluid py-6 my-6 mt-0 earth">
                                                     <div class="container">
@@ -24,7 +24,7 @@
                                                                      data-popup="left-popup"
                                                                      src="{{asset('/assets_front/img/bookleft.png')}}"
                                                                      alt="img">
-                                                                <p class="name_book2">Garb</p>
+                                                                <p class="name_book2">G`arb <br> komporavistika <br> markazlari </p>
                                                             </div>
                                                             <div id="box"></div>
                                                             <div class="home_book-two" data-toggle="modal"
@@ -33,7 +33,7 @@
                                                                      data-popup="right-popup"
                                                                      src="{{asset('/assets_front/img/bookright.png')}}"
                                                                      alt="img">
-                                                                <p class="name_book">Sharq</p>
+                                                                <p class="name_book">Sharq <br> komporavistika <br> markazlari </p>
                                                             </div>
                                                         </div>
                                                     </div>
