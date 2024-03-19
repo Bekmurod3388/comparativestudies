@@ -431,6 +431,32 @@ class HomeController extends Controller
 
         $articles = $query->get();
 
-        return view('user.pages.search', compact('articles', 'q'));
+        $query = ResearcherBook::query();
+
+        if ($request->q) {
+            $query->where('name', 'like', '%' . $request->q . '%')
+//                ->orWhere('country', 'like', '%' . $request->q . '%')
+//                ->orWhere('pub_date', 'like', '%' . $request->q . '%')
+//                ->orWhere('pages', 'like', '%' . $request->q . '%')
+//                ->orWhere('publisher', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $ResearcherBooks = $query->get();
+
+        $query = Abstracts::query();
+
+        if ($request->q) {
+            $query->where('applicant_name', 'like', '%' . $request->q . '%')
+                ->orWhere('dissertation_topic', 'like', '%' . $request->q . '%')
+                ->orWhere('academic_degree', 'like', '%' . $request->q . '%')
+                ->orWhere('specialty_code_and_name', 'like', '%' . $request->q . '%')
+                ->orWhere('protection_year', 'like', '%' . $request->q . '%')
+            ;
+        }
+
+        $Abstracts = $query->get();
+
+        return view('user.pages.search', compact('articles', 'ResearcherBooks', 'Abstracts', 'q'));
     }
 }

@@ -15,7 +15,7 @@
                                                                                     class="sr-only">Kalit so`zni kiriting</label><input
                                                         data-drupal-selector="edit-search-api-fulltext"
                                                         type="search" id="edit-search-api-fulltext" name="q"
-                                                        value="" size="30" maxlength="128" class="form-control">
+                                                        @if(isset($q))value="{{$q}}"@endif size="30" maxlength="128" class="form-control">
                                                 </fieldset>
                                                 <div data-drupal-selector="edit-actions"
                                                      class="form-actions form-group" id="edit-actions">
