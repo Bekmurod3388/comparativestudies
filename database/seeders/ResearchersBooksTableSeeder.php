@@ -278,10 +278,10 @@ class ResearchersBooksTableSeeder extends Seeder
 //                'updated_at' => now(),
 //            ],
             [
-                'name' => 'ҚИЁСИЙ АДАБИЁТШУНОСЛИК',
-                'publisher' => 'ТОШКЕНТ 2020',
+                'name' => 'QIYOSIY ADABIYOTSHUNOSLIK',
+                'publisher' => 'Toshkent 2020',
                 'locale_id' => 1,
-                'authors' => 'Узоқ Жўрақулов Комилжон Ҳамроев',
+                'authors' => 'Gulnoz XALLIYEVA',
                 'file_url' => 'training_manual_files/files/G_XALLIYEVA_Qiyosiy_adabiyotshunoslik_O\'quv_qo\'llanma.pdf',
                 'photo_url' => "training_manual_files/photos/img_14.png",
                 'published_date' => '2020-12-01 00:00:00',
