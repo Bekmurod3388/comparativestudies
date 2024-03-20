@@ -14,7 +14,7 @@ class AboutTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('abouts')->insert([
-            'title' => "Европа кутубхоналарида қандай ноёб қўлёзмаларимиз сақланмоқда?",
+            'title' => "Yevropa kutubxonalarida qanday noyob qo'lyozmalar saqlanmoqda?",
             'url' => "https://www.youtube.com/embed/B0hD4_TPAD4?si=FNSdpNeDiVREdhs9",
             'type' => "youtube",
             'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
@@ -28,7 +28,7 @@ class AboutTableSeeder extends Seeder
 //            'created_at' => now(),
 //        ]);
         DB::table('abouts')->insert([
-            'title' => "“Фарҳод ва Ширин” достони – лотиш китобхонларининг энг севимли асари",
+            'title' => "“Farxod va Shirin” dostoni – lotin kitobxonlarining eng sevimli asari",
             'url' => "https://uza.uz/uz/posts/farhod-va-shirin-dostoni-lotish-kitobxonlarining-eng-sevimli-asari_567082",
             'type' => "sayt",
             'img' => "about_photos/img.png",
