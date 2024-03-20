@@ -115,6 +115,10 @@
                                             href="{{ route('user_about_oav') }}"
                                             class="sf-depth-2">OAV biz haqimizda</a>
                                     </li>
+                                    <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
+                                        class="sf-depth-2 sf-no-children"><a
+                                            href="{{ route('user_scientific_research_conventions') }}"
+                                            class="sf-depth-2">Comporativistika jurnali</a></li>
                                 </ul>
                             </li>
                             <li id="main-menu-link-contentfaf6415d-7a6e-4245-bf98-82e7a76b6dce"
@@ -137,11 +141,6 @@
                                         class="sf-depth-2 sf-no-children"><a
                                             href="{{ route('user_scientific_research_articles') }}"
                                             class="sf-depth-2">Maqolalar</a></li>
-                                    <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
-                                        class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('user_scientific_research_conventions') }}"
-                                            class="sf-depth-2">Anjumanlar</a></li>
-
                                 </ul>
                             </li>
                             <li id="main-menu-link-content5c7661a8-cd1e-4f88-b60e-1c5889aaeb34"
