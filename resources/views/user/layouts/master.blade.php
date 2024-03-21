@@ -96,7 +96,10 @@
             @include('user.layouts.header')
         </div>
         <main>
-            @yield("content")
+            <div style="display: none" id="content">
+                @yield("content")
+            </div>
+            <div class="loader"></div>
         </main>
         @include('user.layouts.footer')
     </div>
