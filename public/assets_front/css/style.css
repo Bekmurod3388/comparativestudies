@@ -28,7 +28,7 @@
 .text-primare {
     color: #2f2fa2;
 }
-.back, .goals{
+body{
     background: url("../../assets/img/pattern1.jpg");
 
 }
@@ -426,6 +426,7 @@
     justify-content: space-between;
     position: relative;
     margin-bottom: 25px;
+    background: #fff;
 }
 .artics_about{
     display: flex;
