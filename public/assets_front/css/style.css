@@ -303,18 +303,14 @@ body{
 }
 
 #box {
-    background: url(https://cdn.rawgit.com/ManzDev/cursos-assets/gh-pages/css3/earth-2.jpg);
+    background: url("../../assets_front/img/globus.jpg");
     background-size: cover;
     border: 2px solid #000;
     border-radius: 50%;
     width: 200px;
     height: 200px;
     animation: movimiento 5s linear 0s infinite;
-    /*box-shadow: 0 0 25px RGBA(255, 255, 255, 0.10),*/
-    /*    -8px -8px 15px #000 inset,*/
-    /*    2px 2px 25px #000 inset,*/
-    /*    -45px -45px 25px RGBA(0, 0, 0, 0.5) inset,*/
-    /*    25px 25px 45px RGBA(0, 0, 0, 0.45) inset;*/
+    box-shadow: 0 0 5px RGBA(5, 5, 4, -0.9), 8px 1px 5px #000 inset, 2px 2px 5px #000 inset, -4px -5px 2px RGBA(0, 0, 0, 0.5) inset, 5px 2px 5px RGBA(0, 0, 0, 0.45) inset;
     transform: rotateX(6deg) rotateY(6deg) rotateZ(6deg);
 }
 
@@ -1174,7 +1170,7 @@ textarea::placeholder {
     margin: 20px 0;
 }
 .page_book-img{
-    width: 100%;
+    width: 280px;
     height: 300px;
     overflow: hidden;
 }
@@ -1204,6 +1200,7 @@ textarea::placeholder {
     border-bottom-right-radius: 20px;
     color: #000;
     height: 180px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
