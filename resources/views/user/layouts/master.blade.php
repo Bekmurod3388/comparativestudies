@@ -80,6 +80,8 @@
         });
     </script>
     <link rel="stylesheet" href="{{asset('assets_front/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('assets_front/css/loading.css')}}">
+    <script src="{{asset('assets_front/js/loader.js')}}"></script>
 
 </head>
 <body class="exclude-node-title layout-no-sidebars page-node-37051 path-frontpage node--type-page">
