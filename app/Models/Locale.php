@@ -65,6 +65,14 @@ class Locale extends Model
     {
         return $this->hasMany(Monograph::class);
     }
+    public function researcherbooks()
+    {
+        return $this->hasMany(ResearcherBook::class);
+    }
+    public function researcherarticle()
+    {
+        return $this->hasMany(ResearcherArticle::class);
+    }
 
    public function training_manual()
     {

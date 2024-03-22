@@ -29,4 +29,8 @@ class ResearcherBook extends Model
     {
         return $this->belongsTo(Researcher::class, 'researcher_id');
     }
+    public function locale()
+    {
+        return $this->belongsTo(Locale::class);
+    }
 }

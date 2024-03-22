@@ -378,9 +378,46 @@ class HomeController extends Controller
 //        return view('user.pages.about.books', compact('books'));
     }
 
-    public function about_articles(){
-        $articles = ResearcherArticle::all();
-        return view('user.pages.about.articles', compact('articles'));
+    public function about_articles(Request $request){
+        $publishers = ResearcherArticle::distinct()->pluck('article_type');
+        $authors = ResearcherArticle::distinct()->pluck('authors');
+        $locales = Locale::all();
+
+        $query = ResearcherArticle::query();
+
+        $search_publisher = false;
+        $search_language = false;
+        $search_author = false;
+        $q = false;
+
+        // Filter by search_publisher
+        if ($request->has("search_publisher") && $request->search_publisher != "None") {
+            $query->where('article_type', $request->search_publisher);
+            $search_publisher = $request->search_publisher;
+        }
+
+        // Filter by search_language
+        if ($request->has("search_language") && $request->search_language != "None") {
+            $query->where('locale_id', $request->search_language);
+            $search_language = $request->search_language;
+        }
+
+        // Filter by search_author
+        if ($request->has("search_author") && $request->search_author != "None") {
+            $query->where('authors', $request->search_author);
+            $search_author = $request->search_author;
+        }
+
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('article_topic', 'like', '%' . $request->q . '%')
+                ->orWhere('article_type', 'like', '%' . $request->q . '%')
+                ->orWhere('authors', 'like', '%' . $request->q . '%');
+            $q = $request->q;
+        }
+        $articles = $query->get();
+
+        return view('user.pages.about.articles', compact('articles', "search_author", "search_language", "search_publisher", "publishers", "locales", "authors", "q"));
     }
 
     public function about_oav(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
@@ -420,11 +457,11 @@ class HomeController extends Controller
 
         // Filter by keyword search
         if ($request->q) {
-            $query->where('applicant_name', 'like', '%' . $request->q . '%')
-                ->orWhere('dissertation_topic', 'like', '%' . $request->q . '%')
-                ->orWhere('academic_degree', 'like', '%' . $request->q . '%')
-                ->orWhere('specialty_code_and_name', 'like', '%' . $request->q . '%')
-                ->orWhere('protection_year', 'like', '%' . $request->q . '%')
+            $query->where('dissertation_topic', 'like', '%' . $request->q . '%')
+//                ->orWhere('dissertation_topic', 'like', '%' . $request->q . '%')
+//                ->orWhere('academic_degree', 'like', '%' . $request->q . '%')
+//                ->orWhere('specialty_code_and_name', 'like', '%' . $request->q . '%')
+//                ->orWhere('protection_year', 'like', '%' . $request->q . '%')
             ;
             $q = $request->q;
         }
@@ -434,10 +471,10 @@ class HomeController extends Controller
         $query = Article::query();
 
         if ($request->q) {
-            $query->where('name', 'like', '%' . $request->q . '%')
-                ->orWhere('journal_name', 'like', '%' . $request->q . '%')
-                ->orWhere('authors', 'like', '%' . $request->q . '%')
-                ->orWhere('published_date', 'like', '%' . $request->q . '%')
+            $query->where('journal_name', 'like', '%' . $request->q . '%')
+//                ->orWhere('journal_name', 'like', '%' . $request->q . '%')
+//                ->orWhere('authors', 'like', '%' . $request->q . '%')
+//                ->orWhere('published_date', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -448,7 +485,7 @@ class HomeController extends Controller
 
         if ($request->q) {
             $query->where('name', 'like', '%' . $request->q . '%')
-                ->orWhere('description', 'like', '%' . $request->q . '%')
+//                ->orWhere('description', 'like', '%' . $request->q . '%')
 //                ->orWhere('published_date', 'like', '%' . $request->q . '%')
             ;
         }
@@ -460,8 +497,8 @@ class HomeController extends Controller
 
         if ($request->q) {
             $query->where('topic', 'like', '%' . $request->q . '%')
-                ->orWhere('country', 'like', '%' . $request->q . '%')
-                ->orWhere('author', 'like', '%' . $request->q . '%')
+//                ->orWhere('country', 'like', '%' . $request->q . '%')
+//                ->orWhere('author', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -471,11 +508,11 @@ class HomeController extends Controller
         $query = FacultyBook::query();
 
         if ($request->q) {
-            $query->where('description', 'like', '%' . $request->q . '%')
-                ->orWhere('title', 'like', '%' . $request->q . '%')
-                ->orWhere('publication_date', 'like', '%' . $request->q . '%')
-                ->orWhere('book_name', 'like', '%' . $request->q . '%')
-                ->orWhere('authors', 'like', '%' . $request->q . '%')
+            $query->where('book_name', 'like', '%' . $request->q . '%')
+//                ->orWhere('title', 'like', '%' . $request->q . '%')
+//                ->orWhere('publication_date', 'like', '%' . $request->q . '%')
+//                ->orWhere('book_name', 'like', '%' . $request->q . '%')
+//                ->orWhere('authors', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -485,8 +522,8 @@ class HomeController extends Controller
         $query = Journal::query();
 
         if ($request->q) {
-            $query->where('description', 'like', '%' . $request->q . '%')
-                ->orWhere('name', 'like', '%' . $request->q . '%')
+            $query->where('name', 'like', '%' . $request->q . '%')
+//                ->orWhere('name', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -496,9 +533,9 @@ class HomeController extends Controller
         $query = Monograph::query();
 
         if ($request->q) {
-            $query->where('authors', 'like', '%' . $request->q . '%')
-                ->orWhere('name', 'like', '%' . $request->q . '%')
-                ->orWhere('publisher', 'like', '%' . $request->q . '%')
+            $query->where('name', 'like', '%' . $request->q . '%')
+//                ->orWhere('name', 'like', '%' . $request->q . '%')
+//                ->orWhere('publisher', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -508,10 +545,10 @@ class HomeController extends Controller
         $query = ResearcherArticle::query();
 
         if ($request->q) {
-            $query->where('protection_year', 'like', '%' . $request->q . '%')
-                ->orWhere('article_type', 'like', '%' . $request->q . '%')
-                ->orWhere('article_topic', 'like', '%' . $request->q . '%')
-                ->orWhere('authors', 'like', '%' . $request->q . '%')
+            $query->where('article_topic', 'like', '%' . $request->q . '%')
+//                ->orWhere('article_type', 'like', '%' . $request->q . '%')
+//                ->orWhere('article_topic', 'like', '%' . $request->q . '%')
+//                ->orWhere('authors', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -521,8 +558,8 @@ class HomeController extends Controller
         $query = ResearcherBook::query();
 
         if ($request->q) {
-            $query->where('publisher', 'like', '%' . $request->q . '%')
-                ->orWhere('name', 'like', '%' . $request->q . '%')
+            $query->where('name', 'like', '%' . $request->q . '%')
+//                ->orWhere('name', 'like', '%' . $request->q . '%')
             ;
         }
 
@@ -532,10 +569,10 @@ class HomeController extends Controller
         $query = TrainingManual::query();
 
         if ($request->q) {
-            $query->where('published_date', 'like', '%' . $request->q . '%')
-                ->orWhere('authors', 'like', '%' . $request->q . '%')
-                ->orWhere('publisher', 'like', '%' . $request->q . '%')
-                ->orWhere('name', 'like', '%' . $request->q . '%')
+            $query->where('name', 'like', '%' . $request->q . '%')
+//                ->orWhere('authors', 'like', '%' . $request->q . '%')
+//                ->orWhere('publisher', 'like', '%' . $request->q . '%')
+//                ->orWhere('name', 'like', '%' . $request->q . '%')
             ;
         }
 

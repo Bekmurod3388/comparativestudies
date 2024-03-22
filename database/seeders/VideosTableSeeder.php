@@ -15,7 +15,7 @@ class VideosTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('videos')->insert([
-            'title' => "Video1",
+            'title' => "Yevropa kutubxonalarida qanday noyob qo'lyozmalar saqlanmoqda?",
             'video_url' => "https://www.youtube.com/embed/B0hD4_TPAD4?si=FNSdpNeDiVREdhs9",
             'created_at' => now(),
             'updated_at' => now(),

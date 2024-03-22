@@ -19,4 +19,8 @@ class ResearcherArticle extends Model
         'photo_url',
         ];
 
+    public function locale()
+    {
+        return $this->belongsTo(Locale::class);
+    }
 }

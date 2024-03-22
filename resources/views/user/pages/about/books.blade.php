@@ -62,7 +62,7 @@
                                             aria-label="Default select example">
                                         <option value="None" selected>Tilni tanlash</option>
                                         @foreach($locales as $locale)
-                                            @if(count($locale->monograph)>0)
+                                            @if(count($locale->researcherbooks)>0)
                                                 <option value="{{ $locale->id }}" @if($search_language == $locale->id) selected @endif>{{ $locale->name }}</option>
                                             @endif
                                         @endforeach
@@ -107,6 +107,7 @@
                                             <div class="prject_objectives-text">
                                                 <h3>{{ $book->name }} <span>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</span></h3>
                                                 <p> {{ $book->authors }} </p>
+                                                <p> {{ $book->locale->name  }} </p>
                                                 <p>( {{ $book->authors }}) {{ $book->publisher }} </p>
                                             </div>
                                         </div>

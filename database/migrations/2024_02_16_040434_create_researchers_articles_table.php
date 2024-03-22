@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('protection_year');
             $table->string('file_url')->nullable();
             $table->string('photo_url')->nullable();
+            $table->bigInteger('locale_id')->unsigned()->nullable();
+            $table->foreign('locale_id')->references('id')->on('locales')->onDelete('cascade');
             $table->timestamps();
         });
     }
