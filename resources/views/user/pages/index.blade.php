@@ -2,127 +2,89 @@
 @section('content')
     <div class="top-paragraphs">
         <section class="no-gutters region region-top-paragraphs">
-            <div class="views-element-container block block-views block-views-blockparagraphs-block-2"
-                 id="block-views-block-paragraphs-block-2">
-
-
+            <div class="views-element-container block block-views block-views-blockparagraphs-block-2" id="block-views-block-paragraphs-block-2">
                 <div class="content">
-                    <div>
-                        <div class="view view-paragraphs view-id-paragraphs view-display-id-block_2 js-view-dom-id-f8f48d28b8fb2eecc5fd3f9fb07d4a3c92b8838820c05ec4667cfe970b4a6a01">
-                            <div class="">
-                                <div class="views-row">
-                                    <div class="views-field views-field-field-paragraphs-top">
-                                        <div class="field-content">
-                                            <div id="main-wrapper" class="layout-main-wrapper back clearfix">
-                                                <div id="earth"
-                                                     class="container-fluid py-6 my-6 mt-0 earth">
-                                                    <div class="container">
-                                                        <div class="align-items-center">
-                                                            <div class="home_book-one" data-toggle="modal"
-                                                                 data-target="#LeftModalCenter">
-                                                                <img class="popup-trigger"
-                                                                     data-popup="left-popup"
-                                                                     src="{{asset('/assets_front/img/bookleft.png')}}"
-                                                                     alt="img">
-                                                                <p class="name_book2">G`arb <br> komporavistika <br> markazlari </p>
-                                                            </div>
-                                                            <div id="box"></div>
-                                                            <div class="home_book-two" data-toggle="modal"
-                                                                 data-target="#RightModalCenter">
-                                                                <img class="popup-trigger"
-                                                                     data-popup="right-popup"
-                                                                     src="{{asset('/assets_front/img/bookright.png')}}"
-                                                                     alt="img">
-                                                                <p class="name_book">Sharq <br> komporavistika <br> markazlari </p>
-                                                            </div>
-                                                        </div>
+                    <div class="view view-paragraphs view-id-paragraphs view-display-id-block_2 js-view-dom-id-f8f48d28b8fb2eecc5fd3f9fb07d4a3c92b8838820c05ec4667cfe970b4a6a01">
+                        <div class="views-row">
+                            <div class="views-field views-field-field-paragraphs-top">
+                                <div class="field-content">
+                                    <div id="main-wrapper" class="layout-main-wrapper back clearfix">
+                                        <div id="earth" class="container-fluid py-6 my-6 mt-0 earth">
+                                            <div class="container">
+                                                <div class="align-items-center">
+                                                    <div class="home_book-one reveal" data-toggle="modal" data-target="#LeftModalCenter">
+                                                        <img class="popup-trigger"
+                                                             data-popup="left-popup"
+                                                             src="{{asset('/assets_front/img/bookleft.png')}}"
+                                                             alt="img">
+                                                        <p class="name_book2">G`arb <br> komporavistika <br> markazlari </p>
+                                                    </div>
+                                                    <div id="box" class="reveal"></div>
+                                                    <div class="home_book-two reveal" data-toggle="modal" data-target="#RightModalCenter">
+                                                        <img class="popup-trigger"
+                                                             data-popup="right-popup"
+                                                             src="{{asset('/assets_front/img/bookright.png')}}"
+                                                             alt="img">
+                                                        <p class="name_book">Sharq <br> komporavistika <br> markazlari </p>
                                                     </div>
                                                 </div>
-                                                @include('user.layouts.centers_popup')
                                             </div>
-                                            <div class="paragraph paragraph--type--front-page-quick-links paragraph--view-mode--default paragraph--id--79">
-                                                <div class="paragraph__column">
-                                                    <p class="paragraph_us">BIZ HAQIMIZDA</p>
-                                                    <div class="quicklinks-wrapper">
-                                                        <div class="field field--name-field-quick-link-1 field--type-link field--label-hidden field__item">
-                                                            <a href="{{ route('user_about_goals') }}">Loyihaning
-                                                                maqsad va vazifalari</a>
-                                                        </div>
-                                                        <div class="field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
-                                                            <a href="{{ route('user_about_articles') }}">Loyiha
-                                                                bo'yicha maqolalar</a>
-                                                        </div>
-
-                                                        <div
-                                                                class="field field--name-field-quick-link-3 field--type-link field--label-hidden field__item">
-                                                            <a href="{{ route('user_about_oav') }}">Oav biz
-                                                                haqimizda</a>
-                                                        </div>
-
-                                                        <div
-                                                                class="field field--name-field-quick-link-4 field--type-link field--label-hidden field__item">
-                                                            <a
-                                                                    href="{{ route('user_magazines') }}">Bizning
-                                                                Jurnallar</a>
-                                                        </div>
-
-                                                    </div>
-
+                                        </div>
+                                        @include('user.layouts.centers_popup')
+                                    </div>
+                                    <div class="paragraph paragraph--type--front-page-quick-links paragraph--view-mode--default paragraph--id--79">
+                                        <div class="paragraph__column">
+                                            <p class="paragraph_us">BIZ HAQIMIZDA</p>
+                                            <div class="quicklinks-wrapper">
+                                                <div class="reveal field field--name-field-quick-link-1 field--type-link field--label-hidden field__item">
+                                                    <a href="{{ route('user_about_goals') }}">Loyihaning
+                                                        maqsad va vazifalari</a>
+                                                </div>
+                                                <div class="reveal field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
+                                                    <a href="{{ route('user_about_articles') }}">Loyiha
+                                                        bo'yicha maqolalar</a>
+                                                </div>
+                                                <div class="reveal field field--name-field-quick-link-3 field--type-link field--label-hidden field__item">
+                                                    <a href="{{ route('user_about_oav') }}">Oav biz haqimizda</a>
+                                                </div>
+                                                <div class="reveal field field--name-field-quick-link-4 field--type-link field--label-hidden field__item">
+                                                    <a
+                                                            href="{{ route('user_magazines') }}">Bizning
+                                                        Jurnallar</a>
                                                 </div>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
-
     </div>
     <div class="bottom-paragraphs">
         <section class="no-gutters region region-bottom-paragraphs">
             <div class="views-element-container block block-views block-views-blockparagraphs-block-1"
                  id="block-tts-sub-views-block-paragraphs-block-1">
-
-
                 <div class="content">
                     <div>
-                        <div
-                                class="view view-paragraphs view-id-paragraphs view-display-id-block_1 js-view-dom-id-e9291022e3b60c3ac51e58a769b8c794f8bfd221fa02bf09b15b984bf4a7b8d4">
-
-
+                        <div class="view view-paragraphs view-id-paragraphs view-display-id-block_1 js-view-dom-id-e9291022e3b60c3ac51e58a769b8c794f8bfd221fa02bf09b15b984bf4a7b8d4">
                             <div class="">
                                 <div class="views-row">
                                     <div class="views-field views-field-field-paragraphs-bottom">
                                         <div class="field-content">
-
-
                                             <div class="" style="background-color: #00539b; color: white;">
                                                 <div class="row container">
-                                                    <div class="col-sm">
-                                                        <div>
-                                                            <div
-                                                                   >
-                                                                <div >
-                                                                    <div>
-                                                                        <div
-                                                                                class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
-                                                                            <div
-                                                                                    class="col-sm-12 bs-region bs-region--main">
-
-                                                                                <div
-                                                                                        class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
+                                                    <div class="revealmx col-sm">
+                                                        <div class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
+                                                                            <div class="col-sm-12 bs-region bs-region--main">
+                                                                                <div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
                                                                                     <h2>Loyihaning
                                                                                         maqsadi
                                                                                         quyidagilardan
                                                                                         iborat:</h2>
+{{--                                                                                    <p>O‘zbek va jahon adabiyot¬shunosligida qiyosiy adabiyotshunosik bo‘yicha amalga oshirilgan tadqiqotlar, fanni o‘zlashtirishga oid barcha materiallarni o‘zida jamlagan “Komparativistika” (Comparative) elektron platformasini yaratish. </p>--}}
                                                                                     <p>
                                                                                         Mahalliy va
                                                                                         xorijiy
@@ -175,38 +137,23 @@
                                                                                         ishlarni
                                                                                         muvofiqlashtirish; 
                                                                                     </p>
-
                                                                                     <p><a class="btn btn-danger" style="border-color: #ffd960 !important; background-color: #ffd960 !important; color: #262626 !important;"
-                                                                                          href="undergraduate-programs.html">Kirish
+                                                                                          href="{{ route('user_about_goals') }}">Batafsil
                                                                                         </a></p>
                                                                                 </div>
-
                                                                             </div>
                                                                         </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
-                                                    <div class="col-sm">
+                                                    <div class="revealx col-sm">
                                                         <div>
-                                                            <div
-                                                                class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
+                                                            <div class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
                                                                 <div class="paragraph__column">
                                                                     <div>
-                                                                        <div
-                                                                            class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
-                                                                            <div
-                                                                                class="paragraph__column">
-
-                                                                                <div
-                                                                                    class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
-                                                                                    <div
-                                                                                        class="views-element-container">
-                                                                                        <div
-                                                                                            class="viewsreference--view-title">
+                                                                        <div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
+                                                                            <div class="paragraph__column">
+                                                                                <div class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
+                                                                                    <div class="views-element-container">
+                                                                                        <div class="viewsreference--view-title">
                                                                                             Bizning
                                                                                             Videolar
                                                                                         </div>
@@ -224,7 +171,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                             <div class="congrames_pupil">
                                                 <h2>Loyiha ishtirokchilari</h2>
                                                 @include('user.layouts.colleagues')
@@ -245,7 +191,7 @@
                                                                                 class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
 
                                                                             <div
-                                                                                    class="col-sm-12 bs-region bs-region--main">
+                                                                                    class=" reveal col-sm-12 bs-region bs-region--main">
 
                                                                                 <div
                                                                                         class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
@@ -341,7 +287,7 @@
                                                         <h2>Bizning Kitoblar</h2>
                                                         <div class="page_books">
                                                             @foreach($books as $book)
-                                                                <div class="page_book">
+                                                                <div class="page_book booksreveal revealx">
                                                                     <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">
                                                                     <div class="page_book-img">
                                                                         <img src="{{asset('storage/'.$book->photo_url)}}" alt="img_book">

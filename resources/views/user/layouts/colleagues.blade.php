@@ -1,7 +1,13 @@
 <div id="articles">
     @foreach($colleagues as $colleague)
 
-        <div id="artics">
+        <div id="artics" class="
+                            @if($loop->iteration % 2 == 0)
+                                revealx
+                            @else
+                                revealmx
+                            @endif
+                            ">
             <div class="artics_about">
                 <div class="artics_about-name">
                     <div class="artics_about-name-back">
