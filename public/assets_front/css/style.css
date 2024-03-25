@@ -280,34 +280,35 @@ body{
     .name_book{
         bottom: 80px;
         left: 70px;
+        font-size: 14px;
     }
     .name_book2{
         right: 80px;
         bottom: 80px;
+        font-size: 14px;
+
     }
   }
   @media(max-width: 700px){
     .name_book{
         bottom: 60px;
         left: 50px;
-        font-size: 20px;
+        font-size: 10px;
     }
     .name_book2{
         bottom: 60px;
         left: 50px;
-        font-size: 20px;
+        font-size: 10px;
     }
   }
   @media(max-width: 540px){
     .name_book{
         bottom: 45px;
         left: 65px;
-        font-size: 15px;
     }
     .name_book2{
         bottom: 45px;
         left: 35px;
-        font-size: 15px;
     }
   }
 
@@ -375,6 +376,7 @@ body{
     background-color: #0032d3;
 
 }
+
 .videos{
     display: flex;
     justify-content: center;
@@ -503,6 +505,12 @@ body{
     }
     #artics{
         width: 100%;
+    }
+
+}
+@media (max-width:768px) {
+    .navbar-text-name p{
+        margin-left: 80px;
     }
 
 }

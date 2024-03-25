@@ -200,66 +200,12 @@
                                                                                         bajarishni taqozo etadi:<br><br>
                                                                                     </h2>
 
-                                                                                    <p>a) adabiyotshunoslik,
-                                                                                        tilshunoslik sohalarida
-                                                                                        manbashunoslik va
-                                                                                        matnshunoslikning oʼrni
-                                                                                        va tadqiq obʼektlaridagi
-                                                                                        tutash nuqtalarni
-                                                                                        aniqlash; matn tarixi va
-                                                                                        matn tanqidi
-                                                                                        tushunchasi;
-                                                                                        ilmiy-tanqidiy matn
-                                                                                        tuzishning
-                                                                                        tasnifiy-qiyosiy
-                                                                                        mezonlari kabilar haqida
-                                                                                        nazariy bilim
-                                                                                        berish;<br><br>
-                                                                                        b) mamlakatimiz
-                                                                                        qoʼlyozma kitoblar
-                                                                                        fondlaridagi adabiy
-                                                                                        manbalar toʼla
-                                                                                        katalogining shartli
-                                                                                        roʼyxatini
-                                                                                        shakllantirish;<br><br>
-
-                                                                                        d) shakllantirilgan
-                                                                                        katalog asosida Yevropa
-                                                                                        qadimiy kitoblar
-                                                                                        fondlaridagi adabiy
-                                                                                        manbalarni qiyosiy
-                                                                                        oʼrganish;<br><br>
-
-                                                                                        e) Yevropa fondlaridagi
-                                                                                        adabiy manbalarni
-                                                                                        tizimli asosda
-                                                                                        xronologik, tematik
-                                                                                        tasnif qilish, qoʼlyozma
-                                                                                        nusxalarining tashqi va
-                                                                                        ichki xususiyatlaridan
-                                                                                        kelib chiqib, ularning
-                                                                                        toʼliq tavsifini
-                                                                                        tayyorlash;<br><br>
-
-                                                                                        f) loyiha doirasida
-                                                                                        amalga oshirilgan
-                                                                                        tadqiqotning tezislar
-                                                                                        toʼplamini oʼzbek, rus,
-                                                                                        ingliz tillarida,
-                                                                                        shuningdek, ularga ilova
-                                                                                        boʼlgan koʼrgazmali
-                                                                                        audio va
-                                                                                        videomateriallarni
-                                                                                        taqdim etish;<br><br>
-
-                                                                                        g) “Yevroturcologica.uz”
-                                                                                        elektron platformasining
-                                                                                        turkiy qoʼlyozma adabiy
-                                                                                        manbalar toʼla katalogi
-                                                                                        va qomusiy lugʼatini oʼz
-                                                                                        ichiga olgan mulьtimedia
-                                                                                        dasturiy mahsulotlarini
-                                                                                        yaratish.</p>
+                                                                                    <p>1. “Komparativistika” (Comparative) elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish. Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin, I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G. Xallieva, U.Jurakulov, A.Qosimov kabi olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.
+                                                                                        <br>
+                                                                                        2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.  <br>
+                                                                                        3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.  <br>
+                                                                                        4. Loyiha doirasida dunyoga mashhur Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) kabi kiyosiy adabiyotshunoslik markazlari (Germaniya,Berlin), University of Toronto Centre for Comparative Literature(Kanada,Toronto). Yale University Department of Comparative Literature(AQSh, Yel' universiteti), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Turkiya, Osmangozi universiteti) Harvard University Department of Comparative Literature (AQSh), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature(AQSh), University of Washington Department of Comparative Literature (Vashington) kabi nufuzli universitetlardagi komparativistika ilmiy markazlari bilan akademik hamkorlik o‘rnatish.  <br>
+                                                                                        5. Platformani kelajakda tijoratlashtirish, shartnoma asosida vebinarlar tashkil qilish.</p>
 
                                                                                     <p>
                                                                                         <a class="btn-primary"
