@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('researchers_articles', function (Blueprint $table) {
             $table->id();
             $table->string('article_topic');
-            $table->string('authors');
+            $table->text('authors');
             $table->string('article_type');
 //            $table->enum('article_type', [
 //                'Scopus',
