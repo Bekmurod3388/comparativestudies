@@ -20,13 +20,13 @@ class AboutTableSeeder extends Seeder
             'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
             'created_at' => now(),
         ]);
-//        DB::table('abouts')->insert([
-//            'title' => "Namuna1",
-//            'url' => "https://ubtuit.uz",
-//            'type' => "gazeta",
-//            'img' => "about_photos/tWcYXClVXRlY6yrYJoaFDeZiuwL4TCdmGI2wBGh2.jpg",
-//            'created_at' => now(),
-//        ]);
+        DB::table('abouts')->insert([
+            'title' => "АЛИШЕР НАВОИЙНИНГ ХОРИЖДА САҚЛАНАЁТГАН ҚЎЛЁЗМАЛАРИНИ АНИҚЛАШ ВА ЎРГАНИШ БОРАСИДАГИ ИШЛАР ҚАНДАЙ САМАРА БЕРМОҚДА?",
+            'url' => "Янги Ўзбекистон №23.pdf",
+            'type' => "gazeta",
+            'img' => "about_photos/img_2.png",
+            'created_at' => now(),
+        ]);
         DB::table('abouts')->insert([
             'title' => "“Farxod va Shirin” dostoni – lotin kitobxonlarining eng sevimli asari",
             'url' => "https://uza.uz/uz/posts/farhod-va-shirin-dostoni-lotish-kitobxonlarining-eng-sevimli-asari_567082",

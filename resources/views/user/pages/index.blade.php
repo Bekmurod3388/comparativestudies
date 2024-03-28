@@ -12,15 +12,15 @@
                                         <div id="earth" class="container-fluid py-6 my-6 mt-0 earth">
                                             <div class="container">
                                                 <div class="align-items-center">
-                                                    <div class="home_book-one reveal" data-toggle="modal" data-target="#LeftModalCenter">
+                                                    <div class="home_book-one " data-toggle="modal" data-target="#LeftModalCenter">
                                                         <img class="popup-trigger"
                                                              data-popup="left-popup"
                                                              src="{{asset('/assets_front/img/bookleft.png')}}"
                                                              alt="img">
                                                         <p class="name_book2">G`arb <br> komporavistika <br> markazlari </p>
                                                     </div>
-                                                    <div id="box" class="reveal"></div>
-                                                    <div class="home_book-two reveal" data-toggle="modal" data-target="#RightModalCenter">
+                                                    <div id="box"></div>
+                                                    <div class="home_book-two " data-toggle="modal" data-target="#RightModalCenter">
                                                         <img class="popup-trigger"
                                                              data-popup="right-popup"
                                                              src="{{asset('/assets_front/img/bookright.png')}}"
