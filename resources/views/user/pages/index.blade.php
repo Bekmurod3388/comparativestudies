@@ -65,213 +65,35 @@
     </div>
     <div class="bottom-paragraphs">
         <section class="no-gutters region region-bottom-paragraphs">
-            <div class="views-element-container block block-views block-views-blockparagraphs-block-1"
-                 id="block-tts-sub-views-block-paragraphs-block-1">
+            <div class="views-element-container block block-views block-views-blockparagraphs-block-1" id="block-tts-sub-views-block-paragraphs-block-1">
                 <div class="content">
-                    <div>
-                        <div class="view view-paragraphs view-id-paragraphs view-display-id-block_1 js-view-dom-id-e9291022e3b60c3ac51e58a769b8c794f8bfd221fa02bf09b15b984bf4a7b8d4">
-                            <div class="">
-                                <div class="views-row">
-                                    <div class="views-field views-field-field-paragraphs-bottom">
-                                        <div class="field-content">
-                                            <div class="" style="background-color: #00539b; color: white;">
-                                                <div class="row container">
-                                                    <div class="revealmx col-sm">
-                                                        <div class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
-                                                                            <div class="col-sm-12 bs-region bs-region--main">
-                                                                                <div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
-                                                                                    <h2>Loyihaning
-                                                                                        maqsadi
-                                                                                        quyidagilardan
-                                                                                        iborat:</h2>
-{{--                                                                                    <p>O‘zbek va jahon adabiyot¬shunosligida qiyosiy adabiyotshunosik bo‘yicha amalga oshirilgan tadqiqotlar, fanni o‘zlashtirishga oid barcha materiallarni o‘zida jamlagan “Komparativistika” (Comparative) elektron platformasini yaratish. </p>--}}
-                                                                                    <p>
-                                                                                        Mahalliy va
-                                                                                        xorijiy
-                                                                                        mutaxassislarni
-                                                                                        jalb
-                                                                                        etgan holda,
-                                                                                        chet
-                                                                                        ellarda
-                                                                                        saqlanayotgan,
-                                                                                        mamlakatimiz
-                                                                                        tarixi
-                                                                                        va madaniyatiga
-                                                                                        oid
-                                                                                        turkiy
-                                                                                        qoʼlyozmalarni
-                                                                                        aniqlash,
-                                                                                        ularning
-                                                                                        toʼliq
-                                                                                        maʼlumotlar
-                                                                                        bazasi — raqamli
-                                                                                        qomusini
-                                                                                        yaratish,
-                                                                                        uni muntazam
-                                                                                        yangilab borish,
-                                                                                        chet el
-                                                                                        fondlaridagi
-                                                                                        turkiy
-                                                                                        qoʼlyozmalarning
-                                                                                        faksimile
-                                                                                        nusxalarini,
-                                                                                        foto va
-                                                                                        videotasvirlarini
-                                                                                        yurtimizga olib
-                                                                                        kelish, tegishli
-                                                                                        ilmiy markazlar,
-                                                                                        xususan, Аbu
-                                                                                        Rayhon
-                                                                                        Beruniy nomidagi
-                                                                                        Sharqshunoslik
-                                                                                        instituti bilan
-                                                                                        birgalikda ilmiy
-                                                                                        tadqiqotlar olib
-                                                                                        borib,
-                                                                                        erishilgan
-                                                                                        natijalarni
-                                                                                        ilmiy
-                                                                                        muomalaga
-                                                                                        kiritish
-                                                                                        borasidagi
-                                                                                        ishlarni
-                                                                                        muvofiqlashtirish; 
-                                                                                    </p>
-                                                                                    <p><a class="btn btn-danger" style="border-color: #ffd960 !important; background-color: #ffd960 !important; color: #262626 !important;"
-                                                                                          href="{{ route('user_about_goals') }}">Batafsil
-                                                                                        </a></p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                    </div>
-                                                    <div class="revealx col-sm">
-                                                        <div>
-                                                            <div class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--76 duke-navy-blue padding-20px add-margin-both">
-                                                                <div class="paragraph__column">
-                                                                    <div>
-                                                                        <div class="paragraph paragraph--type--bp-view paragraph--view-mode--default paragraph--id--75">
-                                                                            <div class="paragraph__column">
-                                                                                <div class="field field--name-field-view field--type-viewsreference field--label-hidden field__item">
-                                                                                    <div class="views-element-container">
-                                                                                        <div class="viewsreference--view-title">
-                                                                                            Bizning
-                                                                                            Videolar
-                                                                                        </div>
-                                                                                        <div class="container">
-                                                                                            @include('user.layouts.our_videos')
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="congrames_pupil">
-                                                <h2>Loyiha ishtirokchilari</h2>
-                                                @include('user.layouts.colleagues')
-                                            </div>
-                                            <div
-                                                    class="paragraph paragraph--type--bp-columns paragraph--view-mode--default paragraph--id--67 paragraph--width--wide duke-navy-blue">
+                    <div class="view view-paragraphs view-id-paragraphs view-display-id-block_1 js-view-dom-id-e9291022e3b60c3ac51e58a769b8c794f8bfd221fa02bf09b15b984bf4a7b8d4">
+                        <div class="views-row">
+                            <div class="views-field views-field-field-paragraphs-bottom">
+                                <div class="paragraph paragraph--type--bp-columns paragraph--view-mode--default paragraph--id--67 paragraph--width--wide duke-navy-blue">
+                                    <div class="paragraph__column">
+                                        <div class="paragraph--type--bp-columns__1col">
+                                            <div class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--66">
                                                 <div class="paragraph__column">
-                                                    <div class="paragraph--type--bp-columns__1col">
-                                                        <div>
-
-
-                                                            <div
-                                                                    class="paragraph paragraph--type--bp-column-wrapper paragraph--view-mode--default paragraph--id--66">
-                                                                <div class="paragraph__column">
-
-                                                                    <div>
-                                                                        <div
-                                                                                class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
-
-                                                                            <div
-                                                                                    class=" reveal col-sm-12 bs-region bs-region--main">
-
-                                                                                <div
-                                                                                        class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
-                                                                                    <h2>Belgilangan maqsadlar
-                                                                                        quyidagi vazifalarni
-                                                                                        bajarishni taqozo etadi:<br><br>
-                                                                                    </h2>
-
-                                                                                    <p>1. “Komparativistika” (Comparative) elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish. Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin, I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G. Xallieva, U.Jurakulov, A.Qosimov kabi olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.
-                                                                                        <br>
-                                                                                        2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.  <br>
-                                                                                        3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.  <br>
-                                                                                        4. Loyiha doirasida dunyoga mashhur Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) kabi kiyosiy adabiyotshunoslik markazlari (Germaniya,Berlin), University of Toronto Centre for Comparative Literature(Kanada,Toronto). Yale University Department of Comparative Literature(AQSh, Yel' universiteti), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Turkiya, Osmangozi universiteti) Harvard University Department of Comparative Literature (AQSh), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature(AQSh), University of Washington Department of Comparative Literature (Vashington) kabi nufuzli universitetlardagi komparativistika ilmiy markazlari bilan akademik hamkorlik o‘rnatish.  <br>
-                                                                                        5. Platformani kelajakda tijoratlashtirish, shartnoma asosida vebinarlar tashkil qilish.</p>
-
-                                                                                    <p>
-                                                                                        <a class="btn-primary"
-                                                                                           href="{{ route('user_about_goals') }}">Batafsil
-                                                                                            </a>
-                                                                                    </p>
-                                                                                </div>
-
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
+                                                    <div class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
+                                                        <div class=" reveal col-sm-12 bs-region bs-region--main">
+                                                            <div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
+                                                                <h2>Belgilangan maqsadlar
+                                                                    quyidagi vazifalarni
+                                                                    bajarishni taqozo etadi:<br><br>
+                                                                </h2>
+                                                                <p>1. “Komparativistika” (Comparative) elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish. Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin, I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G. Xallieva, U.Jurakulov, A.Qosimov kabi olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.
+                                                                    <br>
+                                                                    2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.  <br>
+                                                                    3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.  <br>
+                                                                    4. Loyiha doirasida dunyoga mashhur Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) kabi kiyosiy adabiyotshunoslik markazlari (Germaniya,Berlin), University of Toronto Centre for Comparative Literature(Kanada,Toronto). Yale University Department of Comparative Literature(AQSh, Yel' universiteti), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Turkiya, Osmangozi universiteti) Harvard University Department of Comparative Literature (AQSh), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature(AQSh), University of Washington Department of Comparative Literature (Vashington) kabi nufuzli universitetlardagi komparativistika ilmiy markazlari bilan akademik hamkorlik o‘rnatish.  <br>
+                                                                    5. Platformani kelajakda tijoratlashtirish, shartnoma asosida vebinarlar tashkil qilish.</p>
+                                                                <p>
+                                                                    <a class="btn-primary"
+                                                                       href="{{ route('user_about_goals') }}">Batafsil
+                                                                        </a>
+                                                                </p>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class="index_page-books">
-                                                <div class="container">
-                                                    <div class="page_books-start">
-                                                        <h2>Bizning Kitoblar</h2>
-                                                        <div class="page_books">
-                                                            @foreach($books as $book)
-                                                                <div class="page_book booksreveal revealx">
-                                                                    <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">
-                                                                    <div class="page_book-img">
-                                                                        <img src="{{asset('storage/'.$book->photo_url)}}" alt="img_book">
-                                                                    </div>
-                                                                    <div class="page_book-about">
-                                                                        <span>{{ $book->name }}</span>
-                                                                        <p>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</p>
-                                                                        <p>{{ $book->authors }}</p>
-                                                                        <p>{{ $book->publisher }}</p>
-                                                                    </div>
-                                                                    </a>
-                                                                </div>
-                                                            @endforeach
-{{--                                                            <div class="books_slide">--}}
-{{--                                                                <div class="slider_left slide">--}}
-{{--                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10" viewBox="0 0 256 256" xml:space="preserve">--}}
-
-{{--<defs>--}}
-{{--</defs>--}}
-{{--                                                                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >--}}
-{{--                                                                            <path d="M 65.75 90 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 29.2 45 L 68.225 5.975 c 1.367 -1.367 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.366 -4.95 0 l -41.5 41.5 c -1.367 1.366 -1.367 3.583 0 4.949 l 41.5 41.5 C 63.958 89.658 64.854 90 65.75 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />--}}
-{{--                                                                        </g>--}}
-{{--</svg>--}}
-{{--                                                                </div>--}}
-{{--                                                                <div class="slider_count ">--}}
-{{--                                                                    1--}}
-{{--                                                                </div>--}}
-{{--                                                                <div class="slider_right slide">--}}
-{{--                                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="10" height="10" viewBox="0 0 256 256" xml:space="preserve">--}}
-
-{{--<defs>--}}
-{{--</defs>--}}
-{{--                                                                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >--}}
-{{--                                                                            <path d="M 24.25 90 c -0.896 0 -1.792 -0.342 -2.475 -1.025 c -1.367 -1.366 -1.367 -3.583 0 -4.949 L 60.8 45 L 21.775 5.975 c -1.367 -1.367 -1.367 -3.583 0 -4.95 c 1.367 -1.366 3.583 -1.366 4.95 0 l 41.5 41.5 c 1.367 1.366 1.367 3.583 0 4.949 l -41.5 41.5 C 26.042 89.658 25.146 90 24.25 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />--}}
-{{--                                                                        </g>--}}
-{{--</svg>--}}
-{{--                                                                </div>--}}
-{{--                                                            </div>--}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -279,16 +101,35 @@
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="index_page-books">
+                                    <div class="container">
+                                        <div class="page_books-start">
+                                            <h2>Bizning Kitoblar</h2>
+                                            <div class="page_books">
+                                                @foreach($books as $book)
+                                                    <div class="page_book booksreveal revealx">
+                                                        <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">
+                                                            <div class="page_book-img">
+                                                                <img src="{{asset('storage/'.$book->photo_url)}}" alt="img_book">
+                                                            </div>
+{{--                                                            <div class="page_book-about">--}}
+{{--                                                                <span>{{ $book->name }}</span>--}}
+{{--                                                                <p>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</p>--}}
+{{--                                                                <p>{{ $book->authors }}</p>--}}
+{{--                                                                <p>{{ $book->publisher }}</p>--}}
+{{--                                                            </div>--}}
+                                                        </a>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
-
     </div>
 @endsection
