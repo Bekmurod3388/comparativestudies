@@ -5,7 +5,7 @@
                 <a href="#" data-drupal-link-system-path="node/2821">Biz haqimizda</a>
                 <ul>
                     <li class="menu-item--_135765b-fd1d-4f20-849b-d958bf625641 menu-name--main">
-                        <a href="{ route('user_about_goals') }}"
+                        <a href="{{ route('user_about_goals') }}"
                            data-drupal-link-system-path="node/57607">Loyahaning maqsad va vazifalari
                             </a>
                     </li>
@@ -145,14 +145,6 @@
             </li>
             <li class="menu-item--_b1f1e72-4b08-43cb-a1b8-dcef30770f99 menu-name--main">
                 <a href="{{ route('user_contact') }}" data-drupal-link-system-path="node/3122">Aloqa</a>
-                <ul>
-
-                    <li class="menu-item--_d69eb73-5127-49ff-942f-1f8836ac464c menu-name--main">
-                        <a href="selected-books.html" data-drupal-link-system-path="selected-books">Books By Our
-                            Faculty</a>
-                    </li>
-                </ul>
-
             </li>
             @if (Route::has('login'))
                 <li class="menu-item--_23772cc-530e-4394-93e1-113c2558d06e menu-name--secondary-menu">

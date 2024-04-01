@@ -1,27 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-    var showPopupBtns = document.querySelectorAll('.showPopupBtn');
-    var closePopupBtn = document.querySelector('.closePopupBtn');
-    var popup = document.querySelector('.popup');
-
-    showPopupBtns.forEach(function (btn) {
-        btn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            document.body.style.overflow = 'hidden';
-            popup.style.display = 'block';
-        });
-    });
-
-
-    window.addEventListener('click', function () {
-        // Закрываем всплывающее окно при клике вне него
-        document.body.style.overflow = '';
-        popup.style.animation = 'fadeOut 0.5s ease-in-out';
-        setTimeout(function () {
-            popup.style.display = 'none';
-            popup.style.animation = '';
-        }, 500);
-    });
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     // var showPopupBtns = document.querySelectorAll('.showPopupBtn');
+//     // var closePopupBtn = document.querySelector('.closePopupBtn');
+//     // var popup = document.querySelector('.popup');
+//     //
+//     // showPopupBtns.forEach(function (btn) {
+//     //     btn.addEventListener('click', function (e) {
+//     //         e.stopPropagation();
+//     //         document.body.style.overflow = 'hidden';
+//     //         popup.style.display = 'block';
+//     //     });
+//     // });
+//
+//
+//     window.addEventListener('click', function () {
+//         // Закрываем всплывающее окно при клике вне него
+//         document.body.style.overflow = '';
+//         popup.style.animation = 'fadeOut 0.5s ease-in-out';
+//         setTimeout(function () {
+//             popup.style.display = 'none';
+//             popup.style.animation = '';
+//         }, 500);
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', function () {
     const popupTriggers = document.querySelectorAll('.popup-trigger');
