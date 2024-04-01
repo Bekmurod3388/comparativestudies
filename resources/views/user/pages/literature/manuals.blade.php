@@ -12,7 +12,7 @@
                         </div>
                         <form method="get">
                             <div class="row g-4 form">
-                                <div class="col-lg-4 col-md-4">
+                                <div class="col-lg-6 col-md-6">
                                     <select name="search_publisher" class="form-select border-primary p-2"
                                             aria-label="Default select example">
                                         <option value="None" selected>Chop qiluvchi</option>
@@ -21,7 +21,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-lg-4 col-md-4">
+                                <div class="col-lg-6 col-md-6">
                                     <select name="search_language" class="form-select border-primary p-2"
                                             aria-label="Default select example">
                                         <option value="None" selected>Tilni tanlash</option>
@@ -32,15 +32,15 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <select name="search_author" class="form-select border-primary p-2"
-                                            aria-label="Default select example">
-                                        <option value="None" selected>Yozuvchi</option>
-                                        @foreach($authors as $author)
-                                            <option value="{{ $author }}">{{ $author }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+{{--                                <div class="col-lg-4 col-md-4">--}}
+{{--                                    <select name="search_author" class="form-select border-primary p-2"--}}
+{{--                                            aria-label="Default select example">--}}
+{{--                                        <option value="None" selected>Yozuvchi</option>--}}
+{{--                                        @foreach($authors as $author)--}}
+{{--                                            <option value="{{ $author }}">{{ $author }}</option>--}}
+{{--                                        @endforeach--}}
+{{--                                    </select>--}}
+{{--                                </div>--}}
                                 <div class="col-lg-4 col-md-4 input_search">
 {{--                                    <label for="q">Kalit so'zni kiriting</label>--}}
                                     <input type="text" id="q" name="q" class="dissertation_input" placeholder="Kalit so'zni kiriting" />

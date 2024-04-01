@@ -322,11 +322,7 @@ Comparative Poetics',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Beginning of the New Century: Comparative
-Literature in the Cross-Cultural
-Context—comments on the 7th Triennial
-Conference of Chinese Comparative Literature
-Association and the International Conference',
+                'journal_name' => 'Beginning of the New Century: Comparative',
                 'locale_id' => 2,
                 'authors' => 'Aimin Cheng, Jinglie Lu, Huan Lian & You Huang',
                 'file_url' => 'article_files/files/28. Beginning_of_the_New_Century_Comparative_Literature_in_the_Cross.pdf',
@@ -337,10 +333,7 @@ Association and the International Conference',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Chinese and American Scholars on the “Path of
-Comparative Literature” — Preface to 1979-2009:
-Retrospect of the Development of Comparative
-Literature Studies of China',
+                'journal_name' => 'Chinese and American Scholars',
                 'locale_id' => 2,
                 'authors' => 'Weiliang HUANG & Xiaocheng LIU (Translator)',
                 'file_url' => 'article_files/files/29. Chinese_and_American_Scholars_on_the_Path_of_Comparative_Literature.pdf',
@@ -373,8 +366,7 @@ Literature Studies of China',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Medio-translatology: New Perspectives on
-Comparative Literature and Translation Studies',
+                'journal_name' => 'Medio-translatology',
                 'locale_id' => 2,
                 'authors' => 'Tianzhen Xie',
                 'file_url' => 'article_files/files/33. Medio_translatology_New_Perspectives_on_Comparative_Literature_and.pdf',
@@ -385,8 +377,7 @@ Comparative Literature and Translation Studies',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'The Legitimacy of Comparative Literature and the
-Variation Studies of Comparative Literature',
+                'journal_name' => 'The Legitimacy of Comparative Literature',
                 'locale_id' => 2,
                 'authors' => 'Shunqing CAO & Ying LIU (Translator)',
                 'file_url' => 'article_files/files/34, The_Legitimacy_of_Comparative_Literature_and_the_Variation_Studies.pdf',
@@ -397,8 +388,7 @@ Variation Studies of Comparative Literature',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'T.S. Eliot’s Modern Style as Reflected in Sherko
-Bekas’s Poem “A Fall Letter”: A Comparative Study',
+                'journal_name' => 'T.S. Eliot’s Modern Style as Reflected in Sherko',
                 'locale_id' => 2,
                 'authors' => 'Mariwan Hasan',
                 'file_url' => 'article_files/files/35. T_S_Eliot_s_Modern_Style_as_Reflected_in_Sherko_Bekas_s_Poem_A_Fall.pdf',
@@ -409,9 +399,7 @@ Bekas’s Poem “A Fall Letter”: A Comparative Study',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Representation and Contextualization: A
-Comparative Study of The Joy Luck Club and Typical
-American',
+                'journal_name' => 'Representation and Contextualization',
                 'locale_id' => 2,
                 'authors' => 'Li Wang',
                 'file_url' => 'article_files/files/36. Representation_and_Contextualization_A_Comparative_Study_of_The.pdf',
@@ -422,8 +410,7 @@ American',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Comparative Literature Institute and Department
-of Comparative Literature of Sichuan University',
+                'journal_name' => 'Comparative Literature Institute and Department',
                 'locale_id' => 2,
                 'authors' => 'Xiaoping Fei',
                 'file_url' => 'article_files/files/37. Comparative_Literature_Institute_and_Department_of_Comparative_Literature.pdf',
@@ -434,8 +421,7 @@ of Comparative Literature of Sichuan University',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Comparative Literature & Comparative Culture
-Institute of Tianjin Normal University',
+                'journal_name' => 'Comparative Literature & Comparative Culture',
                 'locale_id' => 2,
                 'authors' => 'Kiritilmagan',
                 'file_url' => 'article_files/files/38.Comparative_Literature_Comparative_Culture_Institute_of_Tianjin.pdf',
@@ -446,9 +432,7 @@ Institute of Tianjin Normal University',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'Feminine Writing Within the Hybrid Cultural
-Context — A Comparative Study of Overseas
-Chinese Women Writings',
+                'journal_name' => 'Feminine Writing Within the Hybrid Cultural',
                 'locale_id' => 2,
                 'authors' => 'Xiao Wei',
                 'file_url' => 'article_files/files/39. Feminine_Writing_Within_the_Hybrid_Cultural_Context_A_Comparative.pdf',
@@ -495,9 +479,7 @@ Comparative Literature',
             ],
             [
                 'name' => 'Comparative Literature: East & West',
-                'journal_name' => 'About the Situation of the Discipline of
-Comparative Literature and Neighboring Fields in
-the Humanities Today',
+                'journal_name' => 'About the Situation of the Discipline ',
                 'locale_id' => 2,
                 'authors' => 'Steven Tötösy de Zepetnek',
                 'file_url' => 'article_files/files/43. About_the_Situation_of_the_Discipline_of_Comparative_Literature.pdf',
@@ -521,9 +503,7 @@ China
             ],
             [
                 'name' => 'Comparative Civilizations Review',
-                'journal_name' => 'The Applicability of Lessons from American Society for the
-European Union: Tolerance, Demographic Change, and Social
-Structure',
+                'journal_name' => 'The Applicability of Lessons from American Society',
 
                 'locale_id' => 2,
                 'authors' => 'Joseph Drew',
@@ -535,9 +515,7 @@ Structure',
             ],
             [
                 'name' => '',
-                'journal_name' => 'UFigures of the Resurrection in O Pai da Menina Morta [The Dead
-Girl’s Father], by Tiago Ferro / Figurações da ressurreição em O pai da
-menina morta, de Tiago Ferro',
+                'journal_name' => 'UFigures of the Resurrection in O Pai da Menina Morta',
 
                 'locale_id' => 2,
                 'authors' => 'Camila Concato
@@ -551,8 +529,7 @@ Thiago Cavalcante Jeronimo',
             [
                 'name' => 'CENTRAL ASIAN JOURNAL OF LITERATURE, PHILOSOPHY
 AND CULTURE',
-                'journal_name' => '“We must meet apart”: A Study of Man-Woman Relationship in Emily
-Dickinson`s Poetry',
+                'journal_name' => '“We must meet apart”: A Study of Man-Woman Relationship',
 
                 'locale_id' => 2,
                 'authors' => 'Dr. Suvapriya Chatterjee',
@@ -576,8 +553,7 @@ AND CULTURE',
                 'updated_at' => now(),
             ],
             [
-                'name' => 'COMPARATIVE LITERATURE IN FAULKNER’S A ROSE FOR EMILY AND
-PRAMOEDYA’S PANGGIL SAJA AKU KARTINI',
+                'name' => 'COMPARATIVE LITERATURE IN FAULKNER’S A ROSE FOR EMILY',
                 'journal_name' => 'SPM UNGGULAN AMANATUL UMMAH',
 
                 'locale_id' => 2,
@@ -665,9 +641,7 @@ and David Damrosch',
             ],
             [
                 'name' => 'INTERNATIONAL TRANSACTIONS ON ELECTRICAL ENERGY SYSTEMS',
-                'journal_name' => 'Pattern recognition techniques for power transformer insulation
-diagnosis—a comparative study part 1: framework, literature,
-and illustration',
+                'journal_name' => 'Pattern recognition techniques for power transformer',
 
                 'locale_id' => 2,
                 'authors' => 'Yi Cui, Hui Ma*,† and Tapan Saha',
@@ -679,8 +653,7 @@ and illustration',
             ],
             [
                 'name' => 'H Y P H O T H E S I S R E V I E W',
-                'journal_name' => 'Transcriptomic effect marker patterns of genotoxins – a
-comparative study with literature data',
+                'journal_name' => 'Transcriptomic effect marker patterns of genotoxins',
 
                 'locale_id' => 2,
                 'authors' => 'Katrin Kreuzer | Falko Frenzel | Alfonso Lampen | Albert Braeuning |
@@ -693,10 +666,7 @@ Linda Böhmert',
             ],
             [
                 'name' => '',
-                'journal_name' => 'Open Versus Endovascular Repair
-of Inflammatory Abdominal Aortic
-Aneurysms: A Comparative Study
-and Meta-Analysis of the Literature',
+                'journal_name' => 'Open Versus Endovascular Repair',
 
                 'locale_id' => 2,
                 'authors' => 'Stavros K. Kakkos, MD, PhD, RVT1, Konstantinos O. Papazoglou, MD, PhD2,
@@ -887,9 +857,7 @@ XVIII — начала XX века',
             [
                 'name' => 'Узбекский государственный университет
 мировых языков',
-                'journal_name' => 'КОНЦЕПТУАЛЬНЫЕ ТЕНДЕНЦИИ РАЗВИТИЯ СОВРЕМЕННОЙ
-ФИЛОЛОГИЧЕСКОЙ (ЛИТЕРАТУРОВЕДЧЕСКОЙ)
-КОМПАРАТИВИСТИКИ',
+                'journal_name' => 'КОНЦЕПТУАЛЬНЫЕ ТЕНДЕНЦИИ РАЗВИТИЯ',
 
                 'locale_id' => 8,
                 'authors' => 'Гульчира ГАРИПОВА
@@ -942,10 +910,7 @@ XVIII — начала XX века',
             ],
             [
                 'name' => '',
-                'journal_name' => 'Edebiyatın Menşei, Karşılaştırmalı
-(Mukayeseli/Komparatistik) Edebiyatın
-Dünya ve Türk Edebiyatındaki Yeri
-Hakkında Bir İncelem',
+                'journal_name' => 'Edebiyatın Menşei, Karşılaştırmalı',
 
                 'locale_id' => 15,
                 'authors' => 'İsmail TURAN
@@ -1077,8 +1042,7 @@ Klasik Türk Edebiyatı ile İran Edebiyatı',
             ],
             [
                 'name' => 'Selçuk Üniversitesi Edebiyat Fakültesi',
-                'journal_name' => 'Genel ve Karşılaştırmalı Edebiyat Bilimi’nin (Komparatistik) Ulusal ve
-Dünya Edebiyatları Ekseninde Kuramsal Açılımı',
+                'journal_name' => 'Genel ve Karşılaştırmalı Edebiyat Bilimi’nin',
 
                 'locale_id' => 15,
                 'authors' => 'Doç. Dr. Ahmet Cuma
@@ -1158,9 +1122,7 @@ EDEBİYAT ARAŞTIRMALARI SEMPOZYUMU III',
             ],
             [
                 'name' => 'Aydın Adnan Menderes Üniversitesi',
-                'journal_name' => 'Ulusal Edebiyata Katkısı Bağlamında Karşılaştırmalı Edebiyat`ın İşlevselliği
-Üzerine On the Functionality of Comparative Literature in Terms of
-Contribution to National Literature',
+                'journal_name' => 'Ulusal Edebiyata Katkısı Bağlamında',
 
                 'locale_id' => 15,
                 'authors' => 'Gökhan şefik Erkurt
