@@ -105,10 +105,11 @@
                                                 <img src="{{asset('storage/'.$book->photo_url)}}" alt="img">
                                             </div>
                                             <div class="prject_objectives-text">
-                                                <h3>{{ $book->name }} <span>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</span></h3>
-                                                <p> {{ $book->authors }} </p>
-                                                <p> {{ $book->locale->name  }} </p>
-                                                <p>( {{ $book->authors }}) {{ $book->publisher }} </p>
+                                                <h3>{{ $book->authors }}</h3>
+{{--                                                <h3>{{ $book->name }} <span>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</span></h3>--}}
+{{--                                                <p> {{ $book->authors }} </p>--}}
+{{--                                                <p> {{ $book->locale->name  }} </p>--}}
+{{--                                                <p>( {{ $book->authors }}) {{ $book->publisher }} </p>--}}
                                             </div>
                                         </div>
                                         <div class="textbook_right">
