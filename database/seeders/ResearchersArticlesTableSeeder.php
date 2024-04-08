@@ -388,6 +388,19 @@ NARRATIVE WORKS: HEROS AND THEMES',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'article_topic' => '«СЕГОДНЯ И БУДУЩЕЕ
+                                ИНДИЙСКИХ ИССЛЕДОВАНИЙ
+                                В ИНДИИ И СТРАНАХ ЕВРАЗИИ»',
+                'authors' => 'Qoqayeva D.M, Bokuleva B.C, Dsc Dama Devi',
+                'article_type' => "Xalqaro konferensiya",
+                'protection_year' => '2024',
+                'file_url' => 'researcher_articles/files/Алмата, макола У.У.Мухибова.pdf',
+                'photo_url' => "researcher_articles/photos/img_32.png",
+                'locale_id' => 19,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         //

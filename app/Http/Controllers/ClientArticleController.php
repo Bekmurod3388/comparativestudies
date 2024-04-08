@@ -55,7 +55,7 @@ class ClientArticleController extends Controller
         $FormFields = $request->validate([
             'locale_id' => 'required|exists:locales,id',
             'name' => 'required|string|max:255',
-            'file_url' => 'nullable|file',
+            'file_url' => 'file',
         ]);
 
         if($request->hasFile('file_url')){
