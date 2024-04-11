@@ -414,6 +414,7 @@ NARRATIVE WORKS: HEROS AND THEMES',
             ],
         ];
 
+
         //
         DB::table('researchers_articles')->insert($abstracts);
     }
