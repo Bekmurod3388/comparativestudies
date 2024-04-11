@@ -15,7 +15,7 @@ class ResearchersTableSeeder extends Seeder
     {
         DB::table('researchers')->insert([
             'fullname' => "Xalliyeva Gulnoz Iskandarovna",
-            'position' => "Filologiya fanlari doktori (DSc), Professor ",
+            'position' => "Filologiya fanlari doktori (DSc), professor ",
             'research' => "Jahon adabiyoti, Qiyosiy adabiyotshunoslik, G’arb va sharq adabiyotida sayyor syujetlar, Rossiya sharqshunosligi.",
             'scholar' => "https://scholar.google.com/citations?user=XthCZmsAAAAJ&hl=ru&oi=ao",
             'email' => "gulnoz7410@mail.ru",
