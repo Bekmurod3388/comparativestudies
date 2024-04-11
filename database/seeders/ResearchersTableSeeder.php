@@ -41,12 +41,12 @@ class ResearchersTableSeeder extends Seeder
             'created_at' => now(),
         ]);
         DB::table('researchers')->insert([
-            'fullname' => "Mannonova Feruzabonu Sherali qizi",
-            'position' => "katta o’qituvchi",
-            'research' => "Qiyosiy adabiyotshunoslik, tilshunoslik, metodika.",
-            'scholar' => "https://scholar.google.com/citations?hl=ru&view_op=list_works&gmla=AJ1KiT0Q-vYppEdUJVsWjownHcAY-jB7h2u2Dd6EvYQ5n6h-G-8lxeJCRZtqdZ04iDaHx13rCQScV-g3kldF3054ombdeaLVBSIOXXr9n7IX3xairg80xRfR&user=QkBbEqoAAAAJ",
-            'email' => "feruzamannonova@gmail.com",
-            'img' => "researchers/4.jpg",
+            'fullname' => "Muhibova Ulfat Uchqunovna",
+            'position' => "filologiya fanlari doktori, professor",
+            'research' => "literature, Indian literature, linguistics,",
+            'scholar' => "https://scholar.google.com/citations?hl=ru&view_op=list_works&gmla=AH70aAU9HEeQlYkiKtMYRleNRTg4fSH-JD0W81CUJEILlea3XiBknDzaHvcp7JBxaEago-A8OvRr2RfIK0wQ6w90sZtY-5rL5bUvPoD9s788ZKzfTBtq3ZbI&user=GgVZd3sAAAAJ",
+            'email' => "ulfatmuhib8@gmail.com",
+            'img' => "researchers/18.jpg",
             'created_at' => now(),
         ]);
         DB::table('researchers')->insert([
@@ -57,10 +57,12 @@ class ResearchersTableSeeder extends Seeder
             'created_at' => now(),
         ]);
         DB::table('researchers')->insert([
-            'fullname' => "Xo’shboqova Gulshoda Kamoliddin qizi",
-            'position' => "Talaba",
-            'research' => "O’zbek adabiyoti, qiyosiy adabiyotshunoslik, chet tilini o’qitish metodikasi, ingliz romanlari",
-            'img' => "researchers/6.jpg",
+            'fullname' => "Mannonova Feruzabonu Sherali qizi",
+            'position' => "katta o’qituvchi",
+            'research' => "Qiyosiy adabiyotshunoslik, tilshunoslik, metodika.",
+            'scholar' => "https://scholar.google.com/citations?hl=ru&view_op=list_works&gmla=AJ1KiT0Q-vYppEdUJVsWjownHcAY-jB7h2u2Dd6EvYQ5n6h-G-8lxeJCRZtqdZ04iDaHx13rCQScV-g3kldF3054ombdeaLVBSIOXXr9n7IX3xairg80xRfR&user=QkBbEqoAAAAJ",
+            'email' => "feruzamannonova@gmail.com",
+            'img' => "researchers/4.jpg",
             'created_at' => now(),
         ]);
     }
