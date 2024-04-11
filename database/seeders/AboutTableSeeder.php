@@ -42,7 +42,7 @@ class AboutTableSeeder extends Seeder
             'created_at' => now(),
         ]);
         DB::table('abouts')->insert([
-            'title' => "Oʻzbekiston davlat jahon tillari universiteti Jahon adabiyoti kafedrasiga biriktirilgan doktorantlar va mustaqil izlanuvchilar ilmiy maktabi ilmiy-nazariy seminarga taklif etadi!",
+            'title' => "7-aprel sanasida Abdulla Qodiriy tavalludining 130 yilligi munosabati bilan adabiy tadbir bo'lib o'tdi.",
             'url' => "https://t.me/UzSWLU/17482",
             'type' => "sayt",
             'img' => "about_photos/3.jpg",

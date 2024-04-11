@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
             ResearchersArticlesTableSeeder::class,
             TrainingManualsTableSeeder::class,
             ConventionsTableSeeder::class,
+            PhotosSeeder::class,
         ]);
     }
 }
