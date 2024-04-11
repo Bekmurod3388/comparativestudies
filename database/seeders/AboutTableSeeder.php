@@ -41,5 +41,12 @@ class AboutTableSeeder extends Seeder
             'img' => "about_photos/img_1.png",
             'created_at' => now(),
         ]);
+        DB::table('abouts')->insert([
+            'title' => "Oʻzbekiston davlat jahon tillari universiteti Jahon adabiyoti kafedrasiga biriktirilgan doktorantlar va mustaqil izlanuvchilar ilmiy maktabi ilmiy-nazariy seminarga taklif etadi!",
+            'url' => "https://t.me/UzSWLU/17482",
+            'type' => "sayt",
+            'img' => "about_photos/3.jpg",
+            'created_at' => now(),
+        ]);
     }
 }
