@@ -174,76 +174,76 @@ class JournalsTableSeeder extends Seeder
                 'created_at' => now(),
             ]
         );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/ASSONANCE 23-1.pdf",
-                'img_url' => "img.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/Assonance 22.pdf",
-                'img_url' => "img_1.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/Assonance-19.pdf",
-                'img_url' => "img_2.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/Assonance-No.17-January-2017-.pdf",
-                'img_url' => "img_3.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/Assonance-No.18-2.pdf",
-                'img_url' => "img_4.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/Имагология.2021.15.pdf",
-                'img_url' => "img_5.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
-        DB::table('journals')->insert(
-            [
-                'name' => "Assonance",
-                'description' => "A Journal of Russian & Comparative Literary Studies",
-                'site_url' => "journal_files/Имагология_2023_19.pdf",
-                'img_url' => "img_6.png",
-                'category' => "4",
-                'created_at' => now(),
-            ]
-        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/ASSONANCE 23-1.pdf",
+//                'img_url' => "img.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/Assonance 22.pdf",
+//                'img_url' => "img_1.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/Assonance-19.pdf",
+//                'img_url' => "img_2.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/Assonance-No.17-January-2017-.pdf",
+//                'img_url' => "img_3.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/Assonance-No.18-2.pdf",
+//                'img_url' => "img_4.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/Имагология.2021.15.pdf",
+//                'img_url' => "img_5.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
+//        DB::table('journals')->insert(
+//            [
+//                'name' => "Assonance",
+//                'description' => "A Journal of Russian & Comparative Literary Studies",
+//                'site_url' => "journal_files/Имагология_2023_19.pdf",
+//                'img_url' => "img_6.png",
+//                'category' => "4",
+//                'created_at' => now(),
+//            ]
+//        );
         DB::table('journals')->insert(
             [
                 'name' => "Assonance",

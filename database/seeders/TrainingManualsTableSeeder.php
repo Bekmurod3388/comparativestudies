@@ -159,7 +159,7 @@ class TrainingManualsTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Qiyosi Adabiyotshunoslik',
+                'name' => 'Qiyosiy Adabiyotshunoslik',
                 'publisher' => 'Barkamol fayz media',
                 'locale_id' => 1,
                 'authors' => 'A.Qosimov, A.Hamroqulov, S.Xo`jayev',
