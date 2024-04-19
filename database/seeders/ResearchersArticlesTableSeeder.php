@@ -120,7 +120,7 @@ NUSXАDА SАQLАNАYOTGАN “MАORIFUN NАSАB” QO‘LYOZMАSI XUSUSIDА',
 YONDOSHUV TAMOYILLARI VA
 ILMIY-AMALIY TARJIMA
 MUAMMOLARI',
-                'authors' => 'Turg‘unov S.T, Ataxanov Sh.N, Mamadaliyev E. M, Tursunov A.H, Saydaliyev S, Sodiqov Z.Y, Todjihodjayev M.M, Tursunov H.B, Tursunov Z.Z',
+                'authors' => ' Г.Халлиева',
                 'article_type' => "OAK",
                 'protection_year' => '2023',
                 'file_url' => 'researcher_articles/files/Китоб туплам.doc (2).pdf',
@@ -142,17 +142,7 @@ MUAMMOLARI',
             ],
             [
                 'article_topic' => 'У Ч Е Н Ы Й X X I В Е К ',
-                'authors' => '
-                А.В Бурков, д-р. экон. наук, доцент (Россия), главный редактор.
-                Е.А. Мурзина, канд. экон. наук, доцент (Россия), технический редактор
-                В.В. Носов, д-р. экон. наук, профессор (Россия),
-                О.Н. Кондратьева, д-р. фил. наук, доцент (Россия),
-                Т.С. Воропаева, канд. психол. наук, доцент (Украина),
-                И.М. Тухтасинов, доктор педагогических наук, профессор (Узбекистан),
-                К.В. Дядюн, канд. юрид. наук, доцент (Россия),
-                У.Д. Кадыров, канд. психол. наук, доцент (Узбекистан),
-                Н.В. Щербакова, канд. экон. наук, доцент (Россия),
-                Г.З. Ганиева, PhD по филологическим наукам (Узбекистан)',
+                'authors' => 'Б.Б. Тураева',
                 'article_type' => "Xalqaro konferensiya",
                 'protection_year' => '2023',
                 'file_url' => 'researcher_articles/files/29-30-PB (1).pdf',
@@ -436,7 +426,7 @@ NARRATIVE WORKS: HEROS AND THEMES',
             ],
             [
                 'article_topic' => 'O`zMU xabralari',
-                'authors' => 'MAdjidov I.U',
+                'authors' => 'Mannonova Feruzabonu Sherali qizi',
                 'article_type' => "Mirzo Ulug`bek nomidagi O`zbekiston milliy universiteti ilmiy jurnali",
                 'protection_year' => '2024',
                 'file_url' => 'researcher_articles/files/Mannonova F 4.pdf',
