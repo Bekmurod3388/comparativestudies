@@ -485,11 +485,11 @@ body{
     margin-left: 20px;
 }
 .navbar-text-name{
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
 }
 .navbar-text-name p{
-    font-size: 11px;
+    font-size: 16px;
 }
 @media(max-width:550px){
     .navbar-text-name span{
@@ -1224,7 +1224,7 @@ textarea::placeholder {
     transition: 0.5s ease all;
 }
 .page_book{
-    width: 24%;
+    width: 48%;
     border-radius: 20px;
 }
 .page_book-about{
@@ -1245,18 +1245,26 @@ textarea::placeholder {
         height: 200px;
         overflow: hidden;
     }
+  .page_book-about span{
+
+  }
 }
 @media(max-width: 768px){
     .page_book{
-        width: 32%;
+        width: 100%;
         border-radius: 20px;
+
     }
     .page_book-about{
         font-size: 15px;
     }
+    .page_book-about p{
+        font-size: 12px;
+    }
 }
 .page_book a{
     text-decoration: none;
+    width: 100%;
 }
 .page_books{
     display: flex;

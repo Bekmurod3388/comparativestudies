@@ -101,30 +101,30 @@
                                         </div>
                                     </div>
                                 </div>
-{{--                                <div class="index_page-books">--}}
-{{--                                    <div class="container">--}}
-{{--                                        <div class="page_books-start">--}}
-{{--                                            <h2>Bizning Kitoblar</h2>--}}
-{{--                                            <div class="page_books">--}}
-{{--                                                @foreach($books as $book)--}}
-{{--                                                    <div class="page_book booksreveal revealx">--}}
-{{--                                                        <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">--}}
-{{--                                                            <div class="page_book-img">--}}
-{{--                                                                <img src="{{asset('storage/'.$book->photo_url)}}" alt="img_book">--}}
-{{--                                                            </div>--}}
-{{--                                                            <div class="page_book-about">--}}
-{{--                                                                <span>{{ $book->name }}</span>--}}
-{{--                                                                <p>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</p>--}}
-{{--                                                                <p>{{ $book->authors }}</p>--}}
-{{--                                                                <p>{{ $book->publisher }}</p>--}}
-{{--                                                            </div>--}}
-{{--                                                        </a>--}}
-{{--                                                    </div>--}}
-{{--                                                @endforeach--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
+                                <div class="index_page-books">
+                                    <div class="container">
+                                        <div class="page_books-start">
+                                            <h2>Bizning Kitoblar</h2>
+                                            <div class="page_books">
+                                                @foreach($books as $book)
+                                                    <div class="page_book booksreveal revealx">
+                                                        <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $book->file_url)) ? asset('storage/' . $book->file_url) : $book->file_url }}">
+                                                            <div class="page_book-img">
+                                                                <img src="{{asset('storage/'.$book->photo_url)}}" alt="img_book">
+                                                            </div>
+                                                            <div class="page_book-about">
+                                                                <span>{{ $book->name }}</span>
+                                                                <p>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</p>
+                                                                <p>{{ $book->authors }}</p>
+                                                                <p>{{ $book->publisher }}</p>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
