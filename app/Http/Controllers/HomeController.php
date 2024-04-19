@@ -45,6 +45,12 @@ class HomeController extends Controller
     {
         return view('user.pages.contact');
         }
+
+    public function aboutThePlatform(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('user.pages.about.aboutThePlatform');
+        }
+
     public function contact_post(Request $request): \Illuminate\Http\RedirectResponse
     {
         $formFields = $request->validate([
