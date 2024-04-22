@@ -119,10 +119,6 @@
                                         class="sf-depth-2 sf-no-children"><a
                                             href="{{ route('user_scientific_research_conventions') }}"
                                             class="sf-depth-2">Komporativistika jurnali</a></li>
-                                    <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
-                                        class="sf-depth-2 sf-no-children"><a
-                                            href="{{ route('aboutThePlatform') }}"
-                                            class="sf-depth-2">Platforma haqida</a></li>
                                 </ul>
                             </li>
                             <li id="main-menu-link-contentfaf6415d-7a6e-4245-bf98-82e7a76b6dce"
