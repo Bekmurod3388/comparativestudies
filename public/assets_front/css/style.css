@@ -233,7 +233,7 @@ body{
 }
 
 
-  .popup_sharq-box ,.popup_garb-box{
+.popup_sharq-box ,.popup_garb-box{
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
@@ -241,42 +241,42 @@ body{
     top: 100%;
     left: 0;
     width: 100%;
-  }
+}
 
 
-  .popup_sharq-btn button, .popup_garb-btn button {
+.popup_sharq-btn button, .popup_garb-btn button {
     background-color: #2ecc71;
     color: #fff;
     border: none;
     padding: 8px 12px;
     border-radius: 3px;
     cursor: pointer;
-  }
+}
 
-  .popup_sharq-btn button:hover, .popup_garb-btn button:hover {
+.popup_sharq-btn button:hover, .popup_garb-btn button:hover {
     background-color: #27ae60;
-  }
-  .viewsreference--view-title{
+}
+.viewsreference--view-title{
     margin-bottom: 10px;
     font-weight: 800;
-  }
-  .name_book{
+}
+.name_book{
     position: absolute;
     z-index: 111;
     bottom: 140px;
     left:100px;
     font-size: 20px;
     font-weight: 800;
-  }
-  .name_book2{
+}
+.name_book2{
     position: absolute;
     z-index: 111;
     bottom: 140px;
     right:115px;
     font-size: 20px;
     font-weight: 800;
-  }
-  @media(max-width: 1250px){
+}
+@media(max-width: 1250px){
     .name_book{
         bottom: 80px;
         left: 70px;
@@ -288,8 +288,8 @@ body{
         font-size: 14px;
 
     }
-  }
-  @media(max-width: 700px){
+}
+@media(max-width: 700px){
     .name_book{
         bottom: 60px;
         left: 50px;
@@ -300,8 +300,8 @@ body{
         left: 50px;
         font-size: 10px;
     }
-  }
-  @media(max-width: 540px){
+}
+@media(max-width: 540px){
     .name_book{
         bottom: 45px;
         left: 65px;
@@ -310,9 +310,9 @@ body{
         bottom: 45px;
         left: 35px;
     }
-  }
+}
 
-  #earth {
+#earth {
     /* background: black;
     background: url(http://fc01.deviantart.net/fs71/f/2012/160/b/9/stars_by_paulinemoss-d52un4e.jpg);
     animation: stars 205s linear alternate; */
@@ -401,13 +401,13 @@ body{
 
 }
 @media (max-width: 968px){
-.video_rol{
-    width: 100%;
+    .video_rol{
+        width: 100%;
 
-}
-.width_row{
-    width: 100%;
-}
+    }
+    .width_row{
+        width: 100%;
+    }
 }
 .congrames_pupil{
     width: 100%;
@@ -485,11 +485,11 @@ body{
     margin-left: 20px;
 }
 .navbar-text-name{
-    font-size: 20px;
+    font-size: 24px;
     color: #fff;
 }
 .navbar-text-name p{
-    font-size: 11px;
+    font-size: 16px;
 }
 @media(max-width:550px){
     .navbar-text-name span{
@@ -1176,7 +1176,7 @@ textarea::placeholder {
 }
 .textbook_btns{
     overflow-y: scroll;
- }
+}
 .textbook_btns button{
     padding: 10px;
     width: 144px;
@@ -1224,7 +1224,7 @@ textarea::placeholder {
     transition: 0.5s ease all;
 }
 .page_book{
-    width: 24%;
+    width: 48%;
     border-radius: 20px;
 }
 .page_book-about{
@@ -1245,18 +1245,26 @@ textarea::placeholder {
         height: 200px;
         overflow: hidden;
     }
+    .page_book-about span{
+
+    }
 }
 @media(max-width: 768px){
     .page_book{
-        width: 32%;
+        width: 100%;
         border-radius: 20px;
+
     }
     .page_book-about{
         font-size: 15px;
     }
+    .page_book-about p{
+        font-size: 12px;
+    }
 }
 .page_book a{
     text-decoration: none;
+    width: 100%;
 }
 .page_books{
     display: flex;

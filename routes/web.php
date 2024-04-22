@@ -76,6 +76,7 @@ Route::get('user/about/participants', [HomeController::class,'about_participants
 Route::get('user/about/books', [HomeController::class,'about_books'])->name('user_about_books');
 Route::get('user/about/articles', [HomeController::class,'about_articles'])->name('user_about_articles');
 Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_about_oav');
+Route::get('/aboutThePlatform', [HomeController::class,'aboutThePlatform'])->name('aboutThePlatform');
 
 
 /* ADMIN PAGE ROUTES ********************************************************************************/

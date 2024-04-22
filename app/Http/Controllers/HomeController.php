@@ -44,7 +44,13 @@ class HomeController extends Controller
     public function contact(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         return view('user.pages.contact');
-        }
+    }
+
+    public function aboutThePlatform(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        return view('user.pages.about.aboutThePlatform');
+    }
+
     public function contact_post(Request $request): \Illuminate\Http\RedirectResponse
     {
         $formFields = $request->validate([
@@ -56,7 +62,7 @@ class HomeController extends Controller
         Connection::create($formFields);
 
         return redirect()->route('user_contact')->with('success','Xabar muvaffaqiyatli yuborildi.');
-        }
+    }
 
     public function gallery(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
@@ -335,46 +341,46 @@ class HomeController extends Controller
         return view('user.pages.about.participants', compact('colleagues'));    }
 
     public function about_books(Request $request){
-            $publishers = ResearcherBook::distinct()->pluck('publisher');
-            $authors = ResearcherBook::distinct()->pluck('authors');
-            $locales = Locale::all();
+        $publishers = ResearcherBook::distinct()->pluck('publisher');
+        $authors = ResearcherBook::distinct()->pluck('authors');
+        $locales = Locale::all();
 
-            $query = ResearcherBook::query();
+        $query = ResearcherBook::query();
 
-            $search_publisher = false;
-            $search_language = false;
-            $search_author = false;
-            $q = false;
+        $search_publisher = false;
+        $search_language = false;
+        $search_author = false;
+        $q = false;
 
-            // Filter by search_publisher
-            if ($request->has("search_publisher") && $request->search_publisher != "None") {
-                $query->where('publisher', $request->search_publisher);
-                $search_publisher = $request->search_publisher;
-            }
+        // Filter by search_publisher
+        if ($request->has("search_publisher") && $request->search_publisher != "None") {
+            $query->where('publisher', $request->search_publisher);
+            $search_publisher = $request->search_publisher;
+        }
 
-            // Filter by search_language
-            if ($request->has("search_language") && $request->search_language != "None") {
-                $query->where('locale_id', $request->search_language);
-                $search_language = $request->search_language;
-            }
+        // Filter by search_language
+        if ($request->has("search_language") && $request->search_language != "None") {
+            $query->where('locale_id', $request->search_language);
+            $search_language = $request->search_language;
+        }
 
-            // Filter by search_author
-            if ($request->has("search_author") && $request->search_author != "None") {
-                $query->where('authors', $request->search_author);
-                $search_author = $request->search_author;
-            }
+        // Filter by search_author
+        if ($request->has("search_author") && $request->search_author != "None") {
+            $query->where('authors', $request->search_author);
+            $search_author = $request->search_author;
+        }
 
-            // Filter by keyword search
-            if ($request->q) {
-                $query->where('authors', 'like', '%' . $request->q . '%')
-                    ->orWhere('name', 'like', '%' . $request->q . '%');
-                $q = $request->q;
-            }
-            $books = $query->get();
+        // Filter by keyword search
+        if ($request->q) {
+            $query->where('authors', 'like', '%' . $request->q . '%')
+                ->orWhere('name', 'like', '%' . $request->q . '%');
+            $q = $request->q;
+        }
+        $books = $query->get();
 
-            return view('user.pages.about.books', compact('publishers', 'authors', 'books', 'locales', 'search_publisher', 'search_author', 'search_language', 'q'));
+        return view('user.pages.about.books', compact('publishers', 'authors', 'books', 'locales', 'search_publisher', 'search_author', 'search_language', 'q'));
 
-            //        $books = ResearcherBook::all();
+        //        $books = ResearcherBook::all();
 //        return view('user.pages.about.books', compact('books'));
     }
 
