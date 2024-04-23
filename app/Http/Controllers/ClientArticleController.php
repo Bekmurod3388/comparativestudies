@@ -55,12 +55,12 @@ class ClientArticleController extends Controller
         $FormFields = $request->validate([
             'locale_id' => 'required|exists:locales,id',
             'name' => 'required|string|max:255',
-            'file_url' => 'file',
+            'file_url' => 'file,mimes:doc,docx',
         ]);
 
         if($request->hasFile('file_url')){
             $FormFields['file_url'] = $request->file('file_url')->store('article_files/files', 'public');
-            }
+        }
 
         $FormFields['status'] = 0;
         // Retrieve the authenticated user
