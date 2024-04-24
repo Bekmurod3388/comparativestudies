@@ -73,7 +73,7 @@ NUSXАDА SАQLАNАYOTGАN “MАORIFUN NАSАB” QO‘LYOZMАSI XUSUSIDА',
             ],
             [
                 'article_topic' => 'Adabiyotshunoslikda davrlashtirish masalasining qiyosiy tahlili',
-                'authors' => 'Xamidov Obidjon Xafizovich, Rasulov To`lqin Husenovich',
+                'authors' => 'Зебо Собирова',
                 'article_type' => "OAK",
                 'protection_year' => '2023',
                 'file_url' => 'researcher_articles/files/BuxDU maqola2023.pdf',
