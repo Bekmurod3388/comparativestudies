@@ -68,12 +68,14 @@ class HomeController extends Controller
     {
         $photos = Photo::all();
         $videos = Video::all();
-        return view('user.pages.gallery', compact('photos','videos'));    }
+        $abouts = About::where('type', 'gazeta')->orWhere('type', 'sayt')->get();
+        return view('user.pages.gallery', compact('photos','videos', 'abouts'));    }
 
     public function gallery_photos(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $photos = Photo::all();
-        return view('user.pages.gallery.photos', ["photos" => $photos]);    }
+        $abouts = About::where('type', 'gazeta')->orWhere('type', 'sayt')->get();
+        return view('user.pages.gallery.photos', ["photos" => $photos, "abouts" => $abouts]);    }
 
     public function gallery_videos(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {

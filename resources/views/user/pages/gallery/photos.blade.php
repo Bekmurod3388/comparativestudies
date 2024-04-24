@@ -24,6 +24,18 @@
                 @empty
                     <h1>Fotosuratlar mavjud emas</h1>
                 @endforelse
+                @forelse( $abouts as $about )
+                    <div class="video_box">
+                        <div class="video">
+                            <img class="video_rol"  height="300" src="{{ asset('storage/' . $about->img) }}">
+                        </div>
+                        <div class="video_text">
+                            <p><span>{{ $about->title }}</span></p>
+                        </div>
+                    </div>
+                @empty
+                    <h1>Fotosuratlar mavjud emas</h1>
+                @endforelse
             </div>
         </div>
     </div>
