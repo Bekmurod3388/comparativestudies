@@ -9,10 +9,6 @@ body::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
 }
 
-::-webkit-scrollbar-track {
-    /*background: #e1e2ff;        !* color of the tracking area *!*/
-}
-
 ::-webkit-scrollbar-thumb {
     background-color: #00539b;    /* color of the scroll thumb */
     border-radius: 20px;       /* roundness of the scroll thumb */
@@ -826,10 +822,6 @@ body{
     background: #0a53be;
 }
 
-input::placeholder,
-textarea::placeholder {
-
-}
 .contact_start{
     display: flex;
     justify-content: space-between;
@@ -896,8 +888,6 @@ textarea::placeholder {
 }
 .project_one p, .project_two p{
     color: #0a53be;
-}
-.goals{
 }
 
 
@@ -1044,9 +1034,6 @@ textarea::placeholder {
     margin: 50px 0;
 }
 
-.textbooks_boxs{
-
-}
 .textbook_img{
     width: 90px;
     height: 130px;
@@ -1245,9 +1232,7 @@ textarea::placeholder {
         height: 200px;
         overflow: hidden;
     }
-    .page_book-about span{
-
-    }
+  
 }
 @media(max-width: 768px){
     .page_book{
@@ -1312,4 +1297,22 @@ textarea::placeholder {
 }
 .slide:hover{
     background: #0b5ed7;
+}
+
+.platforma_text p{
+    color: #000;
+    margin: 10px 0;
+}
+.platforma_text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+.platforma_text img{
+    width: 100%;
+}
+
+@media(max-width:500px){
+    .goals_start h1{
+        font-size: 25px;
+    }
 }
