@@ -23,7 +23,7 @@
                     <div class="project_one">
                         <h3>Loyihaning maqsadi va vazifalari quyidagilardan iborat:</h3>
 <p>
-    O‘zbek va jahon adabiyot¬shunosligida  qiyosiy adabiyotshunosik  bo‘yicha amalga oshirilgan tadqiqotlar, fanni o‘zlashtirishga oid barcha materiallarni  o‘zida jamlagan  “Komparativistika” (Comparative)  elektron platformasini yaratish. Ushbu loyiha maqsadii amalga oshirish uchun ilmiy jamoa oldiga qo‘yidagi vazifalar qo‘yilgan:
+    O‘zbek va jahon adabiyotshunoslikida  qiyosiy adabiyotshunosik  bo‘yicha amalga oshirilgan tadqiqotlar, fanni o‘zlashtirishga oid barcha materiallarni  o‘zida jamlagan  “Komparativistika” (Comparative)  elektron platformasini yaratish. Ushbu loyiha maqsadii amalga oshirish uchun ilmiy jamoa oldiga qo‘yidagi vazifalar qo‘yilgan:
     <br>
     <br>
     1.  “Komparativistika” (Comparative)  elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish.  Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin,  I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G.  Xallieva, U.Jurakulov, A.Qosimov  kabi  olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.<br>
