@@ -62,29 +62,24 @@
             <div class="container">
                 <div class="textbook_two-start">
                     <div class="textbooks_boxs-start">
-                        @foreach($dissertations as $dissertation)
+                        @foreach($dissertations as $index => $dissertation)
                             <div class="textbooks_boxs">
                                 <div class="project_objectives-start">
                                     <div class="project_objectives-box">
                                         <div class="project_objectives-box-start">
                                             <div class="textbook_left">
-    {{--                                            <div class="textbook_img">--}}
-    {{--                                                <img src="" alt="img">--}}
-    {{--                                            </div>--}}
                                                 <div class="prject_objectives-text">
-                                                    <h3>{{ $dissertation->topic }}</h3>
+                                                    <h3>{{ $index + 1 }}. {{ $dissertation->topic }}</h3>
                                                     <p>{{ $dissertation->author }}</p>
                                                 </div>
                                             </div>
                                             <div class="textbook_right">
-
                                                 <div class="textbook_file">
                                                     <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $dissertation->file_url)) ? asset('storage/' . $dissertation->file_url) : $dissertation->file_url }}">
                                                         <button>
-                                                           Dissertatsiya sahifasi
+                                                            Dissertatsiya sahifasi
                                                         </button>
                                                     </a>
-
                                                 </div>
                                             </div>
                                         </div>

@@ -197,7 +197,7 @@ class HomeController extends Controller
             $q = $request->q;
         }
 
-        $dissertations = $query->get();
+        $dissertations = $query->orderBy('thesis_date')->get();
 
         return view('user.pages.scientific_research.dissertations', compact('countries', 'locales', 'author', "dissertations", 'search_country', 'search_locale', 'search_author', 'q'));    }
 
