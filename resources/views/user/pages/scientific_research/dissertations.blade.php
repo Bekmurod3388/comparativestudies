@@ -13,11 +13,11 @@
                             <form method="get">
                                 <div class="row g-4 form">
                                     <div class="col-lg-6 col-md-6">
-                                        <select name="search_country" class="form-select border-primary p-2"
+                                        <select name="search_year" class="form-select border-primary p-2"
                                                 aria-label="Default select example">
-                                            <option value="None" selected>Davlat</option>
-                                            @foreach($countries as $country)
-                                                <option value="{{ $country }}" @if($search_country == $country) selected @endif>{{ $country }}</option>
+                                            <option value="None" selected>Yilni tanlang</option>
+                                            @foreach($years as $year)
+                                                <option value="{{ $year }}" @if($search_year == $year) selected @endif>{{ $year }}</option>
                                             @endforeach
                                         </select>
                                     </div>

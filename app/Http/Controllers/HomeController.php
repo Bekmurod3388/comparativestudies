@@ -161,45 +161,51 @@ class HomeController extends Controller
         return view('user.pages.scientific_research');    }
 
     public function scientific_research_dissertations(Request $request){
-        $countries = Dissertations::distinct()->pluck('country');
+        $years = Dissertations::all()->pluck('thesis_date')->map(function ($date) {
+            return \Carbon\Carbon::parse($date)->format('Y');
+        });
         $locales = Locale::all();
-        $author = Dissertations::distinct()->pluck('author');
+        $authors = Dissertations::distinct()->pluck('author');
 
         $query = Dissertations::query();
 
         $search_author = false;
         $search_locale = false;
-        $search_country = false;
+        $search_year = false;
         $q = false;
 
-        // Filter by search_publisher
+        // Filter by author
         if ($request->has("search_author") && $request->search_author != "None") {
             $query->where('author', $request->search_author);
             $search_author = $request->search_author;
         }
 
-        // Filter by search_language
+        // Filter by locale
         if ($request->has("search_locale") && $request->search_locale != "None") {
             $query->where('locale_id', $request->search_locale);
             $search_locale = $request->search_locale;
         }
 
-        // Filter by search_author
-        if ($request->has("search_country") && $request->search_country != "None") {
-            $query->where('country', $request->search_country);
-            $search_country = $request->search_country;
+        // Filter by year
+        if ($request->has("search_year") && $request->search_year != "None") {
+            $search_year = $request->search_year;
+            // Assuming 'search_year' contains the year in YYYY format
+            $query->whereYear('thesis_date', $search_year);
         }
 
         // Filter by keyword search
         if ($request->q) {
-            $query->where('author', 'like', '%' . $request->q . '%')
-                ->orWhere('topic', 'like', '%' . $request->q . '%');
+            $query->where(function ($query) use ($request) {
+                $query->where('author', 'like', '%' . $request->q . '%')
+                    ->orWhere('topic', 'like', '%' . $request->q . '%');
+            });
             $q = $request->q;
         }
 
         $dissertations = $query->orderBy('thesis_date')->get();
 
-        return view('user.pages.scientific_research.dissertations', compact('countries', 'locales', 'author', "dissertations", 'search_country', 'search_locale', 'search_author', 'q'));    }
+        return view('user.pages.scientific_research.dissertations', compact('years', 'locales', 'authors', 'dissertations', 'search_year', 'search_locale', 'search_year', 'search_author', 'q'));
+    }
 
     public function scientific_research_abstracts(Request $request){
         $locales = Locale::all();
