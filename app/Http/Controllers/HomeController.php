@@ -163,7 +163,7 @@ class HomeController extends Controller
     public function scientific_research_dissertations(Request $request){
         $years = Dissertations::all()->pluck('thesis_date')->map(function ($date) {
             return \Carbon\Carbon::parse($date)->format('Y');
-        });
+        })->unique();
         $locales = Locale::all();
         $authors = Dissertations::distinct()->pluck('author');
 
@@ -238,8 +238,11 @@ class HomeController extends Controller
 
         // Filter by keyword search
         if ($request->q) {
-            $query->where('authors', 'like', '%' . $request->q . '%')
-                ->orWhere('name', 'like', '%' . $request->q . '%');
+            $query->where('applicant_name', 'like', '%' . $request->q . '%')
+                ->orWhere('dissertation_topic', 'like', '%' . $request->q . '%')
+                ->orWhere('protection_year', 'like', '%' . $request->q . '%')
+                ->orWhere('specialty_code_and_name', 'like', '%' . $request->q . '%')
+                ->orWhere('academic_degree', 'like', '%' . $request->q . '%');
             $q = $request->q;
         }
 

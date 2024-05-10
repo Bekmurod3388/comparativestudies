@@ -12,15 +12,15 @@
                         </div>
                         <form method="get">
                             <div class="row g-4 form">
-                                <div class="col-lg-6 col-md-6">
-                                    <select name="search_academicDegree" class="form-select border-primary p-2"
-                                            aria-label="Default select example">
-                                        <option value="None" selected>Ilmiy daraja</option>
-                                        @foreach($academicDegrees as $academicDegree)
-                                            <option value="{{ $academicDegree }}" @if($search_academicDegree == $academicDegree) selected @endif>{{ $academicDegree }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
+{{--                                <div class="col-lg-6 col-md-6">--}}
+{{--                                    <select name="search_academicDegree" class="form-select border-primary p-2"--}}
+{{--                                            aria-label="Default select example">--}}
+{{--                                        <option value="None" selected>Ilmiy daraja</option>--}}
+{{--                                        @foreach($academicDegrees as $academicDegree)--}}
+{{--                                            <option value="{{ $academicDegree }}" @if($search_academicDegree == $academicDegree) selected @endif>{{ $academicDegree }}</option>--}}
+{{--                                        @endforeach--}}
+{{--                                    </select>--}}
+{{--                                </div>--}}
                                 <div class="col-lg-6 col-md-6">
                                     <select name="search_locale" class="form-select border-primary p-2"
                                             aria-label="Default select example">
@@ -32,15 +32,15 @@
                                         @endforeach
                                     </select>
                                 </div>
-{{--                                <div class="col-lg-4 col-md-4">--}}
-{{--                                    <select name="search_protectionYear" class="form-select border-primary p-2"--}}
-{{--                                            aria-label="Default select example">--}}
-{{--                                        <option value="None" selected>Himoya yili</option>--}}
-{{--                                        @foreach($protectionYears as $protectionYear)--}}
-{{--                                            <option value="{{ $protectionYear }}" @if($search_protectionYear == $protectionYear) selected @endif>{{ $protectionYear }}</option>--}}
-{{--                                        @endforeach--}}
-{{--                                    </select>--}}
-{{--                                </div>--}}
+                                <div class="col-lg-6 col-md-6">
+                                    <select name="search_protectionYear" class="form-select border-primary p-2"
+                                            aria-label="Default select example">
+                                        <option value="None" selected>Yilni tanlash</option>
+                                        @foreach($protectionYears as $protectionYear)
+                                            <option value="{{ $protectionYear }}" @if($search_protectionYear == $protectionYear) selected @endif>{{ $protectionYear }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
                                 <div class="col-lg-4 col-md-4 input_search">
                                     <input type="text" name="q" class="dissertation_input" @if($q) value="{{$q}}" @endif placeholder="Kalit so'zni kiriting" />
                                 </div>
@@ -59,7 +59,7 @@
         <div class="container">
             <div class="textbook_two-start">
                 <div class="textbooks_boxs-start">
-                    @forelse($abstracts as $abstract)
+                    @foreach($abstracts as $index => $abstract)
                         <div class="textbooks_boxs">
                             <div class="project_objectives-start">
                                 <div class="project_objectives-box">
@@ -69,7 +69,7 @@
                                             {{--                                                <img src="" alt="img">--}}
                                             {{--                                            </div>--}}
                                             <div class="prject_objectives-text">
-                                                <h3>{{ $abstract->applicant_name }} <span>{{ $abstract->academic_degree }}</span></h3>
+                                                <h3>{{ $index + 1 }}. {{ $abstract->applicant_name }} <span>{{ $abstract->academic_degree }}</span></h3>
                                                 <p> {{ $abstract->dissertation_topic }} </p>
                                                 <p>( {{ $abstract->protection_year }} - yil ) {{ $abstract->specialty_code_and_name }} </p>
                                             </div>
@@ -87,9 +87,10 @@
                                 </div>
                             </div>
                         </div>
-                    @empty
-                        <h1 class="pb-5">Avtoreferat topilmadi</h1>
-                    @endforelse
+{{--                    @empty--}}
+{{--                        <h1 class="pb-5">Avtoreferat topilmadi</h1>--}}
+{{--                    @endforelse--}}
+                    @endforeach
                 </div>
 {{--                <div class="textbook_btns">--}}
 {{--                    @foreach($locales as $locale)--}}
