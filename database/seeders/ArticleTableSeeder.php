@@ -1114,7 +1114,7 @@ EDEBİYAT ARAŞTIRMALARI SEMPOZYUMU III',
                 'locale_id' => 15,
                 'authors' => 'PROF. DR. Ali Gultekin
 ',
-                'file_url' => 'article_files/files/T_rkiye`de_Kar_la_t_rmal_Edebiyat_al_malar_#11677_10786.pdf',
+                'file_url' => 'article_files/files/tr5#11677_10786.pdf',
                 'photo_url' => "article_files/photos/img_92.png",
                 'published_date' => null,
                 'created_at' => now(),
