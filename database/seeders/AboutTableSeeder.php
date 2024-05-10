@@ -48,5 +48,12 @@ class AboutTableSeeder extends Seeder
             'img' => "about_photos/3.jpg",
             'created_at' => now(),
         ]);
+        DB::table('abouts')->insert([
+            'title' => 'O’zDJTU Sharq filologiyasi fakulteti Jahon adabiyot kafedrasi tomonidan tashkil etilgan "Jahon adabiyoti va qiyosiy adabiyotshunoslikning dolzarb masalalari" mavzusidagi xalqaro ilmiy-amaliy anjumandan videolavha.',
+            'url' => "https://t.me/UzSWLU/19081",
+            'type' => "sayt",
+            'img' => "about_photos/img_3.png",
+            'created_at' => now(),
+        ]);
     }
 }
