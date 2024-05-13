@@ -20,11 +20,23 @@ class VideosTableSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-//        DB::table('videos')->insert([
-//            'title' => "Video2",
-//            'video_url' => "https://www.youtube.com/embed/lOKASgtr6kU?si=rD9wnhSoXVrgwaw1",
-//            'created_at' => now(),
-//            'updated_at' => now(),
-//        ]);
+        DB::table('videos')->insert([
+            'title' => "Ilmiy anjuman",
+            'video_url' => "about_videos/ANJUMAN NAVOIY PUSHKIN.mp4",
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        DB::table('videos')->insert([
+            'title' => "Anjuman Navoiy Pushkin",
+            'video_url' => "gallery_videos/video_2024-05-10_09-39-15.mp4",
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        DB::table('videos')->insert([
+            'title' => "O'zDJTU Sharq filologiyasi fakulteti",
+            'video_url' => "gallery_videos/video_2024-05-10_09-39-24.mp4",
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }
