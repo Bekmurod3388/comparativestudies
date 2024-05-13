@@ -13,14 +13,28 @@
         <div class="container">
             <div class="videos_start">
                 @forelse( $videos as $video )
-                    <div class="video_box">
-                        <div class="video">
-                            <iframe class="video_rol"  height="300" src="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $video->video_url)) ? asset('storage/' . $video->video_url) : $video->video_url }}" frameborder="0" allowfullscreen></iframe>
+                    @if(\Illuminate\Support\Facades\File::exists(public_path('storage/' . $video->video_url)))
+                        <div class="video_box">
+                            <div class="video">
+                                <video class="video_url" height="300" controls>
+                                    <source src="{{ asset('storage/' . $video->video_url) }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video_text">
+                                <p><span>{{ $video->title }}</span></p>
+                            </div>
                         </div>
-                        <div class="video_text">
-                            <p><span>{{ $video->title }}</span></p>
+                    @else
+                        <div class="video_box">
+                            <div class="video">
+                                <iframe class="video_rol"  height="300" src="{{ $video->video_url }}" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="video_text">
+                                <p><span>{{ $video->title }}</span></p>
+                            </div>
                         </div>
-                    </div>
+                    @endif
                 @empty
                     <h1>Video mavjud emas</h1>
                 @endforelse
