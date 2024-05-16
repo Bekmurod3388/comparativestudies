@@ -16,13 +16,13 @@
                     @if(\Illuminate\Support\Facades\File::exists(public_path('storage/' . $video->video_url)))
                         <div class="video_box">
                             <div class="video">
-                                <video class="video_url" height="300" controls>
+                                <video width="100%" height="300" autoplay muted controls>
                                     <source src="{{ asset('storage/' . $video->video_url) }}" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
                             </div>
                             <div class="video_text">
-                                <p><span>{{ $video->title }}</span></p>
+                                <p><span>{{ $video->title }} {{ asset('storage/' . $video->video_url) }}</span></p>
                             </div>
                         </div>
                     @else

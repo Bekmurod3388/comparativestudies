@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="textbook_two-start">
                     <div class="textbooks_boxs-start">
-                        @foreach($dissertations as $index => $dissertation)
+                        @forelse($dissertations as $index => $dissertation)
                             <div class="textbooks_boxs">
                                 <div class="project_objectives-start">
                                     <div class="project_objectives-box">
@@ -86,7 +86,9 @@
                                     </div>
                                 </div>
                             </div>
-                        @endforeach
+                        @empty
+                            <h1 class="pb-5">Dissertatsiya topilmadi</h1>
+                        @endforelse
                         </div>
                             <div class="textbook_btns">
                                 @foreach($locales as $locale)

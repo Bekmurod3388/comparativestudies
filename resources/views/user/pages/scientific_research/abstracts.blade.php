@@ -59,7 +59,7 @@
         <div class="container">
             <div class="textbook_two-start">
                 <div class="textbooks_boxs-start">
-                    @foreach($abstracts as $index => $abstract)
+                    @forelse($abstracts as $index => $abstract)
                         <div class="textbooks_boxs">
                             <div class="project_objectives-start">
                                 <div class="project_objectives-box">
@@ -87,9 +87,9 @@
                                 </div>
                             </div>
                         </div>
-{{--                    @empty--}}
-{{--                        <h1 class="pb-5">Avtoreferat topilmadi</h1>--}}
-{{--                    @endforelse--}}
+                    @empty
+                        <h1 class="pb-5">Avtoreferat topilmadi</h1>
+                    @endforelse
                     @endforeach
                 </div>
 {{--                <div class="textbook_btns">--}}
