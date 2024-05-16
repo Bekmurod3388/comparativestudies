@@ -90,7 +90,6 @@
                     @empty
                         <h1 class="pb-5">Avtoreferat topilmadi</h1>
                     @endforelse
-                    @endforeach
                 </div>
 {{--                <div class="textbook_btns">--}}
 {{--                    @foreach($locales as $locale)--}}
