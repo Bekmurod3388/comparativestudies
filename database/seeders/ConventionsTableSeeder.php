@@ -88,6 +88,15 @@ class ConventionsTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => '1-сон журнал',
+                'description' => '1-сон журнал',
+                'locale_id' => 1,
+                'file_url' => 'convention_files/files/54465445.pdf',
+                'photo_url' => 'convention_files/photos/img_4.png',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
         // Insert data into the 'conventions' table
