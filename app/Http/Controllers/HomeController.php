@@ -432,7 +432,7 @@ class HomeController extends Controller
                 ->orWhere('authors', 'like', '%' . $request->q . '%');
             $q = $request->q;
         }
-        $articles = $query->get();
+        $articles = $query->orderBy('authors')->get();
 
         return view('user.pages.about.articles', compact('articles', "search_author", "search_language", "search_publisher", "publishers", "locales", "authors", "q"));
     }
