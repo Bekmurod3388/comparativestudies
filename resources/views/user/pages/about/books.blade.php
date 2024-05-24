@@ -95,7 +95,7 @@
         <div class="container">
             <div class="textbook_two-start">
                 <div class="textbooks_boxs-start">
-                    @forelse($books as $book)
+                    @forelse($books as $index => $book)
                         <div class="textbooks_boxs">
                             <div class="project_objectives-start">
                                 <div class="project_objectives-box">
@@ -105,8 +105,8 @@
                                                 <img src="{{asset('storage/'.$book->photo_url)}}" alt="img">
                                             </div>
                                             <div class="prject_objectives-text">
-                                                <h3>{{ $book->authors }}</h3>
-{{--                                                <h3>{{ $book->name }} <span>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</span></h3>--}}
+                                                <h3>{{ $index + 1 }}. {{ $book->authors }}</h3>
+                                                <h3>{{ $book->name }} <span>{{ \Carbon\Carbon::parse($book->published_date)->format('Y') }}</span></h3>
 {{--                                                <p> {{ $book->authors }} </p>--}}
 {{--                                                <p> {{ $book->locale->name  }} </p>--}}
 {{--                                                <p>( {{ $book->authors }}) {{ $book->publisher }} </p>--}}
