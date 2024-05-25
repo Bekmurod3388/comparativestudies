@@ -69,7 +69,7 @@
     <div class="project-o">
         <div class="container">
             <div class="project_objectives-start">
-                @forelse($articles as $article)
+                @forelse($articles as $index => $article)
                     <div class="project_objectives-box">
                         <div class="project_objectives-box-start">
                             <div class="project_objectives-img">
@@ -77,7 +77,7 @@
                                 alt="{{ $article->article_topic }}">
                             </div>
                             <div class="prject_objectives-text">
-                                <h3>{{ $article->article_topic }}</h3>
+                                <h3>{{ $index + 1 }}. {{ $article->article_topic }}</h3>
                                 <p> {{ $article->article_type }}</p>
                                 <p> {{ $article->locale->name }}</p>
                                 <p> {{ $article->authors }}</p>
