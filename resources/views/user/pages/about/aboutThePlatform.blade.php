@@ -66,9 +66,8 @@ Loyiha Oʼzbekiston Respublikasining iqtisodiy oʼsishi va ijtimoiy rivojlanishi
                         <h2>
                             Dasturchi
                         </h2>
-
-
-                        </a>
+                        <p>adbajd kashdkhsa</p>
+                        <p>adbajd kashdkhsa</p>
                     </div>
                 </div>
                 <div class = "card">
@@ -79,7 +78,6 @@ Loyiha Oʼzbekiston Respublikasining iqtisodiy oʼsishi va ijtimoiy rivojlanishi
                         </h2>
 
 
-                        </a>
                     </div>
                 </div>
                 <div class = "card">
@@ -90,7 +88,6 @@ Loyiha Oʼzbekiston Respublikasining iqtisodiy oʼsishi va ijtimoiy rivojlanishi
                         </h2>
 
 
-                        </a>
                     </div>
                 </div>
             </main>
