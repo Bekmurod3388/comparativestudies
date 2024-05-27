@@ -80,6 +80,12 @@
             viewportMeta.setAttribute('content', defaultViewport);
           });
         }
+          const burgerButton = document.getElementById('toggle-icon');
+          if (burgerButton) {
+              burgerButton.addEventListener('click', function () {
+                  mmenuApi.open();
+              });
+          }
       }
     }
   };
