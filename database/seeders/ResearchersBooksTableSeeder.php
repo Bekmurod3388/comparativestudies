@@ -332,6 +332,17 @@ class ResearchersBooksTableSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'name' => 'СРАВНИТЕЛЬНОЕ ЛИТЕРАТУРОВЕДЕНИЕ',
+                'publisher' => 'Ташкент «Nurafshon business» 2024',
+                'locale_id' => 1,
+                'authors' => 'ХАЛЛИЕВА Г.И.',
+                'file_url' => 'training_manual_files/files/Xalliyeva_rus_mak.pdf',
+                'photo_url' => "training_manual_files/photos/img_21.png",
+                'published_date' => '2024-4-4 00:00:00',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
 //            [
 //                'name' => 'Degrees of Affinity Studies in Comparative Literature and Translation',
 //                'publisher' => 'China Academic Library',

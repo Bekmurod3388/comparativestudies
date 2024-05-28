@@ -731,6 +731,18 @@ M. Shabistariin the World Literature',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
+            [
+                'article_topic' => 'ACTUAL MATTERS OF WORLD LITERATURE AND
+COMPARATIVE LITERARY STUDIES',
+                'authors' => 'Xalliyeva Gulnoz Iskandarovna',
+                'article_type' => "Xalqaro ilmiy-amaliy anjumani",
+                'protection_year' => '2024',
+                'file_url' => 'researcher_articles/files/Xoliqov Z maqola.pdf',
+                'photo_url' => "researcher_articles/photos/img_62.png",
+                'locale_id' => 1,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ];
 
 

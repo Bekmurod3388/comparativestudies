@@ -23,7 +23,6 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
 
     <link rel="icon" href="{{asset('assets_front/img/logo.png')}}" type="image/vnd.microsoft.icon"/>
-
     <title>Сomparative Studies</title>
     <!-- TTS Nagios Verification -->
     <link rel="stylesheet" media="all" href="{{asset('assets_front/css/main.css')}}"/>
@@ -310,7 +309,7 @@
 <script src="{{asset('assets_front/js/blazy.compat.min61e5.js?s53374')}}"></script>
 <script src="{{asset('assets_front/js/tabbable/index.umd.mind1a7.js?v=6.1.2')}}"></script>
 <script src="{{asset('assets_front/js/mmenu/dist/mmenuc7e8.js?v=10.1.6')}}"></script>
-<script src="{{asset('assets_front/js/responsive_menu/js/responsive_menu.configc7e8.js?v=10.1.6')}}"></script>
+<script src="{{asset('assets_front/js/responsive_menu/js/responsive_menu.configc7e8.js')}}"></script>
 <script src="{{asset('assets_front/js/google_analytics/js/google_analyticsc7e8.js?v=10.1.6')}}"></script>
 <script src="{{asset('assets_front/js/globalc7e8.js?v=10.1.6')}}"></script>
 <script src="{{asset('assets_front/js/bootstrap.minc7e8.js?v=10.1.6')}}"></script>

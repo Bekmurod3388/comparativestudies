@@ -70,7 +70,8 @@
                                             </div>
                                             <div class="prject_objectives-text">
                                                 <h3>{{ $monograph->name }} <span>{{ \Carbon\Carbon::parse($monograph->published_date)->format('Y') }}</span></h3>
-                                                <p> {{ $monograph->authors }} </p>
+                                                <p> {{ $monograph->authors }}</p>
+                                                <p> {{ $monograph->locale->name }}</p>
                                                 <p>( {{ $monograph->authors }}) {{ $monograph->publisher }} </p>
                                             </div>
                                         </div>

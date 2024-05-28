@@ -55,5 +55,12 @@ class AboutTableSeeder extends Seeder
             'img' => "about_photos/img_3.png",
             'created_at' => now(),
         ]);
+        DB::table('abouts')->insert([
+            'title' => 'Oʻzbekiston davlat jahon tillari universitetida davlat ilmiy-texnika dasturlari doirasida bajarilayotgan IL-27-4722022413-sonli “Qiyosiy adabiyotshunoslik” fanining “Komparativistika” elektron platformasini yaratish”',
+            'url' => "https://t.me/UzSWLU/19607",
+            'type' => "sayt",
+            'img' => "about_photos/img_4.png",
+            'created_at' => now(),
+        ]);
     }
 }

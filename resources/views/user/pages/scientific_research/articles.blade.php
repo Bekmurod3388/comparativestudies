@@ -72,6 +72,7 @@
                                             <div class="prject_objectives-text">
                                                 <h3>{{ $article->name }} {{ \Carbon\Carbon::parse($article->published_date)->format('Y') }}</h3>
                                                 <p>{{$article->authors}}</p>
+                                                <p>{{$article->locale->name}}</p>
                                                 <p>{{ $article->journal_name }}</p>
                                             </div>
                                         </div>

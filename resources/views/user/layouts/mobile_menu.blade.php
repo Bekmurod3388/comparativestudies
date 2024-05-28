@@ -1,4 +1,4 @@
-<div class="off-canvas-wrapper">
+<div class="off-canvas-wrapper " id="offCanvasWrapper" >
     <div id="off-canvas">
         <ul>
             <li class="menu-item--db57f021-ee07-40a6-8446-be8044f1ad27 menu-name--main">
