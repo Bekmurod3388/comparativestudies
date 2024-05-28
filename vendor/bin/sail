@@ -12,7 +12,11 @@ if [ -z "$self" ]; then
     self="$selfArg"
 fi
 
+<<<<<<< HEAD
 dir=$(cd "${self%[/\\]*}" > /dev/null; cd ../laravel/sail/bin && pwd)
+=======
+dir=$(cd "${self%[/\\]*}" > /dev/null; cd '../laravel/sail/bin' && pwd)
+>>>>>>> 313e52a5137aed7e57a57e38c705953f551e8ed2
 
 if [ -d /proc/cygdrive ]; then
     case $(which php) in
