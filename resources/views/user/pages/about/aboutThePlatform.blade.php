@@ -61,33 +61,30 @@ Loyiha Oʼzbekiston Respublikasining iqtisodiy oʼsishi va ijtimoiy rivojlanishi
         <div class="platforma_programmers">
             <main>
                 <div class = "card">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4k-wallpaper.com%2Fen%2Fwp-content%2Fuploads%2F2015%2F01%2Fthumbnail_00308.jpg&f=1&nofb=1&ipt=1a844960069dfda82dd17c0fa0072c652ec1cf22293dda2867a315d43a8aa46a&ipo=images" alt="">
+                    <img src="{{asset('assets_front/img/img_1.png')}}" alt="">
                     <div class="card-content">
                         <h2>
-                            Dasturchi
+                            Project manager
                         </h2>
-                        <p>adbajd kashdkhsa</p>
-                        <p>adbajd kashdkhsa</p>
+                        <p>Bekmurod Xo`jamuratov</p>
                     </div>
                 </div>
                 <div class = "card">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4k-wallpaper.com%2Fen%2Fwp-content%2Fuploads%2F2015%2F01%2Fthumbnail_00308.jpg&f=1&nofb=1&ipt=1a844960069dfda82dd17c0fa0072c652ec1cf22293dda2867a315d43a8aa46a&ipo=images" alt="">
+                    <img src="{{asset('assets_front/img/PS0A7585.JPG')}}" alt="">
                     <div class="card-content">
                         <h2>
-                            Dasturchi
+                            Frontend programmer
                         </h2>
-
-
+                        <p>Raxmonberganov Xayrullo</p>
                     </div>
                 </div>
                 <div class = "card">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4k-wallpaper.com%2Fen%2Fwp-content%2Fuploads%2F2015%2F01%2Fthumbnail_00308.jpg&f=1&nofb=1&ipt=1a844960069dfda82dd17c0fa0072c652ec1cf22293dda2867a315d43a8aa46a&ipo=images" alt="">
+                    <img src="{{asset('assets_front/img/img.png')}}" alt="">
                     <div class="card-content">
                         <h2>
-                            Dasturchi
+                            Backend programmer
                         </h2>
-
-
+                        <p>Ollanazarov Jamshidbek</p>
                     </div>
                 </div>
             </main>
