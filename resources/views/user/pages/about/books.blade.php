@@ -97,7 +97,7 @@
                 <div class="textbooks_boxs-start">
                     @forelse($books as $index => $book)
                         <div class="textbooks_boxs">
-                            <div class="project_objectives-start">
+                            <div class="project_objectives-start" >
                                 <div class="project_objectives-box">
                                     <div class="project_objectives-box-start">
                                         <div class="textbook_left">

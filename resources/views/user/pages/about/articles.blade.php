@@ -68,7 +68,7 @@
     </div>
     <div class="project-o">
         <div class="container">
-            <div class="project_objectives-start">
+            <div class="project_objectives-start " id="project_scroll">
                 @forelse($articles as $index => $article)
                     <div class="project_objectives-box">
                         <div class="project_objectives-box-start">
