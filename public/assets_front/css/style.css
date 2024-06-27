@@ -1158,6 +1158,7 @@ body{
 }
 .textbook_two{
     margin-bottom: 100px;
+    width: 100%;
 }
 .textbook_btns{
     overflow-y: scroll;

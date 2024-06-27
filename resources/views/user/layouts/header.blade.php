@@ -117,10 +117,6 @@
                                 </li>
                                 <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
                                     class="sf-depth-2 sf-no-children"><a
-                                        href="{{ route('user_scientific_research_conventions') }}"
-                                        class="sf-depth-2">Komporativistika jurnali</a></li>
-                                <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
-                                    class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('aboutThePlatform') }}"
                                         class="sf-depth-2">Platforma haqida</a></li>
                             </ul>
@@ -226,6 +222,8 @@
 
                             </ul>
                         </li>
+                        <li><a href="{{ route('user_scientific_research_conventions') }}">JURNAL</a></li>
+
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
                             class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"
                                                              class="sf-depth-1 menuparent">ALOQA</a>
