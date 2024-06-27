@@ -65,6 +65,35 @@
     {{--            </div>--}}
     {{--        </div>--}}
     {{--    </div>--}}
+    <div class="journal_category">
+        <div class="journal-container">
+            <h1>Текущий выпуск</h1>
+            <div class="journal-details">
+                <div class="journal-cover">
+                    <img src="path_to_your_image/image.png" alt="Journal Cover">
+                </div>
+                <div class="journal-info">
+                    <p><strong>Том 2 № 3 (2024): Зарубежная лингвистика и лингводидактика</strong></p>
+                    <p><span class="icon">&#128197;</span> Опубликован: 2024-05-01</p>
+                    <p><span class="icon">&#128196;</span> Статьи: 68</p>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar_journal">
+            <button>Требования к оформлению статей</button>
+            <button>Редакционный совет</button>
+            <button>Редакционная Политика</button>
+            <button>Отправить материал</button>
+            <button>Быстрая отправка материала</button>
+            <button>Информация</button>
+            <p>Для читателей</p>
+            <p>Для авторов</p>
+            <p>Для библиотек</p>
+        </div>
+    </div>
+
+
+
     <div class="textbook_two">
         <div class="container">
             <div class="textbook_two-start">
