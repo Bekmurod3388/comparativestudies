@@ -1464,11 +1464,12 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.sidebar_journal button {
+.sidebar_journal a {
     display: block;
     width: 100%;
     background-color: #080260;
     color: #fff;
+    text-decoration: none;
     border: none;
     padding: 10px;
     margin-bottom: 10px;
@@ -1477,7 +1478,7 @@ body{
     cursor: pointer;
 }
 
-.sidebar_journal button:hover {
+.sidebar_journal a:hover {
     background-color: #0b5ed7;
 }
 

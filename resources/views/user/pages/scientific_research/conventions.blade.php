@@ -65,7 +65,7 @@
     {{--            </div>--}}
     {{--        </div>--}}
     {{--    </div>--}}
-    <div class="journal_category">
+    <div class="journal_category" style="margin-bottom: 50px">
         <div class="journal-container">
             <h1>Oxirgi jurnal</h1>
             @if($firstType1Convention)
@@ -76,8 +76,7 @@
                     <div class="journal-info">
                         <p><strong>{{ $firstType1Convention->name }}</strong></p>
                         <p>{{ $firstType1Convention->description }}</p>
-                        <p><span class="icon">&#128197;</span> Опубликован: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
-                        <p><span class="icon">&#128196;</span> Статьи: 68</p>
+                        <p><span class="icon_j">&#128197;</span> Sana: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
                     </div>
                 </div>
             @else
@@ -86,7 +85,7 @@
         </div>
         <div class="sidebar_journal">
             @forelse($conventions->where('type', "0") as $convention)
-                <button>{{ $convention->name }}</button>
+              <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}">{{ $convention->name }}</a>
             @empty
                 <p>Ma'lumot topilmadi</p>
             @endforelse
