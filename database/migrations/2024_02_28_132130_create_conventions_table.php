@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('description');
             $table->string('file_url')->nullable();
             $table->string('photo_url')->nullable();
-//            $table->dateTime('published_date')->nullable();
+            $table->string('type')->default('1'); // Default value is '1'
             $table->timestamps();
         });
         Schema::enableForeignKeyConstraints();

@@ -14,6 +14,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
- 
+        $this->call([
+            LocaleTableSeeder::class,
+            RoleSeeder::class,
+            UserSeeder::class,
+            ColleaguesTableSeeder::class,
+            CarouselsTableSeeder::class,
+            FacultyBooksTableSeeder::class,
+            VideosTableSeeder::class,
+            CenterTableSeeder::class,
+            ResearchersTableSeeder::class,
+            ResearchersBooksTableSeeder::class,
+            JournalsTableSeeder::class,
+            AboutTableSeeder::class,
+            AbstractTableSeeder::class,
+            ArticleTableSeeder::class,
+            MonographTableSeeder::class,
+            DissertationsTableSeeder::class,
+            ResearchersArticlesTableSeeder::class,
+            TrainingManualsTableSeeder::class,
+            ConventionsTableSeeder::class,
+            PhotosSeeder::class,
+        ]);
     }
 }

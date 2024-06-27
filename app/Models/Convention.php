@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Convention extends Model
 {
     use HasFactory;
-    protected $fillable = ['locale', 'locale_id', 'name', 'description', 'published_date', 'photo_url', 'file_url'];
+    protected $fillable = ['locale', 'locale_id', 'name', 'description', 'published_date', 'photo_url', 'file_url', 'type'];
 }

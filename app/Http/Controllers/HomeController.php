@@ -338,7 +338,11 @@ class HomeController extends Controller
     public function scientific_research_conventions(){
         $conventions = Convention::all();
         $locales = Locale::all();
-        return view('user.pages.scientific_research.conventions', compact('conventions', 'locales'));
+        $firstType1Convention = $conventions->where('type', 1)->last();
+        $type1Conventions = $conventions->where('type', 1)
+            ->sortBy('created_at')
+            ->reverse();
+        return view('user.pages.scientific_research.conventions', compact('conventions', 'locales', 'firstType1Convention', 'type1Conventions'));
     }
 
     public function about(){

@@ -67,28 +67,29 @@
     {{--    </div>--}}
     <div class="journal_category">
         <div class="journal-container">
-            <h1>Текущий выпуск</h1>
-            <div class="journal-details">
-                <div class="journal-cover">
-                    <img src="path_to_your_image/image.png" alt="Journal Cover">
+            <h1>Oxirgi jurnal</h1>
+            @if($firstType1Convention)
+                <div class="journal-details">
+                    <div class="journal-cover">
+                        <img src="{{ asset('storage/' . $firstType1Convention->photo_url) }}" alt="Journal Cover">
+                    </div>
+                    <div class="journal-info">
+                        <p><strong>{{ $firstType1Convention->name }}</strong></p>
+                        <p>{{ $firstType1Convention->description }}</p>
+                        <p><span class="icon">&#128197;</span> Опубликован: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
+                        <p><span class="icon">&#128196;</span> Статьи: 68</p>
+                    </div>
                 </div>
-                <div class="journal-info">
-                    <p><strong>Том 2 № 3 (2024): Зарубежная лингвистика и лингводидактика</strong></p>
-                    <p><span class="icon">&#128197;</span> Опубликован: 2024-05-01</p>
-                    <p><span class="icon">&#128196;</span> Статьи: 68</p>
-                </div>
-            </div>
+            @else
+                <p>No current issue found</p>
+            @endif
         </div>
         <div class="sidebar_journal">
-            <button>Требования к оформлению статей</button>
-            <button>Редакционный совет</button>
-            <button>Редакционная Политика</button>
-            <button>Отправить материал</button>
-            <button>Быстрая отправка материала</button>
-            <button>Информация</button>
-            <p>Для читателей</p>
-            <p>Для авторов</p>
-            <p>Для библиотек</p>
+            @forelse($conventions->where('type', "0") as $convention)
+                <button>{{ $convention->name }}</button>
+            @empty
+                <p>Ma'lumot topilmadi</p>
+            @endforelse
         </div>
     </div>
 
@@ -98,7 +99,7 @@
         <div class="container">
             <div class="textbook_two-start">
                 <div class="textbooks_boxs-start">
-                    @forelse($conventions as $convention)
+                    @forelse($type1Conventions as $convention)
                         <div class="textbooks_boxs">
                             <div class="project_objectives-start">
                                 <div class="project_objectives-box">
