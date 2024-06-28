@@ -63,7 +63,7 @@ Route::get('user/scientific/dissertations', [HomeController::class,'scientific_r
 Route::get('user/scientific/abstracts', [HomeController::class,'scientific_research_abstracts'])->name('user_scientific_research_abstracts');
 Route::get('user/scientific/monographs', [HomeController::class,'scientific_research_monographs'])->name('user_scientific_research_monographs');
 Route::get('user/scientific/articles', [HomeController::class,'scientific_research_articles'])->name('user_scientific_research_articles');
-Route::get('user/scientific/conventions', [HomeController::class,'scientific_research_conventions'])->name('user_scientific_research_conventions');
+Route::get('/journal', [HomeController::class,'scientific_research_conventions'])->name('user_scientific_research_conventions');
 
 Route::get('user/services', [HomeController::class,'services'])->name('user_services');
 Route::get('user/services/exam_preparation', [HomeController::class,'services_exam_preparation'])->name('user_services_exam_preparation');
