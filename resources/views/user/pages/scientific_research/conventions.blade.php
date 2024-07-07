@@ -2,10 +2,10 @@
 @section('content')
     <div class="textbooks">
         <div class="container text-center animated bounceInDown">
-            <h1 class="display-1 mb-4">Komporativistika jurnali</h1>
+            <h1 class="display-1 mb-4">KOMPORATIVISTIKA JURNALI</h1>
             <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
-                <li class="breadcrumb-item"><a href="#">Asosiy sahifa </a></li>
-                <li class="breadcrumb-item text-dark" aria-current="page">Komparavistika jurnali</li>
+                <li class="breadcrumb-item"><a href="#">ASOSIY SAHIFA</a></li>
+                <li class="breadcrumb-item text-dark" aria-current="page">KOMPARAVISTIKA JURNALI</li>
             </ol>
         </div>
     </div>
@@ -66,7 +66,7 @@
     {{--    </div>--}}
     <div class="journal_category" style="margin-bottom: 50px">
         <div class="journal-container">
-            <h1>Oxirgi chop etilgan jurnal</h1>
+            <h1>OXIRGI CHOP ETILGAN JURNAL</h1>
             @if($firstType1Convention)
                 <div class="journal-details">
                     <div class="journal-cover">
@@ -75,22 +75,22 @@
                     <div class="journal-info">
                         <p><strong>{{ $firstType1Convention->name }}</strong></p>
                         <p>{{ $firstType1Convention->description }}</p>
-                        <p><span class="icon_j">&#128197;</span>Chop etilgan Sana: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
+                        <p><span class="icon_j">&#128197;</span>CHOP ETILGAN SANA: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
                     </div>
                 </div>
             @else
-                <p>No current issue found</p>
+                <p>NO CURRENT ISSUE FOUND</p>
             @endif
         </div>
         <div class="sidebar_journal">
             @forelse($conventions->where('type', "0") as $convention)
-              <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}" target="_blank">{{ $convention->name }}</a>
+                <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}" target="_blank">{{ $convention->name }}</a>
             @empty
-                <p>Ma'lumot topilmadi</p>
+                <p>MA'LUMOT TOPILMADI</p>
             @endforelse
-                <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
-                    Komparativistika jurnaliga maqola yuborish
-                </a>
+            <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
+                KOMPARATIVISTIKA JURNALIGA MAQOLA YUBORISH
+            </a>
         </div>
     </div>
 
@@ -120,7 +120,7 @@
                                             <div class="textbook_file">
                                                 <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}">
                                                     <button>
-                                                        Yuklash
+                                                        YUKLASH
                                                     </button>
                                                 </a>
                                             </div>
@@ -130,7 +130,7 @@
                             </div>
                         </div>
                     @empty
-                        <h1 class="pb-5">Anjuman topilmadi</h1>
+                        <h1 class="pb-5">ANJUMAN TOPILMADI</h1>
                     @endforelse
                 </div>
                 <div class="textbook_btns">
