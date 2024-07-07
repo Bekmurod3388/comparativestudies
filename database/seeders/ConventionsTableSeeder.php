@@ -17,6 +17,16 @@ class ConventionsTableSeeder extends Seeder
 
         $abstracts = [
             [
+                'name' => 'Jurnal haqida',
+                'description' => 'Jurnal haqida',
+                'locale_id' => 1,
+                'file_url' => 'convention_files/files/Jurnal haqida. O jurnale. About the journal.pdf',
+                'photo_url' => 'convention_files/photos/img_2.png',
+                'type' => '0',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
                 'name' => 'Jurnal nizomi',
                 'description' => 'Jurnal nizomi 19.03.2024',
                 'locale_id' => 1,
@@ -57,16 +67,6 @@ class ConventionsTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Jurnal haqida',
-                'description' => 'Jurnal haqida',
-                'locale_id' => 1,
-                'file_url' => 'convention_files/files/Jurnal haqida. O jurnale. About the journal.pdf',
-                'photo_url' => 'convention_files/photos/img_2.png',
-                'type' => '0',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
                 'name' => 'Komparativistika jurnaliga namunaviy maqola',
                 'description' => 'Komparativistika jurnaliga namunaviy maqola',
                 'locale_id' => 1,
@@ -77,7 +77,7 @@ class ConventionsTableSeeder extends Seeder
                 'updated_at' => now(),
             ],
             [
-                'name' => 'Guvohnoma',
+                'name' => 'Komparativistaika jurnali guvohnomasi',
                 'description' => 'Komparativistaika jurnali guvohnomasi',
                 'locale_id' => 1,
                 'file_url' => 'convention_files/files/309609-39b0667a137152b4195d4bef4d2db44f.pdf',

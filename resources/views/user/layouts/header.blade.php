@@ -222,7 +222,7 @@
 
                             </ul>
                         </li>
-                        <li><a href="{{ route('user_scientific_research_conventions') }}">JURNAL</a></li>
+                        <li><a href="{{ route('user_scientific_research_conventions') }}">BIZNING JURNAL</a></li>
 
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
                             class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"

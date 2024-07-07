@@ -5,8 +5,7 @@
             <h1 class="display-1 mb-4">Komporativistika jurnali</h1>
             <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
                 <li class="breadcrumb-item"><a href="#">Asosiy sahifa </a></li>
-                <li class="breadcrumb-item"><a href="#">Ilmiy tadqiqotlar</a></li>
-                <li class="breadcrumb-item text-dark" aria-current="page">Anjumanlar</li>
+                <li class="breadcrumb-item text-dark" aria-current="page">Komparavistika jurnali</li>
             </ol>
         </div>
     </div>
@@ -67,7 +66,7 @@
     {{--    </div>--}}
     <div class="journal_category" style="margin-bottom: 50px">
         <div class="journal-container">
-            <h1>Oxirgi jurnal</h1>
+            <h1>Oxirgi chop etilgan jurnal</h1>
             @if($firstType1Convention)
                 <div class="journal-details">
                     <div class="journal-cover">
@@ -76,7 +75,7 @@
                     <div class="journal-info">
                         <p><strong>{{ $firstType1Convention->name }}</strong></p>
                         <p>{{ $firstType1Convention->description }}</p>
-                        <p><span class="icon_j">&#128197;</span> Sana: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
+                        <p><span class="icon_j">&#128197;</span>Chop etilgan Sana: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
                     </div>
                 </div>
             @else
@@ -85,10 +84,13 @@
         </div>
         <div class="sidebar_journal">
             @forelse($conventions->where('type', "0") as $convention)
-              <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}">{{ $convention->name }}</a>
+              <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}" target="_blank">{{ $convention->name }}</a>
             @empty
                 <p>Ma'lumot topilmadi</p>
             @endforelse
+                <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
+                    Komparativistika jurnaliga maqola yuborish
+                </a>
         </div>
     </div>
 
