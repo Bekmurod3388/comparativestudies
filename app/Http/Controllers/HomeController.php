@@ -130,7 +130,10 @@ class HomeController extends Controller
     {
         $journals = Journal::all();
         return view('user.pages.magazines', compact('journals'));    }
-
+    public function archive(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
+    {
+        $journals = Journal::all();
+        return view('user.pages.scientific_research.archive', compact('journals'));    }
     public function magazines_yevrope(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $journals = Journal::where('category', "1")->get();

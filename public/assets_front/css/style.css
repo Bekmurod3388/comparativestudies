@@ -1511,3 +1511,63 @@ body{
         justify-content: center;
     }
 }
+
+
+.archive {
+    width: 100%;
+}
+
+.archive h2{
+    color: #637088;
+    font-size: 1.5rem !important;
+    text-align: center;
+    margin-top: 50px;
+    text-transform: none;
+    font-variant: normal;
+    font-weight: 700;
+}
+.year-blocks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.year-block {
+    background-color: #f0f0f5;
+    border: 1px solid #ccc;
+    margin: 5px;
+    text-align: left;
+    width: 24%;
+}
+
+.year {
+    font-weight: bold;
+    border-bottom: 1px solid silver;
+    padding: 10px;
+    background-color: #e7ecf8;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.issues {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.issues a {
+    color: #0066cc;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: navajowhite;
+}
+
+.issues a:hover {
+    text-decoration: underline;
+}
+.archive{
+    margin: 100px 0;
+}

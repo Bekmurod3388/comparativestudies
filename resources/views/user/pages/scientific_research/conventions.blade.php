@@ -90,6 +90,8 @@
             @endforelse
             <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
                 KOMPARATIVISTIKA JURNALIGA MAQOLA YUBORISH
+            </a>  <a href="{{ route('archive')  }}">
+                ARXIV
             </a>
         </div>
     </div>
