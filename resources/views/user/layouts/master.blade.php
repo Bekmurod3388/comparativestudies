@@ -80,10 +80,15 @@
     </script>
     <link rel="stylesheet" href="{{asset('assets_front/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets_front/css/loading.css')}}">
+    <link rel="stylesheet" href="{{asset('css/google-translate.css')}}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="{{asset('assets_front/js/loader.js')}}"></script>
-
+    <script src="{{asset('js/google-translate.js')}}"></script>
 </head>
 <body class="exclude-node-title layout-no-sidebars page-node-37051 path-frontpage node--type-page">
+
+
 <a href="#" class="visually-hidden focusable skip-link">
     Skip to main content
 </a>
@@ -93,6 +98,12 @@
     <div id="page-wrapper">
         <div id="page">
             @include('user.layouts.header')
+            <div class="language">
+                <img src="{{asset('lang/lang__uz.png')}}" alt="uz" data-google-lang="uz" class="language__img" >
+
+                <img src="{{asset('lang/lang__ru.png')}}" alt="ru" data-google-lang="ru" class="language__img ">
+                <img src="{{asset('lang/lang__en.png')}}" alt="en" data-google-lang="en" class="language__img">
+            </div>
         </div>
         <main>
             <div style="display: none" id="content">
