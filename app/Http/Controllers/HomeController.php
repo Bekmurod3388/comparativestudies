@@ -132,8 +132,16 @@ class HomeController extends Controller
         return view('user.pages.magazines', compact('journals'));    }
     public function archive(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
-        $journals = Journal::all();
-        return view('user.pages.scientific_research.archive', compact('journals'));    }
+        $conventions = Convention::where('type', '1')
+            ->whereNull('parent_id')
+            ->with('children')
+            ->get()
+            ->groupBy(function($date) {
+                return \Carbon\Carbon::parse($date->created_at)->format('Y');
+            });
+
+        return view('user.pages.scientific_research.archive', compact('conventions'));
+    }
     public function magazines_yevrope(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $journals = Journal::where('category', "1")->get();
@@ -339,13 +347,24 @@ class HomeController extends Controller
         return view('user.pages.scientific_research.articles', compact('locales', 'journal_names', 'authors', 'articles', 'search_locale', 'search_author', 'search_journal_name', 'q'));    }
 
     public function scientific_research_conventions(){
-        $conventions = Convention::all();
-        $locales = Locale::all();
-        $firstType1Convention = $conventions->where('type', 1)->last();
-        $type1Conventions = $conventions->where('type', 1)
-            ->sortBy('created_at')
+        $firstType1Convention = Convention::where('type', '1')
+            ->whereNull('parent_id')
+            ->with('children')
+            ->orderBy('created_at', 'desc')
+            ->get()
+            ->last();
+
+        $type1Conventions = Convention::where('type', '1')
+            ->whereNull('parent_id')
+            ->orderBy('created_at', 'desc')
+            ->get()
             ->reverse();
-        return view('user.pages.scientific_research.conventions', compact('conventions', 'locales', 'firstType1Convention', 'type1Conventions'));
+
+
+
+        $locales = Locale::all();
+        $conventions = Convention::all();
+        return view('user.pages.scientific_research.conventions', compact('locales', 'firstType1Convention', 'type1Conventions', 'conventions'));
     }
 
     public function about(){

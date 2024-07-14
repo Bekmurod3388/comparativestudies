@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->bigInteger('locale_id')->unsigned()->nullable();
             $table->foreign('locale_id')->references('id')->on('locales')->onDelete('cascade');
+            $table->bigInteger('parent_id')->unsigned()->nullable();
+            $table->foreign('parent_id')->references('id')->on('conventions')->onDelete('cascade');
             $table->string('name');
             $table->text('description');
             $table->string('file_url')->nullable();
