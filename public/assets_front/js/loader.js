@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const loader = document.querySelector(".loader")
-    var contentElement = document.getElementById("content");
+    var contentElement = document.getElementById("contents");
 
     loader.classList.add("loader-hidden");
     contentElement.removeAttribute("style");
