@@ -346,7 +346,13 @@ class HomeController extends Controller
 
         return view('user.pages.scientific_research.articles', compact('locales', 'journal_names', 'authors', 'articles', 'search_locale', 'search_author', 'search_journal_name', 'q'));    }
 
-    public function scientific_research_conventions(){
+    public function scientific_research_conventions(Request $request){
+        $query = $request->input('query');
+        $category = $request->input('category');
+        $startDate = $request->input('startDate');
+        $endDate = $request->input('endDate');
+
+        // Fetching the first convention for display
         $firstType1Convention = Convention::where('type', '1')
             ->whereNull('parent_id')
             ->with('children')
@@ -354,16 +360,46 @@ class HomeController extends Controller
             ->get()
             ->last();
 
+        // Constructing the query for search results
+        $searchresults = Convention::query();
+
+        if ($startDate) {
+            $searchresults->whereDate('created_at', '>=', $startDate);
+        }
+
+        if ($endDate) {
+            $searchresults->whereDate('created_at', '<=', $endDate);
+        }
+
+        if ($category) {
+            $searchresults->Where('parent_id', $category);
+        }
+
+        if ($query) {
+            $searchresults->where(function($q) use ($query) {
+                $q->where('name', 'like', "%{$query}%")
+                    ->orWhere('description', 'like', "%{$query}%");
+            });
+        }
+
+        // Fetching the search results
+        $searchresults = $searchresults->get();
+
+        // Fetching the type 1 conventions for display
         $type1Conventions = Convention::where('type', '1')
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
             ->get();
 
-
-
         $locales = Locale::all();
         $conventions = Convention::all();
-        return view('user.pages.scientific_research.conventions', compact('locales', 'firstType1Convention', 'type1Conventions', 'conventions'));
+
+        return view('user.pages.scientific_research.conventions', compact('locales', 'firstType1Convention', 'type1Conventions', 'conventions', 'searchresults'));
+    }
+
+
+    public function scientific_research_convention(Convention $convention){
+        return view('user.pages.scientific_research.convention', compact('convention'));
     }
 
     public function about(){

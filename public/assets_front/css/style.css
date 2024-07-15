@@ -1428,7 +1428,6 @@ body{
     overflow-y: scroll;
 }
 .journal-container {
-    margin: 0 auto;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1445,10 +1444,12 @@ body{
     flex-direction: row;
     gap: 20px;
     margin-top: 20px;
+    height: 90%;
+    align-items: center;
 }
 
 .journal-cover img {
-    max-width: 200px;
+    max-width: 230px;
     border: 1px solid #ddd;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -1459,7 +1460,6 @@ body{
     justify-content: center;
 }
 .sidebar_journal {
-    max-width: 300px;
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1492,7 +1492,7 @@ body{
 }
 .journal_category{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 100px;
 }
 @media(max-width: 1024px){
@@ -1524,6 +1524,7 @@ body{
     margin-top: 50px;
     text-transform: none;
     font-variant: normal;
+    margin-bottom: 100px;
     font-weight: 700;
 }
 .year-blocks {
@@ -1571,3 +1572,118 @@ body{
 .archive{
     margin: 100px 0;
 }
+
+.btn-conv{
+    margin-bottom: 40px;
+    background: #080240;
+    border:none;
+}
+.form-method{
+    max-width:100%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.journal-btn-conv{
+    background-color: #240090;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    width: 170px;
+    border: none;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    margin-right: 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #007bff;
+}
+#resetBtn{
+    background: red;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+.search-bar button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.advanced-search {
+    margin-bottom: 20px;
+}
+
+.advanced-search label {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.advanced-search select,
+.advanced-search input[type="date"] {
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.advanced-search select:focus,
+.advanced-search input[type="date"]:focus {
+    border-color: #007bff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.highlight {
+    background-color: #ffcc00;
+}
+

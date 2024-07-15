@@ -9,71 +9,75 @@
             </ol>
         </div>
     </div>
-    <div class="journal_category" style="margin-bottom: 50px">
-        <div class="journal-container">
-            <h1>OXIRGI CHOP ETILGAN JURNAL</h1>
-            @if($firstType1Convention)
-                <div class="journal-details">
-                    <div class="journal-cover">
-                        <img src="{{ asset('storage/' . $firstType1Convention->photo_url) }}" alt="Journal Cover">
+    <div class="container">
+        <form method="get" action="{{ route('user_scientific_research_conventions') }}" class="form-method">
+            <div class="search-bar">
+                <input type="text" name="query" id="searchInput" placeholder="Search..." value="{{ request('query') }}">
+                <button style="background-color: #080240" type="submit" id="searchButton">Search</button>
+                <a href="{{ route('user_scientific_research_conventions') }}" id="resetBtn">Reset</a>
+            </div>
+            <div class="advanced-search">
+                <label for="category">Parent name:</label>
+                <select name="category" id="category">
+                    <option value="">All</option>
+                    @foreach($type1Conventions as $parent)
+                        <option value="{{ $parent->id }}" {{ request('category') == $parent->id ? 'selected' : '' }}>{{ $parent->name }}</option>
+                    @endforeach
+                </select>
+                <label for="startDate">Start Date:</label>
+                <input type="date" name="startDate" id="startDate" value="{{ request('startDate') }}">
+                <label for="endDate">End Date:</label>
+                <input type="date" name="endDate" id="endDate" value="{{ request('endDate') }}">
+            </div>
+        </form>
+        <div class="journal_category" style="margin-bottom: 50px">
+            <div class="journal-container">
+                <h1>OXIRGI CHOP ETILGAN JURNAL</h1>
+                @if($firstType1Convention)
+                    <div class="journal-details">
+                        <div class="journal-cover">
+                            <img src="{{ asset('storage/' . $firstType1Convention->photo_url) }}" alt="Journal Cover">
+                        </div>
+                        <div class="journal-info">
+                            <p><strong>{{ $firstType1Convention->name }}</strong></p>
+                            <p>{{ $firstType1Convention->description }}</p>
+                            <p><span class="icon_j">&#128197;</span>CHOP ETILGAN SANA: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
+                            <a target="_blank" >
+                                <button class="journal-btn-conv">
+                                    YUKLASH
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    <div class="journal-info">
-                        <p><strong>{{ $firstType1Convention->name }}</strong></p>
-                        <p>{{ $firstType1Convention->description }}</p>
-                        <p><span class="icon_j">&#128197;</span>CHOP ETILGAN SANA: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
-                    </div>
-                </div>
-            @else
-                <p>NO CURRENT ISSUE FOUND</p>
-            @endif
+                @else
+                    <p>NO CURRENT ISSUE FOUND</p>
+                @endif
+            </div>
+            <div class="sidebar_journal">
+                @forelse($conventions->where('type', "0") as $convention)
+                    <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}" target="_blank">{{ $convention->name }}</a>
+                @empty
+                    <p>MA'LUMOT TOPILMADI</p>
+                @endforelse
+                <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
+                    KOMPARATIVISTIKA JURNALIGA MAQOLA YUBORISH
+                </a>
+                <a href="{{ route('archive')  }}">
+                    ARXIV
+                </a>
+            </div>
         </div>
-        <div class="sidebar_journal">
-            @forelse($conventions->where('type', "0") as $convention)
-                <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}" target="_blank">{{ $convention->name }}</a>
-            @empty
-                <p>MA'LUMOT TOPILMADI</p>
-            @endforelse
-            <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
-                KOMPARATIVISTIKA JURNALIGA MAQOLA YUBORISH
-            </a>
-            <a href="{{ route('archive')  }}">
-                ARXIV
-            </a>
-        </div>
+
     </div>
+
 
     <div class="textbook_two">
         <div class="container">
             <div class="textbook_two-start">
                 <div class="textbooks_boxs-start">
                     <div class="textbooks_boxs">
-                        @foreach($type1Conventions as $parent)
-                            <div class="project_objectives-start">
-                                <div class="project_objectives-box">
-                                    <div class="project_objectives-box-start">
-                                        <div class="textbook_left">
-                                            <div class="textbook_img">
-                                                <img src="{{ asset('storage/' . $parent->photo_url) }}"
-                                                     alt="{{ $parent->name }}">
-                                            </div>
-                                            <div class="prject_objectives-text">
-                                                <h3>{{ $parent->name }}</h3>
-                                                <p>{{ $parent->description }}</p>
-                                            </div>
-                                        </div>
-                                        <div class="textbook_right">
-                                            <div class="textbook_file">
-                                                <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $parent->file_url)) ? asset('storage/' . $parent->file_url) : $parent->file_url }}">
-                                                    <button>
-                                                        YUKLASH
-                                                    </button>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @foreach($parent->chilDren as $child)
+                        @if(request()->hasAny(['category', 'query', 'endDate', 'startDate']))
+                            @foreach($searchresults as $child)
                                 <div class="project_objectives-start">
                                     <div class="project_objectives-box">
                                         <div class="project_objectives-box-start">
@@ -85,6 +89,7 @@
                                                 <div class="prject_objectives-text">
                                                     <h3>{{ $child->name }}</h3>
                                                     <p>{{ $child->description }}</p>
+                                                    @if(isset($child->parent->name))<p> {{$child->parent->name}} </p>@endif
                                                 </div>
                                             </div>
                                             <div class="textbook_right">
@@ -100,7 +105,63 @@
                                     </div>
                                 </div>
                             @endforeach
-                        @endforeach
+                        @else
+                            @foreach($type1Conventions as $parent)
+                                <div class="project_objectives-start">
+                                    <div class="project_objectives-box">
+                                        <div class="project_objectives-box-start">
+                                            <div class="textbook_left">
+                                                <div class="textbook_img">
+                                                    <img src="{{ asset('storage/' . $parent->photo_url) }}"
+                                                         alt="{{ $parent->name }}">
+                                                </div>
+                                                <div class="prject_objectives-text">
+                                                    <h3>{{ $parent->name }}</h3>
+                                                    <p>{{ $parent->description }}</p>
+                                                </div>
+                                            </div>
+                                            <div class="textbook_right">
+                                                <div class="textbook_file">
+                                                    <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $parent->file_url)) ? asset('storage/' . $parent->file_url) : $parent->file_url }}">
+                                                        <button>
+                                                            YUKLASH
+                                                        </button>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                @foreach($parent->chilDren as $child)
+                                    <div class="project_objectives-start">
+                                        <div class="project_objectives-box">
+                                            <div class="project_objectives-box-start">
+                                                <div class="textbook_left">
+                                                    <div class="textbook_img">
+                                                        <img src="{{ asset('storage/' . $child->photo_url) }}"
+                                                             alt="{{ $child->name }}">
+                                                    </div>
+                                                    <div class="prject_objectives-text">
+                                                        <h3>{{ $child->name }}</h3>
+                                                        <p>{{ $child->description }}</p>
+                                                        <p>{{ $parent->name }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="textbook_right">
+                                                    <div class="textbook_file">
+                                                        <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $child->file_url)) ? asset('storage/' . $child->file_url) : $child->file_url }}">
+                                                            <button>
+                                                                YUKLASH
+                                                            </button>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @endforeach
+                        @endif
                     </div>
                 </div>
                 <div class="textbook_btns">
