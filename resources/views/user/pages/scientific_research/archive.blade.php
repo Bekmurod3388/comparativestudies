@@ -10,7 +10,7 @@
                             <div class="year">{{ $year }}</div>
                             <div class="issues">
                                 @forelse($yearConventions as $index => $convention)
-                                    <a href="{{ asset('storage/'.$convention->file_url) }}" target="_blank">{{ $index + 1 }}</a>
+                                    <a href="{{ route('parentArchive', $convention) }}" target="_blank">{{ $index + 1 }}</a>
                                 @empty
                                     <h1>No data</h1>
                                 @endforelse

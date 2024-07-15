@@ -398,8 +398,10 @@ class HomeController extends Controller
     }
 
 
-    public function scientific_research_convention(Convention $convention){
-        return view('user.pages.scientific_research.convention', compact('convention'));
+    public function parentArchive(Convention $parent){
+        $conventions = Convention::all();
+        $locales = Locale::all();
+        return view('user.pages.scientific_research.convention', compact('parent', 'conventions', 'locales'));
     }
 
     public function about(){

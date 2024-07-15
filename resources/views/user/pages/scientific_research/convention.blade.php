@@ -11,15 +11,15 @@
     </div>
     <div class="journal_category" style="margin-bottom: 50px">
         <div class="journal-container">
-            <h1>OXIRGI CHOP ETILGAN JURNAL</h1>
+            <h1>ARXIV</h1>
             <div class="journal-details">
                 <div class="journal-cover">
-                    <img src="{{ asset('storage/' . $convention->photo_url) }}" alt="Journal Cover">
+                    <img src="{{ asset('storage/' . $parent->photo_url) }}" alt="Journal Cover">
                 </div>
                 <div class="journal-info">
-                    <p><strong>{{ $convention->name }}</strong></p>
-                    <p>{{ $convention->description }}</p>
-                    <p><span class="icon_j">&#128197;</span>CHOP ETILGAN SANA: {{ $convention->created_at->format('Y-m-d') }}</p>
+                    <p><strong>{{ $parent->name }}</strong></p>
+                    <p>{{ $parent->description }}</p>
+                    <p><span class="icon_j">&#128197;</span>CHOP ETILGAN SANA: {{ $parent->created_at->format('Y-m-d') }}</p>
 
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="textbook_two-start">
                 <div class="textbooks_boxs-start">
                     <div class="textbooks_boxs">
-                        @foreach($parent->chilDren as $child)
+                        @foreach($parent->children as $child)
                             <div class="project_objectives-start">
                                 <div class="project_objectives-box">
                                     <div class="project_objectives-box-start">
@@ -56,6 +56,7 @@
                                             <div class="prject_objectives-text">
                                                 <h3>{{ $child->name }}</h3>
                                                 <p>{{ $child->description }}</p>
+                                                <p>{{ $parent->name }}</p>
                                             </div>
                                         </div>
                                         <div class="textbook_right">

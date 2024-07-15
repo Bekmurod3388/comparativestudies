@@ -12,21 +12,21 @@
     <div class="container">
         <form method="get" action="{{ route('user_scientific_research_conventions') }}" class="form-method">
             <div class="search-bar">
-                <input type="text" name="query" id="searchInput" placeholder="Search..." value="{{ request('query') }}">
-                <button style="background-color: #080240" type="submit" id="searchButton">Search</button>
-                <a href="{{ route('user_scientific_research_conventions') }}" id="resetBtn">Reset</a>
+                <input type="text" name="query" id="searchInput" placeholder="Qidirish..." value="{{ request('query') }}">
+                <button style="background-color: #080240" type="submit" id="searchButton">Qidirish</button>
+                <a href="{{ route('user_scientific_research_conventions') }}" id="resetBtn">Tozalash</a>
             </div>
             <div class="advanced-search">
-                <label for="category">Parent name:</label>
+                <label for="category">Jurnal soni:</label>
                 <select name="category" id="category">
-                    <option value="">All</option>
+                    <option value="">Barchasi</option>
                     @foreach($type1Conventions as $parent)
                         <option value="{{ $parent->id }}" {{ request('category') == $parent->id ? 'selected' : '' }}>{{ $parent->name }}</option>
                     @endforeach
                 </select>
-                <label for="startDate">Start Date:</label>
+                <label for="startDate">Boshlanish sanasi:</label>
                 <input type="date" name="startDate" id="startDate" value="{{ request('startDate') }}">
-                <label for="endDate">End Date:</label>
+                <label for="endDate">Tugash sanasi:</label>
                 <input type="date" name="endDate" id="endDate" value="{{ request('endDate') }}">
             </div>
         </form>
@@ -77,7 +77,7 @@
                 <div class="textbooks_boxs-start">
                     <div class="textbooks_boxs">
                         @if(request()->hasAny(['category', 'query', 'endDate', 'startDate']))
-                            @foreach($searchresults as $child)
+                            @forelse($searchresults as $child)
                                 <div class="project_objectives-start">
                                     <div class="project_objectives-box">
                                         <div class="project_objectives-box-start">
@@ -104,7 +104,9 @@
                                         </div>
                                     </div>
                                 </div>
-                            @endforeach
+                            @empty
+                                <h1>Ma'lumot topilmadi</h1>
+                            @endforelse
                         @else
                             @foreach($type1Conventions as $parent)
                                 <div class="project_objectives-start">
