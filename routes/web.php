@@ -7,6 +7,7 @@ use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\ClientArticleController as ClientArticleControllerAlias;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ConventionsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LocaleController;
 use App\Http\Controllers\MonographController;
@@ -107,6 +108,22 @@ Route::middleware('auth')->group(function () {
     Route::get('/adminarticles/check', [AdminArticlesController::class,'check'])->name('adminarticles.check');
     Route::get('/adminarticles/reject', [AdminArticlesController::class,'reject'])->name('adminarticles.reject');
     Route::post('/adminarticles/{article}/update', [AdminArticlesController::class,'updatestatus'])->name('adminarticles.update');
+
+//    conventions
+    Route::get('/conventions/about', [ConventionsController::class,'about'])->name('conventions.about');
+    Route::get('/conventions/about', [ConventionsController::class, 'about'])->name('conventions.about');
+    Route::post('/conventions', [ConventionsController::class, 'store'])->name('conventions.store');
+    Route::put('/conventions/{id}', [ConventionsController::class, 'update'])->name('conventions.update');
+    Route::delete('/conventions/{id}', [ConventionsController::class, 'destroy'])->name('conventions.destroy');
+
+    Route::get('/conventions/index', [ConventionsController::class, 'index'])->name('conventions.index');
+    Route::post('/conventions/index', [ConventionsController::class, 'storeType1'])->name('conventions.type1.store');
+    Route::put('/conventions/index/{id}', [ConventionsController::class, 'updateType1'])->name('conventions.type1.update');
+    Route::delete('/conventions/index/{id}', [ConventionsController::class, 'destroyType1'])->name('conventions.type1.destroy');
+
+    Route::post('/conventions/{convention}/children', [ConventionsController::class, 'storeChild'])->name('conventions.children.store');
+    Route::put('/conventions/children/{child}', [ConventionsController::class, 'updateChild'])->name('conventions.children.update');
+    Route::delete('/conventions/children/{child}', [ConventionsController::class, 'destroyChild'])->name('conventions.children.destroy');
 
     Route::resource('/photos', PhotoController::class);
     Route::resource('/videos', VideoController::class);

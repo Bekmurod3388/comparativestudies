@@ -211,6 +211,28 @@
                 </ul>
             </li>
 
+            <!-- Conventions -->
+            <li class="menu-item
+                @if(request()->routeIs('conventions.about') or request()->routeIs('conventions.index')) active @endif">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-bookmarks"></i>
+                    <div data-i18n="Layouts">Bizning jurnal</div>
+                </a>
+
+                <ul class="menu-sub">
+                    <li class="menu-item @if(request()->routeIs('conventions.index')) active @endif">
+                        <a href="{{ route('conventions.index') }}" class="menu-link">
+                            <div data-i18n="Analytics">Jurnallar</div>
+                        </a>
+                    </li>
+                    <li class="menu-item @if(request()->routeIs('conventions.about')) active @endif">
+                        <a href="{{ route('conventions.about') }}" class="menu-link">
+                            <div data-i18n="Analytics">Ma'lumotlar</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
             <!-- Contact -->
             <li class="menu-item">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->bigInteger('parent_id')->unsigned()->nullable();
             $table->foreign('parent_id')->references('id')->on('conventions')->onDelete('cascade');
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->string('file_url')->nullable();
             $table->string('photo_url')->nullable();
             $table->string('type')->default('1'); // Default value is '1'

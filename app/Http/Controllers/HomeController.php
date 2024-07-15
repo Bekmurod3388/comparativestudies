@@ -350,15 +350,14 @@ class HomeController extends Controller
         $firstType1Convention = Convention::where('type', '1')
             ->whereNull('parent_id')
             ->with('children')
-            ->orderBy('created_at', 'desc')
+            ->orderBy('created_at', 'asc')
             ->get()
             ->last();
 
         $type1Conventions = Convention::where('type', '1')
             ->whereNull('parent_id')
             ->orderBy('created_at', 'desc')
-            ->get()
-            ->reverse();
+            ->get();
 
 
 
