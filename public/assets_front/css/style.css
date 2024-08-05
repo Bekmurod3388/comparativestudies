@@ -1588,6 +1588,7 @@ body{
 }
 .video img{
     height: 300px;
+    width: 100%;
 }
 .journal-btn-conv{
     background-color: #240090;
@@ -1694,5 +1695,9 @@ li:last-child {
     .animated h1{
         font-size: 26px;
     }
+}
+#primary-navigation .block-superfish ul.menu li a, #primary-navigation .block-superfish ul.menu li span {
+    font-size: 11px !important;
+    padding: 8px 5px !important;
 }
 
