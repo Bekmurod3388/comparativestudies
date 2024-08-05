@@ -1586,6 +1586,9 @@ body{
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
+.video img{
+    height: 300px;
+}
 .journal-btn-conv{
     background-color: #240090;
     color: #fff;
@@ -1685,5 +1688,11 @@ li:last-child {
 
 .highlight {
     background-color: #ffcc00;
+}
+
+@media(max-width:600px){
+    .animated h1{
+        font-size: 26px;
+    }
 }
 
