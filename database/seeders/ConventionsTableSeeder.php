@@ -117,7 +117,7 @@ class ConventionsTableSeeder extends Seeder
                 'description' => '3-SON JURNAL',
                 'locale_id' => 1,
                 'file_url' => 'convention_files/files/Komparavistika 3-son.pdf',
-                'photo_url' => 'convention_files/photos/Titul_page-001.jpg',
+                'photo_url' => 'convention_files/photos/Titul_page-0001.jpg',
                 'type' => '1',
                 'parent_id' => null,
                 'created_at' => now(),
