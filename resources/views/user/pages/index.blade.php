@@ -17,7 +17,7 @@
                                                              data-popup="left-popup"
                                                              src="{{asset('/assets_front/img/bookleft.png')}}"
                                                              alt="img">
-                                                        <p class="name_book2">G`arb <br> komporavistika <br> markazlari </p>
+                                                        <p class="name_book2 notranslate">G`arb <br> komporavistika <br> markazlari </p>
                                                     </div>
                                                     <div id="box"></div>
                                                     <div class="home_book-two " data-toggle="modal" data-target="#RightModalCenter">
