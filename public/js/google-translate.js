@@ -17,11 +17,6 @@ const googleTranslateConfig = {
 
 /* Custom translation dictionary with multiple languages */
 const customTranslations = {
-    "LOYIHA HAQIDA": {
-        "uz": "Hola",
-        "ru": "Bonjour",
-        "en": "Hallo"
-    },
     "G`arb": {
         "uz": "G`arb",
         "ru": "Западные",
