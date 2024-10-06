@@ -57,7 +57,7 @@
                         @if (Route::has('register'))
                             <li>
                                 <a href="{{ route('register') }}"
-                                   class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Ro'yxatdan o'tish</a>
+                                   class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500 notranslate">Ro'yxatdan o'tish</a>
                             </li>
                         @endif
                     @endauth
@@ -76,7 +76,7 @@
                         alt="O'zbekiston jahon tillari universiteti"/></a>
             </div>
             <div class="navbar-text-name">
-                    <span>O'zbekiston jahon tillari universiteti <br>  <p>Komporativistika platformasi</p>
+                    <span class="notranslate">O'zbekiston jahon tillari universiteti<br>  <p>Komparativistika platformasi</p>
                     </span>
 
             </div>
@@ -158,7 +158,7 @@
                                 <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_magazines_turkiya') }}"
-                                        class="sf-depth-2">Turkiya</a></li>
+                                        class="sf-depth-2 notranslate">Turkiya</a></li>
                                 <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d1"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_magazines_rossiya') }}"
@@ -226,7 +226,7 @@
 
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
                             class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"
-                                                             class="sf-depth-1 menuparent">ALOQA</a>
+                                                             class="sf-depth-1 menuparent notranslate">ALOQA</a>
 
                         </li>
                     </ul>

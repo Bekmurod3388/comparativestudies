@@ -17,7 +17,7 @@
                                                              data-popup="left-popup"
                                                              src="{{asset('/assets_front/img/bookleft.png')}}"
                                                              alt="img">
-                                                        <p class="name_book2 notranslate">G`arb <br> komporavistika <br> markazlari </p>
+                                                        <p class="name_book2 notranslate">G`arb <br> komparativistika <br> markazlari </p>
                                                     </div>
                                                     <div id="box"></div>
                                                     <div class="home_book-two " data-toggle="modal" data-target="#RightModalCenter">
@@ -45,7 +45,7 @@
                                                         bo'yicha maqolalar</a>
                                                 </div>
                                                 <div class="reveal field field--name-field-quick-link-3 field--type-link field--label-hidden field__item">
-                                                    <a href="{{ route('user_about_oav') }}">Oav biz haqimizda</a>
+                                                    <a href="{{ route('user_about_oav') }}" class="notranslate">Oav biz haqimizda</a>
                                                 </div>
                                                 <div class="reveal field field--name-field-quick-link-4 field--type-link field--label-hidden field__item">
                                                     <a
@@ -86,8 +86,8 @@
                                                                     <br>
                                                                     2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.  <br>
                                                                     3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.  <br>
-                                                                    4. Loyiha doirasida dunyoga mashhur Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) kabi kiyosiy adabiyotshunoslik markazlari (Germaniya,Berlin), University of Toronto Centre for Comparative Literature(Kanada,Toronto). Yale University Department of Comparative Literature(AQSh, Yel' universiteti), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Turkiya, Osmangozi universiteti) Harvard University Department of Comparative Literature (AQSh), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature(AQSh), University of Washington Department of Comparative Literature (Vashington) kabi nufuzli universitetlardagi komparativistika ilmiy markazlari bilan akademik hamkorlik o‘rnatish.  <br>
-                                                                    5. Platformani kelajakda tijoratlashtirish, shartnoma asosida vebinarlar tashkil qilish.</p>
+                                                                    <span class="notranslate">4.band</span><br>
+                                                                    <span class="notranslate">5.band</span></p>
                                                                 <p>
                                                                     <a class="btn-primary"
                                                                        href="{{ route('user_about_goals') }}">Batafsil

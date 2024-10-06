@@ -15,28 +15,28 @@ class CenterTableSeeder extends Seeder
     {
         DB::table('centers')->insert([
             'type' => "2", #1 sharq 2 g'arb
-            'country' => "Turkey",
+            'country' => "Turkiye",
             'name' => "İstanbul Bilgi Üniversitesi, Karşılaştırmalı Edebiyat Bölümü",
             'url' => "https://www.bilgi.edu.tr/tr/akademik/sosyal-ve-beseri-bilimler-fakultesi/karsilastirmali-edebiyat/",
             'created_at' => now(),
         ]);
         DB::table('centers')->insert([
             'type' => "2", #1 sharq 2 g'arb
-            'country' => "Turkey",
+            'country' => "Turkiye",
             'name' => "Eskişehir Osmangazi Üniversitesi, Fen Edebiyat  Fakültesi Karşılaştırmalı Edebiyat Bölümü",
             'url' => "https://ke.ogu.edu.tr/Sayfa/Index/8/bolumumuz-hakkinda",
             'created_at' => now(),
         ]);
         DB::table('centers')->insert([
             'type' => "2", #1 sharq 2 g'arb
-            'country' => "Turkey",
+            'country' => "Turkiye",
             'name' => "Dokuz Eylül Üni versitesi, Karşılaştırmalı Edebiyat Bölümü",
             'url' => "https://web.deu.edu.tr/komparatistik/",
             'created_at' => now(),
         ]);
         DB::table('centers')->insert([
             'type' => "2", #1 sharq 2 g'arb
-            'country' => "Turkey",
+            'country' => "Turkiye",
             'name' => "Yeditepe Üniversitesi Sosyal Bilimler Enstitüsü, Karşılaştırmalı Edebiyat Yüksek Lisans Programı",
             'url' => "https://sbe.yeditepe.edu.tr/tr/karsilastirmali-edebiyat-yuksek-lisans-programi",
             'created_at' => now(),

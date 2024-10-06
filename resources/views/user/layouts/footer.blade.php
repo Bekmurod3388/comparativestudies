@@ -27,7 +27,7 @@
                                             class="clearfix text-formatted field field--name-field-address-and-contact-info field--type-text-long field--label-hidden field__item">
                                             <h2>Komparavistika markazlari</h2>
 
-                                            <p>Manzil: Toshkent shahri, Kichik Xalqa Yo`li ko`chasi, G-9a mavzesi, 21-a uy.<br/>
+                                            <p>Manzil: Toshkent shahri, Kichik Xalqa <span class="notranslate mr-3 ml-1" style="padding-right: 5px;"> Yo`li </span> ko`chasi, G-9a mavzesi, 21-a <span class="notranslate mr-3 ml-1">uy</span><br/>
                                                 Pochta indeksi: 100138<br/>
                                                 Telefon: +998 71 230-12-92<br/>
                                                 E-pochta: gulnoz7410@mail.ru<br/>

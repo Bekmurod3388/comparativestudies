@@ -78,7 +78,9 @@
                             </div>
                             <div class="prject_objectives-text">
                                 <h3>{{ $index + 1 }}. {{ $article->article_topic }}</h3>
-                                <p> {{ $article->article_type }}</p>
+                                <p class="{{ $article->article_type == 'OAK' ? 'notranslate' : '' }}">
+                                    {{ $article->article_type }}
+                                </p>
                                 <p> {{ $article->locale->name }}</p>
                                 <p> {{ $article->authors }}</p>
                             </div>

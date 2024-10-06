@@ -12,7 +12,7 @@
                     <div style="height: 45vh; overflow-y: scroll;">
                         @foreach ($typeCenters->groupBy('country') as $countryCenters)
                             <p style="text-align: center;">
-                                <strong>
+                                <strong class="notranslate">
                                     {{ isset($countries['en'][$countryCenters[0]->country]) ? $countries['en'][$countryCenters[0]->country] : $countryCenters[0]->country}}
                                 </strong>
                             </p>
@@ -20,7 +20,7 @@
                                 <tbody>
                                     @foreach ($countryCenters as $country)
                                         <tr class="row m-1">
-                                                <td class="col-9">{{ $country->name }}</td>
+                                                <td class="col-9 ">{{ $country->name }}</td>
                                                 <td class="col-3"><a href="{{ $country->url }}" class="btn btn-primary btn-sm rounded">O'tish</a></td>
                                         </tr>
                                     @endforeach

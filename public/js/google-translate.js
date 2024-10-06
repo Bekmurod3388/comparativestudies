@@ -22,8 +22,8 @@ const customTranslations = {
         "ru": "Западные",
         "en": "Western"
     },
-    "komporavistika": {
-        "uz": "komporavistika",
+    "komparativistika": {
+        "uz": "komparativistika",
         "ru": "центры",
         "en": "Comparative Studies"
     },
@@ -32,6 +32,64 @@ const customTranslations = {
         "ru": "информатики",
         "en": "Centers"
     },
+    "O'zbekiston jahon tillari universiteti":{
+        "uz":"O'zbekiston jahon tillari universiteti",
+        "ru":"Университет мировых языков Узбекистана",
+        "en":"Uzbekistan World Languages University"
+    },
+    "Komparativistika platformasi":{
+        "uz":"Komparativistika platformasi",
+        "ru":"Платформа сравнительных исследований",
+        "en":"Comparative studies platform"
+    },
+    "ALOQA":{
+        "uz":"ALOQA",
+        "ru":"Контакты",
+        "en":"CONTACTS",
+    },
+    "Oav biz haqimizda":{
+        "uz":"Oav biz haqimizda",
+        "ru":"СМИ о Нас",
+        "en":"Mass media about us",
+    },
+    "Yo`li":{
+        "uz":"Yo`li ",
+        "ru":"Йули ",
+        "en":" Yuli ",
+    },
+    "uy":{
+        "uz":"uy",
+        "ru":" ",
+        "en":" ",
+    },
+    "Turkiya":{
+        "uz":"Turkiya",
+        "ru":"Турция",
+        "en":"Turkiye",
+    },
+    "Ro'yxatdan o'tish":{
+        "uz":"Ro'yxatdan o'tish",
+        "ru":"Регистрация",
+        "en":"Registration"
+    },
+    "4.band":{
+        "uz":"4. Loyiha doirasida dunyoga mashhur Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) kabi kiyosiy adabiyotshunoslik markazlari (Germaniya,Berlin), University of Toronto Centre for Comparative Literature(Kanada,Toronto). Yale University Department of Comparative Literature(AQSh, Yel' universiteti), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Turkiya, Osmangozi universiteti) Harvard University Department of Comparative Literature (AQSh), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature(AQSh), University of Washington Department of Comparative Literature (Vashington) kabi nufuzli universitetlardagi komparativistika ilmiy markazlari bilan akademik hamkorlik o‘rnatish.",
+        "ru":"4. В рамках проекта налажено академическое сотрудничество со всемирно известным Институтом сравнительного литературоведения им. Петера Зонди, Свободным университетом Берлина, Центром исследований литературы и культуры имени Лейбница (ZfL) (Берлин, Германия), Центром сравнительного литературоведения Торонтского университета (Торонто, Канада) и центрами сравнительных исследований престижных университетов, таких как Вашингтонский университет, кафедра сравнительного литературоведения (Вашингтон, Йельский университет, кафедра сравнительного литературоведения (США, Йельский университет), Университет Османгази в Эскишехире (Турция, Университет Османгози), Гарвардский университет, кафедра сравнительного литературоведения (США), Индианский университет, кафедра сравнительного литературоведения, Колумбийский университет, кафедра английского языка и сравнительного литературоведения (США).",
+        "en":"4.Within the framework of the project, the establishment of academic cooperation with the world-famous Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) (Berlin, Germany), University of Toronto Center for Comparative Literature (Toronto, Canada)and comparative research centers of prestigious universities such as University of Washington Department of Comparative Literature (Washington,. Yale University Department of Comparative Literature (USA, Yale University), Eskişehir Osmangazi Üniversitesi Karşılaştırmali Edebiyat Bölümü (Turkey, Osmangozi University) Harvard University Department of Comparative Literature (USA), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature (USA)."
+    },
+    "5.band":{
+        "uz":"5. Platformani kelajakda tijoratlashtirish, shartnoma asosida vebinarlar tashkil qilish.",
+        "ru":"5. В перспективе коммерциализация платформы, организация вебинаров на договорной основе.",
+        "en":"5. Commercialization of the platform in the future, organization of webinars based on the contract."
+    },
+    "OAK":{
+      "uz":"OAK",
+      "ru":"ВАК",
+      "en":"HAC",
+    },
+
+
+
     // Add more words and translations as needed
 };
 
