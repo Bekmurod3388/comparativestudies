@@ -2,10 +2,10 @@
 @section('content')
     <div class="textbooks">
         <div class="container text-center animated bounceInDown">
-            <h1 class="display-1 mb-4">KOMPORATIVISTIKA JURNALI</h1>
+            <h1 class="display-1 mb-4">KOMPARATIVISTIKA JURNALI</h1>
             <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
                 <li class="breadcrumb-item"><a href="#">ASOSIY SAHIFA</a></li>
-                <li class="breadcrumb-item text-dark" aria-current="page">KOMPARAVISTIKA JURNALI</li>
+                <li class="breadcrumb-item text-dark" aria-current="page">KOMPARATIVISTIKA JURNALI</li>
             </ol>
         </div>
     </div>
