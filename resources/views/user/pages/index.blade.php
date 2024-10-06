@@ -25,7 +25,7 @@
                                                              data-popup="right-popup"
                                                              src="{{asset('/assets_front/img/bookright.png')}}"
                                                              alt="img">
-                                                        <p class="name_book">Sharq <br> komporavistika <br> markazlari </p>
+                                                        <p class="name_book">Sharq <br> komparativistika <br> markazlari </p>
                                                     </div>
                                                 </div>
                                             </div>
