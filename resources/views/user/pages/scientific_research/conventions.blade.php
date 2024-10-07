@@ -151,9 +151,9 @@
                                                              alt="{{ $child->name }}">
                                                     </div>
                                                     <div class="prject_objectives-text">
-                                                        <h3>{{ $child->name }}</h3>
-                                                        <p>{{ $child->description }}</p>
-                                                        <p>{{ $parent->name }}</p>
+                                                        <h3 class="notranslate">{{ $child->name }}</h3>
+                                                        <p class="notranslate">{{ $child->description }}</p>
+                                                        <p class="notranslate">{{ $parent->name }}</p>
                                                     </div>
                                                 </div>
                                                 <div class="textbook_right">
