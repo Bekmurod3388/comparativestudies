@@ -112,7 +112,7 @@ const customTranslations = {
         "ru":"ВЫПУСК ЖУРНАЛА 2",
         "en":"JOURNAL ISSUE 2"
     },
-    "journal2":{
+    "journal3":{
         "uz":"3-SON JOURNAL",
         "ru":"ВЫПУСК ЖУРНАЛА 3",
         "en":"JOURNAL ISSUE 3"
