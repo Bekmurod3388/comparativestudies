@@ -94,8 +94,8 @@
                                                          alt="{{ $child->name }}">
                                                 </div>
                                                 <div class="prject_objectives-text">
-                                                    <h3>{{ $child->name }}</h3>
-                                                    <p>{{ $child->description }}</p>
+                                                    <h3 class="notranslate">{{ $child->name }}</h3>
+                                                    <p class="notranslate">{{ $child->description }}</p>
                                                     @if(isset($child->parent->name))<p> {{$child->parent->name}} </p>@endif
                                                 </div>
                                             </div>
