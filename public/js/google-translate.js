@@ -112,6 +112,11 @@ const customTranslations = {
         "ru":"ВЫПУСК ЖУРНАЛА 2",
         "en":"JOURNAL ISSUE 2"
     },
+    "journal2":{
+        "uz":"3-SON JOURNAL",
+        "ru":"ВЫПУСК ЖУРНАЛА 3",
+        "en":"JOURNAL ISSUE 3"
+    },
     "TAHRIRIYAT HAY’ATI":{
         "uz": "TAHRIRIYAT HAY’ATI",
         "en": "EDITORIAL COLLEGE",
