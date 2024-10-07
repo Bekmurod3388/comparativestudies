@@ -87,6 +87,55 @@ const customTranslations = {
       "ru":"ВАК",
       "en":"HAC",
     },
+    "USHBU SONDA":{
+        "uz":"USHBU SONDA",
+        "ru":"НА ЭТОМ ВЫПУСКЕ",
+        "en":"CURRENT ISSUE",
+    },
+    "JURNAL HAQIDA":{
+        "uz":"JURNAL HAQIDA",
+        "ru":"О ЖУРНАЛЕ",
+        "en":"ABOUT JOURNAL"
+    },
+    "JURNALI":{
+        "uz":"JURNALI",
+        "ru":"НАУЧНЫЙ ЖУРНАЛ",
+        "en":"SCIENTIFIC JOURNAL"
+    },
+    "JURNAL NIZOMI":{
+        "uz":"JURNAL NIZOMI",
+        "ru":"УСТAВ ЖУРНАЛА",
+        "en":"JOURNAL GUIDELINES"
+    },
+    "journal2":{
+        "uz":"2-SON JOURNAL",
+        "ru":"ВЫПУСК ЖУРНАЛА 2",
+        "en":"JOURNAL ISSUE 2"
+    },
+    "TAHRIRIYAT HAY’ATI":{
+        "uz": "TAHRIRIYAT HAY’ATI",
+        "en": "EDITORIAL COLLEGE",
+        "ru": "РЕДАКЦИОННАЯ КОЛЛЕГИЯ"
+    },
+
+    "TAHRIRIYAT KENGASHI":{
+        "uz": "TAHRIRIYAT KENGASHI",
+        "en": "EDITORIAL BOARD",
+        "ru": "РЕДАКЦИОННЫЙ СОВЕТ"
+    },
+
+    "guvohnoma":{
+        "uz": "KOMPARATIVISTIKA JURNALI GUVOHNOMASI",
+        "en": "STATE CERTIFICATE",
+        "ru": "ГОСУДАРСТВЕННОЕ УДОСТОВЕРЕНИЕ"
+    },
+
+    "KOMPARATIVISTIKA":{
+        "uz": "KOMPARATIVISTIKA",
+        "en": "KOMPARATIVISTIKA",
+        "ru": "KOMPARATIVISTIKA"
+    }
+
 
 
 

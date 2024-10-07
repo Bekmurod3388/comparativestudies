@@ -2,10 +2,10 @@
 @section('content')
     <div class="textbooks">
         <div class="container text-center animated bounceInDown">
-            <h1 class="display-1 mb-4">KOMPARATIVISTIKA JURNALI</h1>
+            <h1 class="display-1 mb-4"><span class="notranslate">"KOMPARATIVISTIKA" </span> <span class="notranslate">JURNALI</span></h1>
             <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
                 <li class="breadcrumb-item"><a href="#">ASOSIY SAHIFA</a></li>
-                <li class="breadcrumb-item text-dark" aria-current="page">KOMPARATIVISTIKA JURNALI</li>
+                <li class="breadcrumb-item text-dark" aria-current="page"><span class="notranslate">"KOMPARATIVISTIKA"</span> JURNALI</li>
             </ol>
         </div>
     </div>
@@ -32,7 +32,7 @@
         </form>
         <div class="journal_category" style="margin-bottom: 50px">
             <div class="journal-container">
-                <h1>OXIRGI CHOP ETILGAN JURNAL</h1>
+                <h1 class="notranslate">USHBU SONDA</h1>
                 @if($firstType1Convention)
                     <div class="journal-details">
                         <div class="journal-cover">
@@ -41,7 +41,7 @@
                         <div class="journal-info">
                             <p><strong>{{ $firstType1Convention->name }}</strong></p>
                             <p>{{ $firstType1Convention->description }}</p>
-                            <p><span class="icon_j">&#128197;</span>CHOP ETILGAN SANA: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
+                            <p><span class="icon_j">&#128197;</span>E’LON QILINGAN SANA: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
                             <a target="_blank" >
                                 <button class="journal-btn-conv">
                                     YUKLASH
@@ -54,11 +54,18 @@
                 @endif
             </div>
             <div class="sidebar_journal">
+                <a href="storage/convention_files/files/Jurnal haqida. O jurnale. About the journal.pdf" target="_blank" class="notranslate">
+                    JURNAL HAQIDA
+                </a>
+                <a href="storage/convention_files/files/Jurnal nizomi (2).pdf" target="_blank" class="notranslate">
+                    JURNAL NIZOMI
+                </a>
                 @forelse($conventions->where('type', "0") as $convention)
                     <a href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $convention->file_url)) ? asset('storage/' . $convention->file_url) : $convention->file_url }}" target="_blank">{{ $convention->name }}</a>
                 @empty
                     <p>MA'LUMOT TOPILMADI</p>
                 @endforelse
+
                 <a href="{{ Auth::check() ? route('clientarticles.create') : route('login') }}">
                     KOMPARATIVISTIKA JURNALIGA MAQOLA YUBORISH
                 </a>
