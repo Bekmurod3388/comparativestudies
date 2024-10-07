@@ -41,7 +41,7 @@
                         <div class="journal-info">
                             <p><strong>{{ $firstType1Convention->name }}</strong></p>
                             <p>{{ $firstType1Convention->description }}</p>
-                            <p><span class="icon_j">&#128197;</span>E’LON QILINGAN SANA: {{ $firstType1Convention->created_at->format('Y-m-d') }}</p>
+                            <p><span class="icon_j">&#128197;</span>E’LON QILINGAN SANA: {{ $firstType1Convention->created_at->format('d-F') }}</p>
                             <a target="_blank" >
                                 <button class="journal-btn-conv">
                                     YUKLASH
