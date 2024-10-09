@@ -37,8 +37,7 @@
                                             <p class="paragraph_us">BIZ HAQIMIZDA</p>
                                             <div class="quicklinks-wrapper">
                                                 <div class="reveal field field--name-field-quick-link-1 field--type-link field--label-hidden field__item">
-                                                    <a href="{{ route('user_about_goals') }}">Loyihaning
-                                                        maqsad va vazifalari</a>
+                                                    <a href="{{ route('user_about_goals') }}" class="notranslate">Loyihaning maqsad va vazifalari</a>
                                                 </div>
                                                 <div class="reveal field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
                                                     <a href="{{ route('user_about_articles') }}">Loyiha

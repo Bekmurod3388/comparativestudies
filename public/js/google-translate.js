@@ -35,12 +35,12 @@ const customTranslations = {
     "O'zbekiston jahon tillari universiteti":{
         "uz":"O'zbekiston jahon tillari universiteti",
         "ru":"Университет мировых языков Узбекистана",
-        "en":"Uzbekistan World Languages University"
+        "en":"Uzbekistan State World Languages University"
     },
     "Komparativistika platformasi":{
         "uz":"Komparativistika platformasi",
         "ru":"Платформа сравнительных исследований",
-        "en":"Comparative studies platform"
+        "en":"Platform of Comparative Studies"
     },
     "ALOQA":{
         "uz":"ALOQA",
@@ -139,7 +139,28 @@ const customTranslations = {
         "uz": "KOMPARATIVISTIKA",
         "en": "KOMPARATIVISTIKA",
         "ru": "KOMPARATIVISTIKA"
-    }
+    },
+    "O'QUV ADABIYOTLARI":{
+        "uz":"O'QUV ADABIYOTLARI",
+        "ru":"ОБРАЗОВАТЕЛЬНАЯ ЛИТЕРАТУРА",
+        "en":"EDUCATIONAL LITERATURES"
+    },
+    "KOMPARATIVISTIKA JURNALI":{
+        "uz":"KOMPARATIVISTIKA JURNALI",
+        "ru":"“KOMPARATIVISTIKA” НАУЧНЫЙ ЖУРНАЛ",
+        "en":"“KOMPARATIVISTIKA” SCIENTIFIC JOURNAL"
+    },
+    "ILMIY TADQIQOTLAR":{
+        "uz":"ILMIY TADQIQOTLAR",
+        "ru":"НАУЧНЫЕ ИССЛЕДОВАНИЯ",
+        "en":"SCIENTIFIC STUDIES"
+    },
+    "Loyihaning maqsad va vazifalari":{
+        "uz":"Loyihaning maqsad va vazifalari",
+        "ru":"Цель и задачи проекта",
+        "en":"Aim and objectives of project"
+    },
+
 
 
 

@@ -123,7 +123,7 @@
                         </li>
                         <li id="main-menu-link-contentfaf6415d-7a6e-4245-bf98-82e7a76b6dce"
                             class="sf-depth-1 menuparent"><a href="#"
-                                                             class="sf-depth-1 menuparent">ILMIY TADQIQOTLAR</a>
+                                                             class="sf-depth-1 menuparent notranslate">ILMIY TADQIQOTLAR</a>
                             <ul>
                                 <li id="main-menu-link-content62f18183-51b8-4622-ab43-d702dbcaa026"
                                     class="sf-depth-2 sf-no-children"><a
@@ -171,7 +171,7 @@
                         </li>
                         <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
                             class="sf-depth-1 menuparent"><a href="#"
-                                                             class="sf-depth-1 menuparent">O'QUV ADABIYOTLARI</a>
+                                                             class="sf-depth-1 menuparent notranslate">O'QUV ADABIYOTLARI</a>
                             <ul>
                                 <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_textbooks') }}"
@@ -214,7 +214,7 @@
                                 <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_gallery_photos') }}"
-                                        class="sf-depth-2">Fotosuratlar</a></li>
+                                        class="sf-depth-2">Fotolar</a></li>
                                 <li id="main-menu-link-content5a830532-5174-4ef6-b7ce-7d89ceefeb9d"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_gallery_videos') }}"
@@ -222,7 +222,7 @@
 
                             </ul>
                         </li>
-                        <li><a href="{{ route('user_scientific_research_conventions') }}">KOMPARATIVISTIKA JURNALI</a></li>
+                        <li><a href="{{ route('user_scientific_research_conventions') }}" class="notranslate">KOMPARATIVISTIKA JURNALI</a></li>
 
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
                             class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"

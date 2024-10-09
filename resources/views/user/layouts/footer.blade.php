@@ -47,14 +47,10 @@
                                                     <h2 class="footer-heading">
                                                         Biz haqimizda</h2>
                                                     <div class="footer-link">
-                                                        <a href="{{ route('user_about_goals') }}">Loyihaning maqsad va
-                                                            vazifalari</a>
+                                                        <a href="{{ route('user_about_goals') }}" class="notranslate">Loyihaning maqsad va vazifalari</a>
                                                     </div>
                                                     <div class="footer-link">
-                                                        <a
-                                                            href="{{ route('user_about_articles') }}">Loyiha
-                                                            bo'yicha maqolalar
-                                                        </a>
+                                                        <a href="{{ route('user_about_articles') }}">Loyiha bo'yicha maqolalar</a>
                                                     </div>
 
 
@@ -73,13 +69,12 @@
 
                                                 <div class="bs-region bs-region--main">
 
-                                                    <h2 class="footer-heading">
-                                                        Ilmiy tadqiqotlar</h2>
+                                                    <h2 class="footer-heading" class="notranslate">ILMIY TADQIQOTLAR</h2>
 
 
                                                     <div class="footer-link">
                                                         <a
-                                                            href="{{ route('user_scientific_research_dissertations') }}">Dissertatsiya</a>
+                                                            href="{{ route('user_scientific_research_dissertations') }}">Dissertatsiyalar</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a
@@ -106,7 +101,7 @@
 
 
                                                     <div class="footer-link">
-                                                        <a href="{{ route('user_gallery_photos') }}">Fotosuratlar</a>
+                                                        <a href="{{ route('user_gallery_photos') }}">Fotolar</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a
