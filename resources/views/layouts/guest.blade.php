@@ -31,5 +31,11 @@
                 {{ $slot }}
             </div>
         </div>
+        <div class="language">
+            <img src="{{asset('lang/lang__uz.png')}}" alt="uz" data-google-lang="uz" class="language__img" >
+        
+            <img src="{{asset('lang/lang__ru.png')}}" alt="ru" data-google-lang="ru" class="language__img ">
+            <img src="{{asset('lang/lang__en.png')}}" alt="en" data-google-lang="en" class="language__img">
+        </div>
     </body>
 </html>
