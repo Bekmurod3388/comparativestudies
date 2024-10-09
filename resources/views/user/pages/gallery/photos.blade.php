@@ -15,7 +15,7 @@
                 @forelse( $photos as $photo )
                     <div class="video_box">
                         <div class="video">
-                            <img class="video_rol"  height="300" src="{{ asset('storage/' . $photo->image) }}">
+                            <img class="video_rol"  height="300" src="{{ asset('storage/images/' . $photo->image) }}">
                         </div>
                         <div class="video_text">
                             <p><span>{{ $photo->title }}</span></p>
