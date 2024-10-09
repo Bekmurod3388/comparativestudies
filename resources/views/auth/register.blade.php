@@ -4,7 +4,7 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('F.I.O')" />
+            <x-input-label for="name" :value="__('Ism')" />
             <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
@@ -18,7 +18,7 @@
 
         <!-- Password -->
         <div class="mt-4">
-            <x-input-label for="password" :value="__('Kalit so`z')" />
+            <x-input-label for="password" :value="__('Parol')" />
 
             <x-text-input id="password" class="block mt-1 w-full"
                             type="password"
@@ -30,7 +30,7 @@
 
         <!-- Confirm Password -->
         <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Kalit so`zni takrorlang')" />
+            <x-input-label for="password_confirmation" :value="__('Parolni takrorlang')" />
 
             <x-text-input id="password_confirmation" class="block mt-1 w-full"
                             type="password"
