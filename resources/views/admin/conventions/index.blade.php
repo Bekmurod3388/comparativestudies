@@ -121,6 +121,55 @@
             </div>
         </div>
 
+        <!-- Edit Convention child Modal -->
+        <div class="modal fade" id="editConventionChildModal{{ $convention->id }}" tabindex="-1" aria-labelledby="editConventionChildModalLabel{{ $convention->id }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editConventionModalLabel{{ $convention->id }}">Maqolani o'zgartirish</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Validation Errors -->
+                        @if($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                        <form action="{{ route('conventions.type1.update', $convention->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nomi</label>
+                                <input type="text" class="form-control" id="name" name="name" value="{{ $convention->name }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Avtorlar</label>
+                                <textarea class="form-control" id="description" name="description" required>{{ $convention->description }}</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="photo_url" class="form-label">Rasm</label>
+                                <input type="file" class="form-control" id="photo_url" name="photo_url">
+                            </div>
+                            <div class="mb-3">
+                                <label for="file_url" class="form-label">Fayl</label>
+                                <input type="file" class="form-control" id="file_url" name="file_url">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                                <button type="submit" class="btn btn-primary">O'zgarishlarni saqlash</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <!-- Manage Children Modal -->
         <div class="modal fade" id="manageChildrenModal{{ $convention->id }}" tabindex="-1" aria-labelledby="manageChildrenModalLabel{{ $convention->id }}" aria-hidden="true">
             <div class="modal-dialog modal-lg">
@@ -156,7 +205,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editConventionModal{{ $child->id }}"><i class="bx bx-edit-alt me-1"></i></button>
+                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editConventionChildModal{{ $child->id }}"><i class="bx bx-edit-alt me-1"></i></button>
                                             <form action="{{ route('conventions.children.destroy', $child->id) }}" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
