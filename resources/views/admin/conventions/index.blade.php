@@ -5,10 +5,10 @@
         <div class="card-header">
             <div class="row content-end">
                 <div class="col-4">
-                    <h5>Journals</h5>
+                    <h5>Jurnallar</h5>
                 </div>
                 <div class="col-md-4 text-end offset-md-4">
-                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addConventionModal">Add Journal</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addConventionModal">Jurnal qo'shish</button>
                 </div>
             </div>
         </div>
@@ -22,16 +22,16 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>File</th>
-                    <th style="width: 20%">Actions</th>
+                    <th>Nomi</th>
+                    <th>Jurnal haqida</th>
+                    <th>Fayl</th>
+                    <th style="width: 20%">Amallar</th>
                 </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
                 @if($conventions->isEmpty())
                     <tr>
-                        <td colspan="6">No data available.</td>
+                        <td colspan="6">Malumotlar topilmadi.</td>
                     </tr>
                 @else
                     @foreach($conventions as $convention)
@@ -42,16 +42,16 @@
                             <td>{{ $convention->description }}</td>
                             <td>
                                 @if($convention->file_url)
-                                    <a href="{{ asset('storage/' . $convention->file_url) }}" target="_blank">Download</a>
+                                    <a href="{{ asset('storage/' . $convention->file_url) }}" target="_blank">Yuklash</a>
                                 @else
-                                    No file
+                                    Fayl topilmadi
                                 @endif
                             </td>
                             <td>
                                 <div class="d-flex justify-content-between">
                                     <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#editConventionModal{{ $convention->id }}"><i class="bx bx-edit-alt me-1"></i></button>
 
-                                    <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#manageChildrenModal{{ $convention->id }}">Manage Children</button>
+                                    <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#manageChildrenModal{{ $convention->id }}">Maqolalar</button>
 
                                     <form action="{{ route('conventions.type1.destroy', $convention->id) }}" method="POST" class="d-inline">
                                         @csrf
@@ -78,7 +78,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editConventionModalLabel{{ $convention->id }}">Edit Journal</h5>
+                        <h5 class="modal-title" id="editConventionModalLabel{{ $convention->id }}">Jurnalni o'zgartirish</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -96,24 +96,24 @@
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
+                                <label for="name" class="form-label">Nomi</label>
                                 <input type="text" class="form-control" id="name" name="name" value="{{ $convention->name }}" required>
                             </div>
                             <div class="mb-3">
-                                <label for="description" class="form-label">Description</label>
+                                <label for="description" class="form-label">Jurnal haqida</label>
                                 <textarea class="form-control" id="description" name="description" required>{{ $convention->description }}</textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="photo_url" class="form-label">Photo</label>
+                                <label for="photo_url" class="form-label">Rasm</label>
                                 <input type="file" class="form-control" id="photo_url" name="photo_url">
                             </div>
                             <div class="mb-3">
-                                <label for="file_url" class="form-label">File</label>
+                                <label for="file_url" class="form-label">Fayl</label>
                                 <input type="file" class="form-control" id="file_url" name="file_url">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                                <button type="submit" class="btn btn-primary">O'zgarishlarni saqlash</button>
                             </div>
                         </form>
                     </div>
@@ -126,21 +126,21 @@
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="manageChildrenModalLabel{{ $convention->id }}">Manage Children</h5>
+                        <h5 class="modal-title" id="manageChildrenModalLabel{{ $convention->id }}">Jurnal maqolalari</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addChildModal{{ $convention->id }}">Add Child</button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addChildModal{{ $convention->id }}">Qo'shish</button>
                         </div>
                         <div class="table-responsive text-nowrap">
                             <table class="table">
                                 <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>Name</th>
-                                    <th>File</th>
-                                    <th>Actions</th>
+                                    <th>Nomi</th>
+                                    <th>Fayl</th>
+                                    <th>Amallar</th>
                                 </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
@@ -150,9 +150,9 @@
                                         <td>{{ $child->name }}</td>
                                         <td>
                                             @if($child->file_url)
-                                                <a href="{{ asset('storage/' . $child->file_url) }}" target="_blank">Download</a>
+                                                <a href="{{ asset('storage/' . $child->file_url) }}" target="_blank">Yuklash</a>
                                             @else
-                                                No file
+                                                Fayl topilmadi
                                             @endif
                                         </td>
                                         <td>
@@ -180,7 +180,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="addChildModalLabel{{ $convention->id }}">Add Child</h5>
+                        <h5 class="modal-title" id="addChildModalLabel{{ $convention->id }}">Maqola qo'shish</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -198,24 +198,24 @@
                             @csrf
                             <input type="hidden" name="parent_id" value="{{ $convention->id }}">
                             <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
+                                <label for="name" class="form-label">Nomi</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
                             <div class="mb-3">
-                                <label for="description" class="form-label">Description</label>
+                                <label for="description" class="form-label">Avtorlar</label>
                                 <textarea class="form-control" id="description" name="description" required></textarea>
                             </div>
                             <div class="mb-3">
-                                <label for="photo_url" class="form-label">Photo</label>
+                                <label for="photo_url" class="form-label">Rasm</label>
                                 <input type="file" class="form-control" id="photo_url" name="photo_url" accept="image/*">
                             </div>
                             <div class="mb-3">
-                                <label for="file_url" class="form-label">File</label>
+                                <label for="file_url" class="form-label">Fayl</label>
                                 <input type="file" class="form-control" id="file_url" name="file_url" accept=".pdf,.doc,.docx">
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Add Child</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                                <button type="submit" class="btn btn-primary">Qo'shish</button>
                             </div>
                         </form>
                     </div>
@@ -229,7 +229,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addConventionModalLabel">Add Journal</h5>
+                    <h5 class="modal-title" id="addConventionModalLabel">Jurnal qo'shish</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -246,24 +246,24 @@
                     <form action="{{ route('conventions.type1.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
+                            <label for="name" class="form-label">Nomi</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="description" class="form-label">Description</label>
+                            <label for="description" class="form-label">Jurnal haqida</label>
                             <textarea class="form-control" id="description" name="description" required></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="photo_url" class="form-label">Photo</label>
+                            <label for="photo_url" class="form-label">Rasm</label>
                             <input type="file" class="form-control" id="photo_url" name="photo_url" accept="image/*">
                         </div>
                         <div class="mb-3">
-                            <label for="file_url" class="form-label">File</label>
+                            <label for="file_url" class="form-label">Fayl</label>
                             <input type="file" class="form-control" id="file_url" name="file_url" accept=".pdf,.doc,.docx">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add Journal</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                            <button type="submit" class="btn btn-primary">Qo'shish</button>
                         </div>
                     </form>
                 </div>
