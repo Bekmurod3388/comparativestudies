@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\About;
 use App\Models\Abstracts;
 use App\Models\Article;
+use App\Models\ComparativistScientist;
 use App\Models\Connection;
 use App\Models\Convention;
 use App\Models\FacultyBook;
@@ -395,6 +396,13 @@ class HomeController extends Controller
         $conventions = Convention::all();
 
         return view('user.pages.scientific_research.conventions', compact('locales', 'firstType1Convention', 'type1Conventions', 'conventions', 'searchresults'));
+    }
+
+    public function scientific_research_scientists(Request $request){
+
+        $scientists = ComparativistScientist::all();
+
+        return view('user.pages.scientific_research.scientists', compact('scientists'));
     }
 
 

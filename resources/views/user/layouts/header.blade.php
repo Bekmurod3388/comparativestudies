@@ -141,6 +141,10 @@
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_scientific_research_articles') }}"
                                         class="sf-depth-2">Maqolalar</a></li>
+                                <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
+                                    class="sf-depth-2 sf-no-children"><a
+                                        href="{{ route('user_scientific_research_scientists') }}"
+                                        class="sf-depth-2">Komparativist olimlar</a></li>
                             </ul>
                         </li>
                         <li id="main-menu-link-content5c7661a8-cd1e-4f88-b60e-1c5889aaeb34"
