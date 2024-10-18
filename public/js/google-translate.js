@@ -142,12 +142,12 @@ const customTranslations = {
     },
     "O'QUV ADABIYOTLARI":{
         "uz":"O'QUV ADABIYOTLARI",
-        "ru":"ОБРАЗОВАТЕЛЬНАЯ ЛИТЕРАТУРА",
+        "ru":"УЧЕБНАЯ ЛИТЕРАТУРА",
         "en":"EDUCATIONAL LITERATURES"
     },
     "KOMPARATIVISTIKA JURNALI":{
         "uz":"KOMPARATIVISTIKA JURNALI",
-        "ru":"“KOMPARATIVISTIKA” НАУЧНЫЙ ЖУРНАЛ",
+        "ru":"НАШ ЖУРНАЛ",
         "en":"“KOMPARATIVISTIKA” SCIENTIFIC JOURNAL"
     },
     "ILMIY TADQIQOTLAR":{
@@ -160,6 +160,42 @@ const customTranslations = {
         "ru":"Цель и задачи проекта",
         "en":"Aim and objectives of project"
     },
+    "mgbmghjmkgh":{
+        "uz":"Imtihonga tayorlash",
+        "ru":"Подготовка к экзаменам",
+        "en":"Preparation for exams"
+    },
+    "Tadqiqotlarni o`rgatish":{
+        "uz":"Tadqiqotlarni o`rgatish",
+        "ru":"Изучение научных источников ",
+        "en": "Studying scientific sources"
+    },
+    "Onlayn maruza":{
+        "uz":"Onlayn maruza",
+        "ru":"Онлайн-Лекции ",
+        "en": "Online maritsa"
+    },
+    "Fotolar":{
+        "uz":"Fotolar",
+        "ru":"Фото ",
+        "en": "photo"
+    },
+    "Avtoreferatlar":{
+        "uz":"Avtoreferatlar",
+        "ru":"Резюме ",
+        "en": "resume"
+    },
+    "Loyiha bo'yicha maqolalar":{
+        "uz":"Loyiha bo'yicha maqolalar",
+        "ru":"Статьи по проекту",
+        "en": "Articles on the project"
+    },
+    "XIZMATLAR":{
+        "uz":"XIZMATLAR",
+        "ru":"СЕРВИСЫ",
+        "en": "Services"
+    },
+
 
 
 

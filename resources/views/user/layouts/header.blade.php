@@ -1,5 +1,5 @@
-<header id="header" class="header" role="banner" aria-label="Site header">
-    <div id="header-top" class="header-top container clearfix">
+    <header id="header" class="header" role="banner" aria-label="Site header">
+        <div id="header-top" class="header-top container clearfix">
         <div id="search-block" class="form-inline navbar-form float-right">
             <div id="block-headersearchform"
                  class="block block-block-content block-block-contentf9650caa-84d6-4b94-b74f-71f40a6e5d62">
@@ -95,7 +95,7 @@
                                 <li id="main-menu-link-content9135765b-fd1d-4f20-849b-d958bf625641"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_about_goals') }}"
-                                        class="sf-depth-2">Loyihaning maqsad va vazifalari</a></li>
+                                        class="notranslate   sf-depth-2">Loyihaning maqsad va vazifalari</a></li>
                                 <li id="main-menu-link-content00e95e5a-272e-4d8a-bca1-4cc889c1c50b"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_about_participants') }}" title=""
@@ -108,7 +108,7 @@
                                 <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-1"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_about_articles') }}"
-                                        class="sf-depth-2">Loyiha bo'yicha maqolalar</a>
+                                        class="sf-depth-2 notranslate">Loyiha bo'yicha maqolalar</a>
                                 </li>
                                 <li id="main-menu-link-contente5290d50-5ee0-4079-abdb-3"
                                     class="sf-depth-2 sf-no-children"><a
@@ -132,7 +132,7 @@
                                 <li id="main-menu-link-content8d4e2c93-1380-4b9b-85d8-4efac43921ee"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_scientific_research_abstracts') }}"
-                                        class="sf-depth-2">Avtoreferatlar</a></li>
+                                        class="notranslate sf-depth-2">Avtoreferatlar</a></li>
                                 <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_scientific_research_monographs') }}"
@@ -194,18 +194,18 @@
 
                         <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
                             class="sf-depth-1 menuparent"><a href="#"
-                                                             class="sf-depth-1 menuparent">XIZMATLAR</a>
+                                                             class="sf-depth-1 menuparent notranslate">XIZMATLAR</a>
                             <ul>
                                 <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_exam_preparation') }}"
-                                                                         class="sf-depth-2">Imtihonga tayorlash</a></li>
+                                                                         class="notranslate sf-depth-2">mgbmghjmkgh</a></li>
                                 <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef1"
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_teaching_research') }}"
-                                                                         class="sf-depth-2">Tadqiqotlarni o`rgatish</a>
+                                                                         class="notranslate sf-depth-2">Tadqiqotlarni o`rgatish</a>
                                 </li>
                                 <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_online_lecture') }}"
-                                                                         class="sf-depth-2">Onlayn maruza</a>
+                                                                         class="notranslate sf-depth-2">Onlayn maruza</a>
                                 </li>
 
                             </ul>
@@ -213,12 +213,12 @@
                         <li id="main-menu-link-contente43f358c-d19f-477e-9529-44f9281c2575"
                             class="sf-depth-1 menuparent"><a
                                 href="#"
-                                class="sf-depth-1 menuparent">GALEREYA</a>
+                                class=" sf-depth-1 menuparent">GALEREYA</a>
                             <ul>
                                 <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_gallery_photos') }}"
-                                        class="sf-depth-2">Fotolar</a></li>
+                                        class="notranslate sf-depth-2">Fotolar</a></li>
                                 <li id="main-menu-link-content5a830532-5174-4ef6-b7ce-7d89ceefeb9d"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_gallery_videos') }}"
