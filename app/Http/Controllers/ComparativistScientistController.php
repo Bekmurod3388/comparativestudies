@@ -23,7 +23,7 @@ class ComparativistScientistController extends Controller
         $scientists = ComparativistScientist::all();
 
         // Return the 'index' view with the scientists data
-        return view('admin.comparativeScientist.index', compact('scientists'));
+        return view('admin.comparativistScientist.index', compact('scientists'));
     }
 
     /**
@@ -44,7 +44,7 @@ class ComparativistScientistController extends Controller
         ComparativistScientist::create($request->all());
 
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Scientist added successfully!');
+        return redirect()->back()->with('success', 'Olim muvaffaqiyatli qo`shildi!');
     }
 
     /**
@@ -66,7 +66,7 @@ class ComparativistScientistController extends Controller
         $comparativistScientist->update($request->all());
 
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Scientist updated successfully!');
+        return redirect()->back()->with('success', 'Olim muvaffaqiyatli yangilandi!');
     }
 
 
@@ -82,6 +82,6 @@ class ComparativistScientistController extends Controller
         $comparativistScientist->delete();
 
         // Redirect back with a success message
-        return redirect()->back()->with('success', 'Scientist deleted successfully!');
+        return redirect()->back()->with('success', 'Olim muvaffaqiyatliq o`chirildi!');
     }
 }

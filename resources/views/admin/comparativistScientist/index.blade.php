@@ -2,21 +2,58 @@
 
 @section('content')
     <div class="container">
-        <!-- Page Title -->
-        <h2 class="my-4">Comparativist Scientists</h2>
+        <div class="d-flex justify-content-between">
+            <!-- Page Title -->
+            <h2 class="my-4">
+                Komparativist olimlar
+            </h2>
 
-        <!-- Button to trigger the Create Scientist Modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createScientistModal">
-            Add Scientist
-        </button>
+            <!-- Button to trigger the Create Scientist Modal -->
+            <button type="button" class="btn btn-primary m-4" data-bs-toggle="modal" data-bs-target="#createScientistModal">
+                Olim qo'shish
+            </button>
+        </div>
+        <!-- Flash Messages -->
+        @if(session('success'))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                {{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if(session('error'))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                {{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        @if(session('warning'))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{ session('warning') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+
+        <!-- Validation Errors -->
+        @if ($errors->any())
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
 
         <!-- Table to display the scientists -->
         <table class="table mt-4">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>URL</th>
-                <th>Actions</th>
+                <th>Nomi</th>
+                <th>Havola</th>
+                <th>Amallar</th>
             </tr>
             </thead>
             <tbody>
@@ -28,7 +65,7 @@
                         <!-- Edit Button -->
                         <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#editScientistModal{{ $scientist->id }}">
-                            Edit
+                            O`zgartirish
                         </button>
 
                         <!-- Delete Form -->
@@ -37,7 +74,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger"
-                                    onclick="return confirm('Are you sure you want to delete this scientist?');">Delete</button>
+                                    onclick="return confirm('Olimni o`chirmoqchimisiz?');">O'chirish</button>
                         </form>
                     </td>
                 </tr>
@@ -47,7 +84,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="editModalLabel">Edit Scientist</h5>
+                                <h5 class="modal-title" id="editModalLabel">O'zgartirish</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -56,16 +93,16 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="mb-3">
-                                        <label for="name" class="form-label">Name</label>
+                                        <label for="name" class="form-label">Nomi</label>
                                         <input type="text" class="form-control" id="name" name="name" value="{{ $scientist->name }}" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="url" class="form-label">URL</label>
+                                        <label for="url" class="form-label">Havola</label>
                                         <input type="url" class="form-control" id="url" name="url" value="{{ $scientist->url }}">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Update Scientist</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bekor qilish</button>
+                                        <button type="submit" class="btn btn-primary">Olimni yangilash</button>
                                     </div>
                                 </form>
                             </div>
@@ -82,7 +119,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createModalLabel">Add Scientist</h5>
+                    <h5 class="modal-title" id="createModalLabel">Olimni qo'shish</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -90,16 +127,16 @@
                     <form action="{{ route('comparativist-scientists.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
+                            <label for="name" class="form-label">Nomi</label>
                             <input type="text" class="form-control" id="name" name="name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="url" class="form-label">URL</label>
+                            <label for="url" class="form-label">Havola</label>
                             <input type="url" class="form-control" id="url" name="url">
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add Scientist</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bekor qilish</button>
+                            <button type="submit" class="btn btn-primary">Olimni qo'shish</button>
                         </div>
                     </form>
                 </div>
