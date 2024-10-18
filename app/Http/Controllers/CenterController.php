@@ -37,9 +37,15 @@ class CenterController extends Controller
             'name' => 'required',
             'type' => 'required',
             'country' => 'required',
-            'url' => 'required|url',
+            'file_url' => '',
+            'file_pdf' => '',
         ]);
 
+        if($request->hasFile('file_pdf')){
+            $request['url'] = $request->file('file_pdf')->store('center_files/files', 'public');
+        } else {
+            $request['url'] = $request['file_url'];
+        }
         Center::create([
             "type" => $request->type,
             "url" => $request->url,
@@ -79,6 +85,12 @@ class CenterController extends Controller
             'country' => 'required',
             'url' => 'required|url',
         ]);
+
+        if($request->hasFile('file_pdf')){
+            $request['url'] = $request->file('file_pdf')->store('center_files/files', 'public');
+        } else {
+            $request['url'] = $request['file_url'];
+        }
 
         $center->update([
             "type" => $request->type,

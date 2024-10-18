@@ -10,7 +10,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('centers.update', $center->id) }}">
+            <form method="POST" action="{{ route('centers.update', $center->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PATCH')
 
@@ -37,9 +37,33 @@
                     <input type="text" class="form-control" id="name" name="name" required value="{{ $center->name }}">
                 </div>
 
-                <div class="form-group mb-3">
-                    <label for="url">URL</label>
-                    <input type="url" class="form-control" id="url" name="url" required value="{{ $center->url }}">
+                <div class="tab-content px-0 mt-0">
+                    <div class="tab-pane fade show active" id="horizontal-pdf">
+                        <div class="input-group">
+                            <label class="input-group-text" for="inputGroupFile01">Pdf faylni yuklash</label>
+                            <input type="file" name=file_pdf class="form-control" id="inputGroupFile01" />
+                        </div>
+                        @error('file_url')
+                        <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="tab-pane fade" id="horizontal-url">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="bx bx-link"></i></span>
+                            <span class="input-group-text" id="basic-icon-default-fc">Faylning havolasi</span>
+                            <input
+                                name="file_url"
+                                type="url"
+                                class="form-control"
+                                placeholder="URL"
+                                aria-describedby="basic-icon-default-fc"
+                                id="inputGroupFile01"
+                            />
+                        </div>
+                        @error('file_url')
+                        <div class="alert alert-danger" role="alert">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
 
                 <button type="submit" class="btn btn-primary">Saqlash</button>
