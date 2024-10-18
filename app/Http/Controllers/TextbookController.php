@@ -48,7 +48,7 @@ class TextbookController extends Controller
             'file' => $filePath ?? null,
         ]);
 
-        return redirect()->back()->with('success', 'Textbook added successfully!');
+        return redirect()->back()->with('success', 'O`quv qo`llanma muvaffaqiyatli qo`shildi!');
     }
 
     /**
@@ -83,7 +83,7 @@ class TextbookController extends Controller
             'authors' => $request->authors,
         ]);
 
-        return redirect()->back()->with('success', 'Textbook updated successfully!');
+        return redirect()->back()->with('success', 'O`quv qo`llanma muvaffaqiyatli yangilandi!');
     }
 
     /**
@@ -101,6 +101,6 @@ class TextbookController extends Controller
 
         $textbook->delete();
 
-        return redirect()->back()->with('success', 'Textbook deleted successfully!');
+        return redirect()->back()->with('success', 'O`quv qo`llanma muvaffaqiyatli o`chirildi!');
     }
 }

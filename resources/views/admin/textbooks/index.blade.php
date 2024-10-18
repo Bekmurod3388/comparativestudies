@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="my-4">Textbooks</h2>
+        <h2 class="my-4">O`quv qo`llanmalar</h2>
 
         <!-- Flash Messages -->
         @if(session('success'))
@@ -40,17 +40,17 @@
 
         <!-- Button to trigger Create Textbook Modal -->
         <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#createTextbookModal">
-            Add Textbook
+            O`quv qo`llanma qo`shish
         </button>
 
         <!-- Table for Textbooks -->
         <table class="table">
             <thead>
             <tr>
-                <th>Book Name</th>
-                <th>Authors</th>
-                <th>File</th>
-                <th>Actions</th>
+                <th>Kitob nomi</th>
+                <th>Avtorlar</th>
+                <th>Fayl</th>
+                <th>Harakatlar</th>
             </tr>
             </thead>
             <tbody>
@@ -63,7 +63,7 @@
                         <!-- Edit Button -->
                         <button type="button" class="btn btn-sm btn-warning" data-bs-toggle="modal"
                                 data-bs-target="#editTextbookModal{{ $textbook->id }}">
-                            Edit
+                            O`zgartirish
                         </button>
 
                         <!-- Delete Form -->
@@ -71,7 +71,7 @@
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-sm btn-danger"
-                                    onclick="return confirm('Are you sure you want to delete this textbook?');">Delete</button>
+                                    onclick="return confirm('O`chirishga aminmisiz?');">O`chirish</button>
                         </form>
                     </td>
                 </tr>
@@ -82,7 +82,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="editTextbookLabel{{ $textbook->id }}">Edit Textbook</h5>
+                                <h5 class="modal-title" id="editTextbookLabel{{ $textbook->id }}">O`quv qo`llanmani o`zgartirish</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -92,22 +92,22 @@
                                     @csrf
                                     @method('PUT')
                                     <div class="mb-3">
-                                        <label for="book_name" class="form-label">Book Name</label>
+                                        <label for="book_name" class="form-label">Kitob nomi</label>
                                         <input type="text" class="form-control" id="book_name" name="book_name"
                                                value="{{ $textbook->book_name }}" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="authors" class="form-label">Authors</label>
+                                        <label for="authors" class="form-label">Avtorlar</label>
                                         <input type="text" class="form-control" id="authors" name="authors"
                                                value="{{ $textbook->authors }}" required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="file" class="form-label">File (optional)</label>
+                                        <label for="file" class="form-label">Fayl</label>
                                         <input type="file" class="form-control" id="file" name="file">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Update Textbook</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bekor qilish</button>
+                                        <button type="submit" class="btn btn-primary">Yangilash</button>
                                     </div>
                                 </form>
                             </div>
@@ -124,7 +124,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="createTextbookLabel">Add Textbook</h5>
+                    <h5 class="modal-title" id="createTextbookLabel">O`quv qo`llanma qo`shish</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -132,20 +132,20 @@
                     <form action="{{ route('textbooks.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="book_name" class="form-label">Book Name</label>
+                            <label for="book_name" class="form-label">Kitob nomi</label>
                             <input type="text" class="form-control" id="book_name" name="book_name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="authors" class="form-label">Authors</label>
+                            <label for="authors" class="form-label">Avtorlar</label>
                             <input type="text" class="form-control" id="authors" name="authors" required>
                         </div>
                         <div class="mb-3">
-                            <label for="file" class="form-label">File</label>
+                            <label for="file" class="form-label">Fayl</label>
                             <input type="file" class="form-control" id="file" name="file" required>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary">Add Textbook</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Bekor qilish</button>
+                            <button type="submit" class="btn btn-primary">Qo'shish</button>
                         </div>
                     </form>
                 </div>
