@@ -52,8 +52,7 @@
                                     id="profile-list-item"
                                     data-bs-toggle="list"
                                     href="#horizontal-url"
-                                >URL havola</a
-                                >
+                                >URL havola</a>
                             </div>
                             <div class="tab-content px-0 mt-0">
                                 <div class="tab-pane fade show active" id="horizontal-pdf">

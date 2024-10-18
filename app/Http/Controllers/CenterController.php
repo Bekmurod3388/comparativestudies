@@ -37,8 +37,8 @@ class CenterController extends Controller
             'name' => 'required',
             'type' => 'required',
             'country' => 'required',
-            'file_url' => '',
-            'file_pdf' => '',
+            'file_url' => 'nullable',
+            'file_pdf' => 'nullable',
         ]);
         dd($request);
 
