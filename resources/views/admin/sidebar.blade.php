@@ -114,7 +114,8 @@
             <li class="menu-item
                 @if(request()->routeIs('dissertations.index')) active @endif
                 @if(request()->routeIs('articles.index')) active @endif
-                @if(request()->routeIs('abstracts.index')) active @endif">
+                @if(request()->routeIs('abstracts.index')) active @endif
+                @if(request()->routeIs('comparativist-scientists.index')) active @endif">
                 <a href="javascript:void(0);" class="menu-link menu-toggle">
                     <i class="menu-icon tf-icons bx bx-book-content"></i>
                     <div data-i18n="Layouts">Ilmiy tadqiqotlar</div>
@@ -139,6 +140,11 @@
                     <li class="menu-item @if(request()->routeIs('articles.index')) active @endif">
                         <a href="{{ route('articles.index') }}" class="menu-link">
                             <div data-i18n="Analytics">Maqolalar</div>
+                        </a>
+                    </li>
+                    <li class="menu-item @if(request()->routeIs('comparativist-scientists.index')) active @endif">
+                        <a href="{{ route('comparativist-scientists.index') }}" class="menu-link">
+                            <div data-i18n="Analytics">Komparativist olimlar</div>
                         </a>
                     </li>
                 </ul>

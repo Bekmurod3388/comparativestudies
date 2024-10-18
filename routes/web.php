@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminArticlesController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\CenterController;
 use App\Http\Controllers\ClientArticleController as ClientArticleControllerAlias;
+use App\Http\Controllers\ComparativistScientistController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ConventionsController;
 use App\Http\Controllers\HomeController;
@@ -142,7 +143,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/researcherarticles', ResearcherArticlesController::class);
     Route::resource('/monographs', MonographController::class);
     Route::resource('/trainingmanuals', TrainingManualController::class);
-
+    Route::resource('/comparativist-scientists', ComparativistScientistController::class);
 //    for clients
     Route::resource('/clientarticles', ClientArticleControllerAlias::class);
 });
