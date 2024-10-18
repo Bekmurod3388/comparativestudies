@@ -40,6 +40,7 @@ class CenterController extends Controller
             'file_url' => '',
             'file_pdf' => '',
         ]);
+        dd($request);
 
         if($request->hasFile('file_pdf')){
             $request['url'] = $request->file('file_pdf')->store('center_files/files', 'public');
@@ -52,7 +53,6 @@ class CenterController extends Controller
             "country" => $request->country,
             "name" => $request->name,
         ]);
-        dd($request);
         return redirect()->route('centers.index')->with('success', 'Markaz muvaffaqiyatli yaratildi.');
 
     }
