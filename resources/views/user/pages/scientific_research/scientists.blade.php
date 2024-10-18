@@ -55,6 +55,15 @@
 {{--            </div>--}}
 {{--        </div>--}}
 {{--    </div>--}}
+<div class="textbooks">
+    <div class="container text-center animated bounceInDown">
+        <h1 class="display-1 mb-4"><span class="notranslate">"KOMPARATIVIST" </span> <span class="notranslate">OLIMLARI</span></h1>
+        <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
+            <li class="breadcrumb-item"><a href="#">ASOSIY SAHIFA</a></li>
+            <li class="breadcrumb-item text-dark" aria-current="page"><span class="notranslate">"KOMPARATIVISTIKA"</span> OLIMLARI</li>
+        </ol>
+    </div>
+</div>
     <div class="textbook_two">
         <div class="container">
             <div class="textbook_two-start">
@@ -72,7 +81,7 @@
                                         <div class="textbook_right">
                                             <div class="textbook_file">
                                                 <a target="_blank" href="{{ \Illuminate\Support\Facades\File::exists(public_path('storage/' . $scientist->url)) ? asset('storage/' . $scientist->url) : $scientist->url }}">
-                                                    <button>
+                                                    <button class="notranslate">
                                                         Havola
                                                     </button>
                                                 </a>
@@ -83,7 +92,7 @@
                             </div>
                         </div>
                     @empty
-                        <h1 class="pb-5">Avtoreferat topilmadi</h1>
+                        <h1 class="pb-5">Olimlar topilmadi</h1>
                     @endforelse
                 </div>
 {{--                <div class="textbook_btns">--}}

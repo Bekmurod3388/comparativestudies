@@ -195,7 +195,11 @@ const customTranslations = {
         "ru":"СЕРВИСЫ",
         "en": "Services"
     },
-
+    "Havola":{
+        "uz":"Havola",
+        "ru":"Ссылка",
+        "en": "Link"
+    },
 
 
 
