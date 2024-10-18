@@ -52,7 +52,7 @@ class CenterController extends Controller
             "country" => $request->country,
             "name" => $request->name,
         ]);
-
+        dd($request);
         return redirect()->route('centers.index')->with('success', 'Markaz muvaffaqiyatli yaratildi.');
 
     }
