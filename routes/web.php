@@ -21,6 +21,7 @@ use App\Http\Controllers\ResearcherController;
 use App\Http\Controllers\DissertationsController;
 use App\Http\Controllers\FacultyBooksController;
 use App\Http\Controllers\ResearcherBooksController;
+use App\Http\Controllers\TextbookController;
 use App\Http\Controllers\TrainingManualController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\JournalsControlller;
@@ -145,6 +146,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/monographs', MonographController::class);
     Route::resource('/trainingmanuals', TrainingManualController::class);
     Route::resource('/comparativist-scientists', ComparativistScientistController::class);
+    Route::resource('/textbooks', TextbookController::class);
 //    for clients
     Route::resource('/clientarticles', ClientArticleControllerAlias::class);
 });

@@ -16,6 +16,7 @@ use App\Models\Journal;
 use App\Models\Researcher;
 use App\Models\ResearcherArticle;
 use App\Models\ResearcherBook;
+use App\Models\Textbook;
 use App\Models\TrainingManual;
 use App\Models\Video;
 use App\Models\Center;
@@ -88,7 +89,10 @@ class HomeController extends Controller
         return view('user.pages.literature');    }
 
     public function literature_textbooks(){
-        return view('user.pages.literature.textbooks');    }
+
+        $textBooks = Textbook::all();
+        return view('user.pages.literature.textbooks', ["textBooks" => $textBooks]);
+    }
 
     public function literature_manuals(Request $request){
         $publishers = TrainingManual::distinct()->pluck('publisher');

@@ -180,6 +180,13 @@
                         </a>
                     </li>
                 </ul>
+                <ul class="menu-sub">
+                    <li class="menu-item @if(request()->routeIs('textbooks.index')) active @endif">
+                        <a href="{{ route('textbooks.index') }}" class="menu-link">
+                            <div data-i18n="Analytics">Darsliklar</div>
+                        </a>
+                    </li>
+                </ul>
             </li>
 
             <!-- Services -->

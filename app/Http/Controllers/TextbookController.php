@@ -34,7 +34,7 @@ class TextbookController extends Controller
         $request->validate([
             'book_name' => 'required|string|max:255',
             'authors' => 'required|string|max:255',
-            'file' => 'required|file|mimes:pdf,doc,docx|max:2048', // Only allow PDF and DOC/DOCX files up to 2MB
+            'file' => 'required|file', // Only allow PDF and DOC/DOCX files up to 2MB
         ]);
 
         // Handle file upload
@@ -63,7 +63,7 @@ class TextbookController extends Controller
         $request->validate([
             'book_name' => 'required|string|max:255',
             'authors' => 'required|string|max:255',
-            'file' => 'nullable|file|mimes:pdf,doc,docx|max:2048', // Allow file update, but not required
+            'file' => 'nullable|file', // Allow file update, but not required
         ]);
 
         // Handle file update
