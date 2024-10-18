@@ -21,7 +21,7 @@
                                     @foreach ($countryCenters as $country)
                                         <tr class="row m-1">
                                                 <td class="col-9 ">{{ $country->name }}</td>
-                                                <td class="col-3"><a href="{{ $country->url }}" class="btn btn-primary btn-sm rounded">O'tish</a></td>
+                                                <td class="col-3"><a href="{{ $country->url }}" class="btn btn-primary btn-sm rounded">O'tish {{$country->url}}</a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
