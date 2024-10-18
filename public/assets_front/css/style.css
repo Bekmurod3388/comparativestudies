@@ -1677,11 +1677,6 @@ ul {
     padding: 0;
 }
 
-li {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-    transition: background-color 0.3s ease;
-}
 
 li:last-child {
     border-bottom: none;
@@ -1701,3 +1696,9 @@ li:last-child {
     padding: 8px 5px !important;
 }
 
+
+@media(max-width: 1000px){
+    .navbar-text-name{
+        font-size: 18px;
+    }
+}
