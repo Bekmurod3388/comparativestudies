@@ -42,7 +42,7 @@ class CenterController extends Controller
         ]);
 
         if($request->hasFile('file_pdf')){
-            $request['url'] = $request->file('file_pdf')->store('center_files/files', 'public');
+            $request['url'] = "storage/".$request->file('file_pdf')->store('center_files/files', 'public');
         } else {
             $request['url'] = $request['file_url'];
         }
