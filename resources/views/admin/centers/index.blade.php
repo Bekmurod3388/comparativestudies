@@ -39,7 +39,7 @@
                             <td>{{ isset($countries['en'][$center->country]) ? $countries['en'][$center->country] : $center->country }}</td>
                             <td>{{ $center->name }}</td>
                             <td>
-                                <a href="{{ $center->url }}" target="_blank">Havola</a>
+                                <a href="{{ "storage/".$center->url }}" target="_blank">Havola</a>
                             </td>
                             <td>
                                 <div class="d-flex justify-content-between">

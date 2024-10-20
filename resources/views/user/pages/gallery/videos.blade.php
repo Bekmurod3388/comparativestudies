@@ -22,7 +22,7 @@
                                 </video>
                             </div>
                             <div class="video_text">
-                                <p><span>{{ $video->title }} {{ asset('storage/' . $video->video_url) }}</span></p>
+                                <p><span>{{ $video->title }}</span></p>
                             </div>
                         </div>
                     @else
