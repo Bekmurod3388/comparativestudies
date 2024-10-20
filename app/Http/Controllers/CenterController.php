@@ -38,7 +38,7 @@ class CenterController extends Controller
             'type' => 'required',
             'country' => 'required',
             'file_url' => 'nullable',
-            'file_pdf' => 'required',
+            'file_pdf' => 'nullable',
         ]);
 
         if($request->hasFile('file_pdf')){
@@ -46,7 +46,6 @@ class CenterController extends Controller
         } else {
             $request['url'] = $request['file_url'];
         }
-        dd($request);
 
         Center::create([
             "type" => $request->type,
