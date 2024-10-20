@@ -40,13 +40,14 @@ class CenterController extends Controller
             'file_url' => 'nullable',
             'file_pdf' => 'required',
         ]);
-        dd($request);
 
         if($request->hasFile('file_pdf')){
             $request['url'] = $request->file('file_pdf')->store('center_files/files', 'public');
         } else {
             $request['url'] = $request['file_url'];
         }
+        dd($request);
+
         Center::create([
             "type" => $request->type,
             "url" => $request->url,
