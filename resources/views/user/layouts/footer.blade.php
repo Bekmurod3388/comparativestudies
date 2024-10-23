@@ -25,7 +25,7 @@
 
                                         <div
                                             class="clearfix text-formatted field field--name-field-address-and-contact-info field--type-text-long field--label-hidden field__item">
-                                            <h2>Komparavistika markazlari</h2>
+                                            <h2 class="notranslate">Komparativistika markazlari</h2>
 
                                             <p>Manzil: Toshkent shahri, Kichik Xalqa <span class="notranslate mr-3 ml-1" style="padding-right: 5px;"> Yo`li </span> ko`chasi, G-9a mavzesi, 21-a <span class="notranslate mr-3 ml-1">uy</span><br/>
                                                 Pochta indeksi: 100138<br/>
@@ -130,15 +130,15 @@
 
                                                     <div class="footer-link">
                                                         <a href=""
-                                                            class="brand-icon facebook">Facebook</a>
+                                                            class="brand-icon notranslate facebook">Facebook</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a href=""
-                                                            class="brand-icon twitter">Twitter</a>
+                                                            class="brand-icon notranslate twitter">Twitter</a>
                                                     </div>
                                                     <div class="footer-link">
                                                         <a href=""
-                                                            class="brand-icon youtube">YouTube</a>
+                                                            class="brand-icon notranslate youtube">YouTube</a>
                                                     </div>
 
 

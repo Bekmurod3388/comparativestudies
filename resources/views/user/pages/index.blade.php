@@ -17,7 +17,7 @@
                                                              data-popup="left-popup"
                                                              src="{{asset('/assets_front/img/bookleft.png')}}"
                                                              alt="img">
-                                                        <p class="name_book2 notranslate">G`arb <br> komparativistika <br> markazlari </p>
+                                                        <p class="name_book2 notranslate">y</p>
                                                     </div>
                                                     <div id="box"></div>
                                                     <div class="home_book-two " data-toggle="modal" data-target="#RightModalCenter">
@@ -25,7 +25,7 @@
                                                              data-popup="right-popup"
                                                              src="{{asset('/assets_front/img/bookright.png')}}"
                                                              alt="img">
-                                                        <p class="name_book">Sharq <br> komparativistika <br> markazlari </p>
+                                                        <p class="name_book notranslate">x</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -77,20 +77,14 @@
                                                     <div class="container no-gutters row bs-1col paragraph paragraph--type-bp-simple paragraph--view-mode-default">
                                                         <div class=" reveal col-sm-12 bs-region bs-region--main">
                                                             <div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
-                                                                <h2>Belgilangan maqsadlar
-                                                                    quyidagi vazifalarni
-                                                                    bajarishni taqozo etadi:<br><br>
+                                                                <h2 class="notranslate">text_general<br><br>
                                                                 </h2>
-                                                                <p>1. “Komparativistika” (Comparative) elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish. Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin, I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G. Xallieva, U.Jurakulov, A.Qosimov kabi olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.
-                                                                    <br>
-                                                                    2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.  <br>
-                                                                    3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.  <br>
+                                                                <p>text<br>
                                                                     <span class="notranslate">4.band</span><br>
                                                                     <span class="notranslate">5.band</span></p>
                                                                 <p>
-                                                                    <a class="btn-primary"
-                                                                       href="{{ route('user_about_goals') }}">Batafsil
-                                                                        </a>
+                                                                    <a class="btn-primary notranslate"
+                                                                       href="{{ route('user_about_goals') }}">Batafsil</a>
                                                                 </p>
                                                             </div>
                                                         </div>

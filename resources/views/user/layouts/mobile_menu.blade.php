@@ -153,7 +153,7 @@
                            class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}"
-                           class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Kirish</a>
+                           class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm notranslate focus:outline-red-500">Kirish</a>
 
                 @if (Route::has('register'))
                     <li class="menu-item--_23772cc-530e-4394-93e1-113c2558d06e menu-name--secondary-menu">

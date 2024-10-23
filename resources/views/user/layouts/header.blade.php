@@ -52,7 +52,7 @@
                     @else
                         <li>
                             <a href="{{ route('login') }}"
-                               class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Kirish</a>
+                               class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm notranslate focus:outline-red-500">Kirish</a>
                         </li>
                         @if (Route::has('register'))
                             <li>
@@ -70,13 +70,13 @@
         <div id="block-tts-sub-branding"
              class="clearfix block block-system block-system-branding-block">
             <div class="site-logo">
-                <a href="{{ route('welcome') }}"
+                <a class="notranslate" href="{{ route('welcome') }}"
                    title="O'zbekiston jahon tillari universiteti"><img
                         src="{{asset('assets_front/img/logo.png')}}"
                         alt="O'zbekiston jahon tillari universiteti"/></a>
             </div>
             <div class="navbar-text-name">
-                    <span class="notranslate">O'zbekiston jahon tillari universiteti<br>  <p>Komparativistika platformasi</p>
+                    <span class="notranslate">O`zbekiston Davlat Jahon tillari Universiteti<br>  <p class="notranslate">Komparativistika platformasi</p>
                     </span>
 
             </div>
@@ -226,7 +226,7 @@
 
                             </ul>
                         </li>
-                        <li><a href="{{ route('user_scientific_research_conventions') }}" class="notranslate">KOMPARATIVISTIKA JURNALI</a></li>
+                        <li><a href="{{ route('user_scientific_research_conventions') }}" class="notranslate">s</a></li>
 
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
                             class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"
