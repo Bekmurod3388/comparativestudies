@@ -82,6 +82,30 @@ const customTranslations = {
         "ru":"5. В перспективе коммерциализация платформы, организация вебинаров на договорной основе.",
         "en":"5. Commercialization of the platform in the future, organization of webinars based on the contract."
     },
+    "3.band":{
+        "uz":"3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.\n",
+        "ru":"3.\tСбор и загрузка на платформу диссертаций по сравнительному литературоведению, защищенных в Узбекистане и за рубежом.\n",
+        "en":"3. Compilation of dissertations defended in Uzbekistan and abroad on comparative literature and uploading them to the platform in DJVU format.\n",
+    },
+    "2.band":{
+        "uz":"2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.\n",
+        "ru":"2.\tСоздание Г. Халлиевой и У. Джуракуловым в соавторстве учебника «Сравнительное литературоведение» и его размещение на платформе.\n",
+        "en":"2. G. Hallieva, U. Jurakulov jointly created the textbook \"Comparative Literary Studies\" and put it on the platform.\n",
+    },
+    "1.band":{
+        "uz":"1. “Komparativistika” (Comparative) elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish. Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin, I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G. Xallieva, U.Jurakulov, A.Qosimov kabi olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.\n",
+        "ru":"1.\tСбор научных и художественных источников для электронной платформы «Компаративистика». В том числе загрузка на платформу в формате DJVU научных работ в области сравнительного литературоведения на русском, английском, французском, немецком, узбекском языках таких ученых, как Р.Дж. Клеменс (R. J. Clemens), Пьер Брюнель (Pierre Brunel), Клод Пишуа (Claude Pichois), Андре-Мишель Руссо (André-Michel Rousseau), А.Н. Веселовский, Н.И. Конрад, В.М. Жирмунский, Ю.М. Лотман, A. Kокорин, И.Г. Неупокоева, В. Я. Пропп, А. Дима (A. Dima), Д. Дюришин (D. Dyurishin). М. Бахтин, М.Г. Богаткина, В.Р. Аминева, Г. Халлиева, У. Джуракулов, А. Касымов и др.\n",
+        "en":"1. Collection of scientific and artistic resources for the electronic platform \"Comparative\". Including, . R. J. Clemens, Pierre Brunel, Claude Pichois, André-Michel Rousseau, N. A. Veselovsky, N. I. Konrad, V. M. Zhirmunsky, Yu. Lotman, A. Kokorin, I. G. Neupokoeva, V. Ya. Propp, A. Dima, D. Dyurishin,.M. .Bakhtin, M.G. Bogatkina. Upload scientific works on comparative literary studies in Russian, English, French, German, Uzbek languages by scientists such as V.R. Amineva, G. Hallieva, U. Jurakulov, A. Kasimov to the platform in DJVU format.\n",
+    },
+    "text_general":{
+        "uz":"Belgilangan maqsadlar\n" +
+            "                                                                    quyidagi vazifalarni\n" +
+            "                                                                    bajarishni taqozo etadi: ",
+        "ru":"Достижение цели создания платформы требует решения следующих задач:"
+        ,
+        "en": "The set goals require the following tasks:          "
+    },
+
     "OAK":{
       "uz":"OAK",
       "ru":"ВАК",
@@ -231,49 +255,6 @@ const customTranslations = {
         "ru":"Восточные центры сравнительных исследований",
         "en": "Eastern comparative studies center "
     },
-    "text":{
-        "uz":
-            "“Komparativistika” (Comparative) elektron platformasi uchun ilmiy va badiiy manbalarni yig‘ish. Jumladan, . R. J. Clemens, Pierre Brunel, Claude Pichois, André – Michel Rousseau, N.A.Veselovskiy, N.I.Konrad, V.M.Jirmunskiy, Yu.Lotman,A.Kokorin, I.G.Neupokoeva, V.Ya.Propp, A.Dima, D.Dyurishin,.M.Baxtin, M.G. Bogatkina. V.R.Amineva, G. Xallieva, U.Jurakulov, A.Qosimov kabi olimlarning rus, ingliz, fransuz, nemis, o‘zbek tillaridagi qiyosiy adabiyotshunoslikka doir ilmiy asarlarini DJVU formatda platformaga yuklash.\n" +
-            "2. G.Xallieva, U.Jurakulov birgalikda “Qiyosiy adabiyotshunoslik” darsligini yaratish va platformaga joylash.\n" +
-            "3. Aynan qiyosiy adabiyotshunoslikka doir O‘zbekistonda va horijda himoya qilingan dissertasiyalarni jamlash va DJVU formatda platformaga yuklash.\n" +
-            "4. Loyiha doirasida dunyoga mashhur Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) kabi kiyosiy adabiyotshunoslik markazlari (Germaniya,Berlin), University of Toronto Centre for Comparative Literature(Kanada,Toronto). Yale University Department of Comparative Literature(AQSh, Yel' universiteti), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Turkiya, Osmangozi universiteti) Harvard University Department of Comparative Literature (AQSh), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature(AQSh), University of Washington Department of Comparative Literature (Vashington) kabi nufuzli universitetlardagi komparativistika ilmiy markazlari bilan akademik hamkorlik o‘rnatish.\n" +
-            "5. Platformani kelajakda tijoratlashtirish, shartnoma asosida vebinarlar tashkil qilish.\n" +
-            "\tThe set goals require the following tasks:\n" +
-            "\n" +
-            "1. Collection of scientific and artistic resources for the electronic platform \"Comparative\". Including, . R. J. Clemens, Pierre Brunel, Claude Pichois, André-Michel Rousseau, N. A. Veselovsky, N. I. Konrad, V. M. Zhirmunsky, Yu. Lotman, A. Kokorin, I. G. Neupokoeva, V. Ya. Propp, A. Dima, D. Dyurishin,.M. .Bakhtin, M.G. Bogatkina. Upload scientific works on comparative literary studies in Russian, English, French, German, Uzbek languages by scientists such as V.R. Amineva, G. Hallieva, U. Jurakulov, A. Kasimov to the platform in DJVU format.\n" +
-            "2. G. Hallieva, U. Jurakulov jointly created the textbook \"Comparative Literary Studies\" and put it on the platform.\n" +
-            "3. Compilation of dissertations defended in Uzbekistan and abroad on comparative literature and uploading them to the platform in DJVU format.\n" +
-            "4. As part of the project, the world-famous Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) (Berlin, Germany), University of Toronto Center for Comparative Literature (Toronto, Canada) . Yale University Department of Comparative Literature (USA, Yale University), Eskişehir Osmangazi Üniversitesi Karşılaştırmali Edebiyat Bölümü (Turkey, Osmangozi University) Harvard University Department of Comparative Literature (USA), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature (USA), establishment of academic cooperation with comparative research centers of prestigious universities such as University of Washington Department of Comparative Literature (Washington).\n" +
-            "5. Commercialization of the platform in the future, organization of webinars based on the contract.\n" +
-            "\n" +
-            "\tДостижение цели создания платформы требует решения следующих задач:\n" +
-            "1.\tСбор научных и художественных источников для электронной платформы «Компаративистика». В том числе загрузка на платформу в формате DJVU научных работ в области сравнительного литературоведения на русском, английском, французском, немецком, узбекском языках таких ученых, как Р.Дж. Клеменс (R. J. Clemens), Пьер Брюнель (Pierre Brunel), Клод Пишуа (Claude Pichois), Андре-Мишель Руссо (André-Michel Rousseau), А.Н. Веселовский, Н.И. Конрад, В.М. Жирмунский, Ю.М. Лотман, A. Kокорин, И.Г. Неупокоева, В. Я. Пропп, А. Дима (A. Dima), Д. Дюришин (D. Dyurishin). М. Бахтин, М.Г. Богаткина, В.Р. Аминева, Г. Халлиева, У. Джуракулов, А. Касымов и др.\n" +
-            "2.\tСоздание Г. Халлиевой и У. Джуракуловым в соавторстве учебника «Сравнительное литературоведение» и его размещение на платформе.\n" +
-            "3.\tСбор и загрузка на платформу диссертаций по сравнительному литературоведению, защищенных в Узбекистане и за рубежом.\n" +
-            "4.\tУстановление академического сотрудничества с научно-исследовательскими центрами в области сравнительного литературоведения и научными центрами компаративистики ряда ведущих университетов мира, в том числе:  Peter Szondi Institute of Comparative Literature, Freie Universität (Берлин), Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) (Германия, Берлин), University of Toronto Centre for Comparative Literature (Канада, Торонто), Yale University Department of Comparative Literature (США, Йельский университет), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Турция, университет Османгази),  Harvard University Department of Comparative Literature (США), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature (США), University of Washington Department of Comparative Literature (Вашингтон).\n" +
-            "5.\tКоммерциализация платформы в будущем, организация вебинаров на контрактной основе\n",
-        "ru":"Достижение цели создания платформы требует решения следующих задач:\n" +
-            "1.\tСбор научных и художественных источников для электронной платформы «Компаративистика». В том числе загрузка на платформу в формате DJVU научных работ в области сравнительного литературоведения на русском, английском, французском, немецком, узбекском языках таких ученых, как Р.Дж. Клеменс (R. J. Clemens), Пьер Брюнель (Pierre Brunel), Клод Пишуа (Claude Pichois), Андре-Мишель Руссо (André-Michel Rousseau), А.Н. Веселовский, Н.И. Конрад, В.М. Жирмунский, Ю.М. Лотман, A. Kокорин, И.Г. Неупокоева, В. Я. Пропп, А. Дима (A. Dima), Д. Дюришин (D. Dyurishin). М. Бахтин, М.Г. Богаткина, В.Р. Аминева, Г. Халлиева, У. Джуракулов, А. Касымов и др.\n" +
-            "2.\tСоздание Г. Халлиевой и У. Джуракуловым в соавторстве учебника «Сравнительное литературоведение» и его размещение на платформе.\n" +
-            "3.\tСбор и загрузка на платформу диссертаций по сравнительному литературоведению, защищенных в Узбекистане и за рубежом.\n" +
-            "4.\tУстановление академического сотрудничества с научно-исследовательскими центрами в области сравнительного литературоведения и научными центрами компаративистики ряда ведущих университетов мира, в том числе:  Peter Szondi Institute of Comparative Literature, Freie Universität (Берлин), Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) (Германия, Берлин), University of Toronto Centre for Comparative Literature (Канада, Торонто), Yale University Department of Comparative Literature (США, Йельский университет), Eskişehir Osmangazi Üniversitesi Karşılaştırmalı Edebiyat Bölümü (Турция, университет Османгази),  Harvard University Department of Comparative Literature (США), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature (США), University of Washington Department of Comparative Literature (Вашингтон).\n" +
-            "5.\tКоммерциализация платформы в будущем, организация вебинаров на контрактной основе\n",
-        "en": "The set goals require the following tasks:\n" +
-            "\n" +
-            "1. Collection of scientific and artistic resources for the electronic platform \"Comparative\". Including, . R. J. Clemens, Pierre Brunel, Claude Pichois, André-Michel Rousseau, N. A. Veselovsky, N. I. Konrad, V. M. Zhirmunsky, Yu. Lotman, A. Kokorin, I. G. Neupokoeva, V. Ya. Propp, A. Dima, D. Dyurishin,.M. .Bakhtin, M.G. Bogatkina. Upload scientific works on comparative literary studies in Russian, English, French, German, Uzbek languages by scientists such as V.R. Amineva, G. Hallieva, U. Jurakulov, A. Kasimov to the platform in DJVU format.\n" +
-            "2. G. Hallieva, U. Jurakulov jointly created the textbook \"Comparative Literary Studies\" and put it on the platform.\n" +
-            "3. Compilation of dissertations defended in Uzbekistan and abroad on comparative literature and uploading them to the platform in DJVU format.\n" +
-            "4. As part of the project, the world-famous Peter Szondi Institute of Comparative Literature, Freie Universität Berlin, Leibniz-Zentrum für Literatur-und Kulturforschung (ZfL) (Berlin, Germany), University of Toronto Center for Comparative Literature (Toronto, Canada) . Yale University Department of Comparative Literature (USA, Yale University), Eskişehir Osmangazi Üniversitesi Karşılaştırmali Edebiyat Bölümü (Turkey, Osmangozi University) Harvard University Department of Comparative Literature (USA), Indiana University Comparative Literature Department, Columbia University Department of English and Comparative Literature (USA), establishment of academic cooperation with comparative research centers of prestigious universities such as University of Washington Department of Comparative Literature (Washington).\n" +
-            "5. Commercialization of the platform in the future, organization of webinars based on the contract.\n"
-    },
-    "text_general":{
-        "uz":"Belgilangan maqsadlar\n" +
-            "                                                                    quyidagi vazifalarni\n" +
-            "                                                                    bajarishni taqozo etadi: ",
-        "ru":"Достижение цели создания платформы требует решения следующих задач:"
-            ,
-        "en": "The set goals require the following tasks:          "
-    },
     "Batafsil":{
         "uz":"Batafsil",
         "ru":"Детали",
@@ -285,19 +266,39 @@ const customTranslations = {
         "en": "Centers of comparative studies         "
     },
     "address":{
-        "uz":"Kichik Xalqa Yo`li ko`chasi,\n" +
-            " G-9a mavzesi, 21-a uy.\n" +
-            "Pochta indeksi: 100138\n",
+        "uz":"Manzil: Kichik Xalqa Yo`li ko`chasi, G-9a mavzesi, 21-a uy.",
         "ru":"Адрес:\n" +
             "Ташкент,\n" +
             "улица Кичик Халка Йули (Малая кольцевая дорога), \n" +
-            "квартал G-9А, дом 21-а.\n" +
-            "Почтовый индекс: 10013\n",
-        "en": "Address:\n" +
-            "Tashkent, \n" +
-            "Kichik Halka Yuli street,\n" +
-            "G-9A quartel, 21 a \n         "
+            "квартал G-9А, дом 21-а.\n",
+        "en":"Address: Tashkent, Kichik Halka Yuli street, G-9A quartel, 21 a"
     },
+    "pochta":{
+        "uz":"Pochta indeksi: 100138",
+        "ru":"Почтовый индекс: 100138",
+        "en":"Postal code: 100138"
+    },
+    "phone":{
+        "uz":"+99871 2301292",
+        "ru":"+99871 2301292",
+        "en":"+99871 2301292"
+    },
+    "email":{
+        "uz":"Email: gulnoz7410@email.ru",
+        "ru":"Email: gulnoz7410@email.ru",
+        "en":"Email: gulnoz7410@email.ru"
+    },
+    "fax":{
+        "uz":"F:098911335672",
+        "ru":"F:098911335672",
+        "en":"F:098911335672"
+    },
+    "k_centers":{
+        "uz":"Komparativistika markazlari",
+        "ru":"Центры сравнительных исследований",
+        "en":"Centers of comparative studies"
+    },
+
 
 
     // Add more words and translations as needed

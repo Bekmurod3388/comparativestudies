@@ -40,8 +40,7 @@
                                                     <a href="{{ route('user_about_goals') }}" class="notranslate">Loyihaning maqsad va vazifalari</a>
                                                 </div>
                                                 <div class="reveal field field--name-field-quick-link-2 field--type-link field--label-hidden field__item">
-                                                    <a href="{{ route('user_about_articles') }}">Loyiha
-                                                        bo'yicha maqolalar</a>
+                                                    <a href="{{ route('user_about_articles') }}" class="notranslate">Loyiha bo'yicha maqolalar</a>
                                                 </div>
                                                 <div class="reveal field field--name-field-quick-link-3 field--type-link field--label-hidden field__item">
                                                     <a href="{{ route('user_about_oav') }}" class="notranslate">Oav biz haqimizda</a>
@@ -79,7 +78,9 @@
                                                             <div class="clearfix text-formatted field field--name-bp-text field--type-text-long field--label-hidden field__item">
                                                                 <h2 class="notranslate">text_general<br><br>
                                                                 </h2>
-                                                                <p>text<br>
+                                                                    <span class="notranslate">1.band</span><br>
+                                                                    <span class="notranslate">2.band</span><br>
+                                                                    <span class="notranslate">3.band</span><br>
                                                                     <span class="notranslate">4.band</span><br>
                                                                     <span class="notranslate">5.band</span></p>
                                                                 <p>
