@@ -672,4 +672,12 @@ class HomeController extends Controller
 
         return view('user.pages.search', compact('articles', 'abstracts', 'training_manual', 'researchers_books', 'researchers_articles', 'convention', 'monograph', 'journal', 'dissertations', 'facultybooks', 'q'));
     }
+    public function ikla()
+    {
+        return view('user.pages.ikla');
+    }
+    public function akla()
+    {
+        return view('user.pages.akla');
+    }
 }
