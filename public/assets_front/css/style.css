@@ -68,7 +68,7 @@ body{
 }
 
 .home_book-one, .home_book-two{
-    width: 350px;
+    width: 400px;
     padding: 20px;
     position: relative;
     transition: 0.5s ease all;
@@ -256,21 +256,23 @@ body{
     margin-bottom: 10px;
     font-weight: 800;
 }
-.name_book{
+.name_book {
     position: absolute;
     z-index: 111;
     bottom: 140px;
-    left:100px;
+    right: 145px;
     font-size: 20px;
+    width: 100px;
     font-weight: 800;
 }
-.name_book2{
+.name_book2 {
     position: absolute;
     z-index: 111;
     bottom: 140px;
-    right:115px;
     font-size: 20px;
     font-weight: 800;
+    left: 85px;
+    width: 100px;
 }
 @media(max-width: 1250px){
     .name_book{
@@ -1701,3 +1703,102 @@ li:last-child {
         font-size: 18px;
     }
 }
+header.banner-header {
+    color: #2c3e50;
+    margin-top: 30px;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+header .main-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Контентная область */
+.content-area {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Секции */
+.content-area section {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-left: 4px solid #2980b9;
+    padding-left: 0.5rem;
+}
+
+.text-body {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+/* Списки */
+ul.fancy-list {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+ul.fancy-list li {
+    position: relative;
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+ul.fancy-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2980b9;
+    font-size: 1.2rem;
+}
+
+/* Ссылки */
+.fancy-link {
+    color: white;
+    background-color: #2980b9;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.fancy-link:hover {
+    background-color: #1f5f8b;
+}
+
+/* Нижний колонтитул */
+footer.footer-box {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
