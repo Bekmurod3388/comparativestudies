@@ -487,8 +487,9 @@ body{
     color: #fff;
 }
 .navbar-text-name p{
-    font-size: 16px;
+    font-size: 20px;
 }
+
 @media(max-width:550px){
     .navbar-text-name span{
         font-size: 16px;
@@ -500,6 +501,9 @@ body{
 @media (max-width:900px) {
     #articles{
         flex-direction: column;
+    }
+    .navbar-text-name p{
+        font-size: 16px;
     }
     #artics{
         width: 100%;
@@ -1693,7 +1697,7 @@ li:last-child {
     }
 }
 #primary-navigation .block-superfish ul.menu li a, #primary-navigation .block-superfish ul.menu li span {
-    font-size: 11px !important;
+    font-size: 16px !important;
     padding: 8px 5px !important;
 }
 
@@ -1802,3 +1806,9 @@ footer.footer-box {
     margin-top: 2rem;
 }
 
+@media(max-width: 1000px){
+    #header #main-header .block-system-branding-block {
+        padding-top: 15px !important;
+    }
+
+}
