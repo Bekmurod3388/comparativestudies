@@ -1832,3 +1832,6 @@ footer.footer-box {
         text-decoration: none;
     }
 }
+#primary-navigation .block-superfish ul.menu{
+    max-width: 1320px;
+}
