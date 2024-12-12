@@ -32,6 +32,10 @@
             </label>
         </div>
 
+<<<<<<< HEAD
+=======
+        <div class="flex items-center justify-end mt-4">
+>>>>>>> 9309a491b6b9cf758175313e0b0014268c10dcd8
             @if (Route::has('register'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
                     {{ __('Ro`yxatdan o`tmaganmisiz?') }}

@@ -1011,7 +1011,7 @@ body{
 }
 .video_text{
     width: 100%;
-    height: auto;
+    height: 100px;
     padding: 10px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -1020,7 +1020,6 @@ body{
 .videos_start{
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -1036,7 +1035,9 @@ body{
     width: 100%;
     margin: 50px 0;
 }
-
+.video{
+    height: 300px;
+}
 .textbook_img{
     width: 90px;
     height: 130px;
@@ -1592,7 +1593,7 @@ body{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 .video img{
-    height: 300px;
+    height: 100%;
     width: 100%;
 }
 .journal-btn-conv{
@@ -1811,4 +1812,26 @@ footer.footer-box {
         padding-top: 15px !important;
     }
 
+}
+@media(max-width: 600px){
+    .search-bar{
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+    #searchButton, #resetBtn, #searchInput{
+        width: 100%;
+    }
+    .search-bar input[type="text"]{
+        margin-right: 0;
+
+    }
+    #resetBtn{
+        margin-left: 0;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+#primary-navigation .block-superfish ul.menu{
+    max-width: 1320px;
 }
