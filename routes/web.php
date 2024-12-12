@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
+Route::middleware('auth')->group(function(){
 Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/search', [HomeController::class,'home_search'])->name('home_search');
 Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
@@ -87,7 +87,7 @@ Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_ab
 Route::get('/aboutThePlatform', [HomeController::class,'aboutThePlatform'])->name('aboutThePlatform');
 Route::get('/archive', [HomeController::class,'archive'])->name('archive');
 Route::get('/archive/{parent}', [HomeController::class,'parentArchive'])->name('parentArchive');
-
+});
 
 /* ADMIN PAGE ROUTES ********************************************************************************/
 

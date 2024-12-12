@@ -32,13 +32,12 @@
             </label>
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
+            @if (Route::has('register'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('register') }}">
                     {{ __('Ro`yxatdan o`tmaganmisiz?') }}
                 </a>
             @endif
-
+        <div class="flex items-center justify-end mt-4">
             <x-primary-button class="ml-3">
                 {{ __('Kirish') }}
             </x-primary-button>
