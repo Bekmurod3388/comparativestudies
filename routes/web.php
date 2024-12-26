@@ -38,56 +38,56 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::middleware('auth')->group(function(){
-Route::get('/', [HomeController::class,'index'])->name('welcome');
-Route::get('/search', [HomeController::class,'home_search'])->name('home_search');
-Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
-Route::post('/contactpost', [HomeController::class,'contact_post'])->name('user_contact_post');
+Route::middleware('auth')->group(function(){
+    Route::get('/', [HomeController::class,'index'])->name('welcome');
+    Route::get('/search', [HomeController::class,'home_search'])->name('home_search');
+    Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
+    Route::post('/contactpost', [HomeController::class,'contact_post'])->name('user_contact_post');
 
-Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_gallery');
-Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
-Route::get('user/gallery/videos', [HomeController::class,'gallery_videos'])->name('user_gallery_videos');
+    Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_gallery');
+    Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
+    Route::get('user/gallery/videos', [HomeController::class,'gallery_videos'])->name('user_gallery_videos');
 
 
-Route::get('user/literature', [HomeController::class,'literature'])->name('user_literature');
-Route::get('user/literature/textbooks', [HomeController::class,'literature_textbooks'])->name('user_literature_textbooks');
-Route::get('user/literature/manuals', [HomeController::class,'literature_manuals'])->name('user_literature_manuals');
-Route::get('user/literature/methodical', [HomeController::class,'literature_methodical'])->name('user_literature_methodical');
+    Route::get('user/literature', [HomeController::class,'literature'])->name('user_literature');
+    Route::get('user/literature/textbooks', [HomeController::class,'literature_textbooks'])->name('user_literature_textbooks');
+    Route::get('user/literature/manuals', [HomeController::class,'literature_manuals'])->name('user_literature_manuals');
+    Route::get('user/literature/methodical', [HomeController::class,'literature_methodical'])->name('user_literature_methodical');
 
-Route::get('user/magazines', [HomeController::class,'magazines'])->name('user_magazines');
-Route::get('user/magazines/yevropa', [HomeController::class,'magazines_yevrope'])->name('user_magazines_yevropa');
-Route::get('user/magazines/amerika', [HomeController::class,'magazines_amerika'])->name('user_magazines_amerika');
-Route::get('user/magazines/turkiya', [HomeController::class,'magazines_turkiya'])->name('user_magazines_turkiya');
-Route::get('user/magazines/rossiya', [HomeController::class,'magazines_rossiya'])->name('user_magazines_rossiya');
-Route::get('user/magazines/markaziyosiyo', [HomeController::class,'magazines_central_asia'])->name('user_magazines_central_asia');
+    Route::get('user/magazines', [HomeController::class,'magazines'])->name('user_magazines');
+    Route::get('user/magazines/yevropa', [HomeController::class,'magazines_yevrope'])->name('user_magazines_yevropa');
+    Route::get('user/magazines/amerika', [HomeController::class,'magazines_amerika'])->name('user_magazines_amerika');
+    Route::get('user/magazines/turkiya', [HomeController::class,'magazines_turkiya'])->name('user_magazines_turkiya');
+    Route::get('user/magazines/rossiya', [HomeController::class,'magazines_rossiya'])->name('user_magazines_rossiya');
+    Route::get('user/magazines/markaziyosiyo', [HomeController::class,'magazines_central_asia'])->name('user_magazines_central_asia');
 
-Route::get('user/scientific', [HomeController::class,'scientific_research'])->name('user_scientific_research');
-Route::get('user/scientific/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('user_scientific_research_dissertations');
-Route::get('user/scientific/abstracts', [HomeController::class,'scientific_research_abstracts'])->name('user_scientific_research_abstracts');
-Route::get('user/scientific/monographs', [HomeController::class,'scientific_research_monographs'])->name('user_scientific_research_monographs');
-Route::get('user/scientific/articles', [HomeController::class,'scientific_research_articles'])->name('user_scientific_research_articles');
-Route::get('user/scientific/scientists', [HomeController::class,'scientific_research_scientists'])->name('user_scientific_research_scientists');
+    Route::get('user/scientific', [HomeController::class,'scientific_research'])->name('user_scientific_research');
+    Route::get('user/scientific/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('user_scientific_research_dissertations');
+    Route::get('user/scientific/abstracts', [HomeController::class,'scientific_research_abstracts'])->name('user_scientific_research_abstracts');
+    Route::get('user/scientific/monographs', [HomeController::class,'scientific_research_monographs'])->name('user_scientific_research_monographs');
+    Route::get('user/scientific/articles', [HomeController::class,'scientific_research_articles'])->name('user_scientific_research_articles');
+    Route::get('user/scientific/scientists', [HomeController::class,'scientific_research_scientists'])->name('user_scientific_research_scientists');
 
-Route::get('user/scientific/ikla', [HomeController::class,'ikla'])->name('user_scientific_research_ikla');
-Route::get('user/scientific/akla', [HomeController::class,'akla'])->name('user_scientific_research_akla');
+    Route::get('user/scientific/ikla', [HomeController::class,'ikla'])->name('user_scientific_research_ikla');
+    Route::get('user/scientific/akla', [HomeController::class,'akla'])->name('user_scientific_research_akla');
 
-Route::get('/journal', [HomeController::class,'scientific_research_conventions'])->name('user_scientific_research_conventions');
+    Route::get('/journal', [HomeController::class,'scientific_research_conventions'])->name('user_scientific_research_conventions');
 
-Route::get('user/services', [HomeController::class,'services'])->name('user_services');
-Route::get('user/services/exam_preparation', [HomeController::class,'services_exam_preparation'])->name('user_services_exam_preparation');
-Route::get('user/services/teaching_research', [HomeController::class,'services_teaching_research'])->name('user_services_teaching_research');
-Route::get('user/services/online_lecture', [HomeController::class,'services_online_lecture'])->name('user_services_online_lecture');
+    Route::get('user/services', [HomeController::class,'services'])->name('user_services');
+    Route::get('user/services/exam_preparation', [HomeController::class,'services_exam_preparation'])->name('user_services_exam_preparation');
+    Route::get('user/services/teaching_research', [HomeController::class,'services_teaching_research'])->name('user_services_teaching_research');
+    Route::get('user/services/online_lecture', [HomeController::class,'services_online_lecture'])->name('user_services_online_lecture');
 
-Route::get('user/about', [HomeController::class,'about'])->name('user_about');
-Route::get('user/about/goals', [HomeController::class,'about_goals'])->name('user_about_goals');
-Route::get('user/about/participants', [HomeController::class,'about_participants'])->name('user_about_participants');
-Route::get('user/about/books', [HomeController::class,'about_books'])->name('user_about_books');
-Route::get('user/about/articles', [HomeController::class,'about_articles'])->name('user_about_articles');
-Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_about_oav');
-Route::get('/aboutThePlatform', [HomeController::class,'aboutThePlatform'])->name('aboutThePlatform');
-Route::get('/archive', [HomeController::class,'archive'])->name('archive');
-Route::get('/archive/{parent}', [HomeController::class,'parentArchive'])->name('parentArchive');
-//});
+    Route::get('user/about', [HomeController::class,'about'])->name('user_about');
+    Route::get('user/about/goals', [HomeController::class,'about_goals'])->name('user_about_goals');
+    Route::get('user/about/participants', [HomeController::class,'about_participants'])->name('user_about_participants');
+    Route::get('user/about/books', [HomeController::class,'about_books'])->name('user_about_books');
+    Route::get('user/about/articles', [HomeController::class,'about_articles'])->name('user_about_articles');
+    Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_about_oav');
+    Route::get('/aboutThePlatform', [HomeController::class,'aboutThePlatform'])->name('aboutThePlatform');
+    Route::get('/archive', [HomeController::class,'archive'])->name('archive');
+    Route::get('/archive/{parent}', [HomeController::class,'parentArchive'])->name('parentArchive');
+});
 
 /* ADMIN PAGE ROUTES ********************************************************************************/
 
