@@ -81,7 +81,9 @@
                                 <p class="{{ $article->article_type == 'OAK' ? 'notranslate' : '' }}">
                                     {{ $article->article_type }}
                                 </p>
-                                <p> {{ $article->locale->name }}</p>
+                                @if($article->locale)
+                                    <p> {{ $article->locale->name }}</p>
+                                @endif
                                 <p> {{ $article->authors }}</p>
                             </div>
                             <div class="project_objectives-pdf">

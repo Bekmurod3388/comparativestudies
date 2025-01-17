@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Locale;
 use App\Models\ResearcherArticle;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
@@ -49,7 +50,7 @@ class ResearcherArticlesController extends Controller
             'file_url' => 'nullable|string',
             'photo_url' => 'nullable|file|image|mimes:png,jpg,jpeg|max:2048', // Example: Allow PNG, JPG, JPEG files up to 2MB
         ]);
-
+        $FormFields['locale'] = 1;
         if ($request->hasFile('photo_url')) {
             $FormFields['photo_url'] = $request->file('photo_url')->store('researcher_articles/photos', 'public');
         }
@@ -94,6 +95,7 @@ class ResearcherArticlesController extends Controller
             'file_url' => 'nullable|string',
             'photo_url' => 'nullable|file|image|mimes:png,jpg,jpeg|max:2048', // Example: Allow PNG, JPG, JPEG files up to 2MB
         ]);
+        $FormFields['locale'] = 1;
 
         if ($request->hasFile('photo_url')) {
             $FormFields['photo_url'] = $request->file('photo_url')->store('researcherarticle_files/photos', 'public');
