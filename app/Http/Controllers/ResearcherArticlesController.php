@@ -29,7 +29,8 @@ class ResearcherArticlesController extends Controller
      */
     public function create(): View|\Illuminate\Foundation\Application|Factory|Application
     {
-        return view('admin.researcherarticles.create');
+        $article_types = ResearcherArticle::select('article_type')->distinct()->pluck('article_type');
+        return view('admin.researcherarticles.create', compact('article_types'));
     }
 
     /**
