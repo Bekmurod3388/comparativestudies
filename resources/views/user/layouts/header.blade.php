@@ -192,10 +192,10 @@
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_manuals') }}"
                                                                          class="sf-depth-2">O'quv qo'llanmalar</a>
                                 </li>
-                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"
-                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_methodical') }}"
-                                                                         class="sf-depth-2">Metodik qo'llanmalar</a>
-                                </li>
+{{--                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"--}}
+{{--                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_methodical') }}"--}}
+{{--                                                                         class="sf-depth-2">Metodik qo'llanmalar</a>--}}
+{{--                                </li>--}}
 
                             </ul>
                         </li>

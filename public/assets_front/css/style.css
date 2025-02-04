@@ -1595,6 +1595,7 @@ body{
 .video img{
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 .journal-btn-conv{
     background-color: #240090;
