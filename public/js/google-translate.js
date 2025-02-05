@@ -300,7 +300,25 @@ const customTranslations = {
     },
 
 
-
+    "services-sec1":{
+        "uz":" Platfomamizda 10.00.06 – Qiyosiy adabiyotshunoslik, chogʻishtirma tilshunoslik va tarjimashunoslik ixtisosligi boʻyicha mutahasislik fanidan kirish imtihonlariga va malakaviy imtihonlarga tayyorlov xizmatlari koʻrsatiladi.",
+        "ru":"10.00.06 - На нашей платформе предоставляются услуги по подготовке к вступительным экзаменам и квалификационным экзаменам по специальности сравнительное литературоведение, гибридное языкознание и переводоведение.",
+        "en":"\n" +
+            "10.00.06 - Preparation services for entrance exams and qualification exams in the specialty of comparative literature, hybrid linguistics and translation studies are provided on our platform."
+    },
+    "services-sec2":{
+        "uz":"Tadqiqotlarni oʻrgatish qismida Qiyosiy adabiyotshunoslik bo’yicha ilmiy tadqiqot olib borish usul va metodlari o’rgatiladi",
+        "ru":"При преподавании научных исследований преподаются методы и приемы проведения научных исследований по сравнительному литературоведению.",
+        "en":"\n" +
+            "In the teaching of research, methods and methods of conducting scientific research in Comparative Literature are taught."
+    },
+    "services-sec3":{
+        "uz":"Onlayn maʼruza qismida “Qiyosiy adabiyotshunoslik” fani metodologiyasi bo‘yicha onlayn ma’ruzalar tashkil qilinadi. Qiyosiy adabiyotshunoslik nazariyasi, mezonlari, obyekti, predmeti, qiyoslash shartlari, qiyoslashning tipik vaziyatlari va boshqalar tushuntiriladi.",
+        "ru":"\n" +
+            "В разделе онлайн-лекций организованы онлайн-лекции по методике предмета «Сравнительное литературоведение». Изложены теория сравнительного литературоведения, критерии, объект, предмет, условия сравнения, типичные ситуации сравнения и т.д.",
+        "en":"\n" +
+            "In the online lecture section, online lectures on the methodology of the subject \"Comparative Literature\" are organized. The theory of comparative literature, criteria, object, subject, terms of comparison, typical situations of comparison, etc. are explained."
+    },
     // Add more words and translations as needed
 };
 

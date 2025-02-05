@@ -200,23 +200,28 @@
                             </ul>
                         </li>
 
-                        <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
-                            class="sf-depth-1 menuparent"><a href="#"
-                                                             class="sf-depth-1 menuparent notranslate">XIZMATLAR</a>
-                            <ul>
-                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
-                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_exam_preparation') }}"
-                                                                         class="notranslate sf-depth-2">mgbmghjmkgh</a></li>
-                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef1"
-                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_teaching_research') }}"
-                                                                         class="notranslate sf-depth-2">Tadqiqotlarni o`rgatish</a>
-                                </li>
-                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"
-                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_online_lecture') }}"
-                                                                         class="notranslate sf-depth-2">Onlayn maruza</a>
-                                </li>
+{{--                        <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"--}}
+{{--                            class="sf-depth-1 menuparent"><a href="#"--}}
+{{--                                                             class="sf-depth-1 menuparent notranslate">XIZMATLAR</a>--}}
+{{--                            <ul>--}}
+{{--                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"--}}
+{{--                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_exam_preparation') }}"--}}
+{{--                                                                         class="notranslate sf-depth-2">mgbmghjmkgh</a></li>--}}
+{{--                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef1"--}}
+{{--                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_teaching_research') }}"--}}
+{{--                                                                         class="notranslate sf-depth-2">Tadqiqotlarni o`rgatish</a>--}}
+{{--                                </li>--}}
+{{--                                <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef2"--}}
+{{--                                    class="sf-depth-2 sf-no-children"><a href="{{ route('user_services_online_lecture') }}"--}}
+{{--                                                                         class="notranslate sf-depth-2">Onlayn maruza</a>--}}
+{{--                                </li>--}}
 
-                            </ul>
+{{--                            </ul>--}}
+{{--                        </li>--}}
+                        <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
+                            class="sf-depth-1 menuparent"><a href="{{ route('user_services') }}"
+                                                             class="sf-depth-1 menuparent notranslate">XIZMATLAR</a>
+
                         </li>
                         <li id="main-menu-link-contente43f358c-d19f-477e-9529-44f9281c2575"
                             class="sf-depth-1 menuparent"><a
