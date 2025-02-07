@@ -716,9 +716,7 @@ body{
     height: 100%;
 }
 @media(max-width:1024px){
-    .blog_web-about-box{
-        width: 48%;
-    }
+
     .blog_web-about-img{
         height: 100%;
     }
