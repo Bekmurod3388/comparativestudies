@@ -1847,3 +1847,17 @@ footer.footer-box {
     line-height: 1.6;
 }
 
+@media(max-width: 950px){
+    .blog_web-about a{
+        width: 48%;
+    }
+    .blog_web-about-text{
+        height: 200px;
+    }
+}
+@media(max-width: 600px){
+    .blog_web-about a{
+        width: 100%;
+    }
+}
+
