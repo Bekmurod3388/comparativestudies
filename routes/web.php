@@ -38,17 +38,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', [HomeController::class,'index'])->name('welcome');
+Route::get('/search', [HomeController::class,'home_search'])->name('home_search');
+Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
+Route::post('/contactpost', [HomeController::class,'contact_post'])->name('user_contact_post');
+
+Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_gallery');
+Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
+Route::get('user/gallery/videos', [HomeController::class,'gallery_videos'])->name('user_gallery_videos');
+
+
 Route::middleware('auth')->group(function(){
-    Route::get('/', [HomeController::class,'index'])->name('welcome');
-    Route::get('/search', [HomeController::class,'home_search'])->name('home_search');
-    Route::get('/contact', [HomeController::class,'contact'])->name('user_contact');
-    Route::post('/contactpost', [HomeController::class,'contact_post'])->name('user_contact_post');
-
-    Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_gallery');
-    Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
-    Route::get('user/gallery/videos', [HomeController::class,'gallery_videos'])->name('user_gallery_videos');
-
-
     Route::get('user/literature', [HomeController::class,'literature'])->name('user_literature');
     Route::get('user/literature/textbooks', [HomeController::class,'literature_textbooks'])->name('user_literature_textbooks');
     Route::get('user/literature/manuals', [HomeController::class,'literature_manuals'])->name('user_literature_manuals');
