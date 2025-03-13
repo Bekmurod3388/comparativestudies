@@ -239,7 +239,7 @@
 
                             </ul>
                         </li>
-                        <li><a href="{{ route('user_scientific_research_conventions') }}" class="notranslate">s</a></li>
+                        <li><a href="https://jurnal-komparativistika.uz/" class="notranslate">s</a></li>
 
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
                             class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"
