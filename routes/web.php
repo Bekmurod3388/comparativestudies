@@ -47,6 +47,20 @@ Route::get('user/gallery', [HomeController::class,'gallery'])->name('user_galler
 Route::get('user/gallery/photos', [HomeController::class,'gallery_photos'])->name('user_gallery_photos');
 Route::get('user/gallery/videos', [HomeController::class,'gallery_videos'])->name('user_gallery_videos');
 
+Route::get('user/services', [HomeController::class,'services'])->name('user_services');
+Route::get('user/services/exam_preparation', [HomeController::class,'services_exam_preparation'])->name('user_services_exam_preparation');
+Route::get('user/services/teaching_research', [HomeController::class,'services_teaching_research'])->name('user_services_teaching_research');
+Route::get('user/services/online_lecture', [HomeController::class,'services_online_lecture'])->name('user_services_online_lecture');
+
+Route::get('user/about', [HomeController::class,'about'])->name('user_about');
+Route::get('user/about/goals', [HomeController::class,'about_goals'])->name('user_about_goals');
+Route::get('user/about/participants', [HomeController::class,'about_participants'])->name('user_about_participants');
+Route::get('user/about/books', [HomeController::class,'about_books'])->name('user_about_books');
+Route::get('user/about/articles', [HomeController::class,'about_articles'])->name('user_about_articles');
+Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_about_oav');
+Route::get('/aboutThePlatform', [HomeController::class,'aboutThePlatform'])->name('aboutThePlatform');
+Route::get('/archive', [HomeController::class,'archive'])->name('archive');
+Route::get('/archive/{parent}', [HomeController::class,'parentArchive'])->name('parentArchive');
 
 Route::middleware('auth')->group(function(){
     Route::get('user/literature', [HomeController::class,'literature'])->name('user_literature');
@@ -72,21 +86,6 @@ Route::middleware('auth')->group(function(){
     Route::get('user/scientific/akla', [HomeController::class,'akla'])->name('user_scientific_research_akla');
 
     Route::get('/journal', [HomeController::class,'scientific_research_conventions'])->name('user_scientific_research_conventions');
-
-        Route::get('user/services', [HomeController::class,'services'])->name('user_services');
-    Route::get('user/services/exam_preparation', [HomeController::class,'services_exam_preparation'])->name('user_services_exam_preparation');
-    Route::get('user/services/teaching_research', [HomeController::class,'services_teaching_research'])->name('user_services_teaching_research');
-    Route::get('user/services/online_lecture', [HomeController::class,'services_online_lecture'])->name('user_services_online_lecture');
-
-    Route::get('user/about', [HomeController::class,'about'])->name('user_about');
-    Route::get('user/about/goals', [HomeController::class,'about_goals'])->name('user_about_goals');
-    Route::get('user/about/participants', [HomeController::class,'about_participants'])->name('user_about_participants');
-    Route::get('user/about/books', [HomeController::class,'about_books'])->name('user_about_books');
-    Route::get('user/about/articles', [HomeController::class,'about_articles'])->name('user_about_articles');
-    Route::get('user/about/oav', [HomeController::class,'about_oav'])->name('user_about_oav');
-    Route::get('/aboutThePlatform', [HomeController::class,'aboutThePlatform'])->name('aboutThePlatform');
-    Route::get('/archive', [HomeController::class,'archive'])->name('archive');
-    Route::get('/archive/{parent}', [HomeController::class,'parentArchive'])->name('parentArchive');
 });
 
 /* ADMIN PAGE ROUTES ********************************************************************************/
