@@ -2,11 +2,11 @@
 @section('content')
     <div class="textbooks">
         <div class="container text-center animated bounceInDown">
-            <h1 class="display-1 mb-4">Markaziy osiyo</h1>
+            <h1 class="display-1 mb-4">Osiyo</h1>
             <ol class="breadcrumb justify-content-center mb-0 animated bounceInDown">
                 <li class="breadcrumb-item"><a href="#">Asosiy sahifa </a></li>
                 <li class="breadcrumb-item"><a href="#">Ilmiy jurnallar</a></li>
-                <li class="breadcrumb-item text-dark" aria-current="page">Markaziy osiyo</li>
+                <li class="breadcrumb-item text-dark" aria-current="page"> Osiyo</li>
             </ol>
         </div>
     </div>

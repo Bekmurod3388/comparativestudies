@@ -76,7 +76,7 @@
                         alt="O'zbekiston jahon tillari universiteti"/></a>
             </div>
             <div class="navbar-text-name">
-                    <span class="notranslate">O`zbekiston Davlat Jahon tillari Universiteti<br>  <p class="notranslate">Komparativistika platformasi</p>
+                    <span class="notranslate">Komparativistika platformasi<br>
                     </span>
 
             </div>
@@ -89,9 +89,9 @@
                 <div class="content">
                     <ul id="superfish-main" class="menu sf-menu sf-main sf-horizontal sf-style-none">
                         <li id="main-menu-link-contentdb57f021-ee07-40a6-8446-be8044f1ad27"
-                            class="sf-depth-1 menuparent"><a href="#"
+                            class="sf-depth-1 menuparent"><a href="#" style="background: #0199d5"
                                                              class="sf-depth-1 menuparent">LOYIHA HAQIDA</a>
-                            <ul>
+                            <ul style="background: #0199d5 !important;">
                                 <li id="main-menu-link-content9135765b-fd1d-4f20-849b-d958bf625641"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_about_goals') }}"
@@ -122,9 +122,9 @@
                             </ul>
                         </li>
                         <li id="main-menu-link-contentfaf6415d-7a6e-4245-bf98-82e7a76b6dce"
-                            class="sf-depth-1 menuparent"><a href="#"
+                            class="sf-depth-1 menuparent"><a href="#" style="background: #b02536"
                                                              class="sf-depth-1 menuparent notranslate">ILMIY TADQIQOTLAR</a>
-                            <ul>
+                            <ul style="background: #b02536">
                                 <li id="main-menu-link-content62f18183-51b8-4622-ab43-d702dbcaa026"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_scientific_research_dissertations') }}"
@@ -156,9 +156,9 @@
                             </ul>
                         </li>
                         <li id="main-menu-link-content5c7661a8-cd1e-4f88-b60e-1c5889aaeb34"
-                            class="sf-depth-1 menuparent"><a href="#"
+                            class="sf-depth-1 menuparent"><a href="#" style="background: #356840"
                                                              class="sf-depth-1 menuparent">ILMIY JURNALLAR</a>
-                            <ul>
+                            <ul style="background: #356840">
                                 <li id="main-menu-link-content1165affb-12cc-446d-ae4b-650384a82ce0"
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_magazines_yevropa') }}"
                                                                          class="sf-depth-2">Yevropa</a>
@@ -178,13 +178,13 @@
                                 <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d2"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_magazines_central_asia') }}"
-                                        class="sf-depth-2">Markaziy Osiyo</a></li>
+                                        class="sf-depth-2">Osiyo</a></li>
                             </ul>
                         </li>
                         <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
-                            class="sf-depth-1 menuparent"><a href="#"
+                            class="sf-depth-1 menuparent"><a href="#" style="background: #d56b32"
                                                              class="sf-depth-1 menuparent notranslate">O'QUV ADABIYOTLARI</a>
-                            <ul>
+                            <ul style="background: #d56b32">
                                 <li id="main-menu-link-content175cb147-82b8-486d-9264-94530234e4ef"
                                     class="sf-depth-2 sf-no-children"><a href="{{ route('user_literature_textbooks') }}"
                                                                          class="sf-depth-2">Darsliklar</a></li>
@@ -219,15 +219,15 @@
 {{--                            </ul>--}}
 {{--                        </li>--}}
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
-                            class="sf-depth-1 menuparent"><a href="{{ route('user_services') }}"
+                            class="sf-depth-1 menuparent"><a href="{{ route('user_services') }}" style="background: #069"
                                                              class="sf-depth-1 menuparent notranslate">XIZMATLAR</a>
 
                         </li>
                         <li id="main-menu-link-contente43f358c-d19f-477e-9529-44f9281c2575"
                             class="sf-depth-1 menuparent"><a
-                                href="#"
+                                href="#" style="background: #c08a47"
                                 class=" sf-depth-1 menuparent">GALEREYA</a>
-                            <ul>
+                            <ul background: #c08a47">
                                 <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_gallery_photos') }}"
@@ -239,10 +239,10 @@
 
                             </ul>
                         </li>
-                        <li><a href="https://jurnal-komparativistika.uz/" class="notranslate">s</a></li>
+                        <li style="background: #0b2e13"><a href="https://jurnal-komparativistika.uz/" class="notranslate">s</a></li>
 
                         <li id="main-menu-link-content4b1f1e72-4b08-43cb-a1b8-dcef30770f99"
-                            class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}"
+                            class="sf-depth-1 menuparent"><a href="{{ route('user_contact') }}" style="background: #8f1838"
                                                              class="sf-depth-1 menuparent notranslate">ALOQA</a>
 
                         </li>

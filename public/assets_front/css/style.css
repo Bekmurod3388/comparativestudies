@@ -1833,6 +1833,9 @@ footer.footer-box {
 }
 #primary-navigation .block-superfish ul.menu{
     max-width: 1320px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 .services-name{
     background: white;
