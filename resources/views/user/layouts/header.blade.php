@@ -235,7 +235,7 @@
                             class="sf-depth-1 menuparent"><a
                                 href="#" style="background: #c08a47"
                                 class=" sf-depth-1 menuparent">GALEREYA</a>
-                            <ul background: #c08a47">
+                            <ul style=" background: #c08a47">
                                 <li id="main-menu-link-content523a1f34-4009-4992-80bd-72e3d70158fa"
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_gallery_photos') }}"

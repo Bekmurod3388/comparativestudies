@@ -51,6 +51,18 @@ Loyiha Oʼzbekiston Respublikasining iqtisodiy oʼsishi va ijtimoiy rivojlanishi
 
  “Qiyosiy adabiyotshunoslik” fanining “Komparativistika” elektron platformasini yaratish innovatsion loyihasida ijrochi tashkilot - Oʼzbekiston davlat jahon tillari universitetiti tarkibida “Qiyosiy adabiyotshunoslik, chogʼishtirma tilshunoslik va tarjimashunoslik» (10.00.06) ixtisosligi boʼyicha Ilmiy kengashning mavjudligi, turli tillarda dars bera oladigan mutaxassislarning borligi, kelajakda loyihaning bardavom boʼlishini va turli davlatlarning nufuzli markazlari bilan akademik aloqa oʼrnatishni taʼminlaydi.
 </p>
+
+
+                            <div class="card_dgu">
+                                <img src="{{ asset('assets_front/img/img_2.png') }}" alt="Sample Image" class="card_dgu__image">
+                                <div class="card_dgu__content">
+                                    <h3 class="card_dgu__title">Komparativistika platformasi</h3>
+                                    <p class="card_dgu__description">
+                                        Komparativistika Platformasi Uchun Berilgan Dasturiy Guvohnoma
+                                    </p>
+                                    <a href="{{ asset('assets_front/img/img_2.png') }}" download class="card_dgu__button">Yuklash</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

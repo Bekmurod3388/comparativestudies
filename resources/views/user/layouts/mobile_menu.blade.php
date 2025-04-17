@@ -25,6 +25,10 @@
                         <a href="{{ route('user_about_oav') }}"
                            data-drupal-link-system-path="node/36428">OAV Biz haqimizda</a>
                     </li>
+                    <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
+                        <a  href="{{ route('aboutThePlatform') }}"
+                            class="sf-depth-2">Platforma haqida</a>
+                    </li>
                 </ul>
 
             </li>
@@ -52,6 +56,15 @@
                         <a href="https://anjumanlar.uz/conference/4190"
                            data-drupal-link-system-path="node/36428">Anjumanlar</a>
                     </li>
+                    <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
+                        <a   href="{{ route('user_scientific_research_ikla') }}"
+                             class="sf-depth-2">IKLA</a></li>
+                    <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
+                        <a href="{{ route('user_scientific_research_akla') }}"
+                           class="sf-depth-2">AKLA</a></li>
+                    <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
+                        <a    href="{{ route('user_scientific_research_scientists') }}"
+                              class="sf-depth-2">Komparativist olimlar</a></li>
 
                 </ul>
 
@@ -101,32 +114,32 @@
                            data-drupal-link-system-path="node/57607">O'quv qo'llanmalar
                         </a>
                     </li>
-                    <li class="menu-item--_0e95e5a-272e-4d8a-bca1-4cc889c1c50b menu-name--main">
-                        <a href="{{ route('user_literature_methodical') }}" title="">Metodik qo'llanmalar
+{{--                    <li class="menu-item--_0e95e5a-272e-4d8a-bca1-4cc889c1c50b menu-name--main">--}}
+{{--                        <a href="{{ route('user_literature_methodical') }}" title="">Metodik qo'llanmalar--}}
 
-                        </a>
-                    </li>
+{{--                        </a>--}}
+{{--                    </li>--}}
                 </ul>
             </li>
             <li class="menu-item--db57f021-ee07-40a6-8446-be8044f1ad27 menu-name--main">
-                <a href="#" data-drupal-link-system-path="node/2821">XIZMATLAR</a>
-                <ul>
-                    <li class="menu-item--_135765b-fd1d-4f20-849b-d958bf625641 menu-name--main">
-                        <a href="{{ route('user_services_exam_preparation') }}"
-                           data-drupal-link-system-path="node/57607">Imtihonga tayorlash
-                        </a>
-                    </li>
-                    <li class="menu-item--_135765b-fd1d-4f20-849b-d958bf625641 menu-name--main">
-                        <a href="{{ route('user_services_teaching_research') }}"
-                           data-drupal-link-system-path="node/57607">Tadqiqotlarni o`rgatish
-                        </a>
-                    </li>
-                    <li class="menu-item--_0e95e5a-272e-4d8a-bca1-4cc889c1c50b menu-name--main">
-                        <a href="{{ route('user_services_online_lecture') }}" title="">Onlayn maruza
+                <a href="{{ route('user_services') }}" data-drupal-link-system-path="node/2821">XIZMATLAR</a>
+{{--                <ul>--}}
+{{--                    <li class="menu-item--_135765b-fd1d-4f20-849b-d958bf625641 menu-name--main">--}}
+{{--                        <a href="{{ route('user_services_exam_preparation') }}"--}}
+{{--                           data-drupal-link-system-path="node/57607">Imtihonga tayorlash--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="menu-item--_135765b-fd1d-4f20-849b-d958bf625641 menu-name--main">--}}
+{{--                        <a href="{{ route('user_services_teaching_research') }}"--}}
+{{--                           data-drupal-link-system-path="node/57607">Tadqiqotlarni o`rgatish--}}
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                    <li class="menu-item--_0e95e5a-272e-4d8a-bca1-4cc889c1c50b menu-name--main">--}}
+{{--                        <a href="{{ route('user_services_online_lecture') }}" title="">Onlayn maruza--}}
 
-                        </a>
-                    </li>
-                </ul>
+{{--                        </a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
             </li>
 
             <li class="menu-item--e43f358c-d19f-477e-9529-44f9281c2575 menu-name--main">
@@ -135,7 +148,7 @@
                 <ul>
                     <li class="menu-item--_23a1f34-4009-4992-80bd-72e3d70158fa menu-name--main">
                         <a href="{{ route('user_gallery_photos') }}"
-                           data-drupal-link-system-path="people/appointed-faculty/primary-faculty">Fotosuratlar
+                           data-drupal-link-system-path="people/appointed-faculty/primary-faculty">Fotolar
                             </a>
                     </li>
                     <li class="menu-item--_a830532-5174-4ef6-b7ce-7d89ceefeb9d menu-name--main">
