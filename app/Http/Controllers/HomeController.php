@@ -521,15 +521,15 @@ class HomeController extends Controller
     {
 
         $about_gazeta = About::where('type', 'gazeta')
-            ->orderBy('-craeted_at')
+            ->latest()
             ->get();
 
         $about_site = About::where('type', 'sayt')
-            ->orderBy('-craeted_at')
+            ->latest()
             ->get();
 
         $about_youtube = About::where('type', 'youtube')
-            ->orderBy('-craeted_at')
+            ->latest()
             ->get();
         return view('user.pages.about.oav', compact('about_youtube', 'about_gazeta', 'about_site'));
     }
