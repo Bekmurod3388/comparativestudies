@@ -102,7 +102,8 @@
                                 <option value="2">AQSH</option>
                                 <option value="3">Turkiya</option>
                                 <option value="4">Rossiya</option>
-                                <option value="5">Markaziy osiyo</option>
+                                <option value="5">Osiyo</option>
+                                <option value="6">Australia</option>
                             </select>
                         </div>
                         @error('country')

@@ -73,7 +73,8 @@ Route::middleware('auth')->group(function(){
     Route::get('user/magazines/amerika', [HomeController::class,'magazines_amerika'])->name('user_magazines_amerika');
     Route::get('user/magazines/turkiya', [HomeController::class,'magazines_turkiya'])->name('user_magazines_turkiya');
     Route::get('user/magazines/rossiya', [HomeController::class,'magazines_rossiya'])->name('user_magazines_rossiya');
-    Route::get('user/magazines/markaziyosiyo', [HomeController::class,'magazines_central_asia'])->name('user_magazines_central_asia');
+    Route::get('user/magazines/osiyo', [HomeController::class,'magazines_central_asia'])->name('user_magazines_central_asia');
+    Route::get('user/magazines/australia', [HomeController::class,'magazines_australia'])->name('user_magazines_central_australia');
 
     Route::get('user/scientific', [HomeController::class,'scientific_research'])->name('user_scientific_research');
     Route::get('user/scientific/dissertations', [HomeController::class,'scientific_research_dissertations'])->name('user_scientific_research_dissertations');

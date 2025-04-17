@@ -49,7 +49,7 @@
                         </a>
                     </li>
                     <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
-                        <a href="{{ route('user_scientific_research_conventions') }}"
+                        <a href="https://anjumanlar.uz/conference/4190"
                            data-drupal-link-system-path="node/36428">Anjumanlar</a>
                     </li>
 
@@ -78,7 +78,11 @@
                     </li>
                     <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
                         <a href="{{ route('user_magazines_central_asia') }}"
-                           data-drupal-link-system-path="node/36428">Markaziy Osiyo</a>
+                           data-drupal-link-system-path="node/36428">Osiyo</a>
+                    </li>
+                    <li class="menu-item--e5290d50-5ee0-4079-abdb-dd241705a787 menu-name--main">
+                        <a href="{{ route('user_magazines_central_australia') }}"
+                           data-drupal-link-system-path="node/36428">Australia</a>
                     </li>
 
                 </ul>

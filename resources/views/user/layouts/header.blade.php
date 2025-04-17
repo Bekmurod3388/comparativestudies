@@ -153,6 +153,10 @@
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_scientific_research_akla') }}"
                                         class="sf-depth-2">AKLA</a></li>
+                                <li id="main-menu-link-content21ce1aea-f46f-4909-b5b2-21bfa1771824"
+                                    class="sf-depth-2 sf-no-children"><a
+                                        href="https://anjumanlar.uz/conference/4190"
+                                        class="sf-depth-2">Anjumanlar</a></li>
                             </ul>
                         </li>
                         <li id="main-menu-link-content5c7661a8-cd1e-4f88-b60e-1c5889aaeb34"
@@ -179,6 +183,10 @@
                                     class="sf-depth-2 sf-no-children"><a
                                         href="{{ route('user_magazines_central_asia') }}"
                                         class="sf-depth-2">Osiyo</a></li>
+                                <li id="main-menu-link-content3ba1727e-5ecb-4dde-8e00-7356dae5102d2"
+                                    class="sf-depth-2 sf-no-children"><a
+                                        href="{{ route('user_magazines_central_australia') }}"
+                                        class="sf-depth-2">Australia</a></li>
                             </ul>
                         </li>
                         <li id="main-menu-link-content3cc253b4-478f-4058-8744-cce7c6a57f53"
