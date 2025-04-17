@@ -520,9 +520,17 @@ class HomeController extends Controller
     public function about_oav(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
 
-        $about_gazeta = About::where('type', 'gazeta')->get();
-        $about_site = About::where('type', 'sayt')->get();
-        $about_youtube = About::where('type', 'youtube')->get();
+        $about_gazeta = About::where('type', 'gazeta')
+            ->orderBy('-craeted_at')
+            ->get();
+
+        $about_site = About::where('type', 'sayt')
+            ->orderBy('-craeted_at')
+            ->get();
+
+        $about_youtube = About::where('type', 'youtube')
+            ->orderBy('-craeted_at')
+            ->get();
         return view('user.pages.about.oav', compact('about_youtube', 'about_gazeta', 'about_site'));
     }
 
