@@ -175,7 +175,7 @@ class HomeController extends Controller
     public function magazines_australia(): View|Application|Factory|\Illuminate\Contracts\Foundation\Application
     {
         $journals = Journal::where('category', "6")->get();
-        return view('user.pages.magazines.central_asia', compact('journals'));    }
+        return view('user.pages.magazines.australia', compact('journals'));    }
 
 
     public function scientific_research(){
